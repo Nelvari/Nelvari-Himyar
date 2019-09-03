@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Login only once</string>
+    <string name="facebook_app_id">1403605863110993</string>
+    <string name="fb_login_protocol_scheme">fb1403605863110993</string>
+
+</resources>
