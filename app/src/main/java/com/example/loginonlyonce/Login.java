@@ -178,7 +178,7 @@ public class Login extends AppCompatActivity {
 
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-        startActivityForResult(signInIntent, 0);
+        startActivityForResult(signInIntent, 997);
     }
 
     @Override
@@ -186,7 +186,7 @@ public class Login extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         callbackManager.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == 0) {
+        if (requestCode == 997) {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             handleSignInResult(task);
         }
