@@ -12,21 +12,12 @@
         tools:context=".Daftar"
         android:orientation="vertical">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorAccent"
-            android:minHeight="?attr/actionBarSize"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark" />
-
-
 
         <ImageView
             android:layout_width="140dp"
             android:layout_height="140dp"
             android:layout_gravity="center"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="90dp"
             android:background="@drawable/logobaru" />
 
         <EditText

@@ -198,9 +198,8 @@ public class Login extends AppCompatActivity {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
 
             String realName = account.getDisplayName();
-            String username = account.getGivenName() + account.getId();
             String email = account.getEmail();
-            String userId = account.getId();
+            String fbId = account.getId();
             String avatar;
             if (account.getPhotoUrl() != null) {
                 avatar = account.getPhotoUrl().toString();
@@ -217,7 +216,7 @@ public class Login extends AppCompatActivity {
             Intent intent = new Intent(Login.this, MainActivity.class);
             intent.putExtra("data1", realName);
             intent.putExtra("data2", email);
-            intent.putExtra("data3", userId);
+            intent.putExtra("data3", fbId);
             intent.putExtra("data4", avatar);
             startActivity(intent);
             finish();
