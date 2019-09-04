@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
@@ -40,6 +41,7 @@ public class Login extends AppCompatActivity {
 
     EditText txtusername;
     EditText txtpassword;
+    TextView tvdaftar;
     GoogleSignInClient mGoogleSignInClient;
     CallbackManager callbackManager;
     LoginButton loginButton;
@@ -223,6 +225,15 @@ public class Login extends AppCompatActivity {
         } catch (ApiException e) {
             e.printStackTrace();
         }
+
+        tvdaftar = (TextView) findViewById(R.id.tvdaftar);
+        tvdaftar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(Login.this,registrasi.class);
+                startActivity(in);
+            }
+        });
 
     }
 
