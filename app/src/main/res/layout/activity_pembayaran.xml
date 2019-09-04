@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Registrasi.Pembayaran"
+        android:background="@color/putih"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_satu"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorAccent"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/AppTheme.AppBarOverlay" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Biaya Pendaftaran PPDB"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/hitam"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calon peserta didik : Montserrat"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Batas waktu pembayaran adalah 2x24 jam, segeralah
+membayar biaya pendaftaran sebelum tenggat waktu
+berakhir."
+            android:textColor="@color/hitam"
+            android:layout_marginTop="35dp"
+            android:layout_margin="35dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/hitam"
+            android:text="Silahkan transfer ke rekening berikut."
+            android:layout_marginLeft="35dp"/>
+
+        <LinearLayout
+            android:layout_width="301dp"
+            android:layout_height="113dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rgstrs">
+
+            <View
+                android:layout_width="14dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nomor Rekening   :  09219928434723"
+                    android:layout_marginTop="24dp"
+                    android:textColor="@color/hitam"
+                    android:layout_marginLeft="25dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Atas Nama             :  Admin PPDB"
+                    android:layout_marginLeft="25dp"
+                    android:textColor="@color/hitam"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nominal                  :  Rp.100.000,-"
+                    android:layout_marginLeft="25dp"
+                    android:textColor="@color/hitam"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="35dp"
+            android:textColor="@color/hitam"
+            android:text="Jika anda sudah membayar ,silahkan isi form dan apload
+bukti/struk transfer di bawah ini. "/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status anda : "
+            android:textColor="@color/blue"
+            android:layout_marginLeft="35dp"/>
+
+        <CheckBox
+            android:id="@+id/cb_windows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Belum terbayar"
+            android:layout_marginLeft="35dp"/>
+
+
+        <LinearLayout
+            android:layout_width="330dp"
+            android:layout_height="635dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/line1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/form" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:hint="Atas nama calon siswa" />
+
+            <Button
+                android:layout_width="162dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorAccent"
+                android:text="Upload Struk"
+                android:textColor="@color/putih" />
+
+            <ImageView
+                android:layout_width="258dp"
+                android:layout_height="298dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/img" />
+
+            <Button
+                android:layout_width="162dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:background="@color/colorAccent"
+                android:text="Kirim"
+                android:textColor="@color/putih" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnkartu"
+            android:layout_width="292dp"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content"
+            android:text="Cetak kartu tes anda disini"
+            android:textColor="@color/putih"
+            android:background="@color/abuabu"
+            android:layout_marginBottom="30dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+</ScrollView>
