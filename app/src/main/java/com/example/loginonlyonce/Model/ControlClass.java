@@ -1,12 +1,14 @@
-package com.example.loginonlyonce;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.loginonlyonce.Model;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.SharedMemory;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.loginonlyonce.Login;
+import com.example.loginonlyonce.MainActivity;
 
 public class ControlClass extends AppCompatActivity {
 

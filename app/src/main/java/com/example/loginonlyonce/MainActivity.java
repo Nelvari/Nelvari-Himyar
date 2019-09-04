@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.facebook.login.LoginManager;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 editor.clear();
                 editor.apply();
 
-                //LoginManager.getInstance().logOut();
+                LoginManager.getInstance().logOut();
 
                 Intent intent = new Intent(MainActivity.this, SplashScreen.class);
                 startActivity(intent);
