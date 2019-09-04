@@ -65,10 +65,10 @@
                 android:layout_marginTop="30dp">
 
                 <View
-                    android:layout_width="1dp"
+                    android:layout_width="8dp"
                     android:layout_height="200dp"
                     android:layout_marginLeft="30dp"
-                    android:background="@color/blue" />
+                    android:background="@drawable/line2" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -80,7 +80,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:textStyle="bold"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="20dp"
                         android:text="PETUNJUK PENDAFTARAN"
                         android:textColor="@color/blue" />
 
@@ -97,6 +97,28 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:text="2.Isi data data yang sudah kami cantumkan."
+                        android:textColor="@color/blue" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="3.kemudian seterusnya,isi data data orang tua dan data data sekolah."
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="4.jika sudah di isi semua , lalu simpan."
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="5.Pastikan anda benar benar sudah menyimpan nya."
                         android:textColor="@color/blue" />
 
 
@@ -121,9 +143,9 @@
                 android:layout_marginTop="50dp"/>
 
             <View
-                android:layout_width="1dp"
+                android:layout_width="8dp"
                 android:layout_height="70dp"
-                android:background="@color/blue" />
+                android:background="@drawable/line2" />
 
 
         </LinearLayout>
