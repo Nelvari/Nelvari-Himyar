@@ -6,22 +6,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Login"
-    android:gravity="center">
+    tools:context=".Login">
 
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:background="@mipmap/ic_launcher" />
+        android:layout_marginTop="60dp"
+        android:background="@drawable/logobaru"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WELCOME PLEASE LOGIN"
+        android:textSize="20dp"
+        android:textColor="@color/hitam"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="40dp"/>
+
 
     <EditText
         android:id="@+id/txtusername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
         android:hint="Email"
         android:textColorHint="#797979"

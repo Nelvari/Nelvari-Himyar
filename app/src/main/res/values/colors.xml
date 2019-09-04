@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#2a429e</color>
+    <color name="colorPrimaryDark">#374785</color>
+    <color name="colorAccent">#24305e</color>
+    <color name="lightgray">#ededed</color>
+    <color name="blue">#2A429E</color>
+    <color name="produksi">#8BF6D8</color>
+    <color name="hitam">#000000</color>
+    <color name="putih">#ffffff</color>
+    <color name="fb">#314EBC</color>
+    <color name="persiapan">#90CCF4</color>
+    <color name="rpl">#F3D250</color>
+    <color name="dkv">#ECECEC</color>
+    <color name="anim">#F78888</color>
+    <color name="back">#24305e</color>
+    <color name="abuabu">#707070</color>
 
     <!-- Screens background color-->
     <color name="bg_screen1">#800000</color>
