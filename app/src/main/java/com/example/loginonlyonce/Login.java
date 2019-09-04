@@ -59,6 +59,16 @@ public class Login extends AppCompatActivity {
         txtpassword = (EditText) findViewById(R.id.txtpassword);
         Button btnlogin = (Button) findViewById(R.id.btnlogin);
 
+
+        tvdaftar = (TextView) findViewById(R.id.tvdaftar);
+        tvdaftar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(Login.this,registrasi.class);
+                startActivity(in);
+            }
+        });
+
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -78,6 +88,7 @@ public class Login extends AppCompatActivity {
                     editor.putInt("userid", getTaskId());
                     editor.apply();
                     Intent intent = new Intent(Login.this, MainActivity.class);
+                    intent.putExtra("data1", username);
                     startActivity(intent);
                     finish();
 
@@ -225,17 +236,6 @@ public class Login extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        tvdaftar = (TextView) findViewById(R.id.tvdaftar);
-        tvdaftar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent in = new Intent(Login.this,registrasi.class);
-                startActivity(in);
-            }
-        });
-
     }
-
-
 
 }

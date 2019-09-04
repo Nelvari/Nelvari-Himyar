@@ -17,7 +17,6 @@
         android:layout_marginTop="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Nama"
         android:id="@+id/nama"
         android:textSize="20dp"/>
 
@@ -26,7 +25,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
         android:textSize="20dp"
-        android:hint="Email"
         android:id="@+id/email"/>
 
     <TextView
@@ -34,7 +32,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
         android:textSize="20dp"
-        android:hint="Id"
         android:id="@+id/id"/>
 
     <Button
