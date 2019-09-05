@@ -58,8 +58,7 @@ public class Intro extends AppCompatActivity {
                 R.layout.slide1,
                 R.layout.slide2,
                 R.layout.slide3,
-                R.layout.slide4,
-                R.layout.slide5};
+                R.layout.slide4};
 
 
         addBottomDots(0);

@@ -35,10 +35,10 @@
         android:id="@+id/id"/>
 
     <Button
-        android:layout_marginTop="50dp"
         android:id="@+id/logOut"
-        android:layout_width="wrap_content"
+        android:layout_width="337dp"
         android:layout_height="wrap_content"
-        android:text="Log Out"/>
+        android:layout_marginTop="50dp"
+        android:text="Log Out" />
 
 </LinearLayout>
