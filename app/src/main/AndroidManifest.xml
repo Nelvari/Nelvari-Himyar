@@ -16,7 +16,6 @@
         <activity android:name=".registrasi" />
         <activity android:name=".Intro" />
         <activity android:name=".home"></activity>
-        <activity android:name=".Intro" />
         <activity android:name=".Login" />
         <activity android:name=".Model.ControlClass" />
         <activity android:name=".SplashScreen">
