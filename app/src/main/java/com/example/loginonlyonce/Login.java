@@ -88,7 +88,7 @@ public class Login extends AppCompatActivity {
                     editor.putInt("userid", getTaskId());
                     editor.apply();
                     Intent intent = new Intent(Login.this, MainActivity.class);
-                    intent.putExtra("data1", username);
+                    //intent.putExtra("data1", username);
                     startActivity(intent);
                     finish();
 
@@ -151,13 +151,13 @@ public class Login extends AppCompatActivity {
 
                             SharedPreferences.Editor editor = mLogin.edit();
                             editor.putInt("userid", getTaskId());
+                            editor.putString("data1", realName);
+                            editor.putString("data2", email);
+                            editor.putString("data3", fbId);
+                            editor.putString("data4", avatar);
                             editor.apply();
 
                             Intent intent = new Intent(Login.this, MainActivity.class);
-                            intent.putExtra("data1", realName);
-                            intent.putExtra("data2", email);
-                            intent.putExtra("data3", fbId);
-                            intent.putExtra("data4", avatar);
                             startActivity(intent);
                             finish();
 
@@ -223,12 +223,13 @@ public class Login extends AppCompatActivity {
 
             SharedPreferences.Editor editor = mLogin.edit();
             editor.putInt("userid", getTaskId());
+            editor.putString("data1", realName);
+            editor.putString("data2", email);
+            editor.putString("data3", fbId);
+            editor.putString("data4", avatar);
             editor.apply();
+
             Intent intent = new Intent(Login.this, MainActivity.class);
-            intent.putExtra("data1", realName);
-            intent.putExtra("data2", email);
-            intent.putExtra("data3", fbId);
-            intent.putExtra("data4", avatar);
             startActivity(intent);
             finish();
 
