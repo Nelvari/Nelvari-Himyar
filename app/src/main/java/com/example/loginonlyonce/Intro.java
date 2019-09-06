@@ -29,7 +29,7 @@ public class Intro extends AppCompatActivity {
     private LinearLayout dotsLayout;
     private TextView[] dots;
     private int[] layouts;
-    private Button btnSkip, btnNext;
+    private Button btnBack, btnNext;
     private PrefManager prefManager;
 
     @Override
@@ -50,7 +50,7 @@ public class Intro extends AppCompatActivity {
 
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
-        btnSkip = (Button) findViewById(R.id.btn_skip);
+        btnBack = (Button) findViewById(R.id.btn_skip);
         btnNext = (Button) findViewById(R.id.btn_next);
 
 
@@ -68,13 +68,6 @@ public class Intro extends AppCompatActivity {
         viewPager.setAdapter(myViewPagerAdapter);
         viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
 
-        btnSkip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                launchHomeScreen();
-            }
-        });
-
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,6 +79,16 @@ public class Intro extends AppCompatActivity {
                 }
             }
         });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int current = getItem(-1);
+                viewPager.setCurrentItem(current);
+            }
+        });
+
+
     }
 
     private void addBottomDots(int currentPage) {
@@ -123,13 +126,42 @@ public class Intro extends AppCompatActivity {
         public void onPageSelected(int position) {
             addBottomDots(position);
 
-                if (position == layouts.length - 1) {
-                btnNext.setText(getString(R.string.start));
-                btnSkip.setVisibility(View.GONE);
-            } else {
+            if (position == 0){
+
+                btnBack.setEnabled(false);
+                btnBack.setVisibility(View.GONE);
+                btnNext.setEnabled(true);
                 btnNext.setText(getString(R.string.next));
-                btnSkip.setVisibility(View.VISIBLE);
+
             }
+            else if(position == layouts.length -1){
+
+                btnBack.setEnabled(true);
+                btnBack.setVisibility(View.VISIBLE);
+                btnBack.setText(" ");
+                btnNext.setText(getString(R.string.start));
+                btnNext.setEnabled(true);
+
+            }
+            else if(position % 2 == 0){
+
+                btnBack.setEnabled(true);
+                btnBack.setVisibility(View.VISIBLE);
+                btnBack.setText(getString(R.string.back));
+                btnNext.setEnabled(true);
+                btnNext.setText(getString(R.string.next));
+
+            }
+            else if (position % 2 == 1){
+
+                btnBack.setEnabled(true);
+                btnBack.setVisibility(View.VISIBLE);
+                btnBack.setText(getString(R.string.back));
+                btnNext.setEnabled(true);
+                btnNext.setText(getString(R.string.next));
+
+            }
+
         }
 
         @Override
