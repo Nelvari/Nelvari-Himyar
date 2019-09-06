@@ -34,15 +34,17 @@ public class MainActivity extends AppCompatActivity {
         email = findViewById(R.id.email);
         id = findViewById(R.id.id);
 
-        nama.setText(getIntent().getStringExtra("data1"));
+        SharedPreferences mlogin = getSharedPreferences("login", Context.MODE_PRIVATE);
 
-        if (getIntent().getExtras() != null){
+        nama.setText(mlogin.getString("username", "missing"));
 
-            nama.setText(getIntent().getStringExtra("data1"));
-            email.setText(getIntent().getStringExtra("data2"));
-            id.setText(getIntent().getStringExtra("data3"));
+        if (getSharedPreferences("login", Context.MODE_PRIVATE) != null){
 
-            Glide.with(this).load(getIntent().getStringExtra("data4")).into(imageView);
+            nama.setText(mlogin.getString("data1", "missing"));
+            email.setText(mlogin.getString("data2", "missing"));
+            id.setText(mlogin.getString("data3", "missing"));
+
+            Glide.with(this).load(mlogin.getString("data4", "missing")).into(imageView);
 
         }
 
