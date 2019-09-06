@@ -1,41 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/persiapan">
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="KOMPETENSI KEAHLIAN"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/putih"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:textSize="13dp"
+        android:gravity="center"
+        android:text="1.Produksi Grafika"
+        android:textColor="@color/putih" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="1dp"
+        android:textSize="13dp"
+        android:text="2.Persiapan Grafika"
+        android:textColor="@color/putih" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="13dp"
+        android:text="3.Rekayasa Perangkat Lunak"
+        android:textColor="@color/putih" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="4.Desain Komunikasi Visual"
+        android:textColor="@color/putih" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="5.Animasi"
+        android:textColor="@color/putih" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="25dp">
 
         <ImageView
-            android:layout_width="@dimen/img_width_height"
-            android:layout_height="@dimen/img_width_height"
-            android:src="@drawable/persiapan" />
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:background="@drawable/pd"
+            />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="DESIGN GRAFIS"
-            android:textColor="@color/hitam"
-            android:textSize="@dimen/slide_title"
-            android:textStyle="bold" />
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="-20dp"
+            android:background="@drawable/dg"
+            android:layout_marginTop="4dp"
+            />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:paddingLeft="@dimen/desc_padding"
-            android:paddingRight="@dimen/desc_padding"
-            android:text="Raih masa depan dengan kemampuan Designmu"
-            android:textAlignment="center"
-            android:textColor="@color/hitam"
-            android:textSize="@dimen/slide_desc" />
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-</RelativeLayout>
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="130dp"
+            android:background="@drawable/rpl1"
+            />
+
+        <ImageView
+            android:layout_width="118dp"
+            android:layout_height="130dp"
+            android:background="@drawable/dkv1"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:background="@drawable/animasi"/>
+    </LinearLayout>
+</LinearLayout>
+
+
