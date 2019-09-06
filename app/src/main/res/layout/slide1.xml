@@ -1,39 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/produksi">
+    android:background="@drawable/capture1"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:text="WELCOME"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/colorAccent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SMK RADEN UMAR SAID KUDUS"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textColor="@color/colorAccent"/>
 
         <ImageView
-            android:layout_width="@dimen/img_width_height"
-            android:layout_height="@dimen/img_width_height"
-            android:src="@drawable/produksi" />
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/logobaru"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="40dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="160dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/line2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="PRODUKSI GRAFIKA"
-            android:textColor="@color/hitam"
-            android:textSize="@dimen/slide_title"
-            android:textStyle="bold" />
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:paddingLeft="@dimen/desc_padding"
-            android:paddingRight="@dimen/desc_padding"
-            android:text="Jadilah pengusaha dengan skill sablon"
-            android:textAlignment="center"
-            android:textColor="@color/hitam"
-            android:textSize="@dimen/slide_desc" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:textSize="13dp"
+                android:text="YAYASAN PENDIDIKAN ISLAM RADEN UMAR SAID KUDUS"
+                android:textColor="@color/blue" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="1dp"
+                android:textSize="13dp"
+                android:text="SMK RADEN UMAR SAID KUDUS"
+                android:textColor="@color/blue" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textSize="13dp"
+                android:text="Jl.Sukun Raya N0.9 Besito Gebog Kudus Telp.(0291)430202"
+                android:textColor="@color/blue" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="40dp"
+                android:text="Website : smkradenumarsaidkudus.sch.id"
+                android:textColor="@color/blue" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="E-mail     : smkradenumarsaidkudus@gmail.com"
+                android:textColor="@color/blue" />
+        </LinearLayout>
     </LinearLayout>
-</RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="203dp"
+        android:layout_height="109dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/depan1" />
+
+    <ImageView
+        android:layout_width="201dp"
+        android:layout_height="104dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="-40dp"
+        android:background="@drawable/tengah2" />
+
+    <ImageView
+        android:layout_width="181dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="-175dp"
+        android:background="@drawable/akhir3" />
+
+
+</LinearLayout>
