@@ -88,7 +88,6 @@ public class Login extends AppCompatActivity {
                     editor.putInt("userid", getTaskId());
                     editor.apply();
                     Intent intent = new Intent(Login.this, MainActivity.class);
-                    //intent.putExtra("data1", username);
                     startActivity(intent);
                     finish();
 
