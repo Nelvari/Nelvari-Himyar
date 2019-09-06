@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/bg"
     android:orientation="vertical">
 
@@ -9,15 +10,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginTop="60dp">
+        android:layout_marginTop="100dp">
 
     <ImageView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:background="@drawable/toga" />
     </LinearLayout>
 
     <TextView
+        android:fontFamily="@font/costumfont"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Majors for your future"
@@ -27,20 +29,23 @@
         android:textColor="@color/putih"/>
 
     <TextView
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/costumfont"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="When you know better you do better."
+        android:text="When you know better you do better"
         android:textSize="17dp"
         android:textColor="@color/putih"
         android:gravity="center"/>
 
     <TextView
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=" - Maya Angelou"
-        android:textSize="17dp"
+        android:text="-Kei wong"
         android:gravity="center"
-        android:textColor="@color/putih"/>
-
+        android:textColor="@color/putih"
+        android:textSize="17dp"
+        android:fontFamily="@font/costumfont"/>
 
 </LinearLayout>
