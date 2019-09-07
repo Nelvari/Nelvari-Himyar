@@ -69,14 +69,14 @@
             android:layout_width="150dp"
             android:layout_height="130dp"
             android:layout_gravity="center"
-            android:background="@drawable/pd"
+            android:src="@drawable/pd"
             />
 
         <ImageView
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:layout_marginLeft="-20dp"
-            android:background="@drawable/dg"
+            android:src="@drawable/dg"
             android:layout_marginTop="4dp"
             />
 
@@ -92,13 +92,13 @@
         <ImageView
             android:layout_width="125dp"
             android:layout_height="130dp"
-            android:background="@drawable/rpl1"
+            android:src="@drawable/rpl1"
             />
 
         <ImageView
             android:layout_width="118dp"
             android:layout_height="130dp"
-            android:background="@drawable/dkv1"
+            android:src="@drawable/dkv1"
             />
 
 
@@ -112,7 +112,7 @@
     <ImageView
         android:layout_width="130dp"
         android:layout_height="120dp"
-        android:background="@drawable/animasi"/>
+        android:src="@drawable/animasi"/>
     </LinearLayout>
 </LinearLayout>
 
