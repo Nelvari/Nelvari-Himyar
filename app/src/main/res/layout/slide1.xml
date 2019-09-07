@@ -11,6 +11,7 @@
         android:layout_marginTop="40dp"
         android:gravity="center"
         android:text="WELCOME"
+        android:fontFamily="light"
         android:textColor="@color/putih"
         android:textSize="15sp" />
 
@@ -18,6 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:fontFamily="light"
         android:text="SMK RADEN UMAR SAID KUDUS"
         android:textColor="@color/putih"
         android:textSize="15sp" />
@@ -35,6 +37,7 @@
         android:layout_marginTop="70dp"
         android:gravity="center"
         android:text="YAYASAN PENDIDIKAN ISLAM RADEN UMAR SAID KUDUS"
+        android:fontFamily="light"
         android:textColor="@color/putih"
         android:textSize="13dp" />
 
@@ -43,6 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
         android:gravity="center"
+        android:fontFamily="light"
         android:text="SMK RADEN UMAR SAID KUDUS"
         android:textColor="@color/putih"
         android:textSize="13dp" />
@@ -51,6 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:fontFamily="light"
         android:text="Jl.Sukun Raya N0.9 Besito Gebog Kudus Telp.(0291)430202"
         android:textColor="@color/putih"
         android:textSize="13dp" />
@@ -61,6 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:gravity="center"
+        android:fontFamily="light"
         android:text="Website : smkradenumarsaidkudus.sch.id"
         android:textColor="@color/putih" />
 
@@ -68,6 +74,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:fontFamily="light"
         android:text="E-mail : smkradenumarsaidkudus@gmail.com"
         android:textColor="@color/putih" />
 
