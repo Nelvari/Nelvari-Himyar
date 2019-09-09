@@ -19,7 +19,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.loginonlyonce.Model.ControlClass;
 import com.example.loginonlyonce.Model.PrefManager;
 
 public class Intro extends AppCompatActivity {
@@ -57,7 +56,8 @@ public class Intro extends AppCompatActivity {
         layouts = new int[]{
                 R.layout.slide1,
                 R.layout.slide2,
-                R.layout.slide3,};
+                R.layout.slide3,
+        };
 
 
         addBottomDots(0);
@@ -116,7 +116,7 @@ public class Intro extends AppCompatActivity {
 
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(Intro.this, ControlClass.class));
+        startActivity(new Intent(Intro.this, home.class));
         finish();
     }
 

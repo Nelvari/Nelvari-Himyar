@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,40 +16,21 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="220dp"
-            android:background="@drawable/logio" />
+            android:background="@mipmap/logio" />
 
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="-215dp"
-            android:background="@drawable/logobaru" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="-35dp"
-            android:text="YAYASAN PENDIDIKAN ISLAM RADEN UMAR SAID"
-            android:textColor="#ffffff"
-            android:textSize="10dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:text="SMK RADEN UMAR SAID KUDUS"
-            android:textColor="#ffffff"
-            android:textSize="10dp"
-            android:textStyle="bold" />
+            android:background="@mipmap/logobaru" />
 
         <ImageView
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginLeft="280dp"
             android:layout_marginTop="140dp"
-            android:background="@drawable/user" />
+            android:background="@mipmap/user" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -61,14 +41,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="30dp">
-
-                <View
-                    android:layout_width="8dp"
-                    android:layout_height="200dp"
-                    android:layout_marginLeft="30dp"
-                    android:background="@drawable/line2" />
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -79,10 +53,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:textStyle="bold"
                         android:layout_marginTop="20dp"
                         android:text="PETUNJUK PENDAFTARAN"
-                        android:textColor="@color/blue" />
+                        android:textColor="@color/blue"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -123,24 +97,30 @@
 
 
                 </LinearLayout>
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@drawable/line2" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="220dp"
+                android:layout_marginTop="50dp"
                 android:text="Good Luck !  "
                 android:textColor="@color/blue"
-                android:textStyle="bold"
                 android:textSize="17dp"
-                android:layout_marginLeft="220dp"
-                android:layout_marginTop="50dp"/>
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="8dp"
@@ -149,21 +129,13 @@
 
 
         </LinearLayout>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="60dp"
-            android:text="PILIH JURUSAN :"
-            android:textStyle="bold"
-            android:textColor="@color/blue" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:clipToPadding="false"
             android:gravity="center"
-            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
@@ -184,13 +156,7 @@
                     <ImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/produksi" />
-
-                    <View
-                        android:layout_width="110dp"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="15dp"
-                        android:background="@color/hitam" />
+                        android:src="@mipmap/produksi" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -200,6 +166,12 @@
                         android:padding="5dp"
                         android:text="PRODUKSI"
                         android:textColor="@color/hitam" />
+
+                    <View
+                        android:layout_width="110dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/hitam" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -221,13 +193,7 @@
                     <ImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/persiapan" />
-
-                    <View
-                        android:layout_width="110dp"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="15dp"
-                        android:background="@color/hitam" />
+                        android:src="@mipmap/persiapan" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -237,6 +203,12 @@
                         android:padding="5dp"
                         android:text="PERSIAPAN"
                         android:textColor="@color/hitam" />
+
+                    <View
+                        android:layout_width="110dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/hitam" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -268,13 +240,7 @@
                     <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:src="@drawable/rpl" />
-
-                    <View
-                        android:layout_width="110dp"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="15dp"
-                        android:background="@color/hitam" />
+                        android:src="@mipmap/rpl" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -284,94 +250,125 @@
                         android:padding="5dp"
                         android:text="RPL"
                         android:textColor="@color/hitam" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:id="@+id/dkv"
-                android:layout_width="160dp"
-                android:layout_height="200dp"
-                android:layout_margin="10dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:background="@color/dkv"
-                    >
-                    <ImageView
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:src="@drawable/dkv"/>
                     <View
                         android:layout_width="110dp"
                         android:layout_height="1dp"
                         android:layout_marginTop="15dp"
                         android:background="@color/hitam" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/dkv"
+                android:layout_width="160dp"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/dkv"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:src="@mipmap/dkv" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="DKV"
-                        android:padding="5dp"
                         android:layout_marginTop="15dp"
-                        android:textColor="@color/hitam"/>
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="DKV"
+                        android:textColor="@color/hitam" />
+
+                    <View
+                        android:layout_width="110dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/hitam" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="-35dp"
+            android:text="YAYASAN PENDIDIKAN ISLAM RADEN UMAR SAID"
+            android:textColor="#ffffff"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:text="SMK RADEN UMAR SAID KUDUS"
+            android:textColor="#ffffff"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="60dp"
+            android:text="PILIH JURUSAN :"
+            android:textColor="@color/blue"
+            android:textStyle="bold" />
 
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/animasi"
+            android:layout_width="160dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="200dp"
+                android:background="@color/anim"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:src="@mipmap/anim" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:padding="5dp"
+                    android:text="ANIMASI"
+                    android:textColor="@color/hitam" />
+
+                <View
+                    android:layout_width="110dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/hitam" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
 
-                    <androidx.cardview.widget.CardView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-
-                        android:layout_width="160dp"
-                        android:layout_height="200dp"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginTop="10dp">
-
-                        <LinearLayout
-                            android:layout_width="160dp"
-                            android:layout_height="200dp"
-                            android:background="@color/anim"
-                            android:orientation="vertical"
-                            >
-
-                            <ImageView
-                                android:layout_width="70dp"
-                                android:layout_height="70dp"
-                                android:src="@drawable/anim"
-                                android:layout_marginTop="30dp"
-                                android:layout_gravity="center"/>
-
-                            <View
-                                android:layout_width="110dp"
-                                android:layout_height="1dp"
-                                android:layout_marginTop="15dp"
-                                android:layout_gravity="center"
-                                android:background="@color/hitam" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="15dp"
-                                android:layout_gravity="center"
-                                android:padding="5dp"
-                                android:text="ANIMASI"
-                                android:textColor="@color/hitam" />
-
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-
-        </LinearLayout>
-
+    </LinearLayout>
 
 
 </ScrollView>
