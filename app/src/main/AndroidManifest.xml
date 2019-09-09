@@ -9,19 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
-        <activity android:name=".DKV"></activity>
+        <activity android:name=".desaingrafis"></activity>
+        <activity android:name=".animasi" />
+        <activity android:name=".DKV" />
         <activity android:name=".RPL" />
-        <activity android:name=".mainmenu" />
-        <activity android:name=".FormulirPendaftaran" />
-=======
-        <activity android:name=".Produksi"
-            android:parentActivityName=".home"/>
+        <activity
+            android:name=".Produksi"
+            android:parentActivityName=".home" />
         <activity
             android:name=".FormulirPendaftaran"
             android:parentActivityName=".home" />
-        <activity android:name=".mainmenu"></activity>
->>>>>>> 3dcc40a73027f5fae11b414789d42765e1c5fa53
+        <activity android:name=".mainmenu" />
         <activity android:name=".kartutes" />
         <activity android:name=".pembayaran" />
         <activity android:name=".registrasi" />
