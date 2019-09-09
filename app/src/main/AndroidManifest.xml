@@ -20,6 +20,9 @@
             android:name=".FormulirPendaftaran"
             android:parentActivityName=".home" />
         <activity android:name=".mainmenu"></activity>
+        <activity android:name=".desaingrafis"></activity>
+        <activity android:name=".animasi" />
+
         <activity android:name=".kartutes" />
         <activity android:name=".pembayaran" />
         <activity android:name=".registrasi" />

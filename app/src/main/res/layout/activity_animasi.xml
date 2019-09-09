@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bkg"
-    tools:context=".DKV">
+    tools:context=".animasi">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,17 +17,16 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/DKV"
-            android:theme="@style/ActionBarThemeOverlay">
+            android:background="@color/anim">
 
         </androidx.appcompat.widget.Toolbar>
 
         <LinearLayout
             android:layout_width="340dp"
-            android:layout_height="255dp"
+            android:layout_height="169dp"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
-            android:background="@drawable/dkv"
+            android:background="@drawable/anima"
             android:orientation="vertical">
 
             <TextView
@@ -39,42 +38,42 @@
 
             <TextView
                 android:layout_width="285dp"
-                android:layout_height="176dp"
+                android:layout_height="110dp"
                 android:layout_gravity="center"
-                android:text="Jurusan Desain Komunikasi Visual(DKV) mempelajari ilmu tentang penyampaian pesan (komunikasi)dengan menggunakan elemen-elemen visual atau rupa. Disini kamu akan belajar untuk mengolah pesan se-kreatif mungkin agar pesan dapat mencapai sasaran dengan memperhatikan unsur bentuk,warna,tekstur, ruang, huruf,dan segala hal yang berkaitan dengan visual (pengelihatan). " />
+                android:text="Animasi merupakan suatu Teknik menampilkan gambar berurut sedemikian rupa sehingga penonton merasakan adanya ilusi gerakan (motion) pada gambar yang ditampilkan. "/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="340dp"
-            android:layout_height="111dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:background="@drawable/dkv"
+            android:background="@drawable/anima"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:text="jurusan  ini juga tepat untuk kamu yang suka menggambar secara manual atapun menggunakan perangkat lunak desain grafis, fotografi, videografi, serta membuat animasi." />
+                android:text="Secara umum ilusi gerakan merupakan perubahan yang dideteksi secara visual oleh mata penonton sehingga tidak harus perubahan yang terjadi merupakan perubahan posisi sebagai makna dari istilah 'gerakan'."/>
 
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="340dp"
-            android:layout_height="174dp"
+            android:layout_height="214dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:background="@drawable/dkv"
+            android:background="@drawable/anima"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:text="PERSYARATAN PENDAFTAR" />
+                android:text="PERSYARATAN PENDAFTAR"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -106,6 +105,12 @@
                 android:layout_marginLeft="20dp"
                 android:text="5.Pas Foto 3x5. "/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="6.Sertakan 1 contoh gambar ilustrasi buatan anda."/>
+
         </LinearLayout>
 
         <Button
@@ -114,13 +119,10 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_margin="20dp"
-            android:background="@color/DKV"
+            android:background="@color/anim"
             android:text="LOGIN SEKARANG"
             android:textColor="@color/putih"/>
 
-
-
-
-
     </LinearLayout>
+
 </ScrollView>

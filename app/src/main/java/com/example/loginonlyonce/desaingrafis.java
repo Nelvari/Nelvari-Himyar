@@ -10,27 +10,27 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.example.loginonlyonce.Model.ControlClass;
 
-public class Produksi extends AppCompatActivity {
+public class desaingrafis extends AppCompatActivity {
 
     Button btnLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_produksi);
+        setContentView(R.layout.activity_desaingrafis);
 
-        btnLogin = findViewById(R.id.btnlogin);
         Toolbar toolbar = findViewById(R.id.toolbar);
+        btnLogin = findViewById(R.id.btnlogin);
 
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("PRODUKSI");
+        getSupportActionBar().setTitle("DKV");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(Produksi.this, ControlClass.class);
+                Intent intent = new Intent(desaingrafis.this, ControlClass.class);
                 startActivity(intent);
                 finish();
 

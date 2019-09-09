@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bkg"
-    tools:context=".DKV">
+    tools:context=".desaingrafis">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,17 +17,16 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/DKV"
-            android:theme="@style/ActionBarThemeOverlay">
+            android:background="@color/persiapan">
 
         </androidx.appcompat.widget.Toolbar>
 
         <LinearLayout
             android:layout_width="340dp"
-            android:layout_height="255dp"
+            android:layout_height="205dp"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
-            android:background="@drawable/dkv"
+            android:background="@drawable/dg"
             android:orientation="vertical">
 
             <TextView
@@ -39,25 +38,25 @@
 
             <TextView
                 android:layout_width="285dp"
-                android:layout_height="176dp"
+                android:layout_height="128dp"
                 android:layout_gravity="center"
-                android:text="Jurusan Desain Komunikasi Visual(DKV) mempelajari ilmu tentang penyampaian pesan (komunikasi)dengan menggunakan elemen-elemen visual atau rupa. Disini kamu akan belajar untuk mengolah pesan se-kreatif mungkin agar pesan dapat mencapai sasaran dengan memperhatikan unsur bentuk,warna,tekstur, ruang, huruf,dan segala hal yang berkaitan dengan visual (pengelihatan). " />
+                android:text="Jurusan Design Grafis adalah jurusan yang berhubungan dengan bagaimana visual communication dibuat dan dapat menimbulkan sebuah pengaruh bagi pembaca.Cakupan kerjanya yang cukup luas.Dari buku sampai program multimedia, covers CD  dan logo."/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="340dp"
-            android:layout_height="111dp"
+            android:layout_height="129dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:background="@drawable/dkv"
+            android:background="@drawable/dg"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:text="jurusan  ini juga tepat untuk kamu yang suka menggambar secara manual atapun menggunakan perangkat lunak desain grafis, fotografi, videografi, serta membuat animasi." />
+                android:text="Jurusan ini  harus mempersiapkan Anda untuk mampu menyelesaikan masalah design, memahami target pembaca, menguasai tools dan technology (termasuk offset printing, photography dan media interaktif)."/>
 
 
         </LinearLayout>
@@ -67,14 +66,14 @@
             android:layout_height="174dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:background="@drawable/dkv"
+            android:background="@drawable/dg"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:text="PERSYARATAN PENDAFTAR" />
+                android:text="PERSYARATAN PENDAFTAR"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -114,13 +113,10 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_margin="20dp"
-            android:background="@color/DKV"
+            android:background="@color/persiapan"
             android:text="LOGIN SEKARANG"
             android:textColor="@color/putih"/>
 
-
-
-
-
     </LinearLayout>
+
 </ScrollView>
