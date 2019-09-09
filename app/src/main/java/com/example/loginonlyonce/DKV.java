@@ -1,8 +1,9 @@
 package com.example.loginonlyonce;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class DKV extends AppCompatActivity {
 
@@ -10,5 +11,12 @@ public class DKV extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dkv);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("RPL");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 }

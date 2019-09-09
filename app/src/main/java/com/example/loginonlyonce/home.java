@@ -58,7 +58,7 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent hi = new Intent(home.this, ControlClass.class);
+                Intent hi = new Intent(home.this, DKV.class);
                 startActivity(hi);
 
             }
@@ -68,7 +68,7 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent hi = new Intent(home.this, ControlClass.class);
+                Intent hi = new Intent(home.this, RPL.class);
                 startActivity(hi);
 
             }
