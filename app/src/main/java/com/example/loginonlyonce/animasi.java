@@ -23,7 +23,7 @@ public class animasi extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnlogin);
 
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("DKV");
+        getSupportActionBar().setTitle("ANIMASI");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {

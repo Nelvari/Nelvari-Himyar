@@ -23,7 +23,7 @@ public class desaingrafis extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnlogin);
 
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("DKV");
+        getSupportActionBar().setTitle("DESAIN GRAFIS");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
