@@ -228,7 +228,7 @@ public class Login extends AppCompatActivity {
             editor.putString("data4", avatar);
             editor.apply();
 
-            Intent intent = new Intent(Login.this, MainActivity.class);
+            Intent intent = new Intent(Login.this, FormulirPendaftaran.class);
             startActivity(intent);
             finish();
 

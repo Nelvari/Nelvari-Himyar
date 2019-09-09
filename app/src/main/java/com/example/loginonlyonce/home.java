@@ -28,9 +28,8 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent hi = new Intent(home.this, ControlClass.class);
+                Intent hi = new Intent(home.this, Produksi.class);
                 startActivity(hi);
-                finish();
 
             }
         });
@@ -41,7 +40,6 @@ public class home extends AppCompatActivity {
 
                 Intent hi = new Intent(home.this, ControlClass.class);
                 startActivity(hi);
-                finish();
 
             }
         });
@@ -52,7 +50,6 @@ public class home extends AppCompatActivity {
 
                 Intent hi = new Intent(home.this, ControlClass.class);
                 startActivity(hi);
-                finish();
 
             }
         });
@@ -63,7 +60,6 @@ public class home extends AppCompatActivity {
 
                 Intent hi = new Intent(home.this, ControlClass.class);
                 startActivity(hi);
-                finish();
 
             }
         });
@@ -74,7 +70,6 @@ public class home extends AppCompatActivity {
 
                 Intent hi = new Intent(home.this, ControlClass.class);
                 startActivity(hi);
-                finish();
 
             }
         });

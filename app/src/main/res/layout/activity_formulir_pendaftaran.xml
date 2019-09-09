@@ -26,19 +26,20 @@
 
             </androidx.appcompat.widget.Toolbar>
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/icon"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:src="@mipmap/user" />
+                android:clickable="true"/>
 
             <TextView
+                android:id="@+id/nama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:text="Username"
                 android:textColor="@color/lightgray"
                 android:textSize="15dp" />
 
