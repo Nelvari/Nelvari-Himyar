@@ -138,7 +138,7 @@ public class Intro extends AppCompatActivity {
 
                 btnBack.setEnabled(true);
                 btnBack.setVisibility(View.VISIBLE);
-                btnBack.setText(" ");
+                btnBack.setText(getString(R.string.back));
                 btnNext.setText(getString(R.string.start));
                 btnNext.setEnabled(true);
 

@@ -10,9 +10,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".inbox"></activity>
         <activity android:name=".mainmenu" />
-        <activity android:name=".FormulirPendaftaran" />
+
+
+        <activity android:name=".desaingrafis"></activity>
+        <activity android:name=".animasi" />
+        <activity android:name=".DKV" />
+        <activity android:name=".RPL" />
+        <activity
+            android:name=".Produksi"
+            android:parentActivityName=".home" />
+        <activity
+            android:name=".FormulirPendaftaran"
+            android:parentActivityName=".home" />
+
+
         <activity android:name=".kartutes" />
         <activity android:name=".pembayaran" />
         <activity android:name=".registrasi" />
@@ -20,6 +34,15 @@
         <activity android:name=".home" />
         <activity android:name=".Login" />
         <activity android:name=".Model.ControlClass" />
+        <activity
+            android:name=".DataAsalSekolah"
+            android:parentActivityName=".FormulirPendaftaran" />
+        <activity
+            android:name=".DataOrangTua"
+            android:parentActivityName=".FormulirPendaftaran" />
+        <activity
+            android:name=".DataSiswa"
+            android:parentActivityName=".FormulirPendaftaran" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

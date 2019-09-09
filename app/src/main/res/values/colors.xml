@@ -10,13 +10,21 @@
     <color name="putih">#ffffff</color>
     <color name="fb">#314EBC</color>
     <color name="persiapan">#90CCF4</color>
-    <color name="rpl">#F3D250</color>
+    <color name="rpl">#FFEB69</color>
     <color name="dkv">#ECECEC</color>
     <color name="anim">#F78888</color>
     <color name="bg">#5F71B6</color>
     <color name="back">#24305e</color>
     <color name="abuabu">#707070</color>
+<<<<<<< HEAD
+    <color name="bkg">#f6f6f6</color>
+=======
     <color name="blu">#5C60BE</color>
+<<<<<<< HEAD
+    <color name="DKV">#C7C4C4</color>
+=======
+>>>>>>> f38b9752567a65e8b7f0214605c156d3e04069bf
+>>>>>>> 3dcc40a73027f5fae11b414789d42765e1c5fa53
 
     <!-- dots inactive colors -->
     <color name="dot_dark_screen1">#FFFFF0</color>

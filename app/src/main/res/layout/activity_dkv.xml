@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bkg"
+    tools:context=".DKV">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/DKV">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_height="255dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/dkv"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="TENTANG :"
+                android:textColor="@color/hitam" />
+
+            <TextView
+                android:layout_width="285dp"
+                android:layout_height="176dp"
+                android:layout_gravity="center"
+                android:text="Jurusan Desain Komunikasi Visual(DKV)
+mempelajari ilmu tentang penyampaian pesan
+(komunikasi)dengan menggunakan elemen-elemen
+visual atau rupa. Disini kamu akan belajar untuk
+mengolah pesan se-kreatif mungkin agar pesan
+dapat mencapai sasaran dengan memperhatikan
+unsur bentuk,warna,tekstur, ruang, huruf,dan
+segala hal yang berkaitan dengan visual
+(pengelihatan). "
+                android:textColor="@color/hitam" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_height="111dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/dkv"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="jurusan  ini juga tepat untuk kamu yang
+suka menggambar secara manual atapun
+menggunakan perangkat lunak desain
+grafis, fotografi, videografi, serta membuat
+animasi."
+                android:textColor="@color/hitam" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_height="174dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/dkv"
+            android:orientation="vertical"
+            android:textColor="@color/hitam">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="PERSYARATAN PENDAFTAR"
+                android:textColor="@color/hitam" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="1.Foto Copy Nilai Raport Semester 5/nilai UN."
+                android:textColor="@color/hitam" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="2.Akta Kelahiran."
+                android:textColor="@color/hitam" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="3.Kartu Keluarga (KK)."
+                android:textColor="@color/hitam" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="4.Riwayat Kesehatan"
+                android:textColor="@color/hitam" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="5.Pas Foto 3x5. "
+                android:textColor="@color/hitam" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@color/DKV"
+            android:text="LOGIN SEKARANG"
+            android:textColor="@color/putih"/>
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>

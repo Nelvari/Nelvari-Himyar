@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bkg"
+    tools:context=".desaingrafis">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/persiapan">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_height="205dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/dg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="TENTANG :"
+                android:textColor="@color/hitam" />
+
+            <TextView
+                android:layout_width="285dp"
+                android:layout_height="128dp"
+                android:layout_gravity="center"
+                android:text="Jurusan Design Grafis adalah jurusan
+yang berhubungan dengan bagaimana
+visual communication dibuat dan dapat
+menimbulkan sebuah pengaruh bagi
+pembaca.Cakupan kerjanya yang cukup
+luas.Dari buku sampai program
+multimedia, covers CD  dan logo."
+                android:textColor="@color/hitam" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_height="129dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/dg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Jurusan ini  harus mempersiapkan Anda
+untuk mampu menyelesaikan masalah
+design, memahami target pembaca,
+menguasai tools dan technology
+(termasuk offset printing, photography
+dan media interaktif)."
+                android:textColor="@color/hitam" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_height="174dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/dg"
+            android:orientation="vertical"
+            android:textColor="@color/hitam">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="PERSYARATAN PENDAFTAR"
+                android:textColor="@color/hitam" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="1.Foto Copy Nilai Raport Semester 5/nilai UN."
+                android:textColor="@color/hitam" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="2.Akta Kelahiran."
+                android:textColor="@color/hitam" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="3.Kartu Keluarga (KK)."
+                android:textColor="@color/hitam" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="4.Riwayat Kesehatan"
+                android:textColor="@color/hitam" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="5.Pas Foto 3x5. "
+                android:textColor="@color/hitam" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@color/persiapan"
+            android:text="LOGIN SEKARANG"
+            android:textColor="@color/putih"/>
+
+    </LinearLayout>
+
+</ScrollView>
