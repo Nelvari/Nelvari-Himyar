@@ -118,6 +118,7 @@ bukti/struk transfer di bawah ini. "/>
             android:layout_marginLeft="35dp"/>
 
 
+
         <LinearLayout
             android:layout_width="330dp"
             android:layout_height="635dp"
@@ -137,7 +138,9 @@ bukti/struk transfer di bawah ini. "/>
                 android:layout_margin="20dp"
                 android:hint="Atas nama calon siswa" />
 
+
             <Button
+                android:id="@+id/btnupload"
                 android:layout_width="162dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
@@ -145,14 +148,13 @@ bukti/struk transfer di bawah ini. "/>
                 android:background="@color/colorAccent"
                 android:text="Upload Struk"
                 android:textColor="@color/putih" />
-
             <ImageView
+                android:id="@+id/ivgambar"
                 android:layout_width="258dp"
                 android:layout_height="298dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/img" />
-
             <Button
                 android:layout_width="162dp"
                 android:layout_height="40dp"
