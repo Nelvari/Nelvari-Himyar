@@ -16,6 +16,7 @@
     <color name="bg">#5F71B6</color>
     <color name="back">#24305e</color>
     <color name="abuabu">#707070</color>
+    <color name="blu">#5C60BE</color>
 
     <!-- dots inactive colors -->
     <color name="dot_dark_screen1">#FFFFF0</color>
