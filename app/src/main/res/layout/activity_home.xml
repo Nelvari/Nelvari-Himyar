@@ -4,15 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
         android:orientation="vertical"
-        tools:context=".MainActivity">
-
+        android:layout_height="wrap_content">
 
         <ImageView
             android:layout_width="match_parent"
@@ -52,84 +50,82 @@
             android:layout_marginTop="165dp"
             android:background="@mipmap/user" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
 
+            <View
+                android:layout_width="8dp"
+                android:layout_height="170dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/line2" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
-                <View
-                    android:layout_width="8dp"
-                    android:layout_height="170dp"
-                    android:layout_marginLeft="30dp"
-                    android:background="@drawable/line2" />
+                <TextView
+                    android:layout_width="188dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/hitam"
+                    android:text="PETUNJUK PENDAFTARAN"
+                    android:textStyle="bold" />
 
-                <LinearLayout
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="1.Pilih jurusan yang ingin anda tempuh."
+                    android:textColor="@color/hitam" />
 
-                    <TextView
-                        android:layout_width="188dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="20dp"
-                        android:textColor="@color/hitam"
-                        android:text="PETUNJUK PENDAFTARAN"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="15dp"
-                        android:text="1.Pilih jurusan yang ingin anda tempuh."
-                        android:textColor="@color/hitam" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:text="2.Isi data data yang sudah kami cantumkan."
-                        android:textColor="@color/hitam" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="2.Isi data data yang sudah kami cantumkan."
+                    android:textColor="@color/hitam" />
 
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:text="3.kemudian seterusnya,isi data data orang tua dan data data sekolah."
-                        android:textColor="@color/hitam" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="3.kemudian seterusnya,isi data data orang tua dan data data sekolah."
+                    android:textColor="@color/hitam" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:text="4.jika sudah di isi semua , lalu simpan."
-                        android:textColor="@color/hitam" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="4.jika sudah di isi semua , lalu simpan."
+                    android:textColor="@color/hitam" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:text="5.Pastikan anda benar benar sudah menyimpan nya."
-                        android:textColor="@color/hitam" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="5.Pastikan anda benar benar sudah menyimpan nya."
+                    android:textColor="@color/hitam" />
 
-
-                </LinearLayout>
 
             </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="60dp"
-        android:text="PILIH JURUSAN :"
-        android:textStyle="bold"
-        android:textColor="@color/hitam" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="60dp"
+            android:text="PILIH JURUSAN :"
+            android:textStyle="bold"
+            android:textColor="@color/hitam" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -158,8 +154,6 @@
                         android:layout_height="70dp"
                         android:src="@mipmap/produksi" />
 
-
-
                     <View
                         android:layout_width="110dp"
                         android:layout_height="1dp"
@@ -174,6 +168,7 @@
                         android:text="PRODUKSI"
                         android:textColor="@color/hitam" />
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -301,51 +296,53 @@
         </LinearLayout>
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
 
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/animasi"
-            android:layout_width="150dp"
-            android:layout_height="200dp"
-            android:layout_marginLeft="55dp"
-            android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground">
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/animasi"
+                android:layout_width="150dp"
                 android:layout_height="200dp"
-                android:background="@color/anim"
-                android:orientation="vertical">
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground">
 
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="30dp"
-                    android:src="@mipmap/anim" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/anim"
+                    android:orientation="vertical">
 
-
-
-                <View
-                    android:layout_width="110dp"
-                    android:layout_height="1dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="15dp"
-                    android:background="@color/hitam" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="15dp"
-                    android:padding="5dp"
-                    android:text="ANIMASI"
-                    android:textColor="@color/hitam" />
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:src="@mipmap/anim" />
 
 
+
+                    <View
+                        android:layout_width="110dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/hitam" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:padding="5dp"
+                        android:text="ANIMASI"
+                        android:textColor="@color/hitam" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
 
     </LinearLayout>
 
