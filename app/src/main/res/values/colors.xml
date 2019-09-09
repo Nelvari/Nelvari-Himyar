@@ -16,7 +16,11 @@
     <color name="bg">#5F71B6</color>
     <color name="back">#24305e</color>
     <color name="abuabu">#707070</color>
+<<<<<<< HEAD
     <color name="bkg">#f6f6f6</color>
+=======
+    <color name="blu">#5C60BE</color>
+>>>>>>> f38b9752567a65e8b7f0214605c156d3e04069bf
 
     <!-- dots inactive colors -->
     <color name="dot_dark_screen1">#FFFFF0</color>
