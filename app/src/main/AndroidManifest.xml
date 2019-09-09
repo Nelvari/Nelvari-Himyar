@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.loginonlyonce">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -9,6 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity android:name=".inbox"></activity>
+        <activity android:name=".mainmenu" />
+
+
         <activity android:name=".desaingrafis"></activity>
         <activity android:name=".animasi" />
         <activity android:name=".DKV" />
@@ -19,7 +25,8 @@
         <activity
             android:name=".FormulirPendaftaran"
             android:parentActivityName=".home" />
-        <activity android:name=".mainmenu" />
+
+
         <activity android:name=".kartutes" />
         <activity android:name=".pembayaran" />
         <activity android:name=".registrasi" />
@@ -66,6 +73,6 @@
             android:value="@string/facebook_app_id" />
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET" />
+
 
 </manifest>
