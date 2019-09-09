@@ -19,7 +19,7 @@
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_marginTop="60dp"
-            android:background="@drawable/logobaru"/>
+            android:background="@mipmap/logobaru"/>
 
         <TextView
             android:layout_width="match_parent"

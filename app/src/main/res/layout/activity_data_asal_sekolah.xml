@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DataAsalSekolah">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+       <androidx.appcompat.widget.Toolbar
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/toolbar"
+            android:background="@color/colorPrimaryDark"
+           android:theme="@style/ActionBarThemeOverlay">
+
+       </androidx.appcompat.widget.Toolbar>
+
+       <TextView
+           android:layout_marginTop="50dp"
+           android:layout_marginBottom="20dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Formulir Sekolah Asal"
+           android:gravity="center"
+           android:textSize="20dp"
+           android:textStyle="bold"/>
+
+       <androidx.cardview.widget.CardView
+           android:layout_marginHorizontal="10sp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_marginTop="10dp"
+               android:layout_marginHorizontal="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:gravity="center">
+
+               <EditText
+                   android:id="@+id/namaSekolah"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:inputType="text"
+                   android:textSize="15dp"
+                   android:hint="Nama"/>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_marginHorizontal="10dp"
+               android:layout_marginTop="50sp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:gravity="center">
+
+               <EditText
+                   android:id="@+id/alamatSekolah"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:inputType="text"
+                   android:textSize="15dp"
+                   android:hint="Alamat"/>
+
+           </LinearLayout>
+
+       </androidx.cardview.widget.CardView>
+
+       <androidx.cardview.widget.CardView
+           android:layout_marginTop="10dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginHorizontal="10sp">
+
+           <TextView
+               android:layout_marginHorizontal="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="STTB/Ijazah/Surat Tenda Kelulusan/Surat Tanda Lulus"
+               android:textSize="15dp"
+               android:textStyle="bold"
+               android:layout_marginTop="10dp"/>
+
+           <LinearLayout
+               android:layout_marginTop="40dp"
+               android:layout_marginHorizontal="20dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:gravity="center">
+
+               <EditText
+                   android:id="@+id/tahunSTTB"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:inputType="numberDecimal"
+                   android:textSize="15dp"
+                   android:hint="Tahun"/>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_marginTop="70dp"
+               android:layout_marginHorizontal="20dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:gravity="center">
+
+               <EditText
+                   android:id="@+id/noSTTB"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:inputType="numberDecimal"
+                   android:textSize="15dp"
+                   android:hint="Nomor"/>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_marginTop="100dp"
+               android:layout_marginHorizontal="20dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:gravity="center">
+
+               <EditText
+                   android:id="@+id/nilaiSTTb"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:inputType="numberDecimal"
+                   android:textSize="15dp"
+                   android:hint="Nilai"/>
+
+           </LinearLayout>
+
+       </androidx.cardview.widget.CardView>
+
+       <Button
+           android:id="@+id/btnSav"
+           android:layout_marginHorizontal="20sp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:layout_marginTop="200sp"
+           android:layout_marginBottom="20sp"
+           android:background="@drawable/button"
+           android:text="Simpan"
+           android:textStyle="bold"
+           android:textColor="@android:color/white"/>
+
+   </LinearLayout>
+
+</ScrollView>

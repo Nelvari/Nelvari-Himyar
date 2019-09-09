@@ -7,8 +7,8 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.loginonlyonce.FormulirPendaftaran;
 import com.example.loginonlyonce.Login;
-import com.example.loginonlyonce.MainActivity;
 
 public class ControlClass extends AppCompatActivity {
 
@@ -28,7 +28,7 @@ public class ControlClass extends AppCompatActivity {
         }
         else {
 
-            Intent in = new Intent(ControlClass.this, MainActivity.class);
+            Intent in = new Intent(ControlClass.this, FormulirPendaftaran.class);
             startActivity(in);
             finish();
 

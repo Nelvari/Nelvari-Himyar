@@ -129,8 +129,9 @@ bukti/struk transfer di bawah ini. "/>
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/form" />
+                android:layout_height="45dp"
+
+                android:background="@mipmap/form" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -148,13 +149,15 @@ bukti/struk transfer di bawah ini. "/>
                 android:background="@color/colorAccent"
                 android:text="Upload Struk"
                 android:textColor="@color/putih" />
+
             <ImageView
                 android:id="@+id/ivgambar"
                 android:layout_width="258dp"
-                android:layout_height="298dp"
+                android:layout_height="271dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
-                android:background="@drawable/img" />
+                android:background="@mipmap/img" />
+
             <Button
                 android:layout_width="162dp"
                 android:layout_height="40dp"
