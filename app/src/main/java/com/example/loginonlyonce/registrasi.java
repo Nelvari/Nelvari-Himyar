@@ -1,11 +1,14 @@
 package com.example.loginonlyonce;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
+
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
@@ -26,18 +29,21 @@ public class registrasi extends AppCompatActivity {
 
 
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrasi);
+
 
         txtusername = findViewById(R.id.txtusername);
         notelp = findViewById(R.id.notelp);
         email = findViewById(R.id.email);
         txtpassword = findViewById(R.id.txtpassword);
         konfirmpass = findViewById(R.id.konfirmpass);
-        Button btnbuat = findViewById(R.id.btnbuat);
-
+         btnbuat = findViewById(R.id.btnbuat);
 
 
         AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/login")
@@ -58,6 +64,18 @@ public class registrasi extends AppCompatActivity {
 
                     }
                 });
+
+        btnbuat = findViewById(R.id.btnbuat);
+
+        btnbuat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(registrasi.this, Login.class);
+                startActivity(intent);
+
+            }
+        });
 
 
     }

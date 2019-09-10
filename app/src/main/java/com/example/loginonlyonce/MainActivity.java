@@ -57,6 +57,31 @@ public class MainActivity extends AppCompatActivity {
                 editor.clear();
                 editor.apply();
 
+                SharedPreferences mInfo = getSharedPreferences("info", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editorInfo = mInfo.edit();
+                editorInfo.clear();
+                editorInfo.apply();
+
+                SharedPreferences mInfoDg = getSharedPreferences("infoDg", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editorInfoDg = mInfoDg.edit();
+                editorInfoDg.clear();
+                editorInfoDg.apply();
+
+                SharedPreferences mInfoRPL = getSharedPreferences("infoRPL", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editorInfoRPL = mInfoRPL.edit();
+                editorInfoRPL.clear();
+                editorInfoRPL.apply();
+
+                SharedPreferences mInfoDKV = getSharedPreferences("infoDKV", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editorInfoDKV = mInfoDKV.edit();
+                editorInfoDKV.clear();
+                editorInfoDKV.apply();
+
+                SharedPreferences mInfoAnimasi = getSharedPreferences("infoAnimasi", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editorInfoAnimasi = mInfoAnimasi.edit();
+                editorInfoAnimasi.clear();
+                editorInfoAnimasi.apply();
+
                 LoginManager.getInstance().logOut();
 
                 Intent intent = new Intent(MainActivity.this, SplashScreen.class);

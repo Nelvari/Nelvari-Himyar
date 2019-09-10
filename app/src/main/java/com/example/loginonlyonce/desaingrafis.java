@@ -1,6 +1,8 @@
 package com.example.loginonlyonce;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +20,12 @@ public class desaingrafis extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_desaingrafis);
+
+        SharedPreferences mInfoDg = getSharedPreferences("infoDg", Context.MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = mInfoDg.edit();
+        editor.putInt("userInfoDg", 1);
+        editor.apply();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         btnLogin = findViewById(R.id.btnlogin);
