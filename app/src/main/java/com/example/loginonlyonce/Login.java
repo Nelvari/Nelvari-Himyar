@@ -16,6 +16,9 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.androidnetworking.AndroidNetworking;
+import com.androidnetworking.common.Priority;
+import com.androidnetworking.error.ANError;
+import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -30,6 +33,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
+import com.google.gson.JsonObject;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -50,6 +54,7 @@ public class Login extends AppCompatActivity {
     public String realName;
     public String email;
     public String avatar;
+    String token="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,19 +78,42 @@ public class Login extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 SharedPreferences mLogin = getSharedPreferences("login", Context.MODE_PRIVATE);
-
-                final String username = txtusername.getText().toString().trim();
-                final String password = txtpassword.getText().toString().trim();
-
-                if (username.isEmpty() || password.isEmpty()) {
+                if (txtusername.getText().toString().isEmpty() || txtpassword.getText().toString().isEmpty()) {
                     Toast.makeText(Login.this, "please fill my heart first to send a request :(", Toast.LENGTH_SHORT).show();
                 }
                 else {
+                    AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/login")
+                            .addBodyParameter("username", txtusername.getText().toString())
+                            .addBodyParameter("password", txtpassword.getText().toString())
+                            .addBodyParameter("role", "superadmin")
+                            .setTag("test")
+                            .setPriority(Priority.MEDIUM)
+                            .build()
+                            .getAsJSONObject(new JSONObjectRequestListener() {
+                                @Override
+                                public void onResponse(JSONObject response) {
+                                    // do anything with response
+                                    try {
+                                        String status=response.getString("STATUS");
+                                        if(status.equalsIgnoreCase("SUCCES")){
+                                            JSONObject getdata=response.getJSONObject("PAYLOAD");
+                                            token=getdata.getString("login_token");
+
+                                        }
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                                @Override
+                                public void onError(ANError error) {
+                                    Log.d("gagal login", "onResponse: "+error.toString());
+                                }
+                            });
 
                     SharedPreferences.Editor editor = mLogin.edit();
-                    editor.putString("username", username);
+                    editor.putString("username", txtusername.getText().toString());
+                    editor.putString("data1", txtusername.getText().toString());
                     editor.putInt("userid", getTaskId());
                     editor.apply();
                     Intent intent = new Intent(Login.this, FormulirPendaftaran.class);
