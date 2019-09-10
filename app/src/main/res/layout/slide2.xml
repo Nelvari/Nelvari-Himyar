@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/bg"
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/txtKeahlian"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="KOMPETENSI KEAHLIAN"
@@ -14,19 +15,25 @@
         android:textSize="15sp"
         android:fontFamily="light"
         android:layout_marginTop="40dp"
-        android:textColor="@color/putih"/>
+        android:textColor="@color/putih"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"/>
 
     <TextView
+        android:id="@+id/txtPd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:textSize="14dp"
         android:fontFamily="light"
         android:gravity="center"
         android:text="1.Produksi Grafika"
-        android:textColor="@color/putih" />
+        android:textColor="@color/putih"
+        app:layout_constraintTop_toBottomOf="@+id/txtKeahlian"/>
 
     <TextView
+        android:id="@+id/txtDg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -34,92 +41,108 @@
         android:layout_marginTop="1dp"
         android:textSize="14dp"
         android:text="2.Persiapan Grafika"
-        android:textColor="@color/putih" />
+        android:textColor="@color/putih"
+        app:layout_constraintTop_toBottomOf="@+id/txtPd"/>
 
     <TextView
+        android:id="@+id/txtRpl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="14dp"
         android:fontFamily="light"
         android:text="3.Rekayasa Perangkat Lunak"
-        android:textColor="@color/putih" />
+        android:textColor="@color/putih"
+        app:layout_constraintTop_toBottomOf="@+id/txtDg"/>
 
 
     <TextView
+        android:id="@+id/txtDkv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="14dp"
         android:fontFamily="light"
         android:text="4.Desain Komunikasi Visual"
-        android:textColor="@color/putih" />
+        android:textColor="@color/putih"
+        app:layout_constraintTop_toBottomOf="@+id/txtRpl"/>
 
     <TextView
+        android:id="@+id/txtAnimasi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="14dp"
         android:fontFamily="light"
         android:text="5.Animasi"
-        android:textColor="@color/putih" />
+        android:textColor="@color/putih"
+        app:layout_constraintTop_toBottomOf="@+id/txtRpl"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="25dp">
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/txtAnimasi">
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="130dp"
-            android:layout_gravity="center"
-            android:src="@mipmap/pd"
-            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
 
-        <ImageView
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:layout_marginLeft="-20dp"
-            android:src="@mipmap/dg"
-            android:layout_marginTop="4dp"
-            />
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/pd"
+                />
 
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginLeft="-20dp"
+                android:src="@mipmap/dg"
+                android:layout_marginTop="4dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="130dp"
+                android:src="@mipmap/rpl1"
+                />
+
+            <ImageView
+                android:layout_width="118dp"
+                android:layout_height="130dp"
+                android:src="@mipmap/dkv1"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="120dp"
+                android:src="@mipmap/animasi"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="125dp"
-            android:layout_height="130dp"
-            android:src="@mipmap/rpl1"
-            />
-
-        <ImageView
-            android:layout_width="118dp"
-            android:layout_height="130dp"
-            android:src="@mipmap/dkv1"
-            />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-
-    <ImageView
-        android:layout_width="130dp"
-        android:layout_height="120dp"
-        android:src="@mipmap/animasi"/>
-    </LinearLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
