@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:text="TENTANG :"
-                android:textColor="@color/hitam" />
+                android:textStyle="bold"/>
 
 
             <TextView
@@ -46,7 +46,6 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"
                 android:layout_gravity="center"
-                android:textColor="@color/hitam"
                 android:text="produksi grafika adalah salah satu jurusan di sekolah grafika yang mengajarkan di bidang teknik produksi grafika (percetakan) mencakup penguasaan berbagai jenis mesin dalam industry percetakan." />
 
         </LinearLayout>
@@ -64,32 +63,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:textColor="@color/hitam"
                 android:text="Jurusan produksi grafika mempunyai kompetensi yaitu : "/>
 
             <TextView
-                android:textColor="@color/hitam"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:text="1. Teknik cetak offset"/>
 
             <TextView
-                android:textColor="@color/hitam"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:text="2. Teknik cetak sablon"/>
 
             <TextView
-                android:textColor="@color/hitam"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:text="3. Teknik cetak tinggi"/>
 
             <TextView
-                android:textColor="@color/hitam"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
@@ -99,49 +93,44 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="340dp"
+            android:layout_height="179dp"
+            android:layout_gravity="center"
             android:layout_marginHorizontal="20dp"
             android:background="@drawable/produksi_card"
             android:orientation="vertical">
 
             <TextView
-                android:textColor="@color/hitam"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:text="PERSYARATAN PENDAFTAR"/>
 
             <TextView
-                android:textColor="@color/hitam"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:text="1. Foto Copy Nilai Raport Semester 5/nilai UN."/>
 
             <TextView
-                android:textColor="@color/hitam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:text="2. Akta Kelahiran."/>
 
             <TextView
-                android:textColor="@color/hitam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:text="3. Kartu Keluarga (KK)."/>
 
             <TextView
-                android:textColor="@color/hitam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:text="4. Riwayat Kesehatan."/>
 
             <TextView
-                android:textColor="@color/hitam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"

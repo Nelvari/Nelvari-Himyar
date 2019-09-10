@@ -19,7 +19,8 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/rpl">
+        android:background="@color/rpl"
+        android:theme="@style/ActionBarThemeOverlay">
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -36,19 +37,13 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:text="TENTANG :"
-            android:textColor="@color/hitam"/>
+            android:textStyle="bold"/>
 
         <TextView
             android:layout_width="285dp"
             android:layout_height="110dp"
             android:layout_gravity="center"
-            android:textColor="@color/hitam"
-            android:text="Rekayasa Perangkat Lunak (RPL) didalam
-bahasa Inggris disebut dengan Software
-Engineering. RPL adalah salah satu bidang
-profesi dan ilmu di dalam dunia teknologi
-informasi. RPL berhubungan dengan cara
-mengembangkan perangkat lunak." />
+            android:text="Rekayasa Perangkat Lunak (RPL) didalam bahasa Inggris disebut dengan Software Engineering. RPL adalah salah satu bidang profesi dan ilmu di dalam dunia teknologi informasi. RPL berhubungan dengan cara mengembangkan perangkat lunak." />
 
     </LinearLayout>
 
@@ -64,39 +59,33 @@ mengembangkan perangkat lunak." />
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:textColor="@color/hitam"
             android:text="Jurusan RPL mempunyai kompetensi yaitu:" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:textColor="@color/hitam"
             android:text="1.Database Administrator" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:textColor="@color/hitam"
             android:text="2.Website Developer" />
 
         <TextView
-            android:textColor="@color/hitam"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:text="3.Software Developer" />
 
         <TextView
-            android:textColor="@color/hitam"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:text="4.Game Developer" />
 
         <TextView
-            android:textColor="@color/hitam"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -105,7 +94,6 @@ mengembangkan perangkat lunak." />
     </LinearLayout>
 
     <LinearLayout
-        android:textColor="@color/hitam"
         android:layout_width="340dp"
         android:layout_height="174dp"
         android:layout_gravity="center"
@@ -114,7 +102,6 @@ mengembangkan perangkat lunak." />
         android:orientation="vertical">
 
         <TextView
-            android:textColor="@color/hitam"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
@@ -124,47 +111,43 @@ mengembangkan perangkat lunak." />
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:textColor="@color/hitam"
             android:text="1.Foto Copy Nilai Raport Semester 5/nilai UN." />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:textColor="@color/hitam"
             android:text="2.Akta Kelahiran." />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:textColor="@color/hitam"
             android:text="3.Kartu Keluarga (KK)." />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:textColor="@color/hitam"
             android:text="4.Riwayat Kesehatan" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:textColor="@color/hitam"
             android:text="5.Pas Foto 3x5. " />
 
     </LinearLayout>
 
     <Button
+        android:id="@+id/btnlogin"
         android:layout_width="340dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_margin="20dp"
         android:background="@color/rpl"
         android:text="LOGIN SEKARANG"
-        android:textColor="@color/colorPrimary"/>
+        android:textColor="@android:color/white"/>
 
 </LinearLayout>
 </ScrollView>

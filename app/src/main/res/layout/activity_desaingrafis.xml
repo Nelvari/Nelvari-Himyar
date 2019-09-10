@@ -17,7 +17,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/persiapan">
+            android:background="@color/persiapan"
+            android:theme="@style/ActionBarThemeOverlay">
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -34,20 +35,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:text="TENTANG :"
-                android:textColor="@color/hitam" />
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="285dp"
                 android:layout_height="128dp"
                 android:layout_gravity="center"
-                android:text="Jurusan Design Grafis adalah jurusan
-yang berhubungan dengan bagaimana
-visual communication dibuat dan dapat
-menimbulkan sebuah pengaruh bagi
-pembaca.Cakupan kerjanya yang cukup
-luas.Dari buku sampai program
-multimedia, covers CD  dan logo."
-                android:textColor="@color/hitam" />
+                android:text="Jurusan Design Grafis adalah jurusan yang berhubungan dengan bagaimana visual communication dibuat dan dapat menimbulkan sebuah pengaruh bagi pembaca.Cakupan kerjanya yang cukup luas.Dari buku sampai program multimedia, covers CD  dan logo."/>
 
         </LinearLayout>
 
@@ -63,13 +57,7 @@ multimedia, covers CD  dan logo."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:text="Jurusan ini  harus mempersiapkan Anda
-untuk mampu menyelesaikan masalah
-design, memahami target pembaca,
-menguasai tools dan technology
-(termasuk offset printing, photography
-dan media interaktif)."
-                android:textColor="@color/hitam" />
+                android:text="Jurusan ini  harus mempersiapkan Anda untuk mampu menyelesaikan masalah design, memahami target pembaca, menguasai tools dan technology (termasuk offset printing, photography dan media interaktif)."/>
 
 
         </LinearLayout>
@@ -80,54 +68,48 @@ dan media interaktif)."
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:background="@drawable/dg"
-            android:orientation="vertical"
-            android:textColor="@color/hitam">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:text="PERSYARATAN PENDAFTAR"
-                android:textColor="@color/hitam" />
+                android:text="PERSYARATAN PENDAFTAR"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:text="1.Foto Copy Nilai Raport Semester 5/nilai UN."
-                android:textColor="@color/hitam" />
+                android:text="1.Foto Copy Nilai Raport Semester 5/nilai UN."/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:text="2.Akta Kelahiran."
-                android:textColor="@color/hitam" />
+                android:text="2.Akta Kelahiran."/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:text="3.Kartu Keluarga (KK)."
-                android:textColor="@color/hitam" />
+                android:text="3.Kartu Keluarga (KK)."/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:text="4.Riwayat Kesehatan"
-                android:textColor="@color/hitam" />
+                android:text="4.Riwayat Kesehatan"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:text="5.Pas Foto 3x5. "
-                android:textColor="@color/hitam" />
+                android:text="5.Pas Foto 3x5. "/>
 
         </LinearLayout>
 
         <Button
+            android:id="@+id/btnlogin"
             android:layout_width="340dp"
             android:layout_height="50dp"
             android:layout_gravity="center"

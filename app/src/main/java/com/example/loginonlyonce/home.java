@@ -7,8 +7,6 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import com.example.loginonlyonce.Model.ControlClass;
-
 public class home extends AppCompatActivity {
 
     CardView prduksi, persiapan, animasi, rpl, dkv;
@@ -38,7 +36,7 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent hi = new Intent(home.this, ControlClass.class);
+                Intent hi = new Intent(home.this, desaingrafis.class);
                 startActivity(hi);
 
             }
@@ -48,7 +46,7 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent hi = new Intent(home.this, ControlClass.class);
+                Intent hi = new Intent(home.this, animasi.class);
                 startActivity(hi);
 
             }
@@ -58,7 +56,7 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent hi = new Intent(home.this, ControlClass.class);
+                Intent hi = new Intent(home.this, DKV.class);
                 startActivity(hi);
 
             }
@@ -68,7 +66,7 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent hi = new Intent(home.this, ControlClass.class);
+                Intent hi = new Intent(home.this, RPL.class);
                 startActivity(hi);
 
             }
