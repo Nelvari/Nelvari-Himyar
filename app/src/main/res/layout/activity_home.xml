@@ -138,7 +138,7 @@
                 android:id="@+id/produksi"
                 android:layout_width="130dp"
                 android:layout_height="150dp"
-                android:layout_margin="20dp"
+                android:layout_margin="5dp"
                 android:layout_gravity="center"
                 android:clickable="true"
                 app:cardCornerRadius="20sp"
@@ -229,7 +229,7 @@
                 android:id="@+id/rpl"
                 android:layout_width="130dp"
                 android:layout_height="150dp"
-                android:layout_margin="20dp"
+                android:layout_margin="5dp"
                 android:clickable="true"
                 app:cardCornerRadius="20dp"
                 android:foreground="?android:attr/selectableItemBackground">
@@ -323,7 +323,7 @@
                 android:id="@+id/animasi"
                 android:layout_width="130dp"
                 android:layout_height="150dp"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"
                 app:cardCornerRadius="20dp"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground">
