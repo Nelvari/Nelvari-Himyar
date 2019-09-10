@@ -27,22 +27,16 @@ public class registrasi extends AppCompatActivity {
     EditText konfirmpass;
     Button   btnbuat;
 
-
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrasi);
-
-
         txtusername = findViewById(R.id.txtusername);
         notelp = findViewById(R.id.notelp);
         email = findViewById(R.id.email);
         txtpassword = findViewById(R.id.txtpassword);
         konfirmpass = findViewById(R.id.konfirmpass);
+
          btnbuat = findViewById(R.id.btnbuat);
 
 
@@ -65,8 +59,8 @@ public class registrasi extends AppCompatActivity {
                     }
                 });
 
-        btnbuat = findViewById(R.id.btnbuat);
 
+        btnbuat = findViewById(R.id.btnbuat);
         btnbuat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
