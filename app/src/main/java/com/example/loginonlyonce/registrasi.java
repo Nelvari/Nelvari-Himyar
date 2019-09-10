@@ -36,6 +36,30 @@ public class registrasi extends AppCompatActivity {
         email = findViewById(R.id.email);
         txtpassword = findViewById(R.id.txtpassword);
         konfirmpass = findViewById(R.id.konfirmpass);
+
+         btnbuat = findViewById(R.id.btnbuat);
+
+
+        AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/login")
+                .addBodyParameter("username", "txtusername")
+                .addBodyParameter("password", "txtpassword")
+                .addBodyParameter("role", "txtpassword")
+                .setTag("test")
+                .setPriority(Priority.MEDIUM)
+                .build()
+                .getAsJSONObject(new JSONObjectRequestListener() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Log.d("sheca", "onResponse: ");
+                    }
+
+                    @Override
+                    public void onError(ANError anError) {
+
+                    }
+                });
+
+
         btnbuat = findViewById(R.id.btnbuat);
         btnbuat.setOnClickListener(new View.OnClickListener() {
             @Override
