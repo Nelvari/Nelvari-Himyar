@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".Model.ControlInfoAnimasi"></activity>
         <activity android:name=".Model.ControlInfoDKV" />
         <activity android:name=".Model.ControlInfoRPL" />
@@ -33,7 +34,8 @@
         <activity
             android:name=".animasi"
             android:parentActivityName=".home" />
-        <activity android:name=".inbox" />
+
+
         <activity android:name=".kartutes" />
         <activity android:name=".pembayaran" />
         <activity android:name=".registrasi" />
