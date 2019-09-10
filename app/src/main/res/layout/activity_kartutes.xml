@@ -32,10 +32,10 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_width="145dp"
+                android:layout_height="185dp"
                 android:layout_gravity="center"
-                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
                 android:background="@mipmap/fto" />
 
             <View
