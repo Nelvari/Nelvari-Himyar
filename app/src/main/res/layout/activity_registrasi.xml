@@ -21,6 +21,7 @@
             android:background="@mipmap/logobaru" />
 
         <EditText
+            android:id="@+id/txtusername"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -28,6 +29,7 @@
             android:hint="Nama Lengkap"/>
 
         <EditText
+            android:id="@+id/notelp"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -35,6 +37,7 @@
             android:hint="Nomor Telepon Aktif"/>
 
         <EditText
+            android:id="@+id/email"
             android:layout_width="280dp"
             android:layout_marginTop="7dp"
             android:layout_height="wrap_content"
@@ -42,6 +45,7 @@
             android:hint="E-mail"/>
 
         <EditText
+            android:id="@+id/txtpassword"
             android:layout_width="280dp"
             android:layout_marginTop="7dp"
             android:layout_height="wrap_content"
@@ -49,6 +53,7 @@
             android:hint="Password"/>
 
         <EditText
+            android:id="@+id/konfirmpass"
             android:layout_width="280dp"
             android:layout_marginTop="7dp"
             android:layout_height="wrap_content"
