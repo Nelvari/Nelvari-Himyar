@@ -7,6 +7,12 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.example.loginonlyonce.Model.ControlInfo;
+import com.example.loginonlyonce.Model.ControlInfoAnimasi;
+import com.example.loginonlyonce.Model.ControlInfoDKV;
+import com.example.loginonlyonce.Model.ControlInfoDg;
+import com.example.loginonlyonce.Model.ControlInfoRPL;
+
 public class home extends AppCompatActivity {
 
     CardView prduksi, persiapan, animasi, rpl, dkv;
@@ -26,7 +32,7 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent hi = new Intent(home.this, Produksi.class);
+                Intent hi = new Intent(home.this, ControlInfo.class);
                 startActivity(hi);
 
             }
@@ -36,7 +42,7 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent hi = new Intent(home.this, desaingrafis.class);
+                Intent hi = new Intent(home.this, ControlInfoDg.class);
                 startActivity(hi);
 
             }
@@ -46,7 +52,7 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent hi = new Intent(home.this, animasi.class);
+                Intent hi = new Intent(home.this, ControlInfoAnimasi.class);
                 startActivity(hi);
 
             }
@@ -56,7 +62,7 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent hi = new Intent(home.this, DKV.class);
+                Intent hi = new Intent(home.this, ControlInfoDKV.class);
                 startActivity(hi);
 
             }
@@ -66,7 +72,7 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent hi = new Intent(home.this, RPL.class);
+                Intent hi = new Intent(home.this, ControlInfoRPL.class);
                 startActivity(hi);
 
             }
