@@ -17,7 +17,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/anim">
+            android:background="@color/anim"
+            android:theme="@style/ActionBarThemeOverlay">
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -34,19 +35,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:text="TENTANG :"
-                android:textColor="@color/hitam" />
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="285dp"
                 android:layout_height="110dp"
                 android:layout_gravity="center"
-                android:text="Animasi merupakan suatu Teknik
-menampilkan gambar berurut
-sedemikian rupa sehingga penonton
-merasakan adanya ilusi gerakan
-(motion) pada gambar yang
-ditampilkan. "
-                android:textColor="@color/hitam" />
+                android:text="Animasi merupakan suatu Teknik menampilkan gambar berurut sedemikian rupa sehingga penonton merasakan adanya ilusi gerakan (motion) pada gambar yang ditampilkan. "/>
 
         </LinearLayout>
 
@@ -62,13 +57,7 @@ ditampilkan. "
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:text="Secara umum ilusi gerakan
-merupakan perubahan yang dideteksi
-secara visual oleh mata penonton
-sehingga tidak harus perubahan yang
-terjadi merupakan perubahan posisi
-sebagai makna dari istilah 'gerakan'."
-                android:textColor="@color/hitam" />
+                android:text="Secara umum ilusi gerakan merupakan perubahan yang dideteksi secara visual oleh mata penonton sehingga tidak harus perubahan yang terjadi merupakan perubahan posisi sebagai makna dari istilah 'gerakan'."/>
 
 
         </LinearLayout>
@@ -79,61 +68,54 @@ sebagai makna dari istilah 'gerakan'."
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:background="@drawable/anima"
-            android:orientation="vertical"
-            android:textColor="@color/hitam">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:text="PERSYARATAN PENDAFTAR"
-                android:textColor="@color/hitam" />
+                android:text="PERSYARATAN PENDAFTAR"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:text="1.Foto Copy Nilai Raport Semester 5/nilai UN."
-                android:textColor="@color/hitam" />
+                android:text="1.Foto Copy Nilai Raport Semester 5/nilai UN."/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:text="2.Akta Kelahiran."
-                android:textColor="@color/hitam" />
+                android:text="2.Akta Kelahiran."/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:text="3.Kartu Keluarga (KK)."
-                android:textColor="@color/hitam" />
+                android:text="3.Kartu Keluarga (KK)."/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:text="4.Riwayat Kesehatan"
-                android:textColor="@color/hitam" />
+                android:text="4.Riwayat Kesehatan"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:text="5.Pas Foto 3x5. "
-                android:textColor="@color/hitam" />
+                android:text="5.Pas Foto 3x5. "/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:text="6.Sertakan 1 contoh gambar ilustrasi buatan anda."
-                android:textColor="@color/hitam" />
+                android:text="6.Sertakan 1 contoh gambar ilustrasi buatan anda."/>
 
         </LinearLayout>
 
         <Button
+            android:id="@+id/btnlogin"
             android:layout_width="340dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
@@ -142,12 +124,6 @@ sebagai makna dari istilah 'gerakan'."
             android:text="LOGIN SEKARANG"
             android:textColor="@color/putih"/>
 
-
-
-
-
     </LinearLayout>
-
-
 
 </ScrollView>
