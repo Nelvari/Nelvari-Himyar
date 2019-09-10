@@ -41,6 +41,8 @@ public class FormulirPendaftaran extends AppCompatActivity {
 
         SharedPreferences mlogin = getSharedPreferences("login", Context.MODE_PRIVATE);
 
+        nama.setText(mlogin.getString("username", "missing"));
+
         if (getSharedPreferences("login", Context.MODE_PRIVATE) != null){
 
             nama.setText(mlogin.getString("data1", "missing"));
