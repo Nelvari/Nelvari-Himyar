@@ -24,7 +24,7 @@
         android:id="@+id/txtPd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:textSize="14dp"
         android:fontFamily="light"
         android:gravity="center"
@@ -99,7 +99,7 @@
                 />
 
             <ImageView
-                android:layout_width="130dp"
+                android:layout_width="140dp"
                 android:layout_height="130dp"
                 android:layout_marginLeft="-20dp"
                 android:src="@mipmap/dg"
@@ -115,13 +115,15 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="125dp"
+                android:layout_width="150dp"
+                android:layout_marginLeft="15dp"
                 android:layout_height="130dp"
                 android:src="@mipmap/rpl1"
                 />
 
             <ImageView
-                android:layout_width="118dp"
+                android:layout_width="135dp"
+                android:layout_marginLeft="-2dp"
                 android:layout_height="130dp"
                 android:src="@mipmap/dkv1"
                 />
@@ -134,7 +136,7 @@
             android:gravity="center">
 
             <ImageView
-                android:layout_width="130dp"
+                android:layout_width="140dp"
                 android:layout_height="120dp"
                 android:src="@mipmap/animasi"/>
 
