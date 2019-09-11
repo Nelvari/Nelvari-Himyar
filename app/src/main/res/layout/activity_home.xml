@@ -1,368 +1,388 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:layout_width="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/ivgambar"
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="wrap_content">
+        android:layout_height="250dp"
+        android:background="@mipmap/logio"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"/>
 
-        <ImageView
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/logobaru"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="5dp"
+        android:text="YAYASAN PENDIDIKAN ISLAM RADEN UMAR SAID\nSMK RADEN UMAR SAID KUDUS"
+        android:textColor="#ffffff"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/ivLogo"
+        app:layout_constraintTop_toTopOf="@+id/ivLogo"/>
+
+    <LinearLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivgambar"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp">
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="261dp"
-            android:background="@mipmap/logio" />
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="-255dp"
-            android:background="@mipmap/logobaru" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="-30dp"
-            android:text="YAYASAN PENDIDIKAN ISLAM RADEN UMAR SAID"
-            android:textColor="#ffffff"
-            android:textSize="10dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:text="SMK RADEN UMAR SAID KUDUS"
-            android:textColor="#ffffff"
-            android:textSize="10dp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="280dp"
-            android:layout_marginTop="165dp"
-            android:background="@mipmap/user" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:orientation="horizontal">
-
-            <View
-                android:layout_width="8dp"
-                android:layout_height="170dp"
-                android:layout_marginLeft="30dp"
-                android:background="@drawable/line2" />
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="170dp"
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/line2" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="188dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="20dp"
+                            android:textColor="@color/hitam"
+                            android:text="PETUNJUK PENDAFTARAN"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:text="1.Pilih jurusan yang ingin anda tempuh."
+                            android:textColor="@color/hitam" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="2.Isi data data yang sudah kami cantumkan."
+                            android:textColor="@color/hitam" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="3.kemudian seterusnya,isi data data orang tua dan data data sekolah."
+                            android:textColor="@color/hitam" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="4.jika sudah di isi semua , lalu simpan."
+                            android:textColor="@color/hitam" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="5.Pastikan anda benar benar sudah menyimpan nya."
+                            android:textColor="@color/hitam" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
                 <TextView
-                    android:layout_width="188dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="60dp"
+                    android:text="PILIH JURUSAN :"
+                    android:textStyle="bold"
+                    android:textColor="@color/hitam" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:textColor="@color/hitam"
-                    android:text="PETUNJUK PENDAFTARAN"
-                    android:textStyle="bold" />
+                    android:clipToPadding="false"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-                <TextView
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/produksi"
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="5dp"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        app:cardCornerRadius="20sp"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/produksi_card1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="25dp"
+                                android:src="@mipmap/produksi" />
+
+                            <View
+                                android:layout_width="80dp"
+                                android:layout_height="1dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/hitam" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="5dp"
+                                android:text="PRODUKSI"
+                                android:textColor="@color/hitam" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/persiapan"
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        android:clickable="true"
+                        app:cardCornerRadius="20dp"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/persiapan"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="25dp"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/persiapan" />
+
+                            <View
+                                android:layout_width="80dp"
+                                android:layout_height="1dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/hitam" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="5dp"
+                                android:text="PERSIAPAN"
+                                android:textColor="@color/hitam" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp"
-                    android:text="1.Pilih jurusan yang ingin anda tempuh."
-                    android:textColor="@color/hitam" />
+                    android:clipToPadding="false"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-                <TextView
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/rpl"
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="5dp"
+                        android:clickable="true"
+                        app:cardCornerRadius="20dp"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:id="@+id/lnrpl"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/erpel"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="25dp"
+                                android:src="@mipmap/rpl" />
+
+
+
+                            <View
+                                android:layout_width="80dp"
+                                android:layout_height="1dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/hitam" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="RPL"
+                                android:textColor="@color/hitam" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dkv"
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        android:clickable="true"
+                        app:cardCornerRadius="20dp"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/dkv1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="25dp"
+                                android:src="@mipmap/dkv" />
+
+
+
+                            <View
+                                android:layout_width="80dp"
+                                android:layout_height="1dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/hitam" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="5dp"
+                                android:text="DKV"
+                                android:textColor="@color/hitam" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:text="2.Isi data data yang sudah kami cantumkan."
-                    android:textColor="@color/hitam" />
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/animasi"
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/animas"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="25dp"
+                                android:src="@mipmap/anim" />
 
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:text="3.kemudian seterusnya,isi data data orang tua dan data data sekolah."
-                    android:textColor="@color/hitam" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="5dp"
+                                android:text="ANIMASI"
+                                android:textColor="@color/hitam" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:text="4.jika sudah di isi semua , lalu simpan."
-                    android:textColor="@color/hitam" />
+                            <View
+                                android:layout_width="80dp"
+                                android:layout_height="1dp"
+                                android:layout_gravity="center"
+                                android:background="@color/hitam" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:text="5.Pastikan anda benar benar sudah menyimpan nya."
-                    android:textColor="@color/hitam" />
+                        </LinearLayout>
 
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
 
             </LinearLayout>
 
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="60dp"
-            android:text="PILIH JURUSAN :"
-            android:textStyle="bold"
-            android:textColor="@color/hitam" />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:clipToPadding="false"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/produksi"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
-                android:layout_margin="5dp"
-                android:layout_gravity="center"
-                android:clickable="true"
-                app:cardCornerRadius="20sp"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@drawable/produksi_card1"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="25dp"
-                        android:src="@mipmap/produksi" />
-
-                    <View
-                        android:layout_width="80dp"
-                        android:layout_height="1dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="15dp"
-                        android:background="@color/hitam" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:padding="5dp"
-                        android:text="PRODUKSI"
-                        android:textColor="@color/hitam" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/persiapan"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
-                android:layout_margin="10dp"
-                android:clickable="true"
-                app:cardCornerRadius="20dp"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/persiapan"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_marginTop="25dp"
-                        android:layout_gravity="center"
-                        android:src="@mipmap/persiapan" />
-
-                    <View
-                        android:layout_width="80dp"
-                        android:layout_height="1dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="15dp"
-                        android:background="@color/hitam" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:padding="5dp"
-                        android:text="PERSIAPAN"
-                        android:textColor="@color/hitam" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clipToPadding="false"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/rpl"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
-                android:layout_margin="5dp"
-                android:clickable="true"
-                app:cardCornerRadius="20dp"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <LinearLayout
-                    android:id="@+id/lnrpl"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/erpel"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="25dp"
-                        android:src="@mipmap/rpl" />
-
-
-
-                    <View
-                        android:layout_width="80dp"
-                        android:layout_height="1dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="15dp"
-                        android:background="@color/hitam" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:padding="5dp"
-                        android:text="RPL"
-                        android:textColor="@color/hitam" />
-
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/dkv"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
-                android:layout_margin="10dp"
-                android:clickable="true"
-                app:cardCornerRadius="20dp"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/dkv1"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="25dp"
-                        android:src="@mipmap/dkv" />
-
-
-
-                    <View
-                        android:layout_width="80dp"
-                        android:layout_height="1dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="15dp"
-                        android:background="@color/hitam" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:padding="5dp"
-                        android:text="DKV"
-                        android:textColor="@color/hitam" />
-
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/animasi"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
-                android:layout_margin="10dp"
-                app:cardCornerRadius="20dp"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@drawable/animas"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="25dp"
-                        android:src="@mipmap/anim" />
-
-
-
-                    <View
-                        android:layout_width="80dp"
-                        android:layout_height="1dp"
-                        android:layout_gravity="center"
-                        android:background="@color/hitam" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:padding="5dp"
-                        android:text="ANIMASI"
-                        android:textColor="@color/hitam" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
+        </ScrollView>
 
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/ivUser"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="280dp"
+        android:background="@mipmap/user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/ivgambar"
+        app:layout_constraintTop_toBottomOf="@+id/ivgambar"/>
 
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
