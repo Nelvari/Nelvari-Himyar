@@ -55,7 +55,8 @@ public class Login extends AppCompatActivity {
     public String email;
     public String avatar;
     String token="";
-
+    String nohp="";
+    SharedPreferences mLogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,7 +79,7 @@ public class Login extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SharedPreferences mLogin = getSharedPreferences("login", Context.MODE_PRIVATE);
+                mLogin = getSharedPreferences("login", Context.MODE_PRIVATE);
                 if (txtusername.getText().toString().isEmpty() || txtpassword.getText().toString().isEmpty()) {
                     Toast.makeText(Login.this, "please fill my heart first to send a request :(", Toast.LENGTH_SHORT).show();
                 }
@@ -99,6 +100,19 @@ public class Login extends AppCompatActivity {
                                         if(status.equalsIgnoreCase("SUCCES")){
                                             JSONObject getdata=response.getJSONObject("PAYLOAD");
                                             token=getdata.getString("login_token");
+                                            nohp=getdata.getString("u_no_hp");
+                                            email=getdata.getString("u_email");
+
+                                            SharedPreferences.Editor editor = mLogin.edit();
+                                            editor.putString("username", txtusername.getText().toString());
+                                            editor.putString("nohp", nohp);
+                                            editor.putString("email", email);
+                                            editor.putInt("userid", getTaskId());
+                                            editor.putString("data4", "data4");
+                                            editor.apply();
+                                            Intent intent = new Intent(Login.this, FormulirPendaftaran.class);
+                                            startActivity(intent);
+                                            finish();
 
                                         }
                                     } catch (JSONException e) {
@@ -111,14 +125,7 @@ public class Login extends AppCompatActivity {
                                 }
                             });
 
-                    SharedPreferences.Editor editor = mLogin.edit();
-                    editor.putString("username", txtusername.getText().toString());
-                    editor.putString("data1", txtusername.getText().toString());
-                    editor.putInt("userid", getTaskId());
-                    editor.apply();
-                    Intent intent = new Intent(Login.this, FormulirPendaftaran.class);
-                    startActivity(intent);
-                    finish();
+
 
                 }
 
@@ -179,7 +186,7 @@ public class Login extends AppCompatActivity {
 
                             SharedPreferences.Editor editor = mLogin.edit();
                             editor.putInt("userid", getTaskId());
-                            editor.putString("data1", realName);
+                            editor.putString("username", realName);
                             editor.putString("data2", email);
                             editor.putString("data3", fbId);
                             editor.putString("data4", avatar);
@@ -251,7 +258,7 @@ public class Login extends AppCompatActivity {
 
             SharedPreferences.Editor editor = mLogin.edit();
             editor.putInt("userid", getTaskId());
-            editor.putString("data1", realName);
+            editor.putString("username", realName);
             editor.putString("data2", email);
             editor.putString("data3", fbId);
             editor.putString("data4", avatar);

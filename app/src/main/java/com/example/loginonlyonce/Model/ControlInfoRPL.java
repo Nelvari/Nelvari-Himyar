@@ -18,9 +18,11 @@ public class ControlInfoRPL extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mInfoRPL = getSharedPreferences("infoRPL", Context.MODE_PRIVATE);
+        mInfoRPL = getSharedPreferences("login", Context.MODE_PRIVATE);
 
-        if (mInfoRPL.getInt("userInfoRPL", 0) == 0){
+        if (mInfoRPL.getString("username", "").equalsIgnoreCase("")
+                || mInfoRPL.getString("username", "") == null
+                || mInfoRPL.getString("username", "").isEmpty()){
 
             Intent intent = new Intent(ControlInfoRPL.this, RPL.class);
             startActivity(intent);

@@ -12,14 +12,16 @@ import com.example.loginonlyonce.Login;
 
 public class ControlClass extends AppCompatActivity {
 
-    private SharedPreferences mlogin;
+    private SharedPreferences mInfoRPL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mlogin = getSharedPreferences("login", Context.MODE_PRIVATE);
+        mInfoRPL = getSharedPreferences("login", Context.MODE_PRIVATE);
 
-        if (mlogin.getInt("userid", 0) == 0){
+        if (mInfoRPL.getString("username", "").equalsIgnoreCase("")
+                || mInfoRPL.getString("username", "") == null
+                || mInfoRPL.getString("username", "").isEmpty()){
 
             Intent in = new Intent(ControlClass.this, Login.class);
             startActivity(in);
