@@ -39,17 +39,14 @@ public class FormulirPendaftaran extends AppCompatActivity {
         sekolah = findViewById(R.id.sekolah);
         user = findViewById(R.id.icon);
         nama = findViewById(R.id.nama);
-        nomortelp = findViewById(R.id.notelp);
+        nomortelp = findViewById(R.id.tvnotelp);
 
         SharedPreferences mlogin = getSharedPreferences("login", Context.MODE_PRIVATE);
 
         nama.setText(mlogin.getString("username", "missing"));
         nomortelp.setText(mlogin.getString("nohp", "missing"));
 
-        if (getSharedPreferences("login", Context.MODE_PRIVATE) != null){
-
-            nama.setText(mlogin.getString("data1", "missing"));
-
+        if (mlogin != null){
             Glide.with(this).load(mlogin.getString("data4", "missing")).into(user);
 
         }

@@ -25,11 +25,9 @@ import org.json.JSONObject;
 public class registrasi extends AppCompatActivity {
 
     EditText txtusername;
-
-    EditText Email;
-    EditText notelp;
-    String nohp = "";
-    public String email;
+    SharedPreferences mLogin;
+    EditText txtEmail;
+    EditText txtnotelp;
     EditText txtpassword;
     EditText konfirmpass;
     Button btnbuat;
@@ -42,20 +40,18 @@ public class registrasi extends AppCompatActivity {
         txtpassword = findViewById(R.id.txtPassword);
         konfirmpass = findViewById(R.id.konfirmpass);
         btnbuat = findViewById(R.id.btnbuat);
-
-
         btnbuat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SharedPreferences mLogin = getSharedPreferences("login", Context.MODE_PRIVATE);
+                mLogin = getSharedPreferences("login", Context.MODE_PRIVATE);
                 if (txtusername.getText().toString().isEmpty() || txtpassword.getText().toString().isEmpty()) {
                     Toast.makeText(registrasi.this, "please fill my heart first to send a request :(", Toast.LENGTH_SHORT).show();
-                } if (txtpassword == konfirmpass)
+                } else if (txtpassword == konfirmpass){
                     AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/register")
                             .addBodyParameter("username", txtusername.getText().toString())
                             .addBodyParameter("password", txtpassword.getText().toString())
-                            .addBodyParameter("email", Email.getText().toString())
-                            .addBodyParameter("no_hp", notelp.getText().toString())
+                            .addBodyParameter("email", txtEmail.getText().toString())
+                            .addBodyParameter("no_hp", txtnotelp.getText().toString())
                             .addBodyParameter("role", "user")
                             .setTag("test")
                             .setPriority(Priority.MEDIUM)
@@ -67,10 +63,16 @@ public class registrasi extends AppCompatActivity {
                                     try {
                                         String status = response.getString("STATUS");
                                         if (status.equalsIgnoreCase("SUCCES")) {
-                                            JSONObject getdata = response.getJSONObject("PAYLOAD");
-                                            nohp = getdata.getString("u_no_hp");
-                                            email = getdata.getString("u_email");
-
+                                            SharedPreferences.Editor editor = mLogin.edit();
+                                            editor.putString("username", txtusername.getText().toString());
+                                            editor.putString("nohp", txtnotelp.getText().toString() );
+                                            editor.putString("email", txtEmail.getText().toString());
+                                            editor.putString("data1", txtusername.getText().toString());
+                                            editor.putInt("userid", getTaskId());
+                                            editor.apply();
+                                            Intent intent = new Intent(registrasi.this, FormulirPendaftaran.class);
+                                            startActivity(intent);
+                                            finish();
                                         }
                                     } catch (JSONException e) {
                                         e.printStackTrace();
@@ -83,16 +85,9 @@ public class registrasi extends AppCompatActivity {
                                 }
                             });
 
-                SharedPreferences.Editor editor = mLogin.edit();
-                editor.putString("username", txtusername.getText().toString());
-                editor.putString("nohp", nohp);
-                editor.putString("email", email);
-                editor.putString("data1", txtusername.getText().toString());
-                editor.putInt("userid", getTaskId());
-                editor.apply();
-                Intent intent = new Intent(registrasi.this, FormulirPendaftaran.class);
-                startActivity(intent);
-                finish();
+
+                }
+
             }
         });
     }
