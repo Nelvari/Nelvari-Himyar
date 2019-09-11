@@ -55,6 +55,7 @@ public class Login extends AppCompatActivity {
     public String email;
     public String avatar;
     String token="";
+    String nohp="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +100,8 @@ public class Login extends AppCompatActivity {
                                         if(status.equalsIgnoreCase("SUCCES")){
                                             JSONObject getdata=response.getJSONObject("PAYLOAD");
                                             token=getdata.getString("login_token");
+                                            nohp=getdata.getString("u_no_hp");
+                                            email=getdata.getString("u_email");
 
                                         }
                                     } catch (JSONException e) {
@@ -113,6 +116,8 @@ public class Login extends AppCompatActivity {
 
                     SharedPreferences.Editor editor = mLogin.edit();
                     editor.putString("username", txtusername.getText().toString());
+                    editor.putString("nohp", nohp);
+                    editor.putString("email", email);
                     editor.putString("data1", txtusername.getText().toString());
                     editor.putInt("userid", getTaskId());
                     editor.apply();
