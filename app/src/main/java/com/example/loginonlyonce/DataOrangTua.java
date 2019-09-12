@@ -1,18 +1,15 @@
 package com.example.loginonlyonce;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.viewpager.widget.ViewPager;
+
+import com.example.loginonlyonce.Model.MainFragmentPagerAdapter;
+import com.google.android.material.tabs.TabLayout;
 
 public class DataOrangTua extends AppCompatActivity {
-
-    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,38 +19,24 @@ public class DataOrangTua extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(" ");
+        getSupportActionBar().setTitle("Formulir Pendaftaran");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        button = findViewById(R.id.btnSimpan);
+        ViewPager viewPager = findViewById(R.id.viewPager);
+        setupViewPager(viewPager);
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        // setting tabLayout
+        TabLayout tabLayout = findViewById(R.id.tabLayout);
+        tabLayout.setupWithViewPager(viewPager);
 
-                DialogInterface.OnClickListener dialog = new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
+    }
 
-                        switch (i){
-                            case DialogInterface.BUTTON_POSITIVE:
-                                Toast.makeText(getApplicationContext(), "Sukses", Toast.LENGTH_LONG).show();
-                                break;
+    private void setupViewPager(ViewPager viewPager) {
 
-                            case DialogInterface.BUTTON_NEGATIVE:
-                                Toast.makeText(getApplicationContext(), "Gagal", Toast.LENGTH_LONG).show();
-                                break;
-                        }
-
-                    }
-                };
-
-                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-                builder.setMessage("Apakah anda yakin ingin simpan data?").setPositiveButton("Ya", dialog)
-                        .setNegativeButton("Tidak", dialog).show();
-
-            }
-        });
+        MainFragmentPagerAdapter mainFragmentPagerAdapter = new MainFragmentPagerAdapter(getSupportFragmentManager());
+        mainFragmentPagerAdapter.addFragment(new OrangTuaFragment(), getString(R.string.orangtua));
+        mainFragmentPagerAdapter.addFragment(new WaliFragment(), getString(R.string.wali));
+        viewPager.setAdapter(mainFragmentPagerAdapter);
 
     }
 }

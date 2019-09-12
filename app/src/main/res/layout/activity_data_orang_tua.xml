@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,289 +7,32 @@
     android:layout_height="match_parent"
     tools:context=".DataOrangTua">
 
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <androidx.appcompat.widget.Toolbar
-            android:background="@color/colorPrimaryDark"
-            android:theme="@style/ActionBarThemeOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:id="@+id/toolbar"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            style="@style/TabLayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/toolbar">
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            android:background="?attr/colorPrimary"/>
 
-        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
 
-        <TextView
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Formulir Orang Tua"
-            android:gravity="center"
-            android:textSize="20dp"
-            android:textStyle="bold"/>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewPager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
-        <androidx.cardview.widget.CardView
-            android:layout_marginHorizontal="10sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="10sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Nama Orang Tua"
-                android:textSize="15dp"
-                android:textStyle="bold"/>
-
-            <LinearLayout
-                android:layout_marginHorizontal="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="25sp"
-                android:gravity="center">
-
-                <EditText
-                    android:id="@+id/namaAyah"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:textSize="15dp"
-                    android:hint="Ayah"/>
-
-                <EditText
-                    android:id="@+id/namaIbu"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:textSize="15dp"
-                    android:hint="ibu"/>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_marginHorizontal="10sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10sp">
-
-            <LinearLayout
-                android:layout_marginHorizontal="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <EditText
-                    android:id="@+id/alamatOrangTua"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:textSize="15dp"
-                    android:hint="Alamat Orang Tua (Lengkap)"/>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_marginHorizontal="10sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10sp">
-
-            <TextView
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="10sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Pekerjaan Orang Tua"
-                android:textSize="15dp"
-                android:textStyle="bold"/>
-
-            <LinearLayout
-                android:layout_marginHorizontal="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="25sp"
-                android:gravity="center">
-
-                <EditText
-                    android:id="@+id/pekerjaanAyah"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:textSize="15dp"
-                    android:hint="Ayah"/>
-
-                <EditText
-                    android:id="@+id/pekerjaanIbu"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:textSize="15dp"
-                    android:hint="ibu"/>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_marginHorizontal="10sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10sp">
-
-            <TextView
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="10sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Penghasilan Orang Tua"
-                android:textSize="15dp"
-                android:textStyle="bold"/>
-
-            <LinearLayout
-                android:layout_marginHorizontal="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="25sp"
-                android:gravity="center">
-
-                <EditText
-                    android:id="@+id/penghasilanAyah"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:textSize="15dp"
-                    android:hint="Ayah"/>
-
-                <EditText
-                    android:id="@+id/penghasilanIbu"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:textSize="15dp"
-                    android:hint="ibu"/>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_marginHorizontal="10sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10sp">
-
-            <TextView
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="10sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Nomor Telepon/HP"
-                android:textSize="15dp"
-                android:textStyle="bold"/>
-
-            <LinearLayout
-                android:layout_marginHorizontal="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="25sp"
-                android:gravity="center">
-
-                <EditText
-                    android:id="@+id/noAyah"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:textSize="15dp"
-                    android:hint="Ayah"/>
-
-                <EditText
-                    android:id="@+id/noIbu"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:textSize="15dp"
-                    android:hint="ibu"/>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_marginHorizontal="10sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10sp">
-
-            <LinearLayout
-                android:layout_marginHorizontal="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <EditText
-                    android:id="@+id/namaWali"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:textSize="15dp"
-                    android:hint="Nama Wali"/>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_marginHorizontal="10sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10sp">
-
-            <LinearLayout
-                android:layout_marginHorizontal="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <EditText
-                    android:id="@+id/alamatWali"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:textSize="15dp"
-                    android:hint="Alamat Wali (Lengkap)"/>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <Button
-            android:id="@+id/btnSimpan"
-            android:layout_width="match_parent"
-            android:layout_marginHorizontal="20sp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20sp"
-            android:layout_marginBottom="20sp"
-            android:background="@drawable/button"
-            android:text="Simpan"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"/>
-
-    </LinearLayout>
-
-</ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
