@@ -29,7 +29,7 @@
             android:parentActivityName=".home" />
         <activity
             android:name=".FormulirPendaftaran"
-            android:parentActivityName=".home" />
+            android:parentActivityName=".mainmenu" />
         <activity android:name=".mainmenu" />
         <activity
             android:name=".desaingrafis"

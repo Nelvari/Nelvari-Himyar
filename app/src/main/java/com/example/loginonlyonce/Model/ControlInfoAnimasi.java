@@ -7,8 +7,8 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.loginonlyonce.FormulirPendaftaran;
 import com.example.loginonlyonce.animasi;
+import com.example.loginonlyonce.mainmenu;
 
 public class ControlInfoAnimasi extends AppCompatActivity {
 
@@ -18,9 +18,11 @@ public class ControlInfoAnimasi extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mInfoAnimasi = getSharedPreferences("infoAnimasi", Context.MODE_PRIVATE);
+        mInfoAnimasi = getSharedPreferences("login", Context.MODE_PRIVATE);
 
-        if (mInfoAnimasi.getInt("userInfoAnimasi", 0) == 0){
+        if (mInfoAnimasi.getString("username", "").equalsIgnoreCase("")
+                || mInfoAnimasi.getString("username", "") == null
+                || mInfoAnimasi.getString("username", "").isEmpty()){
 
             Intent intent = new Intent(ControlInfoAnimasi.this, animasi.class);
             startActivity(intent);
@@ -28,7 +30,7 @@ public class ControlInfoAnimasi extends AppCompatActivity {
 
         }else {
 
-            Intent intent = new Intent(ControlInfoAnimasi.this, FormulirPendaftaran.class);
+            Intent intent = new Intent(ControlInfoAnimasi.this, mainmenu.class);
             startActivity(intent);
             finish();
 

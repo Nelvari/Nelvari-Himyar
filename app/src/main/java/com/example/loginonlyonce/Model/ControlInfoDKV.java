@@ -8,7 +8,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.loginonlyonce.DKV;
-import com.example.loginonlyonce.FormulirPendaftaran;
+import com.example.loginonlyonce.mainmenu;
 
 public class ControlInfoDKV extends AppCompatActivity {
 
@@ -18,9 +18,11 @@ public class ControlInfoDKV extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mInfoDKV = getSharedPreferences("infoDKV", Context.MODE_PRIVATE);
+        mInfoDKV = getSharedPreferences("login", Context.MODE_PRIVATE);
 
-        if (mInfoDKV.getInt("userInfoDKV", 0) == 0){
+        if (mInfoDKV.getString("username", "").equalsIgnoreCase("")
+                || mInfoDKV.getString("username", "") == null
+                || mInfoDKV.getString("username", "").isEmpty()){
 
             Intent intent = new Intent(ControlInfoDKV.this, DKV.class);
             startActivity(intent);
@@ -28,7 +30,7 @@ public class ControlInfoDKV extends AppCompatActivity {
 
         }else {
 
-            Intent intent = new Intent(ControlInfoDKV.this, FormulirPendaftaran.class);
+            Intent intent = new Intent(ControlInfoDKV.this, mainmenu.class);
             startActivity(intent);
             finish();
 

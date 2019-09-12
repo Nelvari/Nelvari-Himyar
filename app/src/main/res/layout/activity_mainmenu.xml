@@ -1,55 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".mainmenu"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mainmenu"
     android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
+        android:id="@+id/line3"
         android:layout_width="match_parent"
         android:layout_height="235dp"
         android:background="@color/blu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@mipmap/usermainmenu"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="328dp"
-            tools:layout_editor_absoluteY="70dp" />
+    </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4 items"
-            android:textColor="@color/item"
-            android:textSize="18sp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="30dp"
-            tools:layout_editor_absoluteY="100dp" />
+    <ImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/usermainmenu"
+        android:layout_marginTop="75dp"
+        android:layout_marginRight="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Main Menu"
-            android:textColor="@color/putih"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="30dp"
-            tools:layout_editor_absoluteY="70dp" />
+    <TextView
+        android:id="@+id/txtMainMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Main Menu"
+        android:textColor="@color/putih"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginTop="75dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
+    <TextView
+        android:id="@+id/txtItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4 items"
+        android:textColor="@color/item"
+        android:textSize="18sp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtMainMenu"
+        app:layout_constraintStart_toStartOf="parent"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
+        android:id="@+id/line1"
+        app:layout_constraintTop_toBottomOf="@+id/txtItems"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_marginTop="-95dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -122,19 +131,20 @@
     </LinearLayout>
 
     <LinearLayout
+        app:layout_constraintTop_toBottomOf="@+id/line1"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center">
 
         <LinearLayout
             android:foreground="?android:attr/selectableItemBackground"
             android:layout_width="120dp"
             android:layout_height="150dp"
+            android:layout_margin="30dp"
             android:background="@drawable/pinggirrr"
             android:gravity="center"
-            android:layout_marginLeft="67dp"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="82dp"
@@ -162,14 +172,14 @@
 
 
         <LinearLayout
+            android:id="@+id/btnDaftar"
+            android:layout_marginRight="40dp"
             android:foreground="?android:attr/selectableItemBackground"
             android:layout_width="120dp"
             android:layout_height="150dp"
             android:background="@drawable/pinggirrr"
             android:gravity="center"
-            android:layout_marginLeft="30dp"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="67dp"
@@ -196,8 +206,6 @@
                 android:gravity="center"/>
         </LinearLayout>
 
-
     </LinearLayout>
 
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

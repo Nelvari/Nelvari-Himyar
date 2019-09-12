@@ -7,8 +7,8 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.loginonlyonce.FormulirPendaftaran;
 import com.example.loginonlyonce.RPL;
+import com.example.loginonlyonce.mainmenu;
 
 public class ControlInfoRPL extends AppCompatActivity {
 
@@ -30,7 +30,7 @@ public class ControlInfoRPL extends AppCompatActivity {
 
         }else {
 
-            Intent intent = new Intent(ControlInfoRPL.this, FormulirPendaftaran.class);
+            Intent intent = new Intent(ControlInfoRPL.this, mainmenu.class);
             startActivity(intent);
             finish();
 

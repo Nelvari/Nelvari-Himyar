@@ -33,7 +33,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
-import com.google.gson.JsonObject;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -110,7 +109,7 @@ public class Login extends AppCompatActivity {
                                             editor.putInt("userid", getTaskId());
                                             editor.putString("data4", "data4");
                                             editor.apply();
-                                            Intent intent = new Intent(Login.this, FormulirPendaftaran.class);
+                                            Intent intent = new Intent(Login.this, mainmenu.class);
                                             startActivity(intent);
                                             finish();
 
@@ -192,7 +191,7 @@ public class Login extends AppCompatActivity {
                             editor.putString("data4", avatar);
                             editor.apply();
 
-                            Intent intent = new Intent(Login.this, FormulirPendaftaran.class);
+                            Intent intent = new Intent(Login.this, mainmenu.class);
                             startActivity(intent);
                             finish();
 
@@ -264,7 +263,7 @@ public class Login extends AppCompatActivity {
             editor.putString("data4", avatar);
             editor.apply();
 
-            Intent intent = new Intent(Login.this, FormulirPendaftaran.class);
+            Intent intent = new Intent(Login.this, mainmenu.class);
             startActivity(intent);
             finish();
 

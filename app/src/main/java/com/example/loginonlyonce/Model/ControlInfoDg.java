@@ -7,8 +7,8 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.loginonlyonce.FormulirPendaftaran;
 import com.example.loginonlyonce.desaingrafis;
+import com.example.loginonlyonce.mainmenu;
 
 public class ControlInfoDg extends AppCompatActivity {
 
@@ -18,9 +18,11 @@ public class ControlInfoDg extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mInfoDg = getSharedPreferences("infoDg", Context.MODE_PRIVATE);
+        mInfoDg = getSharedPreferences("login", Context.MODE_PRIVATE);
 
-        if (mInfoDg.getInt("userInfoDg", 0) == 0){
+        if (mInfoDg.getString("username", "").equalsIgnoreCase("")
+                || mInfoDg.getString("username", "") == null
+                || mInfoDg.getString("username", "").isEmpty()){
 
             Intent intent = new Intent(ControlInfoDg.this, desaingrafis.class);
             startActivity(intent);
@@ -28,7 +30,7 @@ public class ControlInfoDg extends AppCompatActivity {
 
         }else {
 
-            Intent intent = new Intent(ControlInfoDg.this, FormulirPendaftaran.class);
+            Intent intent = new Intent(ControlInfoDg.this, mainmenu.class);
             startActivity(intent);
             finish();
 
