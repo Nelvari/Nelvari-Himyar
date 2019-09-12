@@ -41,24 +41,6 @@
             android:gravity="center"
             android:layout_marginTop="10dp">
 
-            <EditText
-                android:id="@+id/noPendaftaran"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Nomor Pendaftaran"
-                android:inputType="number"
-                android:textSize="15dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_marginHorizontal="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="10dp">
-
 
 
             <EditText
@@ -84,7 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:hint="Nomor Induk Siswa Nasional (NISN)"
+                android:hint="Nomor Induk Siswa Nasional (NISN) *"
                 android:textSize="15dp"/>
 
         </LinearLayout>
@@ -102,7 +84,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:hint="Nama Siswa (Lengkap)"
+                android:hint="Nama Siswa (Lengkap) *"
                 android:textSize="15dp"/>
 
         </LinearLayout>
@@ -124,16 +106,15 @@
                 android:padding="5dp"
                 android:elevation="10sp">
 
+
+
                 <Spinner
                     android:id="@+id/jenisKelamin"
                     android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:entries="@array/kelamin"
-                    android:outlineAmbientShadowColor="@color/colorAccent">
-
-                </Spinner>
-
+                    android:outlineAmbientShadowColor="@color/colorAccent"/>
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>
@@ -151,7 +132,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="text"
                 android:textSize="15dp"
-                android:hint="Tempat"/>
+                android:hint="Tempat lahir"/>
 
             <ImageView
                 android:layout_width="50dp"
@@ -211,7 +192,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:hint="Alamat Siswa (Lengkap)"
+                android:hint="Alamat Siswa (Lengkap) *"
                 android:textSize="15dp"/>
 
         </LinearLayout>
@@ -228,7 +209,7 @@
                 android:id="@+id/tinggi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Tinggi Badan (cm)"
+                android:hint="Tinggi Badan (cm) *"
                 android:inputType="numberDecimal"
                 android:textSize="15dp"/>
 
@@ -247,7 +228,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
-                android:hint="Berat Badan (kg)"
+                android:hint="Berat Badan (kg) *"
                 android:textSize="15dp"/>
 
         </LinearLayout>
@@ -264,7 +245,7 @@
                 android:id="@+id/prestasi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Prestasi yang pernah di capai"
+                android:hint="Prestasi yang pernah di capai *"
                 android:inputType="text"
                 android:textSize="15dp"/>
 
@@ -279,7 +260,7 @@
             android:layout_marginTop="20sp"
             android:layout_marginBottom="20sp"
             android:background="@drawable/button"
-            android:text="Simpan"
+            android:text="Next"
             android:textStyle="bold"
             android:textColor="@android:color/white"/>
 

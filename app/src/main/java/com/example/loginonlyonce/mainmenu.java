@@ -22,8 +22,10 @@ public class mainmenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(mainmenu.this, FormulirPendaftaran.class);
+                //Intent intent = new Intent(mainmenu.this, FormulirPendaftaran.class);
+                Intent intent = new Intent(mainmenu.this, DataSiswa.class);
                 startActivity(intent);
+                finish();
 
             }
         });

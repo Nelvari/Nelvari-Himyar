@@ -14,7 +14,6 @@
 
     <string-array name="kelamin">
 
-        <item>Jenis Kelamin</item>
         <item>Laki-laki</item>
         <item>Perempuan</item>
 

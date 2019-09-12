@@ -2,6 +2,7 @@ package com.example.loginonlyonce;
 
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,7 +11,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +23,7 @@ public class DataSiswa extends AppCompatActivity {
     ImageView date;
     TextView show;
     Button btnSave;
-    EditText noPendaftaran;
+
     EditText noUjian;
     EditText nisn;
     EditText namaSiswa;
@@ -41,7 +41,6 @@ public class DataSiswa extends AppCompatActivity {
         setContentView(R.layout.activity_data_siswa);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        noPendaftaran = findViewById(R.id.noPendaftaran);
         noUjian = findViewById(R.id.noUjian);
         nisn = findViewById(R.id.nisn);
         namaSiswa = findViewById(R.id.namaSiswa);
@@ -79,7 +78,7 @@ public class DataSiswa extends AppCompatActivity {
                         show.setText(datef);
 
                     }
-                },year,month,day);
+                }, year, month, day);
                 datePickerDialog.show();
 
             }
@@ -99,7 +98,7 @@ public class DataSiswa extends AppCompatActivity {
                         show.setText(datef);
 
                     }
-                },year,month,day);
+                }, year, month, day);
                 datePickerDialog.show();
 
             }
@@ -115,13 +114,17 @@ public class DataSiswa extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
-                        switch (i){
+                        switch (i) {
                             case DialogInterface.BUTTON_POSITIVE:
-                                Toast.makeText(getApplicationContext(), "Sukses", Toast.LENGTH_LONG).show();
+
+                                Intent in = new Intent(getApplicationContext(), DataOrangTua.class);
+                                //put extra here
+                                startActivity(in);
+
                                 break;
 
                             case DialogInterface.BUTTON_NEGATIVE:
-                                Toast.makeText(getApplicationContext(), "Gagal", Toast.LENGTH_LONG).show();
+
                                 break;
                         }
 
