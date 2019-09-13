@@ -10,8 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".FragmentWali"></activity>
-        <activity android:name=".FragmentOrangTua" />
         <activity android:name=".Model.ControlInfoAnimasi" />
         <activity android:name=".Model.ControlInfoDKV" />
         <activity android:name=".Model.ControlInfoRPL" />

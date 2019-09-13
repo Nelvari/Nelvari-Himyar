@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -13,6 +14,11 @@ import androidx.appcompat.widget.Toolbar;
 public class DataAsalSekolah extends AppCompatActivity {
 
     Button btn;
+    EditText txtNamaSekolah;
+    EditText txtAlamatSekolah;
+    EditText txtTahunSTTb;
+    EditText txtNoSTTb;
+    EditText txtNilaiSTTb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +28,7 @@ public class DataAsalSekolah extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(" ");
+        getSupportActionBar().setTitle("Formulir Asal Sekolah");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         btn = findViewById(R.id.btnSav);

@@ -40,7 +40,7 @@ public class DataSiswa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_siswa);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbarSiswa);
         noUjian = findViewById(R.id.noUjian);
         nisn = findViewById(R.id.nisn);
         namaSiswa = findViewById(R.id.namaSiswa);
@@ -53,7 +53,7 @@ public class DataSiswa extends AppCompatActivity {
         prestasi = findViewById(R.id.prestasi);
 
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(" ");
+        getSupportActionBar().setTitle("Formulir Siswa");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         date = findViewById(R.id.date);
@@ -118,6 +118,17 @@ public class DataSiswa extends AppCompatActivity {
                             case DialogInterface.BUTTON_POSITIVE:
 
                                 Intent in = new Intent(getApplicationContext(), DataOrangTua.class);
+                                in.putExtra("namasiswa", namaSiswa.getText().toString() );
+                                in.putExtra("jeniskelamin", jenisKelamin.getSelectedItem().toString() );
+                                in.putExtra("tempatlahir", tempat.getText().toString() );
+                                in.putExtra("tanggallahir", show.getText().toString() );
+                                in.putExtra("agama", agama.getSelectedItem().toString() );
+                                in.putExtra("alamatsiswa", alamatSiswa.getText().toString() );
+                                in.putExtra("tinggibadan", tinggi.getText().toString() );
+                                in.putExtra("beratbadan", berat.getText().toString() );
+                                in.putExtra("prestasi", prestasi.getText().toString() );
+                                in.putExtra("nisn", nisn.getText().toString() );
+                                in.putExtra("noujian", noUjian.getText().toString() );
                                 //put extra here
                                 startActivity(in);
 
