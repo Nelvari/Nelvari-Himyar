@@ -4,17 +4,53 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class DataOrangTua extends AppCompatActivity {
 
     Button btnSimpanOrangTua;
+    EditText txtNamaAyah;
+    EditText txtNamaIbu;
+    EditText txtAlamatOrangTua;
+    EditText txtPekerjaanAyah;
+    EditText txtPekerjaanIbu;
+    EditText txtPenghasilanAyah;
+    EditText txtPenghasilanIbu;
+    EditText txtnoAyah;
+    EditText txtnoIbu;
+    EditText txtNamaWali;
+    EditText txtAlamatWali;
+    EditText txtnoWali;
+    EditText txtPekerjaanWali;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.formorangtua);
+        setContentView(R.layout.activity_data_orang_tua);
+
+        Toolbar toolbar = findViewById(R.id.toolbarOrangTua);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Formulir Orang Tua");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        txtNamaAyah = findViewById(R.id.namaAyah);
+        txtNamaIbu = findViewById(R.id.namaIbu);
+        txtAlamatOrangTua = findViewById(R.id.alamatOrangTua);
+        txtPekerjaanAyah = findViewById(R.id.pekerjaanAyah);
+        txtPekerjaanIbu = findViewById(R.id.pekerjaanIbu);
+        txtPenghasilanAyah = findViewById(R.id.penghasilanAyah);
+        txtPenghasilanIbu = findViewById(R.id.penghasilanIbu);
+        txtnoAyah = findViewById(R.id.noAyah);
+        txtnoIbu = findViewById(R.id.noIbu);
+        txtNamaWali = findViewById(R.id.namaWali);
+        txtAlamatWali = findViewById(R.id.alamatWali);
+        txtnoWali = findViewById(R.id.noWali);
+        txtPekerjaanWali = findViewById(R.id.pekerjaanWali);
+
 
         btnSimpanOrangTua=(Button)findViewById(R.id.btnSimpanOrangTua);
         btnSimpanOrangTua.setOnClickListener(new View.OnClickListener() {
@@ -23,6 +59,19 @@ public class DataOrangTua extends AppCompatActivity {
                 //dialog
                 Intent in =new Intent(getApplicationContext(),DataAsalSekolah.class);
                 //put extra here
+                in.putExtra("namaayah", txtNamaAyah.getText().toString());
+                in.putExtra("namaibu", txtNamaIbu.getText().toString());
+                in.putExtra("alamatorangtua", txtAlamatOrangTua.getText().toString());
+                in.putExtra("pekerjaanayah", txtPekerjaanAyah.getText().toString());
+                in.putExtra("pekerjaanibu", txtPekerjaanIbu.getText().toString());
+                in.putExtra("penghasilanayah", txtPenghasilanAyah.getText().toString());
+                in.putExtra("penghasilanibu", txtPenghasilanIbu.getText().toString());
+                in.putExtra("noAyah", txtnoAyah.getText().toString());
+                in.putExtra("noibu", txtnoIbu.getText().toString());
+                in.putExtra("namawali", txtNamaWali.getText().toString());
+                in.putExtra("alamatwali", txtAlamatWali.getText().toString());
+                in.putExtra("nowali", txtnoWali.getText().toString());
+                in.putExtra("pekerjaanwali", txtPekerjaanWali.getText().toString());
                 startActivity(in);
             }
         });
@@ -40,13 +89,4 @@ public class DataOrangTua extends AppCompatActivity {
 //        tabLayout.setupWithViewPager(viewPager);
 
     }
-//
-//    private void setupViewPager(ViewPager viewPager) {
-//
-//        MainFragmentPagerAdapter mainFragmentPagerAdapter = new MainFragmentPagerAdapter(getSupportFragmentManager());
-//        mainFragmentPagerAdapter.addFragment(new OrangTuaFragment(), getString(R.string.orangtua));
-//        mainFragmentPagerAdapter.addFragment(new WaliFragment(), getString(R.string.wali));
-//        viewPager.setAdapter(mainFragmentPagerAdapter);
-//
-//    }
 }
