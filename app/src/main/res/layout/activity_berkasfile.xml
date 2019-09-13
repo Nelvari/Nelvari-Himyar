@@ -330,6 +330,18 @@
         </LinearLayout>
 
     </LinearLayout>
+    <Button
+        android:id="@+id/btnSaf"
+        android:layout_marginHorizontal="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100sp"
+        android:layout_marginBottom="20sp"
+        android:background="@drawable/button"
+        android:text="NEXT"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
 
 </LinearLayout>
 </ScrollView>
