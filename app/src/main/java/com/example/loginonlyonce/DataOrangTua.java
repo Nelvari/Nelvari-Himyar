@@ -113,7 +113,7 @@ public class DataOrangTua extends AppCompatActivity {
                 in.putExtra("pekerjaanibu", txtPekerjaanIbu.getText().toString());
                 in.putExtra("penghasilanayah", txtPenghasilanAyah.getText().toString());
                 in.putExtra("penghasilanibu", txtPenghasilanIbu.getText().toString());
-                in.putExtra("noAyah", txtnoAyah.getText().toString());
+                in.putExtra("noayah", txtnoAyah.getText().toString());
                 in.putExtra("noibu", txtnoIbu.getText().toString());
                 in.putExtra("namawali", txtNamaWali.getText().toString());
                 in.putExtra("alamatwali", txtAlamatWali.getText().toString());

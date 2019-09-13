@@ -20,6 +20,40 @@ public class DataAsalSekolah extends AppCompatActivity {
     EditText txtNoSTTb;
     EditText txtNilaiSTTb;
 
+    String namaSiswa;
+    String jenisKelamin;
+    String tempatLahir;
+    String tanggalLahir;
+    String agama;
+    String alamatSiswa;
+    String tinggiBadan;
+    String beratBadan;
+    String prestasi;
+    String nisn;
+    String noUjian;
+
+    String selectedImagePathfoto;
+    String selectedImagePathakte;
+    String selectedImagePathkk;
+    String selectedImagePathsertifikat;
+    String selectedImagePathraport;
+    String selectedImagePathkasehtan;
+    String selectedImagePathgambar;
+
+    String namaayah;
+    String namaibu;
+    String alamatorangtua;
+    String pekerjaanayah;
+    String pekerjaanibu;
+    String penghasilanayah;
+    String penghasilanibu;
+    String noayah;
+    String noibu;
+    String namawali;
+    String alamatwali;
+    String nowali;
+    String pekerjaanwali;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +64,46 @@ public class DataAsalSekolah extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Formulir Asal Sekolah");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Bundle bundle = getIntent().getExtras();
+
+        if (bundle != null){
+
+            namaSiswa = bundle.getString("namasiswa");
+            jenisKelamin = bundle.getString("jeniskelamin");
+            tempatLahir = bundle.getString("tempatlahir");
+            tanggalLahir = bundle.getString("tanggallahir");
+            agama = bundle.getString("agama");
+            alamatSiswa = bundle.getString("alamatsiswa");
+            tinggiBadan = bundle.getString("tinggibadan");
+            beratBadan = bundle.getString("beratbadan");
+            prestasi = bundle.getString("prestasi");
+            nisn = bundle.getString("nisn");
+            noUjian = bundle.getString("noujian");
+
+            selectedImagePathfoto = bundle.getString("selectedImagePathfoto");
+            selectedImagePathakte = bundle.getString("selectedImagePathakte");
+            selectedImagePathkk = bundle.getString("selectedImagePathkk");
+            selectedImagePathsertifikat = bundle.getString("selectedImagePathsertifikat");
+            selectedImagePathraport = bundle.getString("selectedImagePathraport");
+            selectedImagePathkasehtan = bundle.getString("selectedImagePathkasehtan");
+            selectedImagePathgambar = bundle.getString("selectedImagePathgambar");
+
+            namaayah = bundle.getString("namaayah");
+            namaibu = bundle.getString("namaibu");
+            alamatorangtua = bundle.getString("alamatorangtua");
+            pekerjaanayah = bundle.getString("pekerjaanayah");
+            pekerjaanibu = bundle.getString("pekerjaanibu");
+            penghasilanayah = bundle.getString("penghasilanayah");
+            penghasilanibu = bundle.getString("penghasilanibu");
+            noayah = bundle.getString("noayah");
+            noibu = bundle.getString("noibu");
+            namawali = bundle.getString("namawali");
+            alamatwali = bundle.getString("alamatwali");
+            nowali = bundle.getString("nowali");
+            pekerjaanwali = bundle.getString("pekerjaanwali");
+
+        }
 
         btn = findViewById(R.id.btnSav);
 
