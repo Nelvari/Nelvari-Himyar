@@ -26,6 +26,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.viewpager:viewpager'
 
+    implementation 'com.github.jrvansuita:PickImage:+'
+
     implementation 'com.android.volley:volley:1.1.0'
     implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
 
