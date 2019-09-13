@@ -84,7 +84,7 @@ public class Login extends AppCompatActivity {
                 }
                 else {
                     AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/login")
-                            .addBodyParameter("username", txtusername.getText().toString())
+                            .addBodyParameter("email", txtusername.getText().toString())
                             .addBodyParameter("password", txtpassword.getText().toString())
                             .addBodyParameter("role", "superadmin")
                             .setTag("test")
@@ -95,6 +95,7 @@ public class Login extends AppCompatActivity {
                                 public void onResponse(JSONObject response) {
                                     // do anything with response
                                     try {
+                                        Log.d("loginku ", "onResponse: "+response.toString());
                                         String status=response.getString("STATUS");
                                         if(status.equalsIgnoreCase("SUCCES")){
                                             JSONObject getdata=response.getJSONObject("PAYLOAD");

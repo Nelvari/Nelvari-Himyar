@@ -49,7 +49,7 @@
                    android:layout_height="wrap_content"
                    android:inputType="text"
                    android:textSize="15dp"
-                   android:hint="Nama"/>
+                   android:hint="Nama sekolah *"/>
 
            </LinearLayout>
 
@@ -67,7 +67,7 @@
                    android:layout_height="wrap_content"
                    android:inputType="text"
                    android:textSize="15dp"
-                   android:hint="Alamat"/>
+                   android:hint="Alamat sekolah*"/>
 
            </LinearLayout>
 
