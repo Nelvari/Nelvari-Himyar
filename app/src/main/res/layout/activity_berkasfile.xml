@@ -93,6 +93,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnfotosisiwa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -105,7 +106,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/images"
+                android:id="@+id/ivfotodiri"
                 android:layout_width="115dp"
                 android:layout_height="130dp"
                 android:layout_marginLeft="25dp"
@@ -129,6 +130,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnakte"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
@@ -141,6 +143,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/ivakte"
                 android:layout_width="115dp"
                 android:layout_height="130dp"
                 android:layout_marginLeft="25dp"
@@ -164,6 +167,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnkk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -176,6 +180,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/ivkk"
                 android:layout_width="115dp"
                 android:layout_height="130dp"
                 android:layout_marginLeft="25dp"
@@ -198,6 +203,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnsertifikat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -210,6 +216,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/ivsertifikat"
                 android:layout_width="115dp"
                 android:layout_height="130dp"
                 android:layout_marginLeft="25dp"
@@ -233,6 +240,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnraport"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -245,6 +253,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/ivraport"
                 android:layout_width="115dp"
                 android:layout_height="130dp"
                 android:layout_marginLeft="25dp"
@@ -268,6 +277,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnksehtan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -280,6 +290,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/ivksehtan"
                 android:layout_width="115dp"
                 android:layout_height="130dp"
                 android:layout_marginLeft="25dp"
@@ -303,6 +314,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btngambar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -315,6 +327,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/ivgambar"
                 android:layout_width="115dp"
                 android:layout_height="130dp"
                 android:layout_marginLeft="25dp"
@@ -330,6 +343,18 @@
         </LinearLayout>
 
     </LinearLayout>
+    <Button
+        android:id="@+id/btnSaf"
+        android:layout_marginHorizontal="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100sp"
+        android:layout_marginBottom="20sp"
+        android:background="@drawable/button"
+        android:text="NEXT"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
 
 </LinearLayout>
 </ScrollView>
