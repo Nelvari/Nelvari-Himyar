@@ -38,6 +38,14 @@ public class DataOrangTua extends AppCompatActivity {
     String nisn;
     String noUjian;
 
+    String selectedImagePathfoto;
+    String selectedImagePathakte;
+    String selectedImagePathkk;
+    String selectedImagePathsertifikat;
+    String selectedImagePathraport;
+    String selectedImagePathkasehtan;
+    String selectedImagePathgambar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,8 +58,6 @@ public class DataOrangTua extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Bundle bundle = getIntent().getExtras();
-
-
 
         if (bundle != null){
 
@@ -66,6 +72,14 @@ public class DataOrangTua extends AppCompatActivity {
             prestasi = bundle.getString("prestasi");
             nisn = bundle.getString("nisn");
             noUjian = bundle.getString("noujian");
+
+            selectedImagePathfoto = bundle.getString("selectedImagePathfoto");
+            selectedImagePathakte = bundle.getString("selectedImagePathakte");
+            selectedImagePathkk = bundle.getString("selectedImagePathkk");
+            selectedImagePathsertifikat = bundle.getString("selectedImagePathsertifikat");
+            selectedImagePathraport = bundle.getString("selectedImagePathraport");
+            selectedImagePathkasehtan = bundle.getString("selectedImagePathkasehtan");
+            selectedImagePathgambar = bundle.getString("selectedImagePathgambar");
 
         }
 
@@ -118,6 +132,14 @@ public class DataOrangTua extends AppCompatActivity {
                 in.putExtra("prestasi", prestasi);
                 in.putExtra("nisn", nisn);
                 in.putExtra("noujian", noUjian);
+
+                in.putExtra("selectedImagePathfoto", selectedImagePathfoto);
+                in.putExtra("selectedImagePathakte", selectedImagePathakte);
+                in.putExtra("selectedImagePathkk", selectedImagePathkk);
+                in.putExtra("selectedImagePathsertifikat", selectedImagePathsertifikat);
+                in.putExtra("selectedImagePathraport", selectedImagePathraport);
+                in.putExtra("selectedImagePathkasehtan", selectedImagePathkasehtan);
+                in.putExtra("selectedImagePathgambar", selectedImagePathgambar);
 
                 startActivity(in);
             }

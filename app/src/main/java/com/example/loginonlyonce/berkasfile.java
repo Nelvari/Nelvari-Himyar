@@ -1,13 +1,14 @@
 package com.example.loginonlyonce;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.vansuita.pickimage.bean.PickResult;
 import com.vansuita.pickimage.bundle.PickSetup;
@@ -24,6 +25,7 @@ public class berkasfile extends AppCompatActivity implements IPickResult {
     Button btnraport;
     Button btnksehtan;
     Button btngambar;
+    Button btnSaf;
     ImageView ivfotodiri;
     ImageView ivakte;
     ImageView ivkk;
@@ -64,6 +66,7 @@ public class berkasfile extends AppCompatActivity implements IPickResult {
         ivraport= findViewById(R.id.ivraport);
         ivksehtan= findViewById(R.id.ivksehtan);
         ivgambar= findViewById(R.id.ivgambar);
+        btnSaf = findViewById(R.id.btnSaf);
 
         btnfotosisiwa.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,6 +118,22 @@ public class berkasfile extends AppCompatActivity implements IPickResult {
             }
         });
 
+        btnSaf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(berkasfile.this, DataSiswa.class);
+                intent.putExtra("selectedImagePathfoto", selectedImagePathfoto);
+                intent.putExtra("selectedImagePathakte", selectedImagePathakte);
+                intent.putExtra("selectedImagePathkk", selectedImagePathkk);
+                intent.putExtra("selectedImagePathsertifikat", selectedImagePathsertifikat);
+                intent.putExtra("selectedImagePathraport", selectedImagePathraport);
+                intent.putExtra("selectedImagePathkasehtan", selectedImagePathkasehtan);
+                intent.putExtra("selectedImagePathgambar", selectedImagePathgambar);
+                startActivity(intent);
+
+            }
+        });
 
     }
 

@@ -22,7 +22,7 @@ public class mainmenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(mainmenu.this, DataSiswa.class);
+                Intent intent = new Intent(mainmenu.this, berkasfile.class);
                 startActivity(intent);
 
             }
