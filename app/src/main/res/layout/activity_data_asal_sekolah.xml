@@ -129,7 +129,7 @@
            android:layout_marginTop="200sp"
            android:layout_marginBottom="20sp"
            android:background="@drawable/button"
-           android:text="Simpan"
+           android:text="NEXT"
            android:textStyle="bold"
            android:textColor="@android:color/white"/>
 
