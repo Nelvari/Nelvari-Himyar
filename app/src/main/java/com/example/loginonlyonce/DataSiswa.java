@@ -35,6 +35,14 @@ public class DataSiswa extends AppCompatActivity {
     EditText berat;
     EditText prestasi;
 
+    String selectedImagePathfoto;
+    String selectedImagePathakte;
+    String selectedImagePathkk;
+    String selectedImagePathsertifikat;
+    String selectedImagePathraport;
+    String selectedImagePathkasehtan;
+    String selectedImagePathgambar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +63,20 @@ public class DataSiswa extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Formulir Siswa");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Bundle bundle = getIntent().getExtras();
+
+        if (bundle != null){
+
+            selectedImagePathfoto = bundle.getString("selectedImagePathfoto");
+            selectedImagePathakte = bundle.getString("selectedImagePathakte");
+            selectedImagePathkk = bundle.getString("selectedImagePathkk");
+            selectedImagePathsertifikat = bundle.getString("selectedImagePathsertifikat");
+            selectedImagePathraport = bundle.getString("selectedImagePathraport");
+            selectedImagePathkasehtan = bundle.getString("selectedImagePathkasehtan");
+            selectedImagePathgambar = bundle.getString("selectedImagePathgambar");
+
+        }
 
         date = findViewById(R.id.date);
         show = findViewById(R.id.show);
@@ -130,6 +152,15 @@ public class DataSiswa extends AppCompatActivity {
                                 in.putExtra("nisn", nisn.getText().toString() );
                                 in.putExtra("noujian", noUjian.getText().toString() );
                                 //put extra here
+
+                                in.putExtra("selectedImagePathfoto", selectedImagePathfoto);
+                                in.putExtra("selectedImagePathakte", selectedImagePathakte);
+                                in.putExtra("selectedImagePathkk", selectedImagePathkk);
+                                in.putExtra("selectedImagePathsertifikat", selectedImagePathsertifikat);
+                                in.putExtra("selectedImagePathraport", selectedImagePathraport);
+                                in.putExtra("selectedImagePathkasehtan", selectedImagePathkasehtan);
+                                in.putExtra("selectedImagePathgambar", selectedImagePathgambar);
+
                                 startActivity(in);
 
                                 break;
