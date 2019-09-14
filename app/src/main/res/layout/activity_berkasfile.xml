@@ -13,19 +13,12 @@
     tools:context=".berkasfile"
     android:orientation="vertical">
 
-    <androidx.appcompat.widget.Toolbar
-        android:background="@mipmap/capture2"
-        android:theme="@style/ActionBarThemeOverlay"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/toolbarSiswa">
-    </androidx.appcompat.widget.Toolbar>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:textColor="@color/hitam"
         android:text="Pilih file untuk melengkapi syarat pendaftaran"
         />

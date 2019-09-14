@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -64,6 +65,8 @@ public class DataSiswa extends AppCompatActivity {
         getSupportActionBar().setTitle("Formulir Siswa");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+
+
         Bundle bundle = getIntent().getExtras();
 
         if (bundle != null){
@@ -75,6 +78,14 @@ public class DataSiswa extends AppCompatActivity {
             selectedImagePathraport = bundle.getString("selectedImagePathraport");
             selectedImagePathkasehtan = bundle.getString("selectedImagePathkasehtan");
             selectedImagePathgambar = bundle.getString("selectedImagePathgambar");
+
+            Log.d("databerkas", "onCreate: "+selectedImagePathfoto);
+            Log.d("databerkas", "onCreate: "+selectedImagePathakte);
+            Log.d("databerkas", "onCreate: "+selectedImagePathkk);
+            Log.d("databerkas", "onCreate: "+selectedImagePathsertifikat);
+            Log.d("databerkas", "onCreate: "+selectedImagePathraport);
+            Log.d("databerkas", "onCreate: "+selectedImagePathkasehtan);
+            Log.d("databerkas", "onCreate: "+selectedImagePathgambar);
 
         }
 
