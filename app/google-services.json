@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "71663617775",
+    "firebase_url": "https://nelvari-himyar.firebaseio.com",
+    "project_id": "nelvari-himyar",
+    "storage_bucket": "nelvari-himyar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71663617775:android:72c0005c0a0f5d9921fd1a",
+        "android_client_info": {
+          "package_name": "com.example.loginonlyonce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "71663617775-05ueva046a4v50nbfc4ovs9rj99b3cr5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.loginonlyonce",
+            "certificate_hash": "039349c2ab492039583f4053a7bac47c486713f7"
+          }
+        },
+        {
+          "client_id": "71663617775-de4mhhejtnhun34upttdsg6e9qq4ukrk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyef6kXt-1NxaOZDzTGS2rdFtU70-dLsE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "71663617775-de4mhhejtnhun34upttdsg6e9qq4ukrk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

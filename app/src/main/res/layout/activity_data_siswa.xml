@@ -31,7 +31,7 @@
             android:layout_marginTop="10dp">
 
             <EditText
-                android:id="@+id/noUjian"
+                android:id="@+id/editxtnoUjian"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
@@ -49,7 +49,7 @@
             android:layout_marginTop="10dp">
 
             <EditText
-                android:id="@+id/nisn"
+                android:id="@+id/editxtnisn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
@@ -67,7 +67,7 @@
             android:layout_marginTop="10dp">
 
             <EditText
-                android:id="@+id/namaSiswa"
+                android:id="@+id/editxtnamaSiswa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
@@ -114,7 +114,7 @@
             android:layout_marginTop="10dp">
 
             <EditText
-                android:id="@+id/tempat"
+                android:id="@+id/editxttempatlahir"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:inputType="text"
@@ -175,7 +175,7 @@
             android:layout_marginTop="10dp">
 
             <EditText
-                android:id="@+id/alamatSiswa"
+                android:id="@+id/editxtalamatSiswa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
@@ -193,7 +193,7 @@
             android:layout_marginTop="10dp">
 
             <EditText
-                android:id="@+id/tinggi"
+                android:id="@+id/editxttinggi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Tinggi Badan (cm) *"
@@ -211,7 +211,7 @@
             android:layout_marginTop="10dp">
 
             <EditText
-                android:id="@+id/berat"
+                android:id="@+id/editxtberat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
@@ -220,23 +220,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_marginHorizontal="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="10dp">
 
-            <EditText
-                android:id="@+id/prestasi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Prestasi yang pernah di capai *"
-                android:inputType="text"
-                android:textSize="15dp"/>
-
-        </LinearLayout>
 
         <Button
             android:id="@+id/btnSave"
@@ -244,7 +228,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20sp"
+            android:layout_marginTop="170dp"
             android:layout_marginBottom="20sp"
             android:background="@drawable/button"
             android:text="Next"

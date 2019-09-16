@@ -1,8 +1,11 @@
 package com.example.loginonlyonce;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -94,6 +97,16 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.0){
+//            NotificationChannel channel =
+//                    new NotificationChannel("MyNotifications", "MyNotifications" , NotificationManager.IMPORTANCE_DEFAULT);
+//
+//            NotificationManager manager = getSystemService(NotificationManager.class);
+//            manager.createNotificationChannel(channel);
+//        }
+
 
     }
 
