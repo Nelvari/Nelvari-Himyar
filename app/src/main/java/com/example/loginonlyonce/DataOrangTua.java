@@ -69,7 +69,7 @@ public class DataOrangTua extends AppCompatActivity {
             alamatSiswa = bundle.getString("alamatsiswa");
             tinggiBadan = bundle.getString("tinggibadan");
             beratBadan = bundle.getString("beratbadan");
-            prestasi = bundle.getString("prestasi");
+
             nisn = bundle.getString("nisn");
             noUjian = bundle.getString("noujian");
 
@@ -129,7 +129,7 @@ public class DataOrangTua extends AppCompatActivity {
                 in.putExtra("alamatsiswa", alamatSiswa);
                 in.putExtra("tinggibadan", tinggiBadan);
                 in.putExtra("beratbadan", beratBadan);
-                in.putExtra("prestasi", prestasi);
+
                 in.putExtra("nisn", nisn);
                 in.putExtra("noujian", noUjian);
 

@@ -20,7 +20,6 @@ import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.androidnetworking.interfaces.UploadProgressListener;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
@@ -110,7 +109,7 @@ public class DataAsalSekolah extends AppCompatActivity {
             alamatSiswa = bundle.getString("alamatsiswa");
             tinggiBadan = bundle.getString("tinggibadan");
             beratBadan = bundle.getString("beratbadan");
-            prestasi = bundle.getString("prestasi");
+
             nisn = bundle.getString("nisn");
             noUjian = bundle.getString("noujian");
 
@@ -170,7 +169,7 @@ public class DataAsalSekolah extends AppCompatActivity {
                                 Log.d("ceksiswa", alamatSiswa);
                                 Log.d("ceksiswa", tinggiBadan);
                                 Log.d("ceksiswa", beratBadan);
-                                Log.d("ceksiswa", prestasi);
+
                                 Log.d("ceksiswa", nisn);
                                 Log.d("ceksiswa", noUjian);
 
@@ -298,14 +297,8 @@ public class DataAsalSekolah extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         Log.d("hasilResponsku", "onResponse: " + response.toString());
-                        try {
-                            String status = response.getString("STATUS");
-                            if (status.equalsIgnoreCase("SUCCESS")){
 
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
+
 
 
                     }
