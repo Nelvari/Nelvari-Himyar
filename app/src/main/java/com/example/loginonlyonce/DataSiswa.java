@@ -34,7 +34,7 @@ public class DataSiswa extends AppCompatActivity {
     EditText alamatSiswa;
     EditText tinggi;
     EditText berat;
-    EditText prestasi;
+
 
     String selectedImagePathfoto;
     String selectedImagePathakte;
@@ -50,16 +50,16 @@ public class DataSiswa extends AppCompatActivity {
         setContentView(R.layout.activity_data_siswa);
 
         Toolbar toolbar = findViewById(R.id.toolbarSiswa);
-        noUjian = findViewById(R.id.noUjian);
-        nisn = findViewById(R.id.nisn);
-        namaSiswa = findViewById(R.id.namaSiswa);
+        noUjian = findViewById(R.id.editxtnoUjian);
+        nisn = findViewById(R.id.editxtnisn);
+        namaSiswa = findViewById(R.id.editxtnamaSiswa);
         jenisKelamin = findViewById(R.id.jenisKelamin);
-        tempat = findViewById(R.id.tempat);
+        tempat = findViewById(R.id.editxttempatlahir);
         agama = findViewById(R.id.agama);
-        tinggi = findViewById(R.id.tinggi);
-        alamatSiswa = findViewById(R.id.alamatSiswa);
-        berat = findViewById(R.id.berat);
-        prestasi = findViewById(R.id.prestasi);
+        tinggi = findViewById(R.id.editxttinggi);
+        alamatSiswa = findViewById(R.id.editxtalamatSiswa);
+        berat = findViewById(R.id.editxtberat);
+
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Formulir Siswa");
@@ -159,7 +159,6 @@ public class DataSiswa extends AppCompatActivity {
                                 in.putExtra("alamatsiswa", alamatSiswa.getText().toString() );
                                 in.putExtra("tinggibadan", tinggi.getText().toString() );
                                 in.putExtra("beratbadan", berat.getText().toString() );
-                                in.putExtra("prestasi", prestasi.getText().toString() );
                                 in.putExtra("nisn", nisn.getText().toString() );
                                 in.putExtra("noujian", noUjian.getText().toString() );
                                 //put extra here
@@ -185,6 +184,32 @@ public class DataSiswa extends AppCompatActivity {
 
                     }
                 };
+
+//                if(namaSiswa.length()==0)
+//
+//                {
+//                    namaSiswa.requestFocus();
+//                    namaSiswa.setError("FIELD CANNOT BE EMPTY");
+//                }
+//
+//                else if(!Name.matches("[a-zA-Z ]+"))
+//                {
+//                    NameEditText.requestFocus();
+//                    NameEditText.setError("ENTER ONLY ALPHABETICAL CHARACTER");
+//                }
+//
+//                else if(word.length()==0)
+//                {
+//                    wordEditText.requestFocus();
+//                    wordEditText.setError("FIELD CANNOT BE EMPTY");
+//                }
+//                else
+//                {
+//                    Toast.makeText(DataSiswa.this,"Validation Successful",Toast.LENGTH_LONG).show();
+//                }
+
+
+
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
                 builder.setMessage("Apakah anda yakin ingin simpan data?").setPositiveButton("Ya", dialog)

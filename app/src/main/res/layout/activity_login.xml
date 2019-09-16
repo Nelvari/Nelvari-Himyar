@@ -5,7 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="wrap_content"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    android:background="@color/putih">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,17 +16,17 @@
         tools:context=".Login">
 
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:layout_gravity="center"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
             android:background="@mipmap/logobaru"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="WELCOME PLEASE LOGIN"
-            android:textSize="20dp"
+            android:textSize="17dp"
             android:textColor="@color/hitam"
             android:textStyle="bold"
             android:gravity="center"
@@ -59,7 +60,7 @@
         <Button
             android:id="@+id/btnlogin"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="45dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
@@ -99,7 +100,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:gravity="center"
             android:layout_marginBottom="30dp"
             android:orientation="horizontal">
@@ -109,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:text="Belum punya akun ?"
                 android:textColor="@color/hitam"
-                android:textSize="15dp" />
+                android:textSize="14dp" />
 
             <TextView
                 android:id="@+id/tvdaftar"
@@ -118,7 +119,7 @@
                 android:layout_marginLeft="5dp"
                 android:text="Daftar"
                 android:textColor="@color/blue"
-                android:textSize="15dp"
+                android:textSize="14dp"
                 />
 
         </LinearLayout>

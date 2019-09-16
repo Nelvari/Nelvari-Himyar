@@ -16,156 +16,36 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_gravity="center"
-        android:layout_marginTop="70sp"
+        android:layout_marginTop="70dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:id="@+id/icon"
         app:civ_border_width="2dp"
         app:civ_border_color="#FF000000"/>
 
-    <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-
-    <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@mipmap/images"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="50dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/nama"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="25dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:textSize="20dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Name"
-            android:textColor="@color/hitam"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="50dp"
-            android:textSize="17dp"/>
-
-        <TextView
-            android:layout_marginLeft="20dp"
-            android:id="@+id/nama"
-            android:layout_width="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"/>
-
-        <View
-            android:layout_width="250dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="20dp"
-            android:background="@color/hitam" />
-
-    </LinearLayout>
-
-
-
-</LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/email"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:textSize="20dp"/>
 
-
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@mipmap/emailblue"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="20dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="E-mail atau nomor telepon"
-                android:textColor="@color/hitam"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:textSize="17dp"/>
-
-            <TextView
-                android:layout_marginLeft="20dp"
-                android:layout_width="wrap_content"
-                android:layout_marginTop="5dp"
-                android:id="@+id/email"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"/>
-
-            <View
-                android:layout_width="250dp"
-                android:layout_height="1dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="20dp"
-                android:background="@color/hitam" />
-
-        </LinearLayout>
-
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@mipmap/email"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="20dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nomor id"
-                android:textColor="@color/hitam"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:textSize="17dp"/>
-
-            <TextView
-                android:layout_marginLeft="20dp"
-                android:layout_width="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:id="@+id/id"/>
-
-            <View
-                android:layout_width="250dp"
-                android:layout_height="1dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="20dp"
-                android:background="@color/hitam" />
-
-        </LinearLayout>
-
-
-
-    </LinearLayout>
+        android:textSize="20dp"
+        android:id="@+id/id"/>
 
 
 
@@ -176,7 +56,7 @@
         android:textColor="@color/putih"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="150dp"
         android:text="Log Out"
         android:layout_marginBottom="30dp"/>
 

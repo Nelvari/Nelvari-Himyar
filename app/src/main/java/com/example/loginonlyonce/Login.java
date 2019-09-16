@@ -83,6 +83,9 @@ public class Login extends AppCompatActivity {
                     Toast.makeText(Login.this, "please fill my heart first to send a request :(", Toast.LENGTH_SHORT).show();
                 }
                 else {
+                    //
+
+                    //
                     AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/login")
                             .addBodyParameter("username", txtusername.getText().toString())
                             .addBodyParameter("password", txtpassword.getText().toString())
@@ -94,6 +97,7 @@ public class Login extends AppCompatActivity {
                                 @Override
                                 public void onResponse(JSONObject response) {
                                     // do anything with response
+                                    //stop
                                     try {
                                         Log.d("loginku ", "onResponse: "+response.toString());
                                         String status=response.getString("STATUS");
@@ -116,6 +120,7 @@ public class Login extends AppCompatActivity {
 
                                         }
                                     } catch (JSONException e) {
+                                        Log.d("errorku", "onResponse: "+e.toString());
                                         e.printStackTrace();
                                     }
                                 }

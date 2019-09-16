@@ -90,6 +90,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/putih"
             android:layout_marginLeft="25dp"
             android:text="Foto"/>
 
@@ -127,6 +129,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/putih"
             android:layout_marginTop="40dp"
             android:text="akte" />
 
@@ -164,6 +168,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/putih"
             android:layout_marginLeft="25dp"
             android:text="KK"/>
 
@@ -200,6 +206,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/putih"
             android:layout_marginLeft="25dp"
             android:text="Srtfkt"/>
 
@@ -234,6 +242,8 @@
 
         <Button
             android:id="@+id/btnraport"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/putih"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -271,6 +281,8 @@
 
         <Button
             android:id="@+id/btnksehtan"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/putih"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -311,6 +323,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:textColor="@color/putih"
+            android:background="@color/colorPrimaryDark"
             android:layout_marginLeft="25dp"
             android:text="gambar"/>
 
