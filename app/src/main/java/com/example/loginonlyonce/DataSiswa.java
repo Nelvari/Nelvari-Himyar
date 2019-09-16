@@ -174,6 +174,8 @@ public class DataSiswa extends AppCompatActivity {
 
                                 startActivity(in);
 
+                                finish();
+
                                 break;
 
                             case DialogInterface.BUTTON_NEGATIVE:

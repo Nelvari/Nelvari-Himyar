@@ -142,6 +142,7 @@ public class DataOrangTua extends AppCompatActivity {
                 in.putExtra("selectedImagePathgambar", selectedImagePathgambar);
 
                 startActivity(in);
+                finish();
             }
         });
 

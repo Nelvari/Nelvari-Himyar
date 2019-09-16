@@ -20,6 +20,7 @@ import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.androidnetworking.interfaces.UploadProgressListener;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
@@ -294,6 +295,15 @@ public class DataAsalSekolah extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         Log.d("hasilResponsku", "onResponse: " + response.toString());
+                        try {
+                            String status = response.getString("STATUS");
+                            if (status.equalsIgnoreCase("SUCCESS")){
+                                finish();
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
 
                     }
 
