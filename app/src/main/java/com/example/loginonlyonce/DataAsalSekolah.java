@@ -301,7 +301,7 @@ public class DataAsalSekolah extends AppCompatActivity {
                         try {
                             String status = response.getString("STATUS");
                             if (status.equalsIgnoreCase("SUCCESS")){
-                                finish();
+
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
