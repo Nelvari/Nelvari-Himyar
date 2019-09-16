@@ -1,6 +1,8 @@
 package com.example.loginonlyonce;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
@@ -16,11 +18,14 @@ import com.example.loginonlyonce.Model.ControlInfoRPL;
 public class home extends AppCompatActivity {
 
     CardView prduksi, persiapan, animasi, rpl, dkv;
+    SharedPreferences mLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        mLogin = getSharedPreferences("login", Context.MODE_PRIVATE);
 
         prduksi = findViewById(R.id.produksi);
         persiapan = findViewById(R.id.persiapan);
@@ -32,6 +37,10 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                SharedPreferences.Editor editor = mLogin.edit();
+                editor.putString("jurusan", "Produksi");
+                editor.apply();
+
                 Intent hi = new Intent(home.this, ControlInfo.class);
                 startActivity(hi);
 
@@ -41,6 +50,10 @@ public class home extends AppCompatActivity {
         persiapan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                SharedPreferences.Editor editor = mLogin.edit();
+                editor.putString("jurusan", "Persiapan");
+                editor.apply();
 
                 Intent hi = new Intent(home.this, ControlInfoDg.class);
                 startActivity(hi);
@@ -52,6 +65,10 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                SharedPreferences.Editor editor = mLogin.edit();
+                editor.putString("jurusan", "Animasi");
+                editor.apply();
+
                 Intent hi = new Intent(home.this, ControlInfoAnimasi.class);
                 startActivity(hi);
 
@@ -62,6 +79,10 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                SharedPreferences.Editor editor = mLogin.edit();
+                editor.putString("jurusan", "DKV");
+                editor.apply();
+
                 Intent hi = new Intent(home.this, ControlInfoDKV.class);
                 startActivity(hi);
 
@@ -71,6 +92,10 @@ public class home extends AppCompatActivity {
         rpl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                SharedPreferences.Editor editor = mLogin.edit();
+                editor.putString("jurusan", "RPL");
+                editor.apply();
 
                 Intent hi = new Intent(home.this, ControlInfoRPL.class);
                 startActivity(hi);
