@@ -20,6 +20,8 @@ import com.androidnetworking.interfaces.UploadProgressListener;
 
 import org.json.JSONObject;
 
+import java.io.File;
+
 public class DataAsalSekolah extends AppCompatActivity {
 
     Button btn;
@@ -48,6 +50,14 @@ public class DataAsalSekolah extends AppCompatActivity {
     String selectedImagePathraport;
     String selectedImagePathkasehtan;
     String selectedImagePathgambar;
+
+    File fileselectedImagePathfoto;
+    File fileselectedImagePathakte;
+    File fileselectedImagePathkk;
+    File fileselectedImagePathsertifikat;
+    File fileselectedImagePathraport;
+    File fileselectedImagePathkasehtan;
+    File fileselectedImagePathgambar;
 
     String namaayah;
     String namaibu;
@@ -103,6 +113,15 @@ public class DataAsalSekolah extends AppCompatActivity {
             selectedImagePathraport = bundle.getString("selectedImagePathraport");
             selectedImagePathkasehtan = bundle.getString("selectedImagePathkasehtan");
             selectedImagePathgambar = bundle.getString("selectedImagePathgambar");
+
+            fileselectedImagePathfoto=new File(selectedImagePathfoto);
+            fileselectedImagePathakte=new File(selectedImagePathakte);
+            fileselectedImagePathkk=new File(selectedImagePathkk);
+            fileselectedImagePathsertifikat=new File(selectedImagePathsertifikat);
+            fileselectedImagePathraport=new File(selectedImagePathraport);
+            fileselectedImagePathkasehtan=new File(selectedImagePathkasehtan);
+            fileselectedImagePathgambar=new File(selectedImagePathgambar);
+
 
             namaayah = bundle.getString("namaayah");
             namaibu = bundle.getString("namaibu");
@@ -203,6 +222,23 @@ public class DataAsalSekolah extends AppCompatActivity {
 
         AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/daftar")
                 //Siswa
+//                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathfoto)
+//                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathakte)
+//                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathgambar)
+//                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathkasehtan)
+//                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathraport)
+//                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathsertifikat)
+//                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathkk)
+
+
+                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathfoto)
+                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathakte)
+                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathgambar)
+                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathkasehtan)
+                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathraport)
+                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathsertifikat)
+                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathkk)
+
                 .addMultipartParameter("sw_nama_lengkap", namaSiswa)
                 .addMultipartParameter("sw_nisn", nisn)
                 .addMultipartParameter("sw_ttl", tempatLahir + ", " + tanggalLahir)
