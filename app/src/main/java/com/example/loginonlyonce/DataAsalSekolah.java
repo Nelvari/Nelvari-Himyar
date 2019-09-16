@@ -233,23 +233,23 @@ public class DataAsalSekolah extends AppCompatActivity {
 
         AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/daftar")
                 //berkas, testing pakai text dulu
-//                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathfoto)
-//                .addMultipartFile("lmp_akte", fileselectedImagePathakte)
-//                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathgambar)
-//                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathkasehtan)
-//                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathraport)
-//                .addMultipartFile("lmp_skhun", fileselectedImagePathsertifikat)
-//                .addMultipartFile("lmp_kk", fileselectedImagePathkk)
+                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathfoto)
+                .addMultipartFile("lmp_akte", fileselectedImagePathakte)
+                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathgambar)
+                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathkasehtan)
+                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathraport)
+                .addMultipartFile("lmp_skhun", fileselectedImagePathsertifikat)
+                .addMultipartFile("lmp_kk", fileselectedImagePathkk)
 
 
                 //berkas, kalau sudah siap pakai file, komen aja 7 dibawah ini, trus unkomen 7 diatas
 //                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathfoto)
-                .addMultipartParameter("lmp_akte", selectedImagePathakte)
+   //             .addMultipartParameter("lmp_akte", selectedImagePathakte)
 //                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathgambar)
 //                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathkasehtan)
 //                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathraport)
-                .addMultipartParameter("lmp_skhun", selectedImagePathsertifikat)
-                .addMultipartParameter("lmp_kk", selectedImagePathkk)
+      //          .addMultipartParameter("lmp_skhun", selectedImagePathsertifikat)
+        //        .addMultipartParameter("lmp_kk", selectedImagePathkk)
 
 
                 .addMultipartParameter("username", mInfoRPL.getString("username", ""))
