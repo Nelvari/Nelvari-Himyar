@@ -84,7 +84,7 @@ public class Login extends AppCompatActivity {
                 }
                 else {
                     AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/login")
-                            .addBodyParameter("email", txtusername.getText().toString())
+                            .addBodyParameter("username", txtusername.getText().toString())
                             .addBodyParameter("password", txtpassword.getText().toString())
                             .addBodyParameter("role", "superadmin")
                             .setTag("test")

@@ -1,6 +1,8 @@
 package com.example.loginonlyonce;
 
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -73,10 +75,15 @@ public class DataAsalSekolah extends AppCompatActivity {
     String nowali;
     String pekerjaanwali;
 
+    private SharedPreferences mInfoRPL;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_asal_sekolah);
+
+        mInfoRPL = getSharedPreferences("login", Context.MODE_PRIVATE);
+
 
         Toolbar toolbar = findViewById(R.id.toolbar);
 
@@ -151,7 +158,7 @@ public class DataAsalSekolah extends AppCompatActivity {
 
                         switch (i){
                             case DialogInterface.BUTTON_POSITIVE:
-                                Toast.makeText(getApplicationContext(), "Sukses", Toast.LENGTH_LONG).show();
+
 
                                 //siswa
                                 Log.d("ceksiswa", namaSiswa);
@@ -197,6 +204,10 @@ public class DataAsalSekolah extends AppCompatActivity {
                                 Log.d("ceksekolah", txtNoSTTb.getText().toString());
                                 Log.d("ceksekolah", txtTahunSTTb.getText().toString());
 
+
+                                Log.d("ceksekolah",mInfoRPL.getString("username", ""));
+                                Log.d("ceksekolah",mInfoRPL.getString("jurusan", ""));
+
                                 senData();
 
                                 break;
@@ -221,24 +232,29 @@ public class DataAsalSekolah extends AppCompatActivity {
     private void senData(){
 
         AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/daftar")
-                //Siswa
+                //berkas, testing pakai text dulu
 //                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathfoto)
-//                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathakte)
+//                .addMultipartFile("lmp_akte", fileselectedImagePathakte)
 //                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathgambar)
 //                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathkasehtan)
 //                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathraport)
-//                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathsertifikat)
-//                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathkk)
+//                .addMultipartFile("lmp_skhun", fileselectedImagePathsertifikat)
+//                .addMultipartFile("lmp_kk", fileselectedImagePathkk)
 
 
-                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathfoto)
-                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathakte)
-                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathgambar)
-                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathkasehtan)
-                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathraport)
-                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathsertifikat)
-                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathkk)
+                //berkas, kalau sudah siap pakai file, komen aja 7 dibawah ini, trus unkomen 7 diatas
+//                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathfoto)
+                .addMultipartParameter("lmp_akte", selectedImagePathakte)
+//                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathgambar)
+//                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathkasehtan)
+//                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathraport)
+                .addMultipartParameter("lmp_skhun", selectedImagePathsertifikat)
+                .addMultipartParameter("lmp_kk", selectedImagePathkk)
 
+                .addMultipartParameter("username", mInfoRPL.getString("username", ""))
+                .addMultipartParameter("sw_jurusan", mInfoRPL.getString("jurusan", ""))
+
+                //Siswa
                 .addMultipartParameter("sw_nama_lengkap", namaSiswa)
                 .addMultipartParameter("sw_nisn", nisn)
                 .addMultipartParameter("sw_ttl", tempatLahir + ", " + tanggalLahir)
@@ -283,7 +299,9 @@ public class DataAsalSekolah extends AppCompatActivity {
 
                     @Override
                     public void onError(ANError anError) {
-                        Log.d("erorResponsku", "onError: " + anError.toString());
+                        Log.d("erorResponsku", "onError: " + anError.getErrorDetail());
+                        Log.d("erorResponsku", "onError: " + anError.getErrorBody());
+                        Log.d("erorResponsku", "onError: " + anError.getErrorCode());
                     }
                 });
 
