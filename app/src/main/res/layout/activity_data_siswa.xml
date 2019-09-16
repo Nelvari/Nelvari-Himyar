@@ -13,8 +13,6 @@
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
-
-            android:background="@mipmap/capture2"
             android:theme="@style/ActionBarThemeOverlay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -22,13 +20,16 @@
 
         </androidx.appcompat.widget.Toolbar>
 
+
+
+
         <LinearLayout
             android:layout_marginHorizontal="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="30dp">
 
             <EditText
                 android:id="@+id/editxtnoUjian"

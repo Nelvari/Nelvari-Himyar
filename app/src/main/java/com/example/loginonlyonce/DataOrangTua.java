@@ -26,6 +26,26 @@ public class DataOrangTua extends AppCompatActivity {
     EditText txtnoWali;
     EditText txtPekerjaanWali;
 
+    String namaSiswa;
+    String jenisKelamin;
+    String tempatLahir;
+    String tanggalLahir;
+    String agama;
+    String alamatSiswa;
+    String tinggiBadan;
+    String beratBadan;
+    String prestasi;
+    String nisn;
+    String noUjian;
+
+    String selectedImagePathfoto;
+    String selectedImagePathakte;
+    String selectedImagePathkk;
+    String selectedImagePathsertifikat;
+    String selectedImagePathraport;
+    String selectedImagePathkasehtan;
+    String selectedImagePathgambar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +54,34 @@ public class DataOrangTua extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbarOrangTua);
 
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Formulir Orang Tua");
+        getSupportActionBar().setTitle("Formulir Orang Tua/Wali");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Bundle bundle = getIntent().getExtras();
+
+        if (bundle != null){
+
+            namaSiswa = bundle.getString("namasiswa");
+            jenisKelamin = bundle.getString("jeniskelamin");
+            tempatLahir = bundle.getString("tempatlahir");
+            tanggalLahir = bundle.getString("tanggallahir");
+            agama = bundle.getString("agama");
+            alamatSiswa = bundle.getString("alamatsiswa");
+            tinggiBadan = bundle.getString("tinggibadan");
+            beratBadan = bundle.getString("beratbadan");
+            prestasi = bundle.getString("prestasi");
+            nisn = bundle.getString("nisn");
+            noUjian = bundle.getString("noujian");
+
+            selectedImagePathfoto = bundle.getString("selectedImagePathfoto");
+            selectedImagePathakte = bundle.getString("selectedImagePathakte");
+            selectedImagePathkk = bundle.getString("selectedImagePathkk");
+            selectedImagePathsertifikat = bundle.getString("selectedImagePathsertifikat");
+            selectedImagePathraport = bundle.getString("selectedImagePathraport");
+            selectedImagePathkasehtan = bundle.getString("selectedImagePathkasehtan");
+            selectedImagePathgambar = bundle.getString("selectedImagePathgambar");
+
+        }
 
         txtNamaAyah = findViewById(R.id.namaAyah);
         txtNamaIbu = findViewById(R.id.namaIbu);
@@ -56,6 +102,7 @@ public class DataOrangTua extends AppCompatActivity {
         btnSimpanOrangTua.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 //dialog
                 Intent in =new Intent(getApplicationContext(),DataAsalSekolah.class);
                 //put extra here
@@ -66,27 +113,37 @@ public class DataOrangTua extends AppCompatActivity {
                 in.putExtra("pekerjaanibu", txtPekerjaanIbu.getText().toString());
                 in.putExtra("penghasilanayah", txtPenghasilanAyah.getText().toString());
                 in.putExtra("penghasilanibu", txtPenghasilanIbu.getText().toString());
-                in.putExtra("noAyah", txtnoAyah.getText().toString());
+                in.putExtra("noayah", txtnoAyah.getText().toString());
                 in.putExtra("noibu", txtnoIbu.getText().toString());
                 in.putExtra("namawali", txtNamaWali.getText().toString());
                 in.putExtra("alamatwali", txtAlamatWali.getText().toString());
                 in.putExtra("nowali", txtnoWali.getText().toString());
                 in.putExtra("pekerjaanwali", txtPekerjaanWali.getText().toString());
+
+                //siswa
+                in.putExtra("namasiswa", namaSiswa);
+                in.putExtra("jeniskelamin", jenisKelamin);
+                in.putExtra("tempatlahir", tempatLahir);
+                in.putExtra("tanggallahir", tanggalLahir);
+                in.putExtra("agama", agama);
+                in.putExtra("alamatsiswa", alamatSiswa);
+                in.putExtra("tinggibadan", tinggiBadan);
+                in.putExtra("beratbadan", beratBadan);
+                in.putExtra("prestasi", prestasi);
+                in.putExtra("nisn", nisn);
+                in.putExtra("noujian", noUjian);
+
+                in.putExtra("selectedImagePathfoto", selectedImagePathfoto);
+                in.putExtra("selectedImagePathakte", selectedImagePathakte);
+                in.putExtra("selectedImagePathkk", selectedImagePathkk);
+                in.putExtra("selectedImagePathsertifikat", selectedImagePathsertifikat);
+                in.putExtra("selectedImagePathraport", selectedImagePathraport);
+                in.putExtra("selectedImagePathkasehtan", selectedImagePathkasehtan);
+                in.putExtra("selectedImagePathgambar", selectedImagePathgambar);
+
                 startActivity(in);
             }
         });
-//        Toolbar toolbar = findViewById(R.id.toolbar);
-//
-//        setSupportActionBar(toolbar);
-//        getSupportActionBar().setTitle("Formulir Pendaftaran");
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//
-//        ViewPager viewPager = findViewById(R.id.viewPager);
-//        setupViewPager(viewPager);
-//
-//        // setting tabLayout
-//        TabLayout tabLayout = findViewById(R.id.tabLayout);
-//        tabLayout.setupWithViewPager(viewPager);
 
     }
 }

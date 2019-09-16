@@ -13,19 +13,12 @@
     tools:context=".berkasfile"
     android:orientation="vertical">
 
-    <androidx.appcompat.widget.Toolbar
-        android:background="@mipmap/capture2"
-        android:theme="@style/ActionBarThemeOverlay"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/toolbarSiswa">
-    </androidx.appcompat.widget.Toolbar>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:textColor="@color/hitam"
         android:text="Pilih file untuk melengkapi syarat pendaftaran"
         />
@@ -97,6 +90,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/putih"
             android:layout_marginLeft="25dp"
             android:text="Foto"/>
 
@@ -134,6 +129,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/putih"
             android:layout_marginTop="40dp"
             android:text="akte" />
 
@@ -171,6 +168,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/putih"
             android:layout_marginLeft="25dp"
             android:text="KK"/>
 
@@ -207,6 +206,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/putih"
             android:layout_marginLeft="25dp"
             android:text="Srtfkt"/>
 
@@ -241,6 +242,8 @@
 
         <Button
             android:id="@+id/btnraport"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/putih"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -278,6 +281,8 @@
 
         <Button
             android:id="@+id/btnksehtan"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/putih"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -318,6 +323,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:textColor="@color/putih"
+            android:background="@color/colorPrimaryDark"
             android:layout_marginLeft="25dp"
             android:text="gambar"/>
 
@@ -343,13 +350,14 @@
         </LinearLayout>
 
     </LinearLayout>
+
     <Button
         android:id="@+id/btnSaf"
         android:layout_marginHorizontal="20sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="100sp"
+        android:layout_marginTop="50sp"
         android:layout_marginBottom="20sp"
         android:background="@drawable/button"
         android:text="NEXT"
