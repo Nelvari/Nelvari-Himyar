@@ -256,14 +256,6 @@ public class DataAsalSekolah extends AppCompatActivity {
                 .addMultipartParameter("username", mInfoRPL.getString("username", ""))
                 .addMultipartParameter("sw_jurusan", mInfoRPL.getString("jurusan", ""))
 
-                //berkas, kalau sudah siap pakai file, komen aja 7 dibawah ini, trus unkomen 7 diatas
-                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathfoto)
-                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathakte)
-                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathgambar)
-                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathkasehtan)
-                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathraport)
-                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathsertifikat)
-                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathkk)
 
 
                 //Siswa
