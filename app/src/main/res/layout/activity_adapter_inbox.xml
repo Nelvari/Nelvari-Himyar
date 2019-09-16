@@ -52,7 +52,7 @@
 
         <TextView
             android:text="title"
-            android:id="@+id/tvwaktu"
+            android:id="@+id/tvtype"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"/>

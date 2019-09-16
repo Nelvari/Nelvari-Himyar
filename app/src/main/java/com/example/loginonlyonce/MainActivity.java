@@ -13,10 +13,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.loginonlyonce.Model.ModelClass;
 import com.example.loginonlyonce.Model.PrefManager;
 import com.facebook.login.LoginManager;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,16 +30,17 @@ public class MainActivity extends AppCompatActivity {
     TextView id;
     TextView nama;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         log = findViewById(R.id.logOut);
         imageView = findViewById(R.id.icon);
         nama = findViewById(R.id.nama);
         email = findViewById(R.id.email);
         id = findViewById(R.id.id);
+
 
         SharedPreferences mlogin = getSharedPreferences("login", Context.MODE_PRIVATE);
 
