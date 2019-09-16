@@ -221,7 +221,7 @@ public class DataAsalSekolah extends AppCompatActivity {
     private void senData(){
 
         AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/daftar")
-                //Siswa
+                //berkas, testing pakai text dulu
 //                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathfoto)
 //                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathakte)
 //                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathgambar)
@@ -231,6 +231,7 @@ public class DataAsalSekolah extends AppCompatActivity {
 //                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathkk)
 
 
+                //berkas, kalau sudah siap pakai file, komen aja 7 dibawah ini, trus unkomen 7 diatas
                 .addMultipartParameter("gantiparaminiyaNel", selectedImagePathfoto)
                 .addMultipartParameter("gantiparaminiyaNel", selectedImagePathakte)
                 .addMultipartParameter("gantiparaminiyaNel", selectedImagePathgambar)
@@ -239,6 +240,7 @@ public class DataAsalSekolah extends AppCompatActivity {
                 .addMultipartParameter("gantiparaminiyaNel", selectedImagePathsertifikat)
                 .addMultipartParameter("gantiparaminiyaNel", selectedImagePathkk)
 
+                //Siswa
                 .addMultipartParameter("sw_nama_lengkap", namaSiswa)
                 .addMultipartParameter("sw_nisn", nisn)
                 .addMultipartParameter("sw_ttl", tempatLahir + ", " + tanggalLahir)
