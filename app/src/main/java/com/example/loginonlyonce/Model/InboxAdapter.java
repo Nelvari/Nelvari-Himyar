@@ -33,9 +33,9 @@ public class InboxAdapter extends RecyclerView.Adapter<InboxAdapter.InboxViewHol
 
     @Override
     public void onBindViewHolder(@NonNull InboxViewHolder inboxViewHolder, int i) {
-        inboxViewHolder.txttitle.setText(dataList.get(i).getTvtitle());
-        inboxViewHolder.txtisi.setText(dataList.get(i).getTvisi());
-        inboxViewHolder.txtwaktu.setText(dataList.get(i).getTvtype());
+        inboxViewHolder.txttitle.setText(dataList.get(i).getTxttitle());
+        inboxViewHolder.txtisi.setText(dataList.get(i).getTxtisi());
+        inboxViewHolder.txtwaktu.setText(dataList.get(i).getTxtwaktu());
     }
 
     @Override
@@ -43,14 +43,14 @@ public class InboxAdapter extends RecyclerView.Adapter<InboxAdapter.InboxViewHol
         return dataList.size();
     }
 
-    public class InboxViewHolder extends RecyclerView.ViewHolder{
+    public static class InboxViewHolder extends RecyclerView.ViewHolder{
         private TextView txttitle, txtisi,txtwaktu;
 
         public InboxViewHolder(View itemView) {
             super(itemView);
-            txttitle = (TextView) itemView.findViewById(R.id.tvtitle);
-            txtisi = (TextView) itemView.findViewById(R.id.tvisi);
-            txtwaktu = (TextView) itemView.findViewById(R.id.tvtype);
+            txttitle = (TextView) itemView.findViewById(R.id.txttitle);
+            txtisi = (TextView) itemView.findViewById(R.id.txtisi);
+            txtwaktu = (TextView) itemView.findViewById(R.id.txtwaktu);
             //onclick
         }
     }

@@ -2,40 +2,39 @@ package com.example.loginonlyonce.Model;
 
 public class ModelClass {
 
-    private String tvtitle;
-    private String tvisi;
-    private String tvtype;
+    private String txttitle;
+    private String txtisi;
+    private String txtwaktu;
 
 
-    public ModelClass (String tvtitle, String tvisi, String tvwaktu) {
-        this.tvtitle = tvtitle;
-        this.tvisi = tvisi;
-        this.tvwaktu = tvwaktu;
+    public ModelClass(String txttitle, String txtisi, String txtwaktu) {
+        this.setTxttitle(txttitle);
+        this.setTxtisi(txtisi);
+        this.setTxtwaktu(txtwaktu);
 
     }
 
-
-    public String getTvtitle() {
-        return tvtitle;
+    public String getTxttitle() {
+        return txttitle;
     }
 
-    public void setTvtitle(String tvtitle) {
-        this.tvtitle = tvtitle;
+    public void setTxttitle(String txttitle) {
+        this.txttitle = txttitle;
     }
 
-    public String getTvisi() {
-        return tvisi;
+    public String getTxtisi() {
+        return txtisi;
     }
 
-    public void setTvisi(String tvisi) {
-        this.tvisi = tvisi;
+    public void setTxtisi(String txtisi) {
+        this.txtisi = txtisi;
     }
 
-    public String getTvtype() {
-        return tvtype;
+    public String getTxtwaktu() {
+        return txtwaktu;
     }
 
-    public void setTvtype(String tvtype) {
-        this.tvtype = tvtype;
+    public void setTxtwaktu(String txtwaktu) {
+        this.txtwaktu = txtwaktu;
     }
 }
