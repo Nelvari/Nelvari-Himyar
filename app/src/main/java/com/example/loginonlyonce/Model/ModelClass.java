@@ -4,7 +4,7 @@ public class ModelClass {
 
     private String tvtitle;
     private String tvisi;
-    private String tvwaktu;
+    private String tvtype;
 
 
     public ModelClass (String tvtitle, String tvisi, String tvwaktu) {
@@ -31,11 +31,11 @@ public class ModelClass {
         this.tvisi = tvisi;
     }
 
-    public String getTvwaktu() {
-        return tvwaktu;
+    public String getTvtype() {
+        return tvtype;
     }
 
-    public void setTvwaktu(String tvwaktu) {
-        this.tvwaktu = tvwaktu;
+    public void setTvtype(String tvtype) {
+        this.tvtype = tvtype;
     }
 }
