@@ -1,8 +1,10 @@
 package com.example.loginonlyonce;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -77,6 +79,11 @@ public class DataAsalSekolah extends AppCompatActivity {
 
     private SharedPreferences mInfoRPL;
 
+    private ProgressDialog dialog;
+
+    Bitmap bitmapcontoh;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,7 +91,7 @@ public class DataAsalSekolah extends AppCompatActivity {
 
         mInfoRPL = getSharedPreferences("login", Context.MODE_PRIVATE);
 
-
+        dialog = new ProgressDialog(DataAsalSekolah.this);
         Toolbar toolbar = findViewById(R.id.toolbar);
 
         txtNamaSekolah = findViewById(R.id.namaSekolah);
@@ -121,6 +128,10 @@ public class DataAsalSekolah extends AppCompatActivity {
             selectedImagePathkasehtan = bundle.getString("selectedImagePathkasehtan");
             selectedImagePathgambar = bundle.getString("selectedImagePathgambar");
 
+
+
+
+
             fileselectedImagePathfoto=new File(selectedImagePathfoto);
             fileselectedImagePathakte=new File(selectedImagePathakte);
             fileselectedImagePathkk=new File(selectedImagePathkk);
@@ -128,6 +139,9 @@ public class DataAsalSekolah extends AppCompatActivity {
             fileselectedImagePathraport=new File(selectedImagePathraport);
             fileselectedImagePathkasehtan=new File(selectedImagePathkasehtan);
             fileselectedImagePathgambar=new File(selectedImagePathgambar);
+
+
+
 
 
             namaayah = bundle.getString("namaayah");
@@ -231,25 +245,27 @@ public class DataAsalSekolah extends AppCompatActivity {
 
     private void senData(){
 
+        dialog.setMessage("Doing something, please wait.");
+        dialog.show();
         AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/daftar")
                 //berkas, testing pakai text dulu
-                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathfoto)
+                .addMultipartFile("lmp_foto", fileselectedImagePathfoto)
                 .addMultipartFile("lmp_akte", fileselectedImagePathakte)
-                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathgambar)
-                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathkasehtan)
-                .addMultipartFile("gantiparaminiyaNel", fileselectedImagePathraport)
-                .addMultipartFile("lmp_skhun", fileselectedImagePathsertifikat)
+                .addMultipartFile("lmp_gambar_anm", fileselectedImagePathgambar)
+                .addMultipartFile("lmp_kesehatan", fileselectedImagePathkasehtan)
+                .addMultipartFile("lmp_raport", fileselectedImagePathraport)
+                .addMultipartFile("lmp_prestasi", fileselectedImagePathsertifikat)
                 .addMultipartFile("lmp_kk", fileselectedImagePathkk)
 
 
                 //berkas, kalau sudah siap pakai file, komen aja 7 dibawah ini, trus unkomen 7 diatas
-//                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathfoto)
-   //             .addMultipartParameter("lmp_akte", selectedImagePathakte)
-//                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathgambar)
-//                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathkasehtan)
-//                .addMultipartParameter("gantiparaminiyaNel", selectedImagePathraport)
-      //          .addMultipartParameter("lmp_skhun", selectedImagePathsertifikat)
-        //        .addMultipartParameter("lmp_kk", selectedImagePathkk)
+//                .addMultipartParameter("lmp_foto", selectedImagePathfoto)
+//                .addMultipartParameter("lmp_akte", content)
+//                .addMultipartParameter("lmp_gambar_anm", content)
+//                .addMultipartParameter("lmp_kesehatan", content)
+//                .addMultipartParameter("gantiparaminiyaNel", content)
+//                .addMultipartParameter("lmp_skhun", content)
+//                .addMultipartParameter("lmp_kk", content)
 
 
                 .addMultipartParameter("username", mInfoRPL.getString("username", ""))
@@ -296,18 +312,22 @@ public class DataAsalSekolah extends AppCompatActivity {
                 .getAsJSONObject(new JSONObjectRequestListener() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        Log.d("hasilResponsku", "onResponse: " + response.toString());
 
-
-
-
+                        if (dialog.isShowing()) {
+                            Log.d("hasilResponsku", "onResponse: " + response.toString());
+                            dialog.dismiss();
+                        }
                     }
 
                     @Override
                     public void onError(ANError anError) {
-                        Log.d("erorResponsku", "onError: " + anError.getErrorDetail());
-                        Log.d("erorResponsku", "onError: " + anError.getErrorBody());
-                        Log.d("erorResponsku", "onError: " + anError.getErrorCode());
+                        if (dialog.isShowing()) {
+                            dialog.dismiss();
+                            Log.d("erorResponsku", "onError: " + anError.getErrorDetail());
+                            Log.d("erorResponsku", "onError: " + anError.getErrorBody());
+                            Log.d("erorResponsku", "onError: " + anError.getErrorCode());
+                        }
+
                     }
                 });
 

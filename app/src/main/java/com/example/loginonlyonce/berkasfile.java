@@ -3,6 +3,8 @@ package com.example.loginonlyonce;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.os.Environment;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -14,6 +16,11 @@ import com.vansuita.pickimage.bean.PickResult;
 import com.vansuita.pickimage.bundle.PickSetup;
 import com.vansuita.pickimage.dialog.PickImageDialog;
 import com.vansuita.pickimage.listeners.IPickResult;
+
+import java.io.File;
+import java.io.IOException;
+
+import id.zelory.compressor.Compressor;
 
 public class berkasfile extends AppCompatActivity implements IPickResult {
 
@@ -40,6 +47,10 @@ public class berkasfile extends AppCompatActivity implements IPickResult {
     private String selectedImagePathraport = "";
     private String selectedImagePathkasehtan = "";
     private String selectedImagePathgambar = "";
+
+
+
+
     String foto="";
     String akte="";
     String kk="";
@@ -142,40 +153,160 @@ public class berkasfile extends AppCompatActivity implements IPickResult {
     @Override
     public void onPickResult(PickResult r) {
         if (r.getError() == null & foto.equalsIgnoreCase("true")) {
-            selectedImagePathfoto = r.getPath();
-            selectedImage = r.getBitmap();
-            ivfotodiri.setImageBitmap(selectedImage);
-            foto="";
+            //selectedImagePathfoto = r.getPath();
+            try {
+                File fileku = new Compressor(this)
+                        .setQuality(50)
+                        .setCompressFormat(Bitmap.CompressFormat.WEBP)
+                        .setDestinationDirectoryPath(Environment.getExternalStoragePublicDirectory(
+                                Environment.DIRECTORY_PICTURES).getAbsolutePath())
+                        .compressToFile(new File(r.getPath()));
+
+                selectedImagePathfoto=fileku.getAbsolutePath().toString();
+                Log.d("makananku", "onPickResult: "+selectedImagePathfoto);
+
+                selectedImage = r.getBitmap();
+                ivfotodiri.setImageBitmap(selectedImage);
+                foto="";
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+
         }else if(r.getError() == null & akte.equalsIgnoreCase("true")){
-            selectedImagePathakte = r.getPath();
-            selectedImage = r.getBitmap();
-            ivakte.setImageBitmap(selectedImage);
-            akte="";
+            //selectedImagePathakte = r.getPath();
+
+            try {
+                File fileku = new Compressor(this)
+                        .setQuality(50)
+                        .setCompressFormat(Bitmap.CompressFormat.WEBP)
+                        .setDestinationDirectoryPath(Environment.getExternalStoragePublicDirectory(
+                                Environment.DIRECTORY_PICTURES).getAbsolutePath())
+                        .compressToFile(new File(r.getPath()));
+
+                selectedImagePathakte=fileku.getAbsolutePath().toString();
+                Log.d("makananku", "onPickResult: "+selectedImagePathakte);
+                selectedImage = r.getBitmap();
+                ivakte.setImageBitmap(selectedImage);
+                akte="";
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
         }else if(r.getError() == null & kk.equalsIgnoreCase("true")) {
-            selectedImagePathkk = r.getPath();
-            selectedImage = r.getBitmap();
-            ivkk.setImageBitmap(selectedImage);
-            kk = "";
+            //selectedImagePathkk = r.getPath();
+
+            try {
+                File fileku = new Compressor(this)
+                        .setQuality(50)
+                        .setCompressFormat(Bitmap.CompressFormat.WEBP)
+                        .setDestinationDirectoryPath(Environment.getExternalStoragePublicDirectory(
+                                Environment.DIRECTORY_PICTURES).getAbsolutePath())
+                        .compressToFile(new File(r.getPath()));
+
+                selectedImagePathkk=fileku.getAbsolutePath().toString();
+                Log.d("makananku", "onPickResult: "+selectedImagePathkk);
+
+                selectedImage = r.getBitmap();
+                ivkk.setImageBitmap(selectedImage);
+                kk = "";
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
         }else if(r.getError() == null & sertifikat.equalsIgnoreCase("true")) {
-            selectedImagePathsertifikat = r.getPath();
-            selectedImage = r.getBitmap();
-            ivsertifikat.setImageBitmap(selectedImage);
-            sertifikat = "";
+            //selectedImagePathsertifikat = r.getPath();
+
+            try {
+                File fileku = new Compressor(this)
+                        .setQuality(50)
+                        .setCompressFormat(Bitmap.CompressFormat.WEBP)
+                        .setDestinationDirectoryPath(Environment.getExternalStoragePublicDirectory(
+                                Environment.DIRECTORY_PICTURES).getAbsolutePath())
+                        .compressToFile(new File(r.getPath()));
+
+                selectedImagePathsertifikat=fileku.getAbsolutePath().toString();
+                Log.d("makananku", "onPickResult: "+selectedImagePathsertifikat);
+
+                selectedImage = r.getBitmap();
+                ivsertifikat.setImageBitmap(selectedImage);
+                sertifikat = "";
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
         }else if(r.getError() == null & raport.equalsIgnoreCase("true")) {
-            selectedImagePathraport = r.getPath();
-            selectedImage = r.getBitmap();
-            ivraport.setImageBitmap(selectedImage);
-            raport = "";
+            //selectedImagePathraport = r.getPath();
+
+            try {
+                File fileku = new Compressor(this)
+                        .setQuality(50)
+                        .setCompressFormat(Bitmap.CompressFormat.WEBP)
+                        .setDestinationDirectoryPath(Environment.getExternalStoragePublicDirectory(
+                                Environment.DIRECTORY_PICTURES).getAbsolutePath())
+                        .compressToFile(new File(r.getPath()));
+
+                selectedImagePathraport=fileku.getAbsolutePath().toString();
+                Log.d("makananku", "onPickResult: "+selectedImagePathraport);
+
+                selectedImage = r.getBitmap();
+                ivraport.setImageBitmap(selectedImage);
+                raport = "";
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
         }else if(r.getError() == null & ksehtan.equalsIgnoreCase("true")) {
-            selectedImagePathkasehtan = r.getPath();
-            selectedImage = r.getBitmap();
-            ivksehtan.setImageBitmap(selectedImage);
-            ksehtan = "";
+            //selectedImagePathkasehtan = r.getPath();
+
+            try {
+                File fileku = new Compressor(this)
+                        .setQuality(50)
+                        .setCompressFormat(Bitmap.CompressFormat.WEBP)
+                        .setDestinationDirectoryPath(Environment.getExternalStoragePublicDirectory(
+                                Environment.DIRECTORY_PICTURES).getAbsolutePath())
+                        .compressToFile(new File(r.getPath()));
+
+                selectedImagePathkasehtan=fileku.getAbsolutePath().toString();
+                Log.d("makananku", "onPickResult: "+selectedImagePathkasehtan);
+
+                selectedImage = r.getBitmap();
+                ivksehtan.setImageBitmap(selectedImage);
+                ksehtan = "";
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
         }else if(r.getError() == null & gambar.equalsIgnoreCase("true")) {
-            selectedImagePathgambar = r.getPath();
-            selectedImage = r.getBitmap();
-            ivgambar.setImageBitmap(selectedImage);
-            gambar = "";
+            //selectedImagePathgambar = r.getPath();
+
+            try {
+                File fileku = new Compressor(this)
+                        .setQuality(50)
+                        .setCompressFormat(Bitmap.CompressFormat.WEBP)
+                        .setDestinationDirectoryPath(Environment.getExternalStoragePublicDirectory(
+                                Environment.DIRECTORY_PICTURES).getAbsolutePath())
+                        .compressToFile(new File(r.getPath()));
+
+                selectedImagePathgambar=fileku.getAbsolutePath().toString();
+                Log.d("makananku", "onPickResult: "+selectedImagePathgambar);
+
+                selectedImage = r.getBitmap();
+                ivgambar.setImageBitmap(selectedImage);
+                gambar = "";
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
         }else {
             Toast.makeText(this, r.getError().getMessage(), Toast.LENGTH_LONG).show();
         }
