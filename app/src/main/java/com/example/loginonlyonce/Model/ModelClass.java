@@ -7,6 +7,14 @@ public class ModelClass {
     private String tvwaktu;
 
 
+    public ModelClass (String tvtitle, String tvisi, String tvwaktu) {
+        this.tvtitle = tvtitle;
+        this.tvisi = tvisi;
+        this.tvwaktu = tvwaktu;
+
+    }
+
+
     public String getTvtitle() {
         return tvtitle;
     }
