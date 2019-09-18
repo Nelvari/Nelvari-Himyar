@@ -309,9 +309,9 @@ public class DataAsalSekolah extends AppCompatActivity {
                         if (dialog.isShowing()) {
                             Log.d("hasilResponsku", "onResponse: " + response.toString());
                             dialog.dismiss();
-                            SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-                            SharedPreferences.Editor editor = sharedPref.edit();
+                            SharedPreferences.Editor editor = getSharedPreferences("login", MODE_PRIVATE).edit();
                             editor.putString("username", mInfoRPL.getString("username", ""));
+                            editor.putString("username1", mInfoRPL.getString("username", ""));
                             editor.commit();
 
                             Intent intent = new Intent(DataAsalSekolah.this, Mainmenu.class);

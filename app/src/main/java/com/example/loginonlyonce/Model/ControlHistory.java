@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.loginonlyonce.History;
 import com.example.loginonlyonce.Ui.CetakData;
@@ -21,11 +22,12 @@ public class ControlHistory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         mHistory = getSharedPreferences("login", Context.MODE_PRIVATE);
-
-        if (mHistory.getString("username", "").equalsIgnoreCase("")
-                || mHistory.getString("username", "") == null
-                || mHistory.getString("username", "").isEmpty()){
-
+        String username = mHistory.getString("username1","");
+        Log.d("username on history ", "onCreate: "+username);
+//        if (mHistory.getString("username", "").equalsIgnoreCase("")
+//                || mHistory.getString("username", "") == null
+//                || mHistory.getString("username", "").isEmpty()){
+        if(username.isEmpty()){
             Intent intent = new Intent(ControlHistory.this, CetakData.class);
             startActivity(intent);
             finish();
