@@ -128,10 +128,6 @@ public class DataAsalSekolah extends AppCompatActivity {
             selectedImagePathkasehtan = bundle.getString("selectedImagePathkasehtan");
             selectedImagePathgambar = bundle.getString("selectedImagePathgambar");
 
-
-
-
-
             fileselectedImagePathfoto=new File(selectedImagePathfoto);
             fileselectedImagePathakte=new File(selectedImagePathakte);
             fileselectedImagePathkk=new File(selectedImagePathkk);
@@ -139,10 +135,6 @@ public class DataAsalSekolah extends AppCompatActivity {
             fileselectedImagePathraport=new File(selectedImagePathraport);
             fileselectedImagePathkasehtan=new File(selectedImagePathkasehtan);
             fileselectedImagePathgambar=new File(selectedImagePathgambar);
-
-
-
-
 
             namaayah = bundle.getString("namaayah");
             namaibu = bundle.getString("namaibu");
@@ -316,6 +308,11 @@ public class DataAsalSekolah extends AppCompatActivity {
                         if (dialog.isShowing()) {
                             Log.d("hasilResponsku", "onResponse: " + response.toString());
                             dialog.dismiss();
+                            SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("username", mInfoRPL.getString("username", ""));
+                            editor.commit();
+
                         }
                     }
 

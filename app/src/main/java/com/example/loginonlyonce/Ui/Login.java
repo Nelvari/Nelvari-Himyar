@@ -113,7 +113,7 @@ public class Login extends AppCompatActivity {
                                             editor.putString("nohp", nohp);
                                             editor.putString("email", email);
                                             editor.putInt("userid", getTaskId());
-                                            editor.putString("data4", "data4");
+                                            editor.putString("data4", "");
                                             editor.apply();
                                             Intent intent = new Intent(Login.this, Mainmenu.class);
                                             startActivity(intent);
