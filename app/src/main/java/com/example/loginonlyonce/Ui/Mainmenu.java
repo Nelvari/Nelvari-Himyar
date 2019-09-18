@@ -16,6 +16,7 @@ import com.example.loginonlyonce.R;
 public class Mainmenu extends AppCompatActivity {
 
     LinearLayout btnDaftar;
+    LinearLayout btnCetakData;
     ImageView ivProfile;
 
     @Override
@@ -24,6 +25,7 @@ public class Mainmenu extends AppCompatActivity {
         setContentView(R.layout.activity_mainmenu);
 
         ivProfile = findViewById(R.id.ivProfile);
+        btnCetakData = findViewById(R.id.btnCetakData);
         btnDaftar = findViewById(R.id.btnDaftar);
 
         btnDaftar.setOnClickListener(new View.OnClickListener() {
@@ -35,6 +37,15 @@ public class Mainmenu extends AppCompatActivity {
 
             }
         });
+
+        btnCetakData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Mainmenu.this,Berkasfile.class);
+                startActivity(intent);
+            }
+        });
+
 
         ivProfile.setOnClickListener(new View.OnClickListener() {
             @Override
