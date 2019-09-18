@@ -217,6 +217,9 @@ public class DataAsalSekolah extends AppCompatActivity {
 
                                 senData();
 
+                                Intent intent = new Intent(DataAsalSekolah.this, Mainmenu.class);
+                                startActivity(intent);
+
                                 break;
 
                             case DialogInterface.BUTTON_NEGATIVE:
@@ -313,9 +316,6 @@ public class DataAsalSekolah extends AppCompatActivity {
                             editor.putString("username", mInfoRPL.getString("username", ""));
                             editor.putString("username1", mInfoRPL.getString("username", ""));
                             editor.commit();
-
-                            Intent intent = new Intent(DataAsalSekolah.this, Mainmenu.class);
-                            startActivity(intent);
 
                         }
                     }
