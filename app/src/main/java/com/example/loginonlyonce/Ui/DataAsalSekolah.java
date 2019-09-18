@@ -160,7 +160,7 @@ public class DataAsalSekolah extends AppCompatActivity {
 
         }
 
-        btn = findViewById(R.id.btnSav);
+        btn = findViewById(R.id.btnSave);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
