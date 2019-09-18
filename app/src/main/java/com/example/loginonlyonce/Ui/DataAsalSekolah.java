@@ -94,11 +94,11 @@ public class DataAsalSekolah extends AppCompatActivity {
         dialog = new ProgressDialog(DataAsalSekolah.this);
         Toolbar toolbar = findViewById(R.id.toolbar);
 
-        txtNamaSekolah = findViewById(R.id.namaSekolah);
-        txtAlamatSekolah = findViewById(R.id.alamatSekolah);
-        txtNilaiSTTb = findViewById(R.id.nilaiSTTb);
-        txtNoSTTb = findViewById(R.id.noSTTB);
-        txtTahunSTTb = findViewById(R.id.tahunSTTB);
+        txtNamaSekolah = findViewById(R.id.txtNamaSekolah);
+        txtAlamatSekolah = findViewById(R.id.txtAlamatSekolah);
+        txtNilaiSTTb = findViewById(R.id.txtNilaiSTTb);
+        txtNoSTTb = findViewById(R.id.txtNoSTTB);
+        txtTahunSTTb = findViewById(R.id.txtTahunSTTB);
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Formulir Asal Sekolah");

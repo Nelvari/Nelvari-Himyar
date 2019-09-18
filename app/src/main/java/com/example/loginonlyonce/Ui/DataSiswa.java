@@ -55,9 +55,9 @@ public class DataSiswa extends AppCompatActivity {
         noUjian = findViewById(R.id.editxtnoUjian);
         nisn = findViewById(R.id.editxtnisn);
         namaSiswa = findViewById(R.id.editxtnamaSiswa);
-        jenisKelamin = findViewById(R.id.jenisKelamin);
+        jenisKelamin = findViewById(R.id.spinnerJenisKelamin);
         tempat = findViewById(R.id.editxttempatlahir);
-        agama = findViewById(R.id.agama);
+        agama = findViewById(R.id.spinnerAgama);
         tinggi = findViewById(R.id.editxttinggi);
         alamatSiswa = findViewById(R.id.editxtalamatSiswa);
         berat = findViewById(R.id.editxtberat);
