@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
@@ -10,10 +10,9 @@
         android:layout_width="246dp"
         android:layout_height="wrap_content"
         android:text="Maaf,Kartu Peserta dan Kartu Ujian tidak dapat dilihat karena inputan belum terisi"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="295dp"
         android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="300dp"
         android:textSize="17sp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
