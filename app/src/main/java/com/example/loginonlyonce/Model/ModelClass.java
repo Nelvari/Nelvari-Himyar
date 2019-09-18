@@ -10,7 +10,7 @@ public class ModelClass {
     public ModelClass (String tvtitle, String tvisi, String tvwaktu) {
         this.tvtitle = tvtitle;
         this.tvisi = tvisi;
-        this.tvwaktu = tvwaktu;
+        this.tvtype = tvwaktu;
 
     }
 
