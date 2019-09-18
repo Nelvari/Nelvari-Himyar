@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class mainmenu extends AppCompatActivity {
 
     LinearLayout btnDaftar;
+    LinearLayout btncetakdata;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,16 @@ public class mainmenu extends AppCompatActivity {
                 Intent intent = new Intent(mainmenu.this, berkasfile.class);
                 startActivity(intent);
 
+            }
+        });
+
+        btncetakdata = findViewById(R.id.btncetakdata);
+
+        btncetakdata.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mainmenu.this,history.class);
+                startActivity(intent);
             }
         });
 
