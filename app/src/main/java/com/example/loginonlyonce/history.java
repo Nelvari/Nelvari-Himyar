@@ -1,10 +1,10 @@
 package com.example.loginonlyonce;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class history extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class History extends AppCompatActivity {
 
 
 

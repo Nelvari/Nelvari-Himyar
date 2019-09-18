@@ -7,12 +7,14 @@ public class ModelClass {
     private String txttype;
 
 
-    public ModelClass (String tvtitle, String tvisi, String tvwaktu) {
+
+
+
+
+    public ModelClass (String tvtitle, String tvisi, String tvtype) {
         this.txttitle = tvtitle;
         this.txtisi = tvisi;
-        this.txttype = tvwaktu;
-
-
+        this.txttype = tvtype;
 
 
     }
@@ -32,7 +34,6 @@ public class ModelClass {
     public void setTxtisi(String txtisi) {
         this.txtisi = txtisi;
     }
-
     public String getTxttype() {
         return txttype;
     }

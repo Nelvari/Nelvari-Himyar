@@ -1,15 +1,16 @@
-package com.example.loginonlyonce.Model;
-
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+package com.example.loginonlyonce.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.loginonlyonce.MainActivity;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.loginonlyonce.Model.ModelClass;
 import com.example.loginonlyonce.R;
+import com.example.loginonlyonce.Ui.MainActivity;
 
 import java.util.ArrayList;
 

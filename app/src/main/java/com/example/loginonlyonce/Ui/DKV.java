@@ -1,4 +1,4 @@
-package com.example.loginonlyonce;
+package com.example.loginonlyonce.Ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,34 +11,35 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.loginonlyonce.Model.ControlClass;
+import com.example.loginonlyonce.R;
 
-public class desaingrafis extends AppCompatActivity {
+public class DKV extends AppCompatActivity {
 
     Button btnLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_desaingrafis);
+        setContentView(R.layout.activity_dkv);
 
-        SharedPreferences mInfoDg = getSharedPreferences("infoDg", Context.MODE_PRIVATE);
+        SharedPreferences mInfoDg = getSharedPreferences("infoDKV", Context.MODE_PRIVATE);
 
         SharedPreferences.Editor editor = mInfoDg.edit();
-        editor.putInt("userInfoDg", 1);
+        editor.putInt("userInfoDKV", 1);
         editor.apply();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         btnLogin = findViewById(R.id.btnlogin);
 
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("DESAIN GRAFIS");
+        getSupportActionBar().setTitle("DKV");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(desaingrafis.this, ControlClass.class);
+                Intent intent = new Intent(DKV.this, ControlClass.class);
                 startActivity(intent);
                 finish();
 
