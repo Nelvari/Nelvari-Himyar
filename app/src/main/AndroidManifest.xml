@@ -11,49 +11,45 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".InboxActivity"></activity>
-        <activity android:name=".Model.InboxAdapter" />
-        <activity android:name=".inbox" />
-        <activity android:name=".berkasfile" />
+        <activity android:name=".Ui.InboxActivity"></activity>
+        <activity android:name=".Adapter.InboxAdapter" />
+        <activity android:name=".Ui.Berkasfile" />
         <activity android:name=".Model.ControlInfoAnimasi" />
         <activity android:name=".Model.ControlInfoDKV" />
         <activity android:name=".Model.ControlInfoRPL" />
         <activity android:name=".Model.ControlInfoDg" />
         <activity android:name=".Model.ControlInfo" />
         <activity
-            android:name=".DKV"
-            android:parentActivityName=".home" />
+            android:name=".Ui.DKV"
+            android:parentActivityName=".Ui.Home" />
         <activity
-            android:name=".RPL"
-            android:parentActivityName=".home" />
+            android:name=".Ui.RPL"
+            android:parentActivityName=".Ui.Home" />
         <activity
-            android:name=".Produksi"
-            android:parentActivityName=".home" />
+            android:name=".Ui.Produksi"
+            android:parentActivityName=".Ui.Home" />
+        <activity android:name=".Ui.Mainmenu" />
         <activity
-            android:name=".FormulirPendaftaran"
-            android:parentActivityName=".mainmenu" />
-        <activity android:name=".mainmenu" />
+            android:name=".Ui.Desaingrafis"
+            android:parentActivityName=".Ui.Home" />
         <activity
-            android:name=".desaingrafis"
-            android:parentActivityName=".home" />
-        <activity
-            android:name=".animasi"
-            android:parentActivityName=".home" />
-        <activity android:name=".kartutes" />
-        <activity android:name=".pembayaran" />
-        <activity android:name=".registrasi" />
+            android:name=".Ui.Animasi"
+            android:parentActivityName=".Ui.Home" />
+        <activity android:name=".Ui.Kartutes" />
+        <activity android:name=".Ui.Pembayaran" />
+        <activity android:name=".Ui.Registrasi" />
         <activity android:name=".Intro" />
-        <activity android:name=".home" />
-        <activity android:name=".Login" />
+        <activity android:name=".Ui.Home" />
+        <activity android:name=".Ui.Login" />
         <activity android:name=".Model.ControlClass" />
         <activity
-            android:name=".DataAsalSekolah"
+            android:name=".Ui.DataAsalSekolah"
             android:parentActivityName=".FormulirPendaftaran" />
         <activity
-            android:name=".DataOrangTua"
+            android:name=".Ui.DataOrangTua"
             android:parentActivityName=".FormulirPendaftaran" />
         <activity
-            android:name=".DataSiswa"
+            android:name=".Ui.DataSiswa"
             android:parentActivityName=".FormulirPendaftaran" />
         <activity android:name=".SplashScreen">
             <intent-filter>
@@ -62,7 +58,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".Ui.MainActivity" />
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"

@@ -1,11 +1,8 @@
-package com.example.loginonlyonce;
+package com.example.loginonlyonce.Ui;
 
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,14 +10,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.loginonlyonce.Model.ModelClass;
 import com.example.loginonlyonce.Model.PrefManager;
+import com.example.loginonlyonce.R;
+import com.example.loginonlyonce.SplashScreen;
 import com.facebook.login.LoginManager;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,11 +43,15 @@ public class MainActivity extends AppCompatActivity {
 
         if (getSharedPreferences("login", Context.MODE_PRIVATE) != null){
 
-            nama.setText(mlogin.getString("data1", "missing"));
+            nama.setText(mlogin.getString("username", "missing"));
             email.setText(mlogin.getString("data2", "missing"));
             id.setText(mlogin.getString("data3", "missing"));
 
-            Glide.with(this).load(mlogin.getString("data4", "missing")).into(imageView);
+            if (mlogin.getString("data4", "missing") != null){
+
+                Glide.with(this).load(mlogin.getString("data4", "missing")).into(imageView);
+
+            }
 
         }
 

@@ -1,4 +1,4 @@
-package com.example.loginonlyonce;
+package com.example.loginonlyonce.Ui;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -21,6 +21,7 @@ import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.androidnetworking.interfaces.UploadProgressListener;
+import com.example.loginonlyonce.R;
 
 import org.json.JSONObject;
 
@@ -43,7 +44,6 @@ public class DataAsalSekolah extends AppCompatActivity {
     String alamatSiswa;
     String tinggiBadan;
     String beratBadan;
-    String prestasi;
     String nisn;
     String noUjian;
 

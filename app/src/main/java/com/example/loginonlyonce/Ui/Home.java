@@ -1,4 +1,4 @@
-package com.example.loginonlyonce;
+package com.example.loginonlyonce.Ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,8 +14,9 @@ import com.example.loginonlyonce.Model.ControlInfoAnimasi;
 import com.example.loginonlyonce.Model.ControlInfoDKV;
 import com.example.loginonlyonce.Model.ControlInfoDg;
 import com.example.loginonlyonce.Model.ControlInfoRPL;
+import com.example.loginonlyonce.R;
 
-public class home extends AppCompatActivity {
+public class Home extends AppCompatActivity {
 
     CardView prduksi, persiapan, animasi, rpl, dkv;
     SharedPreferences mLogin;
@@ -41,7 +42,7 @@ public class home extends AppCompatActivity {
                 editor.putString("jurusan", "Produksi");
                 editor.apply();
 
-                Intent hi = new Intent(home.this, ControlInfo.class);
+                Intent hi = new Intent(Home.this, ControlInfo.class);
                 startActivity(hi);
 
             }
@@ -55,7 +56,7 @@ public class home extends AppCompatActivity {
                 editor.putString("jurusan", "Persiapan");
                 editor.apply();
 
-                Intent hi = new Intent(home.this, ControlInfoDg.class);
+                Intent hi = new Intent(Home.this, ControlInfoDg.class);
                 startActivity(hi);
 
             }
@@ -69,7 +70,7 @@ public class home extends AppCompatActivity {
                 editor.putString("jurusan", "Animasi");
                 editor.apply();
 
-                Intent hi = new Intent(home.this, ControlInfoAnimasi.class);
+                Intent hi = new Intent(Home.this, ControlInfoAnimasi.class);
                 startActivity(hi);
 
             }
@@ -83,7 +84,7 @@ public class home extends AppCompatActivity {
                 editor.putString("jurusan", "DKV");
                 editor.apply();
 
-                Intent hi = new Intent(home.this, ControlInfoDKV.class);
+                Intent hi = new Intent(Home.this, ControlInfoDKV.class);
                 startActivity(hi);
 
             }
@@ -97,7 +98,7 @@ public class home extends AppCompatActivity {
                 editor.putString("jurusan", "RPL");
                 editor.apply();
 
-                Intent hi = new Intent(home.this, ControlInfoRPL.class);
+                Intent hi = new Intent(Home.this, ControlInfoRPL.class);
                 startActivity(hi);
 
             }

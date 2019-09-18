@@ -7,8 +7,8 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.loginonlyonce.animasi;
-import com.example.loginonlyonce.mainmenu;
+import com.example.loginonlyonce.Ui.Animasi;
+import com.example.loginonlyonce.Ui.Mainmenu;
 
 public class ControlInfoAnimasi extends AppCompatActivity {
 
@@ -24,13 +24,13 @@ public class ControlInfoAnimasi extends AppCompatActivity {
                 || mInfoAnimasi.getString("username", "") == null
                 || mInfoAnimasi.getString("username", "").isEmpty()){
 
-            Intent intent = new Intent(ControlInfoAnimasi.this, animasi.class);
+            Intent intent = new Intent(ControlInfoAnimasi.this, Animasi.class);
             startActivity(intent);
             finish();
 
         }else {
 
-            Intent intent = new Intent(ControlInfoAnimasi.this, mainmenu.class);
+            Intent intent = new Intent(ControlInfoAnimasi.this, Mainmenu.class);
             startActivity(intent);
             finish();
 

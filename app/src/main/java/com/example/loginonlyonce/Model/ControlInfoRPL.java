@@ -7,8 +7,8 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.loginonlyonce.RPL;
-import com.example.loginonlyonce.mainmenu;
+import com.example.loginonlyonce.Ui.RPL;
+import com.example.loginonlyonce.Ui.Mainmenu;
 
 public class ControlInfoRPL extends AppCompatActivity {
 
@@ -30,7 +30,7 @@ public class ControlInfoRPL extends AppCompatActivity {
 
         }else {
 
-            Intent intent = new Intent(ControlInfoRPL.this, mainmenu.class);
+            Intent intent = new Intent(ControlInfoRPL.this, Mainmenu.class);
             startActivity(intent);
             finish();
 
