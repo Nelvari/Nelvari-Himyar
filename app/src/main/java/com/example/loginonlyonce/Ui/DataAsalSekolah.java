@@ -3,6 +3,7 @@ package com.example.loginonlyonce.Ui;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -312,6 +313,9 @@ public class DataAsalSekolah extends AppCompatActivity {
                             SharedPreferences.Editor editor = sharedPref.edit();
                             editor.putString("username", mInfoRPL.getString("username", ""));
                             editor.commit();
+
+                            Intent intent = new Intent(DataAsalSekolah.this, Mainmenu.class);
+                            startActivity(intent);
 
                         }
                     }
