@@ -1,7 +1,5 @@
 package com.example.loginonlyonce.Model;
 
-import android.net.Uri;
-
 public class Modelclasshistory {
 
     private String tvtitle;
@@ -21,7 +19,7 @@ public class Modelclasshistory {
         this.tvtitle = tvtitle;
     }
 
-    public Uri getIvfile() {
+    public String getIvfile() {
         return ivfile;
     }
 
