@@ -44,14 +44,14 @@ public class MainActivity extends AppCompatActivity {
         if (getSharedPreferences("login", Context.MODE_PRIVATE) != null){
 
             nama.setText(mlogin.getString("username", "missing"));
-            email.setText(mlogin.getString("data2", "missing"));
-            id.setText(mlogin.getString("data3", "missing"));
+            email.setText(mlogin.getString("data2", ""));
+            id.setText(mlogin.getString("data3", ""));
 
-            if (mlogin.getString("data4", "missing") != null){
-
-                Glide.with(this).load(mlogin.getString("data4", "missing")).into(imageView);
-
-            }
+            Glide
+                    .with(this)
+                    .load(mlogin.getString("data4", ""))
+                    .placeholder(R.mipmap.usermainmenu)
+                    .into(imageView);
 
         }
 

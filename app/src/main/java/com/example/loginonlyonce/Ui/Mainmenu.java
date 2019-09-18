@@ -59,7 +59,11 @@ public class Mainmenu extends AppCompatActivity {
 
         SharedPreferences mlogin = getSharedPreferences("login", Context.MODE_PRIVATE);
 
-        Glide.with(this).load(mlogin.getString("data4", "")).into(ivProfile);
+        Glide
+                .with(this)
+                .load(mlogin.getString("data4", ""))
+                .placeholder(R.mipmap.usermainmenu)
+                .into(ivProfile);
 
     }
 }
