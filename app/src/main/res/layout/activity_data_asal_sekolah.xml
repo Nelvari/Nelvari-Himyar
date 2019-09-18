@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DataAsalSekolah">
+    tools:context=".Ui.DataAsalSekolah">
 
    <LinearLayout
        android:layout_width="match_parent"
@@ -34,7 +34,7 @@
 
                <EditText
                    android:layout_marginHorizontal="20dp"
-                   android:id="@+id/namaSekolah"
+                   android:id="@+id/txtNamaSekolah"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:inputType="text"
@@ -43,7 +43,7 @@
 
                <EditText
                    android:layout_marginHorizontal="20dp"
-                   android:id="@+id/alamatSekolah"
+                   android:id="@+id/txtAlamatSekolah"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:inputType="text"
@@ -91,7 +91,7 @@
                <EditText
                    android:layout_marginTop="10dp"
                    android:layout_marginHorizontal="20dp"
-                   android:id="@+id/tahunSTTB"
+                   android:id="@+id/txtTahunSTTB"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:inputType="numberDecimal"
@@ -100,7 +100,7 @@
 
                <EditText
                    android:layout_marginHorizontal="20dp"
-                   android:id="@+id/noSTTB"
+                   android:id="@+id/txtNoSTTB"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:inputType="numberDecimal"
@@ -109,7 +109,7 @@
 
                <EditText
                    android:layout_marginHorizontal="20dp"
-                   android:id="@+id/nilaiSTTb"
+                   android:id="@+id/txtNilaiSTTb"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:inputType="numberDecimal"

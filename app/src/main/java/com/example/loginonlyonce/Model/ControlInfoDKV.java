@@ -7,8 +7,8 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.loginonlyonce.DKV;
-import com.example.loginonlyonce.mainmenu;
+import com.example.loginonlyonce.Ui.DKV;
+import com.example.loginonlyonce.Ui.Mainmenu;
 
 public class ControlInfoDKV extends AppCompatActivity {
 
@@ -30,7 +30,7 @@ public class ControlInfoDKV extends AppCompatActivity {
 
         }else {
 
-            Intent intent = new Intent(ControlInfoDKV.this, mainmenu.class);
+            Intent intent = new Intent(ControlInfoDKV.this, Mainmenu.class);
             startActivity(intent);
             finish();
 

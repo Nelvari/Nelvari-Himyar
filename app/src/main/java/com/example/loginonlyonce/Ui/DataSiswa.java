@@ -1,4 +1,4 @@
-package com.example.loginonlyonce;
+package com.example.loginonlyonce.Ui;
 
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
@@ -16,6 +16,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import com.example.loginonlyonce.R;
 
 import java.util.Calendar;
 
@@ -53,9 +55,9 @@ public class DataSiswa extends AppCompatActivity {
         noUjian = findViewById(R.id.editxtnoUjian);
         nisn = findViewById(R.id.editxtnisn);
         namaSiswa = findViewById(R.id.editxtnamaSiswa);
-        jenisKelamin = findViewById(R.id.jenisKelamin);
+        jenisKelamin = findViewById(R.id.spinnerJenisKelamin);
         tempat = findViewById(R.id.editxttempatlahir);
-        agama = findViewById(R.id.agama);
+        agama = findViewById(R.id.spinnerAgama);
         tinggi = findViewById(R.id.editxttinggi);
         alamatSiswa = findViewById(R.id.editxtalamatSiswa);
         berat = findViewById(R.id.editxtberat);

@@ -20,6 +20,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.loginonlyonce.Model.PrefManager;
+import com.example.loginonlyonce.Ui.Home;
 
 public class Intro extends AppCompatActivity {
 
@@ -116,7 +117,7 @@ public class Intro extends AppCompatActivity {
 
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(Intro.this, home.class));
+        startActivity(new Intent(Intro.this, Home.class));
         finish();
     }
 

@@ -1,4 +1,4 @@
-package com.example.loginonlyonce;
+package com.example.loginonlyonce.Ui;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,7 +14,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class pembayaran extends AppCompatActivity {
+import com.example.loginonlyonce.R;
+
+public class Pembayaran extends AppCompatActivity {
 
     ImageView ivGambar;
     Button btnUploud;
@@ -44,7 +46,7 @@ public class pembayaran extends AppCompatActivity {
         ivGambar.setImageResource(0);
         final CharSequence[] items = {"Take Photo", "Choose from Library"};
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(pembayaran.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(Pembayaran.this);
         builder.setTitle("Add Photo");
         builder.setItems(items, new DialogInterface.OnClickListener() {
             @Override

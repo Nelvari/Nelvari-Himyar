@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@color/putih"
-        tools:context=".Login">
+        tools:context=".Ui.Login">
 
         <ImageView
             android:layout_width="140dp"

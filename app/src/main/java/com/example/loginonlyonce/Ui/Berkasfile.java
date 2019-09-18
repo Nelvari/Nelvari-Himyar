@@ -1,4 +1,4 @@
-package com.example.loginonlyonce;
+package com.example.loginonlyonce.Ui;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.loginonlyonce.R;
 import com.vansuita.pickimage.bean.PickResult;
 import com.vansuita.pickimage.bundle.PickSetup;
 import com.vansuita.pickimage.dialog.PickImageDialog;
@@ -22,7 +23,7 @@ import java.io.IOException;
 
 import id.zelory.compressor.Compressor;
 
-public class berkasfile extends AppCompatActivity implements IPickResult {
+public class Berkasfile extends AppCompatActivity implements IPickResult {
 
     private Bitmap selectedImage;
     Button btnfotosisiwa;
@@ -133,7 +134,7 @@ public class berkasfile extends AppCompatActivity implements IPickResult {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(berkasfile.this, DataSiswa.class);
+                Intent intent = new Intent(Berkasfile.this, DataSiswa.class);
                 intent.putExtra("selectedImagePathfoto", selectedImagePathfoto);
                 intent.putExtra("selectedImagePathakte", selectedImagePathakte);
                 intent.putExtra("selectedImagePathkk", selectedImagePathkk);

@@ -4,13 +4,13 @@ public class ModelClass {
 
     private String txttitle;
     private String txtisi;
-    private String txtwaktu;
+    private String txttype;
 
 
-    public ModelClass(String txttitle, String txtisi, String txtwaktu) {
-        this.setTxttitle(txttitle);
-        this.setTxtisi(txtisi);
-        this.setTxtwaktu(txtwaktu);
+    public ModelClass (String tvtitle, String tvisi, String tvtype) {
+        this.txttitle = tvtitle;
+        this.txtisi = tvisi;
+        this.txttype = tvtype;
 
     }
 
@@ -31,10 +31,10 @@ public class ModelClass {
     }
 
     public String getTxtwaktu() {
-        return txtwaktu;
+        return txttype;
     }
 
     public void setTxtwaktu(String txtwaktu) {
-        this.txtwaktu = txtwaktu;
+        this.txttype = txtwaktu;
     }
 }

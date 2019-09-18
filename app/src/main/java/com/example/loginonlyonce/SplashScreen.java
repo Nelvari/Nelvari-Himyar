@@ -6,8 +6,6 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.loginonlyonce.Model.ControlClass;
-
 public class SplashScreen extends AppCompatActivity {
 
     @Override

@@ -7,8 +7,8 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.loginonlyonce.desaingrafis;
-import com.example.loginonlyonce.mainmenu;
+import com.example.loginonlyonce.Ui.Desaingrafis;
+import com.example.loginonlyonce.Ui.Mainmenu;
 
 public class ControlInfoDg extends AppCompatActivity {
 
@@ -24,13 +24,13 @@ public class ControlInfoDg extends AppCompatActivity {
                 || mInfoDg.getString("username", "") == null
                 || mInfoDg.getString("username", "").isEmpty()){
 
-            Intent intent = new Intent(ControlInfoDg.this, desaingrafis.class);
+            Intent intent = new Intent(ControlInfoDg.this, Desaingrafis.class);
             startActivity(intent);
             finish();
 
         }else {
 
-            Intent intent = new Intent(ControlInfoDg.this, mainmenu.class);
+            Intent intent = new Intent(ControlInfoDg.this, Mainmenu.class);
             startActivity(intent);
             finish();
 

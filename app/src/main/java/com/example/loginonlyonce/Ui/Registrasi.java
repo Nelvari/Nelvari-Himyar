@@ -1,4 +1,4 @@
-package com.example.loginonlyonce;
+package com.example.loginonlyonce.Ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,12 +17,13 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
+import com.example.loginonlyonce.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 
-public class registrasi extends AppCompatActivity {
+public class Registrasi extends AppCompatActivity {
 
     EditText txtusername;
     SharedPreferences mLogin;
@@ -45,7 +46,7 @@ public class registrasi extends AppCompatActivity {
             public void onClick(View view) {
                 mLogin = getSharedPreferences("login", Context.MODE_PRIVATE);
                 if (txtusername.getText().toString().isEmpty() || txtpassword.getText().toString().isEmpty()) {
-                    Toast.makeText(registrasi.this, "please fill my heart first to send a request :(", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Registrasi.this, "please fill my heart first to send a request :(", Toast.LENGTH_SHORT).show();
                 } else if (txtpassword == konfirmpass){
                     AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/register")
                             .addBodyParameter("username", txtusername.getText().toString())
@@ -70,7 +71,7 @@ public class registrasi extends AppCompatActivity {
                                             editor.putString("data1", txtusername.getText().toString());
                                             editor.putInt("userid", getTaskId());
                                             editor.apply();
-                                            Intent intent = new Intent(registrasi.this, FormulirPendaftaran.class);
+                                            Intent intent = new Intent(Registrasi.this, Mainmenu.class);
                                             startActivity(intent);
                                             finish();
                                         }

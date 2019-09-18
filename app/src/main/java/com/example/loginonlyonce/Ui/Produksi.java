@@ -1,4 +1,4 @@
-package com.example.loginonlyonce;
+package com.example.loginonlyonce.Ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,34 +11,35 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.loginonlyonce.Model.ControlClass;
+import com.example.loginonlyonce.R;
 
-public class animasi extends AppCompatActivity {
+public class Produksi extends AppCompatActivity {
 
     Button btnLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_animasi);
+        setContentView(R.layout.activity_produksi);
 
-        SharedPreferences mInfoDg = getSharedPreferences("infoAnimasi", Context.MODE_PRIVATE);
+        SharedPreferences mInfo = getSharedPreferences("info", Context.MODE_PRIVATE);
 
-        SharedPreferences.Editor editor = mInfoDg.edit();
-        editor.putInt("userInfoAnimasi", 1);
+        SharedPreferences.Editor editor = mInfo.edit();
+        editor.putInt("userInfo", 1);
         editor.apply();
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
         btnLogin = findViewById(R.id.btnlogin);
+        Toolbar toolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("ANIMASI");
+        getSupportActionBar().setTitle("PRODUKSI");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(animasi.this, ControlClass.class);
+                Intent intent = new Intent(Produksi.this, ControlClass.class);
                 startActivity(intent);
                 finish();
 

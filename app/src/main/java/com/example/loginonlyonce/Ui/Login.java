@@ -1,4 +1,4 @@
-package com.example.loginonlyonce;
+package com.example.loginonlyonce.Ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -19,6 +19,7 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
+import com.example.loginonlyonce.R;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -70,7 +71,7 @@ public class Login extends AppCompatActivity {
         tvdaftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(Login.this,registrasi.class);
+                Intent in = new Intent(Login.this, Registrasi.class);
                 startActivity(in);
             }
         });
@@ -114,7 +115,7 @@ public class Login extends AppCompatActivity {
                                             editor.putInt("userid", getTaskId());
                                             editor.putString("data4", "data4");
                                             editor.apply();
-                                            Intent intent = new Intent(Login.this, mainmenu.class);
+                                            Intent intent = new Intent(Login.this, Mainmenu.class);
                                             startActivity(intent);
                                             finish();
 
@@ -197,7 +198,7 @@ public class Login extends AppCompatActivity {
                             editor.putString("data4", avatar);
                             editor.apply();
 
-                            Intent intent = new Intent(Login.this, mainmenu.class);
+                            Intent intent = new Intent(Login.this, Mainmenu.class);
                             startActivity(intent);
                             finish();
 
@@ -269,7 +270,7 @@ public class Login extends AppCompatActivity {
             editor.putString("data4", avatar);
             editor.apply();
 
-            Intent intent = new Intent(Login.this, mainmenu.class);
+            Intent intent = new Intent(Login.this, Mainmenu.class);
             startActivity(intent);
             finish();
 
