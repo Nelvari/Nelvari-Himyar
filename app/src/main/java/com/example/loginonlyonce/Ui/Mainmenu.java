@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.example.loginonlyonce.Model.ControlHistory;
 import com.example.loginonlyonce.R;
 
 public class Mainmenu extends AppCompatActivity {
@@ -41,7 +42,7 @@ public class Mainmenu extends AppCompatActivity {
         btnCetakData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Mainmenu.this,Berkasfile.class);
+                Intent intent = new Intent(Mainmenu.this, ControlHistory.class);
                 startActivity(intent);
             }
         });
