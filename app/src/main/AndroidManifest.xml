@@ -16,7 +16,7 @@
         <activity android:name=".Adapter.InboxAdapter" />
         <activity android:name=".Ui.Berkasfile" />
         <activity android:name=".adapter_history" />
-        <activity android:name=".History" />
+        <activity android:name=".Ui.History" />
         <activity android:name=".InboxActivity" />
         <activity android:name=".Model.InboxAdapter" />
         <activity android:name=".inbox" />
