@@ -1,11 +1,14 @@
 package com.example.loginonlyonce.Ui;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -101,50 +104,77 @@ public class DataOrangTua extends AppCompatActivity {
 
 
         btnSimpanOrangTua=(Button)findViewById(R.id.btnSimpanOrangTua);
+
         btnSimpanOrangTua.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                //dialog
-                Intent in =new Intent(getApplicationContext(),DataAsalSekolah.class);
-                //put extra here
-                in.putExtra("namaayah", txtNamaAyah.getText().toString());
-                in.putExtra("namaibu", txtNamaIbu.getText().toString());
-                in.putExtra("alamatorangtua", txtAlamatOrangTua.getText().toString());
-                in.putExtra("pekerjaanayah", txtPekerjaanAyah.getText().toString());
-                in.putExtra("pekerjaanibu", txtPekerjaanIbu.getText().toString());
-                in.putExtra("penghasilanayah", txtPenghasilanAyah.getText().toString());
-                in.putExtra("penghasilanibu", txtPenghasilanIbu.getText().toString());
-                in.putExtra("noayah", txtnoAyah.getText().toString());
-                in.putExtra("noibu", txtnoIbu.getText().toString());
-                in.putExtra("namawali", txtNamaWali.getText().toString());
-                in.putExtra("alamatwali", txtAlamatWali.getText().toString());
-                in.putExtra("nowali", txtnoWali.getText().toString());
-                in.putExtra("pekerjaanwali", txtPekerjaanWali.getText().toString());
+                DialogInterface.OnClickListener dialog = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
 
-                //siswa
-                in.putExtra("namasiswa", namaSiswa);
-                in.putExtra("jeniskelamin", jenisKelamin);
-                in.putExtra("tempatlahir", tempatLahir);
-                in.putExtra("tanggallahir", tanggalLahir);
-                in.putExtra("agama", agama);
-                in.putExtra("alamatsiswa", alamatSiswa);
-                in.putExtra("tinggibadan", tinggiBadan);
-                in.putExtra("beratbadan", beratBadan);
+                        switch (i){
 
-                in.putExtra("nisn", nisn);
-                in.putExtra("noujian", noUjian);
+                            case DialogInterface.BUTTON_POSITIVE :
 
-                in.putExtra("selectedImagePathfoto", selectedImagePathfoto);
-                in.putExtra("selectedImagePathakte", selectedImagePathakte);
-                in.putExtra("selectedImagePathkk", selectedImagePathkk);
-                in.putExtra("selectedImagePathsertifikat", selectedImagePathsertifikat);
-                in.putExtra("selectedImagePathraport", selectedImagePathraport);
-                in.putExtra("selectedImagePathkasehtan", selectedImagePathkasehtan);
-                in.putExtra("selectedImagePathgambar", selectedImagePathgambar);
+                                //dialog
+                                Intent in =new Intent(getApplicationContext(),DataAsalSekolah.class);
+                                //put extra here
+                                in.putExtra("namaayah", txtNamaAyah.getText().toString());
+                                in.putExtra("namaibu", txtNamaIbu.getText().toString());
+                                in.putExtra("alamatorangtua", txtAlamatOrangTua.getText().toString());
+                                in.putExtra("pekerjaanayah", txtPekerjaanAyah.getText().toString());
+                                in.putExtra("pekerjaanibu", txtPekerjaanIbu.getText().toString());
+                                in.putExtra("penghasilanayah", txtPenghasilanAyah.getText().toString());
+                                in.putExtra("penghasilanibu", txtPenghasilanIbu.getText().toString());
+                                in.putExtra("noayah", txtnoAyah.getText().toString());
+                                in.putExtra("noibu", txtnoIbu.getText().toString());
+                                in.putExtra("namawali", txtNamaWali.getText().toString());
+                                in.putExtra("alamatwali", txtAlamatWali.getText().toString());
+                                in.putExtra("nowali", txtnoWali.getText().toString());
+                                in.putExtra("pekerjaanwali", txtPekerjaanWali.getText().toString());
 
-                startActivity(in);
-                finish();
+                                //siswa
+                                in.putExtra("namasiswa", namaSiswa);
+                                in.putExtra("jeniskelamin", jenisKelamin);
+                                in.putExtra("tempatlahir", tempatLahir);
+                                in.putExtra("tanggallahir", tanggalLahir);
+                                in.putExtra("agama", agama);
+                                in.putExtra("alamatsiswa", alamatSiswa);
+                                in.putExtra("tinggibadan", tinggiBadan);
+                                in.putExtra("beratbadan", beratBadan);
+
+                                in.putExtra("nisn", nisn);
+                                in.putExtra("noujian", noUjian);
+
+                                in.putExtra("selectedImagePathfoto", selectedImagePathfoto);
+                                in.putExtra("selectedImagePathakte", selectedImagePathakte);
+                                in.putExtra("selectedImagePathkk", selectedImagePathkk);
+                                in.putExtra("selectedImagePathsertifikat", selectedImagePathsertifikat);
+                                in.putExtra("selectedImagePathraport", selectedImagePathraport);
+                                in.putExtra("selectedImagePathkasehtan", selectedImagePathkasehtan);
+                                in.putExtra("selectedImagePathgambar", selectedImagePathgambar);
+
+                                startActivity(in);
+                                finish();
+
+                                break;
+
+                            case DialogInterface.BUTTON_NEGATIVE :
+
+                                Toast.makeText(getApplicationContext(), "Data gagal di simpan", Toast.LENGTH_LONG).show();
+
+                                break;
+
+                        }
+
+                    }
+                };
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                builder.setMessage("Apakah anda yakin ingin simpan data?").setPositiveButton("Ya", dialog)
+                        .setNegativeButton("Tidak", dialog).show();
+
             }
         });
 

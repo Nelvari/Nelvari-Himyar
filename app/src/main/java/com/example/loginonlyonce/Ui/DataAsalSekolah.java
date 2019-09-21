@@ -221,7 +221,9 @@ public class DataAsalSekolah extends AppCompatActivity {
                                 break;
 
                             case DialogInterface.BUTTON_NEGATIVE:
-                                Toast.makeText(getApplicationContext(), "Gagal", Toast.LENGTH_LONG).show();
+
+                                Toast.makeText(getApplicationContext(), "Data gagal di simpan", Toast.LENGTH_LONG).show();
+
                                 break;
                         }
 
