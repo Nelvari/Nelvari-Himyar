@@ -144,7 +144,7 @@ public class Berkasfile extends AppCompatActivity implements IPickResult {
                 intent.putExtra("selectedImagePathgambar", selectedImagePathgambar);
                 startActivity(intent);
 
-                //finish();
+                finish();
 
             }
         });
