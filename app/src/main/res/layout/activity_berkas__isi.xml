@@ -55,6 +55,12 @@
         android:src="@mipmap/img" />
 
     <Button
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Ambil Gambar"/>
+
+    <Button
         android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
