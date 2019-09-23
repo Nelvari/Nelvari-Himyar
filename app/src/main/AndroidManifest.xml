@@ -25,11 +25,6 @@
         <activity android:name=".Model.InboxAdapter" />
         <activity android:name=".inbox" />
         <activity android:name=".berkasfile" />
-        <activity android:name=".Model.ControlInfoAnimasi" />
-        <activity android:name=".Model.ControlInfoDKV" />
-        <activity android:name=".Model.ControlInfoRPL" />
-        <activity android:name=".Model.ControlInfoDg" />
-        <activity android:name=".Model.ControlInfo" />
         <activity
             android:name=".Ui.DKV"
             android:parentActivityName=".Ui.Home" />

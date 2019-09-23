@@ -3,7 +3,6 @@ package com.example.loginonlyonce.Ui;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -217,13 +216,14 @@ public class DataAsalSekolah extends AppCompatActivity {
 
                                 senData();
 
-                                Intent intent = new Intent(DataAsalSekolah.this, Mainmenu.class);
-                                startActivity(intent);
+                                finish();
 
                                 break;
 
                             case DialogInterface.BUTTON_NEGATIVE:
-                                Toast.makeText(getApplicationContext(), "Gagal", Toast.LENGTH_LONG).show();
+
+                                Toast.makeText(getApplicationContext(), "Data gagal di simpan", Toast.LENGTH_LONG).show();
+
                                 break;
                         }
 

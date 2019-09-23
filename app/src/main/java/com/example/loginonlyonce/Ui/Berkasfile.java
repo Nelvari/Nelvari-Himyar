@@ -1,5 +1,6 @@
 package com.example.loginonlyonce.Ui;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -10,7 +11,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.loginonlyonce.R;
 import com.vansuita.pickimage.bean.PickResult;
@@ -64,6 +67,13 @@ public class Berkasfile extends AppCompatActivity implements IPickResult {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_berkasfile);
+
+        Toolbar toolbar = findViewById(R.id.toolbarBerkasFile);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Berkas File");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         btnfotosisiwa = (Button) findViewById(R.id.btnfotosisiwa);
         btnakte = (Button) findViewById(R.id.btnakte);
         btnkk = (Button) findViewById(R.id.btnkk);
@@ -134,17 +144,41 @@ public class Berkasfile extends AppCompatActivity implements IPickResult {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(Berkasfile.this, DataSiswa.class);
-                intent.putExtra("selectedImagePathfoto", selectedImagePathfoto);
-                intent.putExtra("selectedImagePathakte", selectedImagePathakte);
-                intent.putExtra("selectedImagePathkk", selectedImagePathkk);
-                intent.putExtra("selectedImagePathsertifikat", selectedImagePathsertifikat);
-                intent.putExtra("selectedImagePathraport", selectedImagePathraport);
-                intent.putExtra("selectedImagePathkasehtan", selectedImagePathkasehtan);
-                intent.putExtra("selectedImagePathgambar", selectedImagePathgambar);
-                startActivity(intent);
+                DialogInterface.OnClickListener dialog = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
 
-                //finish();
+                        switch (i){
+
+                            case DialogInterface.BUTTON_POSITIVE :
+
+                                Intent intent = new Intent(Berkasfile.this, DataSiswa.class);
+                                intent.putExtra("selectedImagePathfoto", selectedImagePathfoto);
+                                intent.putExtra("selectedImagePathakte", selectedImagePathakte);
+                                intent.putExtra("selectedImagePathkk", selectedImagePathkk);
+                                intent.putExtra("selectedImagePathsertifikat", selectedImagePathsertifikat);
+                                intent.putExtra("selectedImagePathraport", selectedImagePathraport);
+                                intent.putExtra("selectedImagePathkasehtan", selectedImagePathkasehtan);
+                                intent.putExtra("selectedImagePathgambar", selectedImagePathgambar);
+                                startActivity(intent);
+
+                                finish();
+
+                                break;
+
+                            case  DialogInterface.BUTTON_NEGATIVE :
+
+                                Toast.makeText(getApplicationContext(), "Data gagal di simpan", Toast.LENGTH_LONG).show();
+
+                                break;
+                        }
+
+                    }
+                };
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                builder.setMessage("Apakah anda yakin ingin simpan data?").setPositiveButton("Ya", dialog)
+                        .setNegativeButton("Tidak", dialog).show();
 
             }
         });
