@@ -37,11 +37,8 @@
             app:cardElevation="3dp"
             android:layout_marginTop="20dp"
             app:cardUseCompatPadding="true">
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 9473e1f3f7187d957639eb8051e7a22250a8ea01
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -125,13 +122,9 @@
             app:cardElevation="3dp"
             android:layout_marginTop="10dp"
             app:cardUseCompatPadding="true">
-<<<<<<< HEAD
 
 
-            <LinearLayout
-=======
                  <LinearLayout
->>>>>>> 9473e1f3f7187d957639eb8051e7a22250a8ea01
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
