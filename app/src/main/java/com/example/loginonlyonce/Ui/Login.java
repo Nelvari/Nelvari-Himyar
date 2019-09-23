@@ -106,7 +106,7 @@ public class Login extends AppCompatActivity {
                                             JSONObject getdata=response.getJSONObject("PAYLOAD");
                                             token=getdata.getString("login_token");
                                             nohp=getdata.getString("u_no_hp");
-                                            email=getdata.getString("u_email");
+                                            email=getdata.getString("u_username");
 
                                             SharedPreferences.Editor editor = mLogin.edit();
                                             editor.putString("username", txtusername.getText().toString());

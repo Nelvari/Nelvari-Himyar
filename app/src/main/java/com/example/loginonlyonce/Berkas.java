@@ -64,8 +64,8 @@ public class Berkas extends AppCompatActivity {
                             String status=response.getString("STATUS");
                             if (status.equalsIgnoreCase("SUCCES")){
                                 JSONObject jsonObjectPayload = response.getJSONObject("PAYLOAD");
-                                if (jsonObjectPayload.getString("lmp_raport").equalsIgnoreCase("-")){
-                                    foto.setVisibility(View.VISIBLE);
+                                if (jsonObjectPayload.getString("PAYLOAD").equalsIgnoreCase("-")){
+                                    lnberkas.setVisibility(View.VISIBLE);
                                 }
                             }
                             progressBar.dismiss();
