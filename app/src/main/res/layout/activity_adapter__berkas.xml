@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimaryDark"
-        android:id="@+id/toolbarOrangTua">
+        android:id="@+id/toolbarBerkas">
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
@@ -38,8 +38,6 @@
             app:cardElevation="3dp"
             android:layout_marginTop="20dp"
             app:cardUseCompatPadding="true">
-
-
 
 
             <LinearLayout
@@ -131,8 +129,6 @@
             app:cardElevation="3dp"
             android:layout_marginTop="10dp"
             app:cardUseCompatPadding="true">
-
-
 
 
             <LinearLayout
@@ -313,6 +309,7 @@
             android:layout_height="wrap_content"
             app:cardCornerRadius="6dp"
             app:cardElevation="3dp"
+            android:layout_marginBottom="20dp"
             android:layout_marginTop="10dp"
             app:cardUseCompatPadding="true">
 
