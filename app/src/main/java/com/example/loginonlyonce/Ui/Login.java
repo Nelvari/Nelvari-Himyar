@@ -84,9 +84,6 @@ public class Login extends AppCompatActivity {
                     Toast.makeText(Login.this, "please fill my heart first to send a request :(", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    //
-
-                    //
                     AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/login")
                             .addBodyParameter("username", txtusername.getText().toString())
                             .addBodyParameter("password", txtpassword.getText().toString())
@@ -106,13 +103,13 @@ public class Login extends AppCompatActivity {
                                             JSONObject getdata=response.getJSONObject("PAYLOAD");
                                             token=getdata.getString("login_token");
                                             nohp=getdata.getString("u_no_hp");
-                                            email=getdata.getString("u_email");
+                                            email=getdata.getString("u_username");
 
                                             SharedPreferences.Editor editor = mLogin.edit();
                                             editor.putString("username", txtusername.getText().toString());
                                             editor.putString("nohp", nohp);
                                             editor.putString("email", email);
-                                            editor.putInt("userid", getTaskId());
+                                            editor.putInt("userid", 1);
                                             editor.putString("data4", "");
                                             editor.apply();
                                             Intent intent = new Intent(Login.this, Mainmenu.class);
@@ -130,8 +127,6 @@ public class Login extends AppCompatActivity {
                                     Log.d("gagal login", "onResponse: "+error.toString());
                                 }
                             });
-
-
 
                 }
 
