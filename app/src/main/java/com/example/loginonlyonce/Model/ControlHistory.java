@@ -1,17 +1,15 @@
 package com.example.loginonlyonce.Model;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.loginonlyonce.History;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.loginonlyonce.Ui.CetakData;
-import com.example.loginonlyonce.Ui.Home;
-import com.example.loginonlyonce.Ui.Mainmenu;
+import com.example.loginonlyonce.Ui.History;
 
 public class ControlHistory extends AppCompatActivity {
 
@@ -39,5 +37,17 @@ public class ControlHistory extends AppCompatActivity {
             finish();
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
