@@ -47,13 +47,12 @@ public class Berkas extends AppCompatActivity {
         lnberkas=(LinearLayout) findViewById(R.id.lnberkas);
         progressBar = new ProgressDialog(Berkas.this);
 
-        progressBar.setMessage("Please wait");
-        progressBar.show();
-
         mInfoBerkas = getSharedPreferences("login", Context.MODE_PRIVATE);
 
-        AndroidNetworking.get("api-ppdb.smkrus.com/api/v1/berkas")
-                .addPathParameter("u_id", "1")
+        progressBar.setMessage("Please wait");
+        progressBar.show();
+        AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/berkas")
+                .addPathParameter("id", "1")
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()
@@ -61,15 +60,19 @@ public class Berkas extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            String status=response.getString("STATUS");
-                            if (status.equalsIgnoreCase("SUCCES")){
-                                JSONObject jsonObjectPayload = response.getJSONObject("PAYLOAD");
-                                if (jsonObjectPayload.getString("PAYLOAD").equalsIgnoreCase("-")){
+                                if(progressBar.isShowing()){
+                                progressBar.dismiss();}
+                                String status=response.getString("STATUS");
+                                if (status.equalsIgnoreCase("SUCCESS")){
+                                    JSONObject jsonObjectPayload = response.getJSONObject("PAYLOAD");
+                                    if (jsonObjectPayload.getString("lmp_raport").equalsIgnoreCase("-")){
+                                        Log.d("berkas gan", "onResponse: " + response);
+
+                                    }
                                     lnberkas.setVisibility(View.VISIBLE);
                                 }
-                            }
-                            progressBar.dismiss();
-                            Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
+
+                            Toast.makeText(getApplicationContext(), "Successs", Toast.LENGTH_LONG).show();
 
                         } catch (JSONException e) {
                             e.printStackTrace();
