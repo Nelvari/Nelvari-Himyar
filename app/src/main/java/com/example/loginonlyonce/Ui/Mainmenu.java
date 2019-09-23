@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.example.loginonlyonce.Berkas;
 import com.example.loginonlyonce.Model.ControlHistory;
 import com.example.loginonlyonce.R;
 
@@ -19,6 +20,7 @@ public class Mainmenu extends AppCompatActivity {
     LinearLayout btnDaftar;
     LinearLayout btnCetakData;
     ImageView ivProfile;
+    LinearLayout berkasList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class Mainmenu extends AppCompatActivity {
         ivProfile = findViewById(R.id.ivProfile);
         btnCetakData = findViewById(R.id.btnCetakData);
         btnDaftar = findViewById(R.id.btnDaftar);
+        berkasList = findViewById(R.id.berkasList);
 
         btnDaftar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +56,16 @@ public class Mainmenu extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(Mainmenu.this, MainActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        berkasList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(Mainmenu.this, Berkas.class);
                 startActivity(intent);
 
             }
