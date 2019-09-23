@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+
+        <activity android:name=".Adapter_Berkas"></activity>
+        <activity android:name=".Berkas" />
         <activity android:name=".Ui.CetakData" />
         <activity android:name=".Model.ControlHistory" />
         <activity android:name=".Model.ControlHome" />
@@ -23,11 +26,6 @@
         <activity android:name=".Model.InboxAdapter" />
         <activity android:name=".inbox" />
         <activity android:name=".berkasfile" />
-        <activity android:name=".Model.ControlInfoAnimasi" />
-        <activity android:name=".Model.ControlInfoDKV" />
-        <activity android:name=".Model.ControlInfoRPL" />
-        <activity android:name=".Model.ControlInfoDg" />
-        <activity android:name=".Model.ControlInfo" />
         <activity
             android:name=".Ui.DKV"
             android:parentActivityName=".Ui.Home" />
@@ -100,11 +98,16 @@
                 android:resource="@xml/picker_provider_paths" />
         </provider>
     </application>
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 

@@ -20,9 +20,6 @@
 
         </androidx.appcompat.widget.Toolbar>
 
-
-
-
         <LinearLayout
             android:layout_marginHorizontal="10dp"
             android:layout_width="match_parent"

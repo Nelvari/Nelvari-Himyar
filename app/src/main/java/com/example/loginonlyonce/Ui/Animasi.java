@@ -1,8 +1,6 @@
 package com.example.loginonlyonce.Ui;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,12 +19,6 @@ public class Animasi extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animasi);
-
-        SharedPreferences mInfoDg = getSharedPreferences("infoAnimasi", Context.MODE_PRIVATE);
-
-        SharedPreferences.Editor editor = mInfoDg.edit();
-        editor.putInt("userInfoAnimasi", 1);
-        editor.apply();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         btnLogin = findViewById(R.id.btnlogin);
