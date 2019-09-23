@@ -10,10 +10,10 @@
         android:id="@+id/txtselamat"
         android:layout_width="246dp"
         android:layout_height="wrap_content"
-        android:text="Selamat,Berkas Anda telah kami terima semua"
+        android:text="Selamat ,Semua berkas-berkas yang anda kirimkan telah di terima oleh admin PPDB."
         android:textAlignment="center"
         android:layout_gravity="center"
         android:layout_marginTop="300dp"
-        android:textSize="17sp"/>
+        android:textSize="16sp"/>
 
 </LinearLayout>
