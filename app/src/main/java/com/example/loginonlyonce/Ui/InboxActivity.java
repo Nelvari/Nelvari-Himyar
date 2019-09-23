@@ -45,7 +45,7 @@ public class InboxActivity extends AppCompatActivity {
                 new SwipeRefreshLayout.OnRefreshListener() {
                     @Override
                     public void onRefresh() {
-                        Online();
+
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
@@ -58,28 +58,4 @@ public class InboxActivity extends AppCompatActivity {
                 }
         );
     }
-    private void Online(){
-        AndroidNetworking.post("")
-                .addBodyParameter("","")
-                .setTag("test")
-                .setPriority(Priority.LOW)
-                .build()
-                .getAsJSONObject(new JSONObjectRequestListener() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        Log.d("hasilResponsku", "onResponse: " + response.toString());
-                    }
-
-                    @Override
-                    public void onError(ANError anError) {
-                        Log.d("erorResponsku", "onError: " + anError.getErrorDetail());
-                        Log.d("erorResponsku", "onError: " + anError.getErrorBody());
-                        Log.d("erorResponsku", "onError: " + anError.getErrorCode());
-                    }
-                });
-
-
-
-    }
-
 }
