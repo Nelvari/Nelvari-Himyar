@@ -9,6 +9,8 @@
 
 
 <LinearLayout
+    android:visibility="gone"
+    android:id="@+id/lnberkas"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Adapter_Berkas"
@@ -27,9 +29,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-
-
         <androidx.cardview.widget.CardView
             android:id="@+id/txt1"
             android:layout_width="match_parent"
@@ -38,32 +37,24 @@
             app:cardElevation="3dp"
             android:layout_marginTop="20dp"
             app:cardUseCompatPadding="true">
-
-
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:orientation="vertical"
                 android:padding="5dp">
-
                 <LinearLayout
                     android:layout_width="241dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@drawable/line1"
                     android:orientation="horizontal">
-
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:src="@mipmap/ic_launcher" />
-
-
                     <TextView
                         android:id="@+id/txtTitleBerkas"
                         android:layout_width="wrap_content"
@@ -71,8 +62,6 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="30dp"
                         android:text="Pass Foto 3x4" />
-
-
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -131,11 +120,7 @@
             app:cardElevation="3dp"
             android:layout_marginTop="10dp"
             app:cardUseCompatPadding="true">
-
-
-
-
-            <LinearLayout
+                 <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -177,10 +162,6 @@
             app:cardElevation="3dp"
             android:layout_marginTop="10dp"
             app:cardUseCompatPadding="true">
-
-
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -223,10 +204,6 @@
             app:cardElevation="3dp"
             android:layout_marginTop="10dp"
             app:cardUseCompatPadding="true">
-
-
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -269,10 +246,6 @@
             app:cardElevation="3dp"
             android:layout_marginTop="10dp"
             app:cardUseCompatPadding="true">
-
-
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -315,10 +288,6 @@
             app:cardElevation="3dp"
             android:layout_marginTop="10dp"
             app:cardUseCompatPadding="true">
-
-
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
