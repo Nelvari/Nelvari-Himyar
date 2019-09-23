@@ -45,7 +45,6 @@ public class InboxActivity extends AppCompatActivity {
                 new SwipeRefreshLayout.OnRefreshListener() {
                     @Override
                     public void onRefresh() {
-
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
