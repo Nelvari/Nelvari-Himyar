@@ -30,6 +30,7 @@ public class Berkas extends AppCompatActivity {
     private CardView raport;
     private CardView catksehtan;
     private CardView gambar;
+    private CardView struk;
     private SharedPreferences mInfoBerkas;
     private LinearLayout lnberkas;
 
@@ -44,7 +45,9 @@ public class Berkas extends AppCompatActivity {
         raport=(CardView) findViewById(R.id.cdraport);
         catksehtan=(CardView) findViewById(R.id.cdcatksehtan);
         gambar=(CardView) findViewById(R.id.cdgambar);
+        struk=(CardView) findViewById(R.id.cdstruk);
         lnberkas=(LinearLayout) findViewById(R.id.lnberkas);
+
         progressBar = new ProgressDialog(Berkas.this);
 
         mInfoBerkas = getSharedPreferences("login", Context.MODE_PRIVATE);
@@ -121,6 +124,14 @@ public class Berkas extends AppCompatActivity {
                                     }else if (jsonObjectPayload.getString("lmp_gambar_anm").equalsIgnoreCase("Y")){
                                         gambar.setVisibility(View.INVISIBLE);
                                     }
+
+//                                    if (jsonObjectPayload.getString("lmp_struk").equalsIgnoreCase("-")){
+//                                        struk.setVisibility(View.VISIBLE);
+//                                    }else if (jsonObjectPayload.getString("lmp_struk").equalsIgnoreCase("N")){
+//                                        struk.setVisibility(View.VISIBLE);
+//                                    }else if (jsonObjectPayload.getString("lmp_struk").equalsIgnoreCase("Y")){
+//                                        struk.setVisibility(View.INVISIBLE);
+//                                    }
                                 }
 
                             Toast.makeText(getApplicationContext(), "Successs", Toast.LENGTH_LONG).show();
