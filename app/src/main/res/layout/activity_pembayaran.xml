@@ -39,9 +39,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Batas waktu pembayaran adalah 2x24 jam, segeralah
-membayar biaya pendaftaran sebelum tenggat waktu
-berakhir."
+            android:text="Batas waktu pembayaran adalah 2x24 jam, segeralah membayar biaya pendaftaran sebelum tenggat waktu berakhir."
             android:textColor="@color/hitam"
             android:layout_marginTop="35dp"
             android:layout_margin="35dp"/>
@@ -100,8 +98,7 @@ berakhir."
             android:layout_height="wrap_content"
             android:layout_margin="35dp"
             android:textColor="@color/hitam"
-            android:text="Jika anda sudah membayar ,silahkan isi form dan apload
-bukti/struk transfer di bawah ini. "/>
+            android:text="Jika anda sudah membayar ,silahkan isi form dan apload bukti/struk transfer di bawah ini. "/>
 
         <TextView
             android:layout_width="wrap_content"
