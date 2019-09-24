@@ -45,6 +45,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:background="@android:color/transparent"
-    android:textColor="@android:color/white" />
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>

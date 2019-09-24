@@ -60,15 +60,15 @@ public class Berkas extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-if(progressBar.isShowing()){
+                            if(progressBar.isShowing()){
                                 progressBar.dismiss();}
 
 
-                                String status=response.getString("STATUS");
-                                if (status.equalsIgnoreCase("SUCCESS")){
-                                    JSONObject jsonObjectPayload = response.getJSONObject("PAYLOAD");
-                                    if (jsonObjectPayload.getString("lmp_raport").equalsIgnoreCase("-")){
-                                        Log.d("berkas gan", "onResponse: " + response);
+                            String status=response.getString("STATUS");
+                            if (status.equalsIgnoreCase("SUCCESS")){
+                                JSONObject jsonObjectPayload = response.getJSONObject("PAYLOAD");
+                                if (jsonObjectPayload.getString("lmp_raport").equalsIgnoreCase("-")){
+                                    Log.d("berkasgan", "onResponse: " + response);
 
                                     }
                                     lnberkas.setVisibility(View.VISIBLE);
