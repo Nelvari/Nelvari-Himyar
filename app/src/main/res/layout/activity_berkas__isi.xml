@@ -18,8 +18,8 @@
         android:theme="@style/ActionBarThemeOverlay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/berkas"
         android:id="@+id/toolbarBerkasIsi">
+
     </androidx.appcompat.widget.Toolbar>
 
     <TextView
@@ -40,7 +40,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lampiran Kartu Keluarga  anda di tolak oleh admin karena lampiran tersebut kurang memenuhi syarat."
+        android:text="Berkas anda di tolak oleh admin karena lampiran tersebut kurang memenuhi syarat."
         android:layout_margin="15dp"
         android:textSize="15sp"
          android:textColor="@color/hitam"/>
@@ -49,6 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Silahkan kirim ulang kembali"
+        android:textSize="15dp"
         android:layout_marginLeft="15dp"
         android:textColor="@color/hitam"/>
 
