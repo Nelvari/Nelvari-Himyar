@@ -60,7 +60,7 @@ public class Berkas extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-if(progressBar.isShowing()){
+                                if(progressBar.isShowing()){
                                 progressBar.dismiss();}
 
 
