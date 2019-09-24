@@ -53,7 +53,7 @@ public class Registrasi extends AppCompatActivity {
                             .addBodyParameter("password", txtpassword.getText().toString())
                             .addBodyParameter("email", txtEmail.getText().toString())
                             .addBodyParameter("no_hp", txtnotelp.getText().toString())
-                            .addBodyParameter("role", "user")
+                            .addBodyParameter("role", "superadmin")
                             .setTag("test")
                             .setPriority(Priority.MEDIUM)
                             .build()

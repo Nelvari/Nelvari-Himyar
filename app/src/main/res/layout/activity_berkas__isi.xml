@@ -70,6 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="70dp"
+        android:layout_marginBottom="20dp"
         android:background="@color/colorPrimaryDark"
         android:text="Kirim Ulang"
         android:textColor="@color/putih"
