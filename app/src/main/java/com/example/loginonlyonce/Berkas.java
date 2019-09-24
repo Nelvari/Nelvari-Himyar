@@ -62,6 +62,7 @@ public class Berkas extends AppCompatActivity {
                         try {
                                 if(progressBar.isShowing()){
                                 progressBar.dismiss();}
+
                                 String status=response.getString("STATUS");
                                 if (status.equalsIgnoreCase("SUCCESS")){
                                     JSONObject jsonObjectPayload = response.getJSONObject("PAYLOAD");
