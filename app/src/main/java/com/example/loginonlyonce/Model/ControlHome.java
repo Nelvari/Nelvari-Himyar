@@ -20,9 +20,9 @@ public class ControlHome extends AppCompatActivity {
 
         mHome = getSharedPreferences("login", Context.MODE_PRIVATE);
 
-        if (mHome.getString("username1", "").equalsIgnoreCase("")
-                || mHome.getString("username1", "") == null
-                || mHome.getString("username1", "").isEmpty()){
+        if (mHome.getString("username", "").equalsIgnoreCase("")
+                || mHome.getString("username", "") == null
+                || mHome.getString("username", "").isEmpty()){
 
             Intent intent = new Intent(ControlHome.this, Home.class);
             startActivity(intent);
