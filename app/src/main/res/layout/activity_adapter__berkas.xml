@@ -28,364 +28,499 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cdfoto"
-            android:visibility="gone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="380dp"
+            android:layout_height="353dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
             app:cardCornerRadius="6dp"
             app:cardElevation="3dp"
-            android:layout_marginTop="20dp"
             app:cardUseCompatPadding="true">
 
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_width="370dp"
+                android:layout_height="335dp"
+                android:layout_gravity="center"
                 android:layout_margin="5dp"
+                android:background="@drawable/line1"
                 android:orientation="vertical"
                 android:padding="5dp">
 
-                <LinearLayout
-                    android:layout_width="294dp"
-                    android:layout_height="80dp"
+                <TextView
+                    android:id="@+id/txtTitleBerkas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:text="Pass Foto 3x4"
+                    android:textColor="@color/hitam" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_margin="15dp"
-                    android:background="@drawable/line1"
-                    android:orientation="horizontal">
+                    android:text="Berkas Foto anda di tolak oleh admin karena lampiran tersebut kurang memenuhi syarat."
+                    android:textColor="@color/hitam"
+                    android:textSize="13sp" />
 
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="40dp"
-                        android:src="@mipmap/ic_launcher" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Silahkan kirim ulang kembali."
+                    android:textColor="@color/hitam"
+                    android:textSize="13dp" />
 
-                    <TextView
-                        android:id="@+id/txtTitleBerkas"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="30dp"
-                        android:text="Pass Foto 3x4" />
-                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="137dp"
+                    android:layout_height="141dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:src="@mipmap/img" />
+                <Button
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="Kirim Ulang"
+                    android:textColor="@color/putih"
+                    android:textSize="13dp" />
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cdakte"
-            android:visibility="gone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="380dp"
+            android:layout_height="353dp"
             app:cardCornerRadius="6dp"
             app:cardElevation="3dp"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
             app:cardUseCompatPadding="true">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_width="370dp"
+                android:layout_height="335dp"
+                android:layout_gravity="center"
                 android:layout_margin="5dp"
+                android:background="@drawable/line1"
                 android:orientation="vertical"
                 android:padding="5dp">
 
-                <LinearLayout
-                    android:layout_width="294dp"
-                    android:layout_height="80dp"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:text="AKTA Kelahiran"
+                    android:textColor="@color/hitam" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_margin="15dp"
-                    android:background="@drawable/line1"
-                    android:orientation="horizontal">
+                    android:text="Berkas AKTA Kelahiran anda di tolak oleh admin karena lampiran tersebut kurang memenuhi syarat."
+                    android:textColor="@color/hitam"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Silahkan kirim ulang kembali."
+                    android:textColor="@color/hitam"
+                    android:textSize="13dp" />
 
 
                 <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="40dp"
-                        android:src="@mipmap/ic_launcher" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="30dp"
-                        android:text="AKTA Kelahiran" />
-
-
-                </LinearLayout>
+                    android:layout_width="137dp"
+                    android:layout_height="141dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:src="@mipmap/img" />
+                <Button
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="Kirim Ulang"
+                    android:textColor="@color/putih"
+                    android:textSize="13dp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cdkk"
             android:visibility="gone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="380dp"
+            android:layout_height="353dp"
             app:cardCornerRadius="6dp"
+            android:layout_gravity="center"
             app:cardElevation="3dp"
             android:layout_marginTop="10dp"
             app:cardUseCompatPadding="true">
 
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_width="370dp"
+                android:layout_height="335dp"
+                android:layout_gravity="center"
                 android:layout_margin="5dp"
+                android:background="@drawable/line1"
                 android:orientation="vertical"
                 android:padding="5dp">
 
-                <LinearLayout
-                    android:layout_width="294dp"
-                    android:layout_height="80dp"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:text="Kartu Keluarga"
+                    android:textColor="@color/hitam" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_margin="15dp"
-                    android:background="@drawable/line1"
-                    android:orientation="horizontal">
+                    android:text="Berkas Kartu Keluarga anda di tolak oleh admin karena lampiran tersebut kurang memenuhi syarat."
+                    android:textColor="@color/hitam"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Silahkan kirim ulang kembali."
+                    android:textColor="@color/hitam"
+                    android:textSize="13dp" />
 
 
                 <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="40dp"
-                        android:src="@mipmap/ic_launcher" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="30dp"
-                        android:text="Kartu Keluarga" />
-
-
-                </LinearLayout>
+                    android:layout_width="137dp"
+                    android:layout_height="141dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:src="@mipmap/img" />
+                <Button
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="Kirim Ulang"
+                    android:textColor="@color/putih"
+                    android:textSize="13dp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cdsertifikat"
             android:visibility="gone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="380dp"
+            android:layout_height="353dp"
             app:cardCornerRadius="6dp"
+            android:layout_gravity="center"
             app:cardElevation="3dp"
             android:layout_marginTop="10dp"
             app:cardUseCompatPadding="true">
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_width="370dp"
+                android:layout_height="335dp"
+                android:layout_gravity="center"
                 android:layout_margin="5dp"
+                android:background="@drawable/line1"
                 android:orientation="vertical"
                 android:padding="5dp">
 
-                <LinearLayout
-                    android:layout_width="294dp"
-                    android:layout_height="80dp"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:text="Sertifikat"
+                    android:textColor="@color/hitam" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_margin="15dp"
-                    android:background="@drawable/line1"
-                    android:orientation="horizontal">
+                    android:text="Berkas Sertifikat anda di tolak oleh admin karena lampiran tersebut kurang memenuhi syarat."
+                    android:textColor="@color/hitam"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Silahkan kirim ulang kembali."
+                    android:textColor="@color/hitam"
+                    android:textSize="13dp" />
 
 
                 <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="40dp"
-                        android:src="@mipmap/ic_launcher" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="30dp"
-                        android:text="Sertifikat" />
-
-
-                </LinearLayout>
+                    android:layout_width="137dp"
+                    android:layout_height="141dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:src="@mipmap/img" />
+                <Button
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="Kirim Ulang"
+                    android:textColor="@color/putih"
+                    android:textSize="13dp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cdraport"
             android:visibility="gone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="380dp"
+            android:layout_height="353dp"
             app:cardCornerRadius="6dp"
+            android:layout_gravity="center"
             app:cardElevation="3dp"
             android:layout_marginTop="10dp"
             app:cardUseCompatPadding="true">
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_width="370dp"
+                android:layout_height="335dp"
+                android:layout_gravity="center"
                 android:layout_margin="5dp"
+                android:background="@drawable/line1"
                 android:orientation="vertical"
                 android:padding="5dp">
 
-                <LinearLayout
-                    android:layout_width="294dp"
-                    android:layout_height="80dp"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:text="Raport"
+                    android:textColor="@color/hitam" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_margin="15dp"
-                    android:background="@drawable/line1"
-                    android:orientation="horizontal">
+                    android:text="Berkas Raport anda di tolak oleh admin karena lampiran tersebut kurang memenuhi syarat."
+                    android:textColor="@color/hitam"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Silahkan kirim ulang kembali."
+                    android:textColor="@color/hitam"
+                    android:textSize="13dp" />
+
 
                 <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="40dp"
-                        android:src="@mipmap/ic_launcher" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="30dp"
-                        android:text="Nilai Raport" />
-
-
-                </LinearLayout>
+                    android:layout_width="137dp"
+                    android:layout_height="141dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:src="@mipmap/img" />
+                <Button
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="Kirim Ulang"
+                    android:textColor="@color/putih"
+                    android:textSize="13dp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cdcatksehtan"
             android:visibility="gone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="380dp"
+            android:layout_height="353dp"
             app:cardCornerRadius="6dp"
+            android:layout_gravity="center"
             app:cardElevation="3dp"
             android:layout_marginTop="10dp"
             app:cardUseCompatPadding="true">
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:orientation="vertical"
-                android:padding="5dp">
-
-                <LinearLayout
-                    android:layout_width="294dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="center"
-                    android:layout_margin="15dp"
-                    android:background="@drawable/line1"
-                    android:orientation="horizontal">
-
-                <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="40dp"
-                        android:src="@mipmap/ic_launcher" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="30dp"
-                        android:text="Catatan Kesehatan" />
-
-
-                </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-        android:id="@+id/cdgambar"
-            android:visibility="gone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="6dp"
-        app:cardElevation="3dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="10dp"
-        app:cardUseCompatPadding="true">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_width="370dp"
+                android:layout_height="335dp"
+                android:layout_gravity="center"
                 android:layout_margin="5dp"
+                android:background="@drawable/line1"
                 android:orientation="vertical"
                 android:padding="5dp">
-
-                <LinearLayout
-                    android:layout_width="294dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="center"
-                    android:layout_margin="15dp"
-                    android:background="@drawable/line1"
-                    android:orientation="horizontal">
-
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="40dp"
-                    android:src="@mipmap/ic_launcher" />
-
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="30dp"
-                    android:text="Gambar" />
+                    android:text="Catatan Kesehatan"
+                    android:textColor="@color/hitam" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="Berkas Catatan Kesehatan anda di tolak oleh admin karena lampiran tersebut kurang memenuhi syarat."
+                    android:textColor="@color/hitam"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Silahkan kirim ulang kembali."
+                    android:textColor="@color/hitam"
+                    android:textSize="13dp" />
 
 
+                <ImageView
+                    android:layout_width="137dp"
+                    android:layout_height="141dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:src="@mipmap/img" />
+                <Button
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="Kirim Ulang"
+                    android:textColor="@color/putih"
+                    android:textSize="13dp" />
             </LinearLayout>
-        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cdgambar"
+            android:visibility="gone"
+            android:layout_width="380dp"
+            android:layout_height="353dp"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="3dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            app:cardUseCompatPadding="true">
+            <LinearLayout
+                android:layout_width="370dp"
+                android:layout_height="335dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/line1"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Gambar"
+                    android:textColor="@color/hitam" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="Berkas Gambar anda di tolak oleh admin karena lampiran tersebut kurang memenuhi syarat."
+                    android:textColor="@color/hitam"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Silahkan kirim ulang kembali."
+                    android:textColor="@color/hitam"
+                    android:textSize="13dp" />
+
+
+                <ImageView
+                    android:layout_width="137dp"
+                    android:layout_height="141dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:src="@mipmap/img" />
+                <Button
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="Kirim Ulang"
+                    android:textColor="@color/putih"
+                    android:textSize="13dp" />
+            </LinearLayout>
     </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cdstruk"
             android:visibility="gone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="380dp"
+            android:layout_height="353dp"
             app:cardCornerRadius="6dp"
             app:cardElevation="3dp"
+            android:layout_gravity="center"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="10dp"
             app:cardUseCompatPadding="true">
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_width="370dp"
+                android:layout_height="335dp"
+                android:layout_gravity="center"
                 android:layout_margin="5dp"
+                android:background="@drawable/line1"
                 android:orientation="vertical"
                 android:padding="5dp">
 
-                <LinearLayout
-                    android:layout_width="294dp"
-                    android:layout_height="80dp"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:text="Struck Pembayaran"
+                    android:textColor="@color/hitam" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_margin="15dp"
-                    android:background="@drawable/line1"
-                    android:orientation="horizontal">
+                    android:text="Berkas Struck Pembayaran anda di tolak oleh admin karena lampiran tersebut kurang memenuhi syarat."
+                    android:textColor="@color/hitam"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Silahkan kirim ulang kembali."
+                    android:textColor="@color/hitam"
+                    android:textSize="13dp" />
 
 
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="40dp"
-                        android:src="@mipmap/ic_launcher" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="30dp"
-                        android:text="Struk Pembayaran" />
-
-
-                </LinearLayout>
+                <ImageView
+                    android:layout_width="137dp"
+                    android:layout_height="141dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:src="@mipmap/img" />
+                <Button
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="Kirim Ulang"
+                    android:textColor="@color/putih"
+                    android:textSize="13dp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
