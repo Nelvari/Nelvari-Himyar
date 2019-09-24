@@ -31,19 +31,19 @@ public class Berkas extends AppCompatActivity {
     private CardView catksehtan;
     private CardView gambar;
     private SharedPreferences mInfoBerkas;
-    LinearLayout lnberkas;
+    private LinearLayout lnberkas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_berkas);
-        foto=(CardView) findViewById(R.id.txt1);
-        akte=(CardView) findViewById(R.id.txt2);
-        kk=(CardView) findViewById(R.id.txt3);
-        sertifikat=(CardView) findViewById(R.id.txt4);
-        raport=(CardView) findViewById(R.id.txt5);
-        catksehtan=(CardView) findViewById(R.id.txt6);
-        gambar=(CardView) findViewById(R.id.txt7);
+        setContentView(R.layout.activity_adapter__berkas);
+        foto=(CardView) findViewById(R.id.cdfoto);
+        akte=(CardView) findViewById(R.id.cdakte);
+        kk=(CardView) findViewById(R.id.cdkk);
+        sertifikat=(CardView) findViewById(R.id.cdsertifikat);
+        raport=(CardView) findViewById(R.id.cdraport);
+        catksehtan=(CardView) findViewById(R.id.cdcatksehtan);
+        gambar=(CardView) findViewById(R.id.cdgambar);
         lnberkas=(LinearLayout) findViewById(R.id.lnberkas);
         progressBar = new ProgressDialog(Berkas.this);
 
@@ -66,10 +66,60 @@ public class Berkas extends AppCompatActivity {
                                 if (status.equalsIgnoreCase("SUCCESS")){
                                     JSONObject jsonObjectPayload = response.getJSONObject("PAYLOAD");
                                     if (jsonObjectPayload.getString("lmp_raport").equalsIgnoreCase("-")){
-                                        Log.d("berkas gan", "onResponse: " + response);
-
+                                        raport.setVisibility(View.VISIBLE);
+                                    }else if (jsonObjectPayload.getString("lmp_raport").equalsIgnoreCase("N")){
+                                        raport.setVisibility(View.VISIBLE);
+                                    }else if (jsonObjectPayload.getString("lmp_raport").equalsIgnoreCase("Y")){
+                                        raport.setVisibility(View.INVISIBLE);
                                     }
-                                    lnberkas.setVisibility(View.VISIBLE);
+
+                                    if (jsonObjectPayload.getString("lmp_akte").equalsIgnoreCase("-")){
+                                        akte.setVisibility(View.VISIBLE);
+                                    }else if (jsonObjectPayload.getString("lmp_akte").equalsIgnoreCase("N")){
+                                        akte.setVisibility(View.VISIBLE);
+                                    }else if (jsonObjectPayload.getString("lmp_akte").equalsIgnoreCase("Y")){
+                                        akte.setVisibility(View.INVISIBLE);
+                                    }
+
+                                    if (jsonObjectPayload.getString("lmp_kk").equalsIgnoreCase("-")){
+                                        kk.setVisibility(View.VISIBLE);
+                                    }else if (jsonObjectPayload.getString("lmp_kk").equalsIgnoreCase("N")){
+                                        kk.setVisibility(View.VISIBLE);
+                                    }else if (jsonObjectPayload.getString("lmp_kk").equalsIgnoreCase("Y")){
+                                        kk.setVisibility(View.INVISIBLE);
+                                    }
+
+                                    if (jsonObjectPayload.getString("lmp_foto").equalsIgnoreCase("-")){
+                                        foto.setVisibility(View.VISIBLE);
+                                    }else if (jsonObjectPayload.getString("lmp_foto").equalsIgnoreCase("N")){
+                                        foto.setVisibility(View.VISIBLE);
+                                    }else if (jsonObjectPayload.getString("lmp_foto").equalsIgnoreCase("Y")){
+                                        foto.setVisibility(View.INVISIBLE);
+                                    }
+
+                                    if (jsonObjectPayload.getString("lmp_kesehatan").equalsIgnoreCase("-")){
+                                        catksehtan.setVisibility(View.VISIBLE);
+                                    }else if (jsonObjectPayload.getString("lmp_kesehatan").equalsIgnoreCase("N")){
+                                        catksehtan.setVisibility(View.VISIBLE);
+                                    }else if (jsonObjectPayload.getString("lmp_kesehatan").equalsIgnoreCase("Y")){
+                                        catksehtan.setVisibility(View.INVISIBLE);
+                                    }
+
+                                    if (jsonObjectPayload.getString("lmp_prestasi").equalsIgnoreCase("-")){
+                                        sertifikat.setVisibility(View.VISIBLE);
+                                    }else if (jsonObjectPayload.getString("lmp_prestasi").equalsIgnoreCase("N")){
+                                        sertifikat.setVisibility(View.VISIBLE);
+                                    }else if (jsonObjectPayload.getString("lmp_prestasi").equalsIgnoreCase("Y")){
+                                        sertifikat.setVisibility(View.INVISIBLE);
+                                    }
+
+                                    if (jsonObjectPayload.getString("lmp_gambar_anm").equalsIgnoreCase("-")){
+                                        gambar.setVisibility(View.VISIBLE);
+                                    }else if (jsonObjectPayload.getString("lmp_gambar_anm").equalsIgnoreCase("N")){
+                                        gambar.setVisibility(View.VISIBLE);
+                                    }else if (jsonObjectPayload.getString("lmp_gambar_anm").equalsIgnoreCase("Y")){
+                                        gambar.setVisibility(View.INVISIBLE);
+                                    }
                                 }
 
                             Toast.makeText(getApplicationContext(), "Successs", Toast.LENGTH_LONG).show();
