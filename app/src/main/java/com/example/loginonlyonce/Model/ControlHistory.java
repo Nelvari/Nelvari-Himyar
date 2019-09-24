@@ -38,16 +38,5 @@ public class ControlHistory extends AppCompatActivity {
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
     }
 }
