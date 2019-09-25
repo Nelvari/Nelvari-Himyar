@@ -175,7 +175,6 @@ public class DataSiswa extends AppCompatActivity {
                                 in.putExtra("selectedImagePathgambar", selectedImagePathgambar);
 
                                 startActivity(in);
-                                finish();
 
                                // finish();
 

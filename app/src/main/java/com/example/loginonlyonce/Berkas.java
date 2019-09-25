@@ -30,7 +30,7 @@ public class Berkas extends AppCompatActivity {
     private CardView raport;
     private CardView catksehtan;
     private CardView gambar;
-    private SharedPreferences mInfoBerkas;
+    SharedPreferences mInfoBerkas;
     private LinearLayout lnberkas;
 
     @Override
@@ -52,7 +52,7 @@ public class Berkas extends AppCompatActivity {
         progressBar.setMessage("Please wait");
         progressBar.show();
         AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/berkas")
-                .addPathParameter("id", "1")
+                .addPathParameter("id", mInfoBerkas.getString("username1", ""))
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()

@@ -1,7 +1,9 @@
 package com.example.loginonlyonce.Model;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
@@ -19,11 +21,15 @@ import org.json.JSONObject;
 
 public class ControlData extends AppCompatActivity {
 
-    ProgressDialog progressBar;
+    private ProgressDialog progressBar;
+
+    SharedPreferences mData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mData = getSharedPreferences("login", Context.MODE_PRIVATE);
 
         progressBar = new ProgressDialog(ControlData.this);
 
@@ -31,7 +37,7 @@ public class ControlData extends AppCompatActivity {
         progressBar.show();
 
         AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/cek-daftar")
-                .addPathParameter("id")
+                .addPathParameter("id", mData.getString("username1", ""))
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()
@@ -51,15 +57,20 @@ public class ControlData extends AppCompatActivity {
                                     Intent intent = new Intent(ControlData.this, Berkasfile.class);
                                     startActivity(intent);
 
-                                    Log.d("tes", "onResponse: " + status);
+                                    Toast.makeText(getApplicationContext(), "Tolong isi data", Toast.LENGTH_LONG).show();
+
+
 
                                 } else {
 
                                     Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
 
-                                    Log.d("tes", "onResponse: " + status);
 
                                 }
+
+                                Log.d("tes", "onResponse: " + status);
+
+                                finish();
 
                             }
 
@@ -72,7 +83,11 @@ public class ControlData extends AppCompatActivity {
                     @Override
                     public void onError(ANError anError) {
 
+                        if (progressBar.isShowing()){
 
+                            progressBar.dismiss();
+
+                        }
 
                     }
                 });
