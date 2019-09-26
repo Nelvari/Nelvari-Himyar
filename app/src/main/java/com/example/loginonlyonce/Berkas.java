@@ -30,6 +30,7 @@ public class Berkas extends AppCompatActivity {
     private CardView raport;
     private CardView catksehtan;
     private CardView gambar;
+
     private CardView struk;
     private SharedPreferences mInfoBerkas;
     private LinearLayout lnberkas;
@@ -47,6 +48,7 @@ public class Berkas extends AppCompatActivity {
         gambar=(CardView) findViewById(R.id.cdgambar);
         struk=(CardView) findViewById(R.id.cdstruk);
         lnberkas=(LinearLayout) findViewById(R.id.lnberkas);
+        lnberkas=(LinearLayout)findViewById(R.id.lnberkas);
 
         progressBar = new ProgressDialog(Berkas.this);
 
@@ -136,7 +138,9 @@ public class Berkas extends AppCompatActivity {
 //                                    }
                                 }
 
-                            Toast.makeText(getApplicationContext(), "Successs", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(), "Successs", Toast.LENGTH_LONG).show();
+
+                                Log.d("tes", "onResponse: " + status);
 
                         } catch (JSONException e) {
                             e.printStackTrace();
