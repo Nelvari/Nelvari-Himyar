@@ -21,14 +21,13 @@ public class ControlClass extends AppCompatActivity {
 
         if (mInfoRPL.getString("username", "").equalsIgnoreCase("")
                 || mInfoRPL.getString("username", "") == null
-                || mInfoRPL.getString("username", "").isEmpty()){
+                || mInfoRPL.getString("username", "").isEmpty()) {
 
             Intent in = new Intent(ControlClass.this, Login.class);
             startActivity(in);
             finish();
 
-        }
-        else {
+        } else {
 
             Intent in = new Intent(ControlClass.this, Mainmenu.class);
             startActivity(in);

@@ -68,6 +68,8 @@ public class Berkas extends AppCompatActivity {
 
                                 String status=response.getString("STATUS");
                                 if (status.equalsIgnoreCase("SUCCESS")){
+
+                                    
                                     JSONObject jsonObjectPayload = response.getJSONObject("PAYLOAD");
                                     if (jsonObjectPayload.getString("lmp_raport").equalsIgnoreCase("-")){
                                         raport.setVisibility(View.VISIBLE);
