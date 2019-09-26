@@ -313,8 +313,8 @@ public class DataAsalSekolah extends AppCompatActivity {
                             Log.d("hasilResponsku", "onResponse: " + response.toString());
                             dialog.dismiss();
                             SharedPreferences.Editor editor = getSharedPreferences("login", MODE_PRIVATE).edit();
-                            editor.putString("username", mInfoRPL.getString("username", ""));
                             editor.putString("username1", mInfoRPL.getString("username", ""));
+                            editor.putInt("id", 1);
                             editor.commit();
 
                         }

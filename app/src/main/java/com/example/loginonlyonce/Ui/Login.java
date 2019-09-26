@@ -56,6 +56,9 @@ public class Login extends AppCompatActivity {
     public String avatar;
     String token="";
     String nohp="";
+
+    int id;
+
     SharedPreferences mLogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,12 +107,13 @@ public class Login extends AppCompatActivity {
                                             token=getdata.getString("login_token");
                                             nohp=getdata.getString("u_no_hp");
                                             email=getdata.getString("u_username");
+                                            id = getdata.getInt("u_id");
 
                                             SharedPreferences.Editor editor = mLogin.edit();
                                             editor.putString("username", txtusername.getText().toString());
                                             editor.putString("nohp", nohp);
                                             editor.putString("email", email);
-                                            editor.putInt("userid", 1);
+                                            editor.putInt("userid", id);
                                             editor.putString("data4", "");
                                             editor.apply();
                                             Intent intent = new Intent(Login.this, Mainmenu.class);

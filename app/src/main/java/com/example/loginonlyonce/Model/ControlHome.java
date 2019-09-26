@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -29,10 +30,12 @@ public class ControlHome extends AppCompatActivity {
 
         progressBar = new ProgressDialog(ControlHome.this);
 
+        progressBar.setMessage("Please wait");
+        progressBar.show();
+
         mHome = getSharedPreferences("login", Context.MODE_PRIVATE);
 
-        AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/profile")
-                .addPathParameter("id", "1")
+        AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/profile?id=" + mHome.getInt("userid", 0))
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()
@@ -43,11 +46,12 @@ public class ControlHome extends AppCompatActivity {
                         try {
 
                             if(progressBar.isShowing()){
-                                progressBar.dismiss();}
+                                progressBar.dismiss();
+                            }
 
                             String status = response.getString("STATUS");
 
-                            if (status.equalsIgnoreCase("SUCCESS")){
+                            if (status.equalsIgnoreCase("SUCCES") && mHome.getString("username1", "") != ""){
 
                                 Intent intent = new Intent(ControlHome.this, Mainmenu.class);
                                 startActivity(intent);
@@ -63,6 +67,9 @@ public class ControlHome extends AppCompatActivity {
 
                             }
 
+                            Log.d("tag", "onResponse: " + status);
+                            Log.d("tag", "onResponse: " + mHome.getString("username1", ""));
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -74,23 +81,6 @@ public class ControlHome extends AppCompatActivity {
 
                     }
                 });
-
-
-//        if (mHome.getString("username", "").equalsIgnoreCase("")
-//                || mHome.getString("username", "") == null
-//                || mHome.getString("username", "").isEmpty()){
-//
-//            Intent intent = new Intent(ControlHome.this, Home.class);
-//            startActivity(intent);
-//            finish();
-//
-//        }else {
-//
-//            Intent intent = new Intent(ControlHome.this, Mainmenu.class);
-//            startActivity(intent);
-//            finish();
-//
-//        }
 
     }
 }

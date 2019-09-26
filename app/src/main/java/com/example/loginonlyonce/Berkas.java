@@ -51,8 +51,7 @@ public class Berkas extends AppCompatActivity {
 
         progressBar.setMessage("Please wait");
         progressBar.show();
-        AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/berkas")
-                .addPathParameter("id", "1")
+        AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/berkas?id" + mInfoBerkas.getInt("userid", 0))
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()
