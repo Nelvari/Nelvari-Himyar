@@ -45,9 +45,7 @@ public class ControlHome extends AppCompatActivity {
 
                         try {
 
-                            if(progressBar.isShowing()){
-                                progressBar.dismiss();
-                            }
+
 
                             String status = response.getString("STATUS");
 
@@ -69,7 +67,9 @@ public class ControlHome extends AppCompatActivity {
 
                             Log.d("tag", "onResponse: " + status);
                             Log.d("tag", "onResponse: " + mHome.getString("username1", ""));
-
+                            if(progressBar.isShowing()){
+                                progressBar.dismiss();
+                            }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
