@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Model.ControlData"></activity>
+        <activity android:name=".Model.ControlData"/>
         <activity android:name=".Berkas_Isi" />
         <activity android:name=".Adapter_Berkas" />
         <activity android:name=".Berkas" />
@@ -20,13 +20,13 @@
         <activity android:name=".Model.ControlHome" />
         <activity android:name=".Ui.InboxActivity" />
         <activity android:name=".Adapter.InboxAdapter" />
-        <activity android:name=".Ui.Berkasfile" />
+        <activity android:name=".Ui.Berkasfile"
+            android:parentActivityName=".Ui.Mainmenu"/>
         <activity android:name=".adapter_history" />
         <activity android:name=".Ui.History" />
         <activity android:name=".InboxActivity" />
         <activity android:name=".Model.InboxAdapter" />
         <activity android:name=".inbox" />
-        <activity android:name=".berkasfile" />
         <activity
             android:name=".Ui.DKV"
             android:parentActivityName=".Ui.Home" />
@@ -52,13 +52,13 @@
         <activity android:name=".Model.ControlClass" />
         <activity
             android:name=".Ui.DataAsalSekolah"
-            android:parentActivityName=".FormulirPendaftaran" />
+            android:parentActivityName=".Ui.DataOrangTua" />
         <activity
             android:name=".Ui.DataOrangTua"
-            android:parentActivityName=".FormulirPendaftaran" />
+            android:parentActivityName=".Ui.DataSiswa" />
         <activity
             android:name=".Ui.DataSiswa"
-            android:parentActivityName=".FormulirPendaftaran" />
+            android:parentActivityName=".Ui.Berkasfile" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -30,7 +30,7 @@ public class Berkas extends AppCompatActivity {
     private CardView raport;
     private CardView catksehtan;
     private CardView gambar;
-    private SharedPreferences mInfoBerkas;
+    SharedPreferences mInfoBerkas;
     private LinearLayout lnberkas;
 
     @Override
@@ -123,7 +123,9 @@ public class Berkas extends AppCompatActivity {
                                     }
                                 }
 
-                            Toast.makeText(getApplicationContext(), "Successs", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(), "Successs", Toast.LENGTH_LONG).show();
+
+                                Log.d("tes", "onResponse: " + status);
 
                         } catch (JSONException e) {
                             e.printStackTrace();

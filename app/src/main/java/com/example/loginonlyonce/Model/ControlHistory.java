@@ -21,9 +21,9 @@ public class ControlHistory extends AppCompatActivity {
         mHistory = getSharedPreferences("login", Context.MODE_PRIVATE);
 //        String username = mHistory.getString("username1","");
 //        Log.d("username on history ", "onCreate: "+username);
-        if (mHistory.getString("username", "").equalsIgnoreCase("")
-                || mHistory.getString("username", "") == null
-                || mHistory.getString("username", "").isEmpty()){
+        if (mHistory.getString("username1", "").equalsIgnoreCase("")
+                || mHistory.getString("username1", "") == null
+                || mHistory.getString("username1", "").isEmpty()){
 //        if(username.isEmpty()){
             Intent intent = new Intent(ControlHistory.this, CetakData.class);
             startActivity(intent);
