@@ -52,7 +52,7 @@ public class Berkas extends AppCompatActivity {
         progressBar.setMessage("Please wait");
         progressBar.show();
         AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/berkas")
-                .addPathParameter("id", mInfoBerkas.getString("username1", ""))
+                .addPathParameter("id", "1")
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()
@@ -123,7 +123,9 @@ public class Berkas extends AppCompatActivity {
                                     }
                                 }
 
-                            Toast.makeText(getApplicationContext(), "Successs", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(), "Successs", Toast.LENGTH_LONG).show();
+
+                                Log.d("tes", "onResponse: " + status);
 
                         } catch (JSONException e) {
                             e.printStackTrace();

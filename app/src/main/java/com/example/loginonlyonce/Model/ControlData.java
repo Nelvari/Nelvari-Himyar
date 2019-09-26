@@ -37,7 +37,7 @@ public class ControlData extends AppCompatActivity {
         progressBar.show();
 
         AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/cek-daftar")
-                .addPathParameter("id", mData.getString("username1", ""))
+                .addPathParameter("id", "0")
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()
@@ -49,30 +49,29 @@ public class ControlData extends AppCompatActivity {
 
                             if (progressBar.isShowing()){
                                 progressBar.dismiss();
+                            }
 
-                                String status = response.getString("STATUS");
+                            String status = response.getString("STATUS");
 
-                                if (status.equalsIgnoreCase("SUCCESS")){
+                            if (status.equalsIgnoreCase("SUCCESS")){
 
-                                    Intent intent = new Intent(ControlData.this, Berkasfile.class);
-                                    startActivity(intent);
+                                Intent intent = new Intent(ControlData.this, Berkasfile.class);
+                                startActivity(intent);
 
-                                    Toast.makeText(getApplicationContext(), "Tolong isi data", Toast.LENGTH_LONG).show();
-
-
-
-                                } else {
-
-                                    Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(), "Tolong isi data", Toast.LENGTH_LONG).show();
 
 
-                                }
 
-                                Log.d("tes", "onResponse: " + status);
+                            } else {
 
-                                finish();
+                                Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
+
 
                             }
+
+                            Log.d("tes", "onResponse: " + status);
+
+                            finish();
 
                         } catch (JSONException e) {
                             e.printStackTrace();
