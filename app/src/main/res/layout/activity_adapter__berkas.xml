@@ -31,7 +31,6 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cdfoto"
-            android:visibility="gone"
             android:layout_width="380dp"
             android:layout_height="353dp"
             android:layout_marginTop="20dp"
@@ -64,7 +63,7 @@
                     android:layout_margin="15dp"
                     android:text="Berkas Foto anda di tolak oleh admin karena lampiran tersebut kurang memenuhi syarat."
                     android:textColor="@color/hitam"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"

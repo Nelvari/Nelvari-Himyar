@@ -44,7 +44,7 @@ public class Berkas extends AppCompatActivity {
         raport=(CardView) findViewById(R.id.cdraport);
         catksehtan=(CardView) findViewById(R.id.cdcatksehtan);
         gambar=(CardView) findViewById(R.id.cdgambar);
-        lnberkas=(LinearLayout) findViewById(R.id.lnberkas);
+        lnberkas=(LinearLayout)findViewById(R.id.lnberkas);
         progressBar = new ProgressDialog(Berkas.this);
 
         mInfoBerkas = getSharedPreferences("login", Context.MODE_PRIVATE);
