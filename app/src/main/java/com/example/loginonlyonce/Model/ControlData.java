@@ -36,8 +36,7 @@ public class ControlData extends AppCompatActivity {
         progressBar.setMessage("Please wait");
         progressBar.show();
 
-        AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/cek-daftar")
-                .addPathParameter("id", "0")
+        AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/cek-daftar?id=" + mData.getInt("id", 0))
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()
@@ -70,6 +69,7 @@ public class ControlData extends AppCompatActivity {
                             }
 
                             Log.d("tes", "onResponse: " + status);
+                            Log.d("tes", "onResponse: " + mData.getString("username1", ""));
 
                             finish();
 
