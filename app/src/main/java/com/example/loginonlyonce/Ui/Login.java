@@ -265,16 +265,10 @@ public class Login extends AppCompatActivity {
             editor.putString("data4", avatar);
             editor.apply();
 
+            Intent intent = new Intent(Login.this, Mainmenu.class);
+            startActivity(intent);
+            finish();
 
-            if (mLogin == null) {
-                Intent intent = new Intent(Login.this, Home.class);
-                startActivity(intent);
-                finish();
-            }else {
-                Intent intent = new Intent(Login.this, Mainmenu.class);
-                startActivity(intent);
-                finish();
-            }
         } catch (ApiException e) {
             e.printStackTrace();
         }

@@ -465,15 +465,9 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cdstruk"
-<<<<<<< HEAD
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-=======
             android:visibility="gone"
             android:layout_width="380dp"
             android:layout_height="351dp"
->>>>>>> 6253977cbb5509ae575458407d133667ab7f2ea8
             app:cardCornerRadius="6dp"
             app:cardElevation="3dp"
             android:layout_gravity="center"
