@@ -33,7 +33,7 @@
             android:id="@+id/cdfoto"
             android:visibility="gone"
             android:layout_width="380dp"
-            android:layout_height="353dp"
+            android:layout_height="351dp"
             android:layout_marginTop="20dp"
             android:layout_gravity="center"
             app:cardCornerRadius="6dp"
@@ -64,7 +64,7 @@
                     android:layout_margin="15dp"
                     android:text="Berkas Foto anda di tolak oleh admin karena lampiran tersebut kurang memenuhi syarat."
                     android:textColor="@color/hitam"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -76,16 +76,16 @@
 
 
                 <ImageView
-                    android:layout_width="137dp"
-                    android:layout_height="141dp"
+                    android:layout_width="130dp"
+                    android:layout_height="140dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="15dp"
                     android:src="@mipmap/img" />
                 <Button
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="330dp"
+                    android:layout_height="45dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:background="@color/colorPrimaryDark"
                     android:text="Kirim Ulang"
                     android:textColor="@color/putih"
@@ -98,7 +98,7 @@
             android:id="@+id/cdakte"
             android:visibility="gone"
             android:layout_width="380dp"
-            android:layout_height="353dp"
+            android:layout_height="351dp"
             app:cardCornerRadius="6dp"
             app:cardElevation="3dp"
             android:layout_gravity="center"
@@ -137,18 +137,17 @@
                     android:textColor="@color/hitam"
                     android:textSize="13dp" />
 
-
                 <ImageView
-                    android:layout_width="137dp"
-                    android:layout_height="141dp"
+                    android:layout_width="130dp"
+                    android:layout_height="140dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="15dp"
                     android:src="@mipmap/img" />
                 <Button
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="330dp"
+                    android:layout_height="45dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:background="@color/colorPrimaryDark"
                     android:text="Kirim Ulang"
                     android:textColor="@color/putih"
@@ -160,7 +159,7 @@
             android:id="@+id/cdkk"
             android:visibility="gone"
             android:layout_width="380dp"
-            android:layout_height="353dp"
+            android:layout_height="351dp"
             app:cardCornerRadius="6dp"
             android:layout_gravity="center"
             app:cardElevation="3dp"
@@ -202,16 +201,16 @@
 
 
                 <ImageView
-                    android:layout_width="137dp"
-                    android:layout_height="141dp"
+                    android:layout_width="130dp"
+                    android:layout_height="140dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="15dp"
                     android:src="@mipmap/img" />
                 <Button
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="330dp"
+                    android:layout_height="45dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:background="@color/colorPrimaryDark"
                     android:text="Kirim Ulang"
                     android:textColor="@color/putih"
@@ -223,7 +222,7 @@
             android:id="@+id/cdsertifikat"
             android:visibility="gone"
             android:layout_width="380dp"
-            android:layout_height="353dp"
+            android:layout_height="351dp"
             app:cardCornerRadius="6dp"
             android:layout_gravity="center"
             app:cardElevation="3dp"
@@ -263,16 +262,16 @@
 
 
                 <ImageView
-                    android:layout_width="137dp"
-                    android:layout_height="141dp"
+                    android:layout_width="130dp"
+                    android:layout_height="140dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="15dp"
                     android:src="@mipmap/img" />
                 <Button
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="330dp"
+                    android:layout_height="45dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:background="@color/colorPrimaryDark"
                     android:text="Kirim Ulang"
                     android:textColor="@color/putih"
@@ -284,7 +283,7 @@
             android:id="@+id/cdraport"
             android:visibility="gone"
             android:layout_width="380dp"
-            android:layout_height="353dp"
+            android:layout_height="351dp"
             app:cardCornerRadius="6dp"
             android:layout_gravity="center"
             app:cardElevation="3dp"
@@ -324,16 +323,16 @@
 
 
                 <ImageView
-                    android:layout_width="137dp"
-                    android:layout_height="141dp"
+                    android:layout_width="130dp"
+                    android:layout_height="140dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="15dp"
                     android:src="@mipmap/img" />
                 <Button
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="330dp"
+                    android:layout_height="45dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:background="@color/colorPrimaryDark"
                     android:text="Kirim Ulang"
                     android:textColor="@color/putih"
@@ -345,7 +344,7 @@
             android:id="@+id/cdcatksehtan"
             android:visibility="gone"
             android:layout_width="380dp"
-            android:layout_height="353dp"
+            android:layout_height="351dp"
             app:cardCornerRadius="6dp"
             android:layout_gravity="center"
             app:cardElevation="3dp"
@@ -385,16 +384,16 @@
 
 
                 <ImageView
-                    android:layout_width="137dp"
-                    android:layout_height="141dp"
+                    android:layout_width="130dp"
+                    android:layout_height="140dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="15dp"
                     android:src="@mipmap/img" />
                 <Button
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="330dp"
+                    android:layout_height="45dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:background="@color/colorPrimaryDark"
                     android:text="Kirim Ulang"
                     android:textColor="@color/putih"
@@ -406,7 +405,7 @@
             android:id="@+id/cdgambar"
             android:visibility="gone"
             android:layout_width="380dp"
-            android:layout_height="353dp"
+            android:layout_height="351dp"
             app:cardCornerRadius="6dp"
             app:cardElevation="3dp"
             android:layout_gravity="center"
@@ -447,16 +446,16 @@
 
 
                 <ImageView
-                    android:layout_width="137dp"
-                    android:layout_height="141dp"
+                    android:layout_width="130dp"
+                    android:layout_height="140dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="15dp"
                     android:src="@mipmap/img" />
                 <Button
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="330dp"
+                    android:layout_height="45dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:background="@color/colorPrimaryDark"
                     android:text="Kirim Ulang"
                     android:textColor="@color/putih"
@@ -468,7 +467,7 @@
             android:id="@+id/cdstruk"
             android:visibility="gone"
             android:layout_width="380dp"
-            android:layout_height="353dp"
+            android:layout_height="351dp"
             app:cardCornerRadius="6dp"
             app:cardElevation="3dp"
             android:layout_gravity="center"
@@ -509,16 +508,16 @@
 
 
                 <ImageView
-                    android:layout_width="137dp"
-                    android:layout_height="141dp"
+                    android:layout_width="130dp"
+                    android:layout_height="140dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="15dp"
                     android:src="@mipmap/img" />
                 <Button
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="330dp"
+                    android:layout_height="45dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:background="@color/colorPrimaryDark"
                     android:text="Kirim Ulang"
                     android:textColor="@color/putih"
