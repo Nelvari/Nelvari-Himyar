@@ -300,6 +300,8 @@ public class Berkas extends AppCompatActivity implements IPickResult {
     @Override
     public void onPickResult(PickResult r) {
         if (r.getError() == null & kupassfoto.equalsIgnoreCase("true")) {
+            //selectedImagePathkupassfoto = r.getPath();
+
             try {
                 File fileku = new Compressor(this)
                         .setQuality(50)
@@ -320,7 +322,7 @@ public class Berkas extends AppCompatActivity implements IPickResult {
             }
 
         }else if(r.getError() == null & kuakta.equalsIgnoreCase("true")){
-            //selectedImagePathakte = r.getPath();
+            //selectedImagePathkuakte = r.getPath();
 
             try {
                 File fileku = new Compressor(this)
@@ -341,7 +343,7 @@ public class Berkas extends AppCompatActivity implements IPickResult {
 
 
         }else if(r.getError() == null & kukk.equalsIgnoreCase("true")) {
-            //selectedImagePathkk = r.getPath();
+            //selectedImagePathkukk = r.getPath();
 
             try {
                 File fileku = new Compressor(this)
@@ -364,7 +366,7 @@ public class Berkas extends AppCompatActivity implements IPickResult {
 
 
         }else if(r.getError() == null & kusertifikat.equalsIgnoreCase("true")) {
-            //selectedImagePathgambar = r.getPath();
+            //selectedImagePathkusertifikat = r.getPath();
 
             try {
                 File fileku = new Compressor(this)
@@ -385,7 +387,7 @@ public class Berkas extends AppCompatActivity implements IPickResult {
                 e.printStackTrace();
             }
         }else if(r.getError() == null & kuraport.equalsIgnoreCase("true")) {
-            //selectedImagePathraport = r.getPath();
+            //selectedImagePathkuraport = r.getPath();
 
             try {
                 File fileku = new Compressor(this)
@@ -407,7 +409,7 @@ public class Berkas extends AppCompatActivity implements IPickResult {
             }
 
         }else if(r.getError() == null & kukesehatan.equalsIgnoreCase("true")) {
-            //selectedImagePathkasehtan = r.getPath();
+            //selectedImagePathkukesehatan = r.getPath();
 
             try {
                 File fileku = new Compressor(this)
@@ -429,7 +431,7 @@ public class Berkas extends AppCompatActivity implements IPickResult {
             }
 
         }else if(r.getError() == null & kugambar.equalsIgnoreCase("true")) {
-            //selectedImagePathgambar = r.getPath();
+            //selectedImagePathkugambar = r.getPath();
 
             try {
                 File fileku = new Compressor(this)
@@ -451,7 +453,7 @@ public class Berkas extends AppCompatActivity implements IPickResult {
             }
 
         }else if(r.getError() == null & kustruk.equalsIgnoreCase("true")) {
-            //selectedImagePathgambar = r.getPath();
+            //selectedImagePathkustruk = r.getPath();
 
             try {
                 File fileku = new Compressor(this)

@@ -31,6 +31,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cdfoto"
+            android:visibility="gone"
             android:layout_width="360dp"
             android:layout_height="348dp"
             android:layout_marginTop="20dp"
@@ -115,6 +116,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cdakte"
+            android:visibility="gone"
             android:layout_width="360dp"
             android:layout_height="348dp"
             app:cardCornerRadius="6dp"
@@ -194,6 +196,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cdkk"
+            android:visibility="gone"
             android:layout_width="360dp"
             android:layout_height="348dp"
             app:cardCornerRadius="6dp"
@@ -275,6 +278,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cdsertifikat"
+            android:visibility="gone"
             android:layout_width="360dp"
             android:layout_height="348dp"
             app:cardCornerRadius="6dp"
@@ -354,6 +358,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cdraport"
+            android:visibility="gone"
             android:layout_width="360dp"
             android:layout_height="348dp"
             app:cardCornerRadius="6dp"
@@ -433,6 +438,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cdcatksehtan"
+            android:visibility="gone"
             android:layout_width="360dp"
             android:layout_height="348dp"
             app:cardCornerRadius="6dp"
@@ -512,6 +518,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cdgambar"
+            android:visibility="gone"
             android:layout_width="360dp"
             android:layout_height="348dp"
             app:cardCornerRadius="6dp"
@@ -592,6 +599,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cdstruk"
+            android:visibility="gone"
             android:layout_width="360dp"
             android:layout_height="348dp"
             app:cardCornerRadius="6dp"
