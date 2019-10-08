@@ -109,14 +109,14 @@ public class Berkas extends AppCompatActivity implements IPickResult {
         gambar = (CardView) findViewById(R.id.cdgambar);
         lnberkas = (LinearLayout) findViewById(R.id.lnberkas);
 
-        ivkupassfoto=findViewById(R.id.ivkupassfoto);
-        ivkuakta=findViewById(R.id.ivkuakta);
-        ivkukk=findViewById(R.id.ivkukk);
-        ivkusertifikat=findViewById(R.id.ivkusertifikat);
-        ivkuraport=findViewById(R.id.ivkuraport);
-        ivkukesehatan=findViewById(R.id.ivkukesehatan);
-        ivkugambar=findViewById(R.id.ivkugambar);
-        ivkustruk=findViewById(R.id.ivkustruk);
+        ivkupassfoto = findViewById(R.id.ivkupassfoto);
+        ivkuakta = findViewById(R.id.ivkuakta);
+        ivkukk = findViewById(R.id.ivkukk);
+        ivkusertifikat = findViewById(R.id.ivkusertifikat);
+        ivkuraport = findViewById(R.id.ivkuraport);
+        ivkukesehatan = findViewById(R.id.ivkukesehatan);
+        ivkugambar = findViewById(R.id.ivkugambar);
+        ivkustruk = findViewById(R.id.ivkustruk);
 
 
         btnkufoto = (Button) findViewById(R.id.btnkufoto);
@@ -321,7 +321,7 @@ public class Berkas extends AppCompatActivity implements IPickResult {
                 e.printStackTrace();
             }
 
-        }else if(r.getError() == null & kuakta.equalsIgnoreCase("true")){
+        } else if (r.getError() == null & kuakta.equalsIgnoreCase("true")) {
             //selectedImagePathkuakte = r.getPath();
 
             try {
@@ -332,17 +332,17 @@ public class Berkas extends AppCompatActivity implements IPickResult {
                                 Environment.DIRECTORY_PICTURES).getAbsolutePath())
                         .compressToFile(new File(r.getPath()));
 
-                selectedImagePathkuakta=fileku.getAbsolutePath().toString();
-                Log.d("makananku", "onPickResult: "+selectedImagePathkuakta);
+                selectedImagePathkuakta = fileku.getAbsolutePath().toString();
+                Log.d("makananku", "onPickResult: " + selectedImagePathkuakta);
                 selectedImage = r.getBitmap();
                 ivkuakta.setImageBitmap(selectedImage);
-                kuakta="";
+                kuakta = "";
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
 
-        }else if(r.getError() == null & kukk.equalsIgnoreCase("true")) {
+        } else if (r.getError() == null & kukk.equalsIgnoreCase("true")) {
             //selectedImagePathkukk = r.getPath();
 
             try {
@@ -353,8 +353,8 @@ public class Berkas extends AppCompatActivity implements IPickResult {
                                 Environment.DIRECTORY_PICTURES).getAbsolutePath())
                         .compressToFile(new File(r.getPath()));
 
-                selectedImagePathkukk=fileku.getAbsolutePath().toString();
-                Log.d("makananku", "onPickResult: "+selectedImagePathkukk);
+                selectedImagePathkukk = fileku.getAbsolutePath().toString();
+                Log.d("makananku", "onPickResult: " + selectedImagePathkukk);
 
                 selectedImage = r.getBitmap();
                 ivkukk.setImageBitmap(selectedImage);
@@ -365,7 +365,7 @@ public class Berkas extends AppCompatActivity implements IPickResult {
             }
 
 
-        }else if(r.getError() == null & kusertifikat.equalsIgnoreCase("true")) {
+        } else if (r.getError() == null & kusertifikat.equalsIgnoreCase("true")) {
             //selectedImagePathkusertifikat = r.getPath();
 
             try {
@@ -376,8 +376,8 @@ public class Berkas extends AppCompatActivity implements IPickResult {
                                 Environment.DIRECTORY_PICTURES).getAbsolutePath())
                         .compressToFile(new File(r.getPath()));
 
-                selectedImagePathkusertifikat=fileku.getAbsolutePath().toString();
-                Log.d("makananku", "onPickResult: "+selectedImagePathkusertifikat);
+                selectedImagePathkusertifikat = fileku.getAbsolutePath().toString();
+                Log.d("makananku", "onPickResult: " + selectedImagePathkusertifikat);
 
                 selectedImage = r.getBitmap();
                 ivkusertifikat.setImageBitmap(selectedImage);
@@ -386,7 +386,7 @@ public class Berkas extends AppCompatActivity implements IPickResult {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }else if(r.getError() == null & kuraport.equalsIgnoreCase("true")) {
+        } else if (r.getError() == null & kuraport.equalsIgnoreCase("true")) {
             //selectedImagePathkuraport = r.getPath();
 
             try {
@@ -397,8 +397,8 @@ public class Berkas extends AppCompatActivity implements IPickResult {
                                 Environment.DIRECTORY_PICTURES).getAbsolutePath())
                         .compressToFile(new File(r.getPath()));
 
-                selectedImagePathkuraport=fileku.getAbsolutePath().toString();
-                Log.d("makananku", "onPickResult: "+selectedImagePathkuraport);
+                selectedImagePathkuraport = fileku.getAbsolutePath().toString();
+                Log.d("makananku", "onPickResult: " + selectedImagePathkuraport);
 
                 selectedImage = r.getBitmap();
                 ivkuraport.setImageBitmap(selectedImage);
@@ -408,7 +408,7 @@ public class Berkas extends AppCompatActivity implements IPickResult {
                 e.printStackTrace();
             }
 
-        }else if(r.getError() == null & kukesehatan.equalsIgnoreCase("true")) {
+        } else if (r.getError() == null & kukesehatan.equalsIgnoreCase("true")) {
             //selectedImagePathkukesehatan = r.getPath();
 
             try {
@@ -419,8 +419,8 @@ public class Berkas extends AppCompatActivity implements IPickResult {
                                 Environment.DIRECTORY_PICTURES).getAbsolutePath())
                         .compressToFile(new File(r.getPath()));
 
-                selectedImagePathkukesehatan=fileku.getAbsolutePath().toString();
-                Log.d("makananku", "onPickResult: "+selectedImagePathkukesehatan);
+                selectedImagePathkukesehatan = fileku.getAbsolutePath().toString();
+                Log.d("makananku", "onPickResult: " + selectedImagePathkukesehatan);
 
                 selectedImage = r.getBitmap();
                 ivkukesehatan.setImageBitmap(selectedImage);
@@ -430,7 +430,7 @@ public class Berkas extends AppCompatActivity implements IPickResult {
                 e.printStackTrace();
             }
 
-        }else if(r.getError() == null & kugambar.equalsIgnoreCase("true")) {
+        } else if (r.getError() == null & kugambar.equalsIgnoreCase("true")) {
             //selectedImagePathkugambar = r.getPath();
 
             try {
@@ -441,8 +441,8 @@ public class Berkas extends AppCompatActivity implements IPickResult {
                                 Environment.DIRECTORY_PICTURES).getAbsolutePath())
                         .compressToFile(new File(r.getPath()));
 
-                selectedImagePathkugambar=fileku.getAbsolutePath().toString();
-                Log.d("makananku", "onPickResult: "+selectedImagePathkugambar);
+                selectedImagePathkugambar = fileku.getAbsolutePath().toString();
+                Log.d("makananku", "onPickResult: " + selectedImagePathkugambar);
 
                 selectedImage = r.getBitmap();
                 ivkugambar.setImageBitmap(selectedImage);
@@ -452,7 +452,7 @@ public class Berkas extends AppCompatActivity implements IPickResult {
                 e.printStackTrace();
             }
 
-        }else if(r.getError() == null & kustruk.equalsIgnoreCase("true")) {
+        } else if (r.getError() == null & kustruk.equalsIgnoreCase("true")) {
             //selectedImagePathkustruk = r.getPath();
 
             try {
@@ -463,8 +463,8 @@ public class Berkas extends AppCompatActivity implements IPickResult {
                                 Environment.DIRECTORY_PICTURES).getAbsolutePath())
                         .compressToFile(new File(r.getPath()));
 
-                selectedImagePathkustruk=fileku.getAbsolutePath().toString();
-                Log.d("makananku", "onPickResult: "+selectedImagePathkustruk);
+                selectedImagePathkustruk = fileku.getAbsolutePath().toString();
+                Log.d("makananku", "onPickResult: " + selectedImagePathkustruk);
 
                 selectedImage = r.getBitmap();
                 ivkustruk.setImageBitmap(selectedImage);
@@ -474,17 +474,16 @@ public class Berkas extends AppCompatActivity implements IPickResult {
                 e.printStackTrace();
             }
 
-        }else {
-
-
-
+        } else {
 
         }
 
     }
-
-
 }
+
+
+
+
 
 
 
