@@ -34,7 +34,7 @@ import java.io.IOException;
 
 import id.zelory.compressor.Compressor;
 
-public class Berkas extends AppCompatActivity implements IPickResult {
+public class Berkas extends AppCompatActivity implements IPickResult  {
 
     private ProgressDialog progressBar;
     private CardView foto;
@@ -480,10 +480,3 @@ public class Berkas extends AppCompatActivity implements IPickResult {
 
     }
 }
-
-
-
-
-
-
-

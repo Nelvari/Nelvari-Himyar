@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.example.loginonlyonce.Adapter.InboxAdapter;
 import com.example.loginonlyonce.Berkas;
 import com.example.loginonlyonce.Model.ControlData;
 import com.example.loginonlyonce.Model.ControlHistory;
@@ -22,6 +23,7 @@ public class Mainmenu extends AppCompatActivity {
     LinearLayout btnCetakData;
     ImageView ivProfile;
     LinearLayout berkasList;
+    LinearLayout Inbox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class Mainmenu extends AppCompatActivity {
         btnCetakData = findViewById(R.id.btnCetakData);
         btnDaftar = findViewById(R.id.btnDaftar);
         berkasList = findViewById(R.id.berkasList);
+        Inbox = findViewById(R.id.Inbox);
 
         btnDaftar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,6 +72,14 @@ public class Mainmenu extends AppCompatActivity {
                 Intent intent = new Intent(Mainmenu.this, Berkas.class);
                 startActivity(intent);
 
+            }
+        });
+
+        Inbox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Mainmenu.this, InboxActivity.class);
+                startActivity(intent);
             }
         });
 
