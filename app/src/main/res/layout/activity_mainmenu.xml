@@ -63,6 +63,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/Inbox"
             android:foreground="?android:attr/selectableItemBackground"
             android:layout_width="120dp"
             android:layout_height="150dp"

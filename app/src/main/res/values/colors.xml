@@ -21,6 +21,10 @@
     <color name="DKV">#C0BDBD</color>
     <color name="item">#7eccff</color>
     <color name="berkas">#E4E4E4</color>
+    <color name="inbox1">#14D45B</color>
+    <color name="inbox2">#D41414</color>
+    <color name="background">#dddddd</color>
+    <color name="background2">#8ADDDDDD</color>
     <color name="color_white_semitransparent">#99FFFFFF</color>
 
     <!-- dots inactive colors -->
