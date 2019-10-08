@@ -55,12 +55,9 @@ public class ControlData extends AppCompatActivity {
 
                                 Toast.makeText(getApplicationContext(), "Tolong isi data", Toast.LENGTH_LONG).show();
 
-
-
                             } else {
 
                                 Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
-
 
                             }
 
