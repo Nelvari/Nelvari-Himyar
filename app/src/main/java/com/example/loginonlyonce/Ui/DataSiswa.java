@@ -176,7 +176,7 @@ public class DataSiswa extends AppCompatActivity {
 
                                 startActivity(in);
 
-                               // finish();
+                               finish();
 
                                 break;
 

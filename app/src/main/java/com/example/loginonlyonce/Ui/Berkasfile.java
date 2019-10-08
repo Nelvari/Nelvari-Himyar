@@ -52,9 +52,6 @@ public class Berkasfile extends AppCompatActivity implements IPickResult {
     private String selectedImagePathkasehtan = "";
     private String selectedImagePathgambar = "";
 
-
-
-
     String foto="";
     String akte="";
     String kk="";
@@ -161,6 +158,8 @@ public class Berkasfile extends AppCompatActivity implements IPickResult {
                                 intent.putExtra("selectedImagePathkasehtan", selectedImagePathkasehtan);
                                 intent.putExtra("selectedImagePathgambar", selectedImagePathgambar);
                                 startActivity(intent);
+
+                                finish();
 
                                 break;
 
