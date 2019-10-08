@@ -46,10 +46,6 @@ public class ControlData extends AppCompatActivity {
 
                         try {
 
-                            if (progressBar.isShowing()){
-                                progressBar.dismiss();
-                            }
-
                             String status = response.getString("STATUS");
 
                             if (status.equalsIgnoreCase("SUCCESS")){
@@ -70,6 +66,10 @@ public class ControlData extends AppCompatActivity {
 
                             Log.d("tes", "onResponse: " + status);
                             Log.d("tes", "onResponse: " + mData.getString("username1", ""));
+
+                            if (progressBar.isShowing()){
+                                progressBar.dismiss();
+                            }
 
                             finish();
 

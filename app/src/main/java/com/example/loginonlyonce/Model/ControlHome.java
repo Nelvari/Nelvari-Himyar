@@ -45,8 +45,6 @@ public class ControlHome extends AppCompatActivity {
 
                         try {
 
-
-
                             String status = response.getString("STATUS");
 
                             if (status.equalsIgnoreCase("SUCCES") && mHome.getString("username1", "") != ""){
