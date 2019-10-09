@@ -30,7 +30,7 @@ public class ControlHome extends AppCompatActivity {
 
         progressBar = new ProgressDialog(ControlHome.this);
 
-        progressBar.setMessage("Please wai t");
+        progressBar.setMessage("Please wait");
         progressBar.show();
 
         mHome = getSharedPreferences("login", Context.MODE_PRIVATE);
