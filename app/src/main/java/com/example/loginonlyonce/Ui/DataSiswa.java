@@ -152,31 +152,73 @@ public class DataSiswa extends AppCompatActivity {
                         switch (i) {
                             case DialogInterface.BUTTON_POSITIVE:
 
-                                Intent in = new Intent(getApplicationContext(), DataOrangTua.class);
-                                in.putExtra("namasiswa", namaSiswa.getText().toString());
-                                in.putExtra("jeniskelamin", jenisKelamin.getSelectedItem().toString());
-                                in.putExtra("tempatlahir", tempat.getText().toString());
-                                in.putExtra("tanggallahir", show.getText().toString());
-                                in.putExtra("agama", agama.getSelectedItem().toString());
-                                in.putExtra("alamatsiswa", alamatSiswa.getText().toString());
-                                in.putExtra("tinggibadan", tinggi.getText().toString());
-                                in.putExtra("beratbadan", berat.getText().toString());
-                                in.putExtra("nisn", nisn.getText().toString());
-                                in.putExtra("noujian", noUjian.getText().toString());
-                                //put extra here
+                                if (namaSiswa.length()==0)
+                                {
+                                    namaSiswa.requestFocus();
+                                    namaSiswa.setError("FIELD CANNOT BE EMPTY");
+                                }
 
-                                in.putExtra("selectedImagePathfoto", selectedImagePathfoto);
-                                in.putExtra("selectedImagePathakte", selectedImagePathakte);
-                                in.putExtra("selectedImagePathkk", selectedImagePathkk);
-                                in.putExtra("selectedImagePathsertifikat", selectedImagePathsertifikat);
-                                in.putExtra("selectedImagePathraport", selectedImagePathraport);
-                                in.putExtra("selectedImagePathkasehtan", selectedImagePathkasehtan);
-                                in.putExtra("selectedImagePathgambar", selectedImagePathgambar);
+                                else if (tempat.length()==0)
+                                {
+                                    tempat.requestFocus();
+                                    tempat.setError("FIELD CANNOT BE EMPTY");
+                                }
 
-                                startActivity(in);
+                                else if (noUjian.length()==0)
+                                {
+                                    noUjian.requestFocus();
+                                    noUjian.setError("FIELD CANNOT BE EMPTY");
+                                }
 
-                                finish();
+                                else if (nisn.length()==0)
+                                {
+                                    nisn.requestFocus();
+                                    nisn.setError("FIELD CANNOT BE EMPTY");
+                                }
 
+                                else if (alamatSiswa.length()==0)
+                                {
+                                    alamatSiswa.requestFocus();
+                                    alamatSiswa.setError("FIELD CANNOT BE EMPTY");
+                                }
+
+                                else if (tinggi.length()==0)
+                                {
+                                    tinggi.requestFocus();
+                                    tinggi.setError("FIELD CANNOT BE EMPTY");
+                                }
+
+                                else if (berat.length()==0)
+                                {
+                                    berat.requestFocus();
+                                    berat.setError("FIELD CANNOT BE EMPTY");
+                                }
+                                else {
+                                    Intent in = new Intent(getApplicationContext(), DataOrangTua.class);
+                                    in.putExtra("namasiswa", namaSiswa.getText().toString());
+                                    in.putExtra("jeniskelamin", jenisKelamin.getSelectedItem().toString());
+                                    in.putExtra("tempatlahir", tempat.getText().toString());
+                                    in.putExtra("tanggallahir", show.getText().toString());
+                                    in.putExtra("agama", agama.getSelectedItem().toString());
+                                    in.putExtra("alamatsiswa", alamatSiswa.getText().toString());
+                                    in.putExtra("tinggibadan", tinggi.getText().toString());
+                                    in.putExtra("beratbadan", berat.getText().toString());
+                                    in.putExtra("nisn", nisn.getText().toString());
+                                    in.putExtra("noujian", noUjian.getText().toString());
+                                    //put extra here
+
+                                    in.putExtra("selectedImagePathfoto", selectedImagePathfoto);
+                                    in.putExtra("selectedImagePathakte", selectedImagePathakte);
+                                    in.putExtra("selectedImagePathkk", selectedImagePathkk);
+                                    in.putExtra("selectedImagePathsertifikat", selectedImagePathsertifikat);
+                                    in.putExtra("selectedImagePathraport", selectedImagePathraport);
+                                    in.putExtra("selectedImagePathkasehtan", selectedImagePathkasehtan);
+                                    in.putExtra("selectedImagePathgambar", selectedImagePathgambar);
+
+                                    startActivity(in);
+
+                                    finish();
+                                }
                                 break;
 
                             case DialogInterface.BUTTON_NEGATIVE:
@@ -185,54 +227,13 @@ public class DataSiswa extends AppCompatActivity {
 
                                 break;
                         }
-                        if (namaSiswa.length()==0)
-                        {
-                            namaSiswa.requestFocus();
-                            namaSiswa.setError("FIELD CANNOT BE EMPTY");
-                        }
 
-                        else if (tempat.length()==0)
-                        {
-                            tempat.requestFocus();
-                            tempat.setError("FIELD CANNOT BE EMPTY");
-                        }
-
-                        else if (noUjian.length()==0)
-                        {
-                            noUjian.requestFocus();
-                            noUjian.setError("FIELD CANNOT BE EMPTY");
-                        }
-
-                        else if (nisn.length()==0)
-                        {
-                            nisn.requestFocus();
-                            nisn.setError("FIELD CANNOT BE EMPTY");
-                        }
-
-                        else if (alamatSiswa.length()==0)
-                        {
-                            alamatSiswa.requestFocus();
-                            alamatSiswa.setError("FIELD CANNOT BE EMPTY");
-                        }
-
-                        else if (tinggi.length()==0)
-                        {
-                            tinggi.requestFocus();
-                            tinggi.setError("FIELD CANNOT BE EMPTY");
-                        }
-
-                        else if (berat.length()==0)
-                        {
-                            berat.requestFocus();
-                            berat.setError("FIELD CANNOT BE EMPTY");
-                        }
                     }
                 };
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
                 builder.setMessage("Apakah anda yakin ingin simpan data?").setPositiveButton("Ya", dialog)
                         .setNegativeButton("Tidak", dialog).show();
-
 
             }
 

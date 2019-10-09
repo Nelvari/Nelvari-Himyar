@@ -10,12 +10,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.loginonlyonce.Model.ModelClass;
 import com.example.loginonlyonce.R;
-<<<<<<< HEAD
+
 import com.example.loginonlyonce.Ui.InboxActivity;
 import com.example.loginonlyonce.Ui.MainActivity;
 import com.facebook.shimmer.ShimmerFrameLayout;
-=======
->>>>>>> ece1f3d0aa0e15e2a44c1d434c2baaf6703c937b
+
 
 import java.util.ArrayList;
 
@@ -23,11 +22,8 @@ public class InboxAdapter extends RecyclerView.Adapter<InboxAdapter.InboxViewHol
 
     private ArrayList<ModelClass> dataList;
 
-<<<<<<< HEAD
-    public InboxAdapter(InboxActivity mainActivity, ArrayList<ModelClass> dataList) {
-=======
     public InboxAdapter(ArrayList<ModelClass> dataList) {
->>>>>>> ece1f3d0aa0e15e2a44c1d434c2baaf6703c937b
+
         this.dataList = dataList;
     }
 

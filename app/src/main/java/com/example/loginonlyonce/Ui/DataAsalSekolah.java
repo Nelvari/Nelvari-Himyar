@@ -106,7 +106,7 @@ public class DataAsalSekolah extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
 
-        if (bundle != null){
+        if (bundle != null) {
 
             namaSiswa = bundle.getString("namasiswa");
             jenisKelamin = bundle.getString("jeniskelamin");
@@ -128,13 +128,13 @@ public class DataAsalSekolah extends AppCompatActivity {
             selectedImagePathkasehtan = bundle.getString("selectedImagePathkasehtan");
             selectedImagePathgambar = bundle.getString("selectedImagePathgambar");
 
-            fileselectedImagePathfoto=new File(selectedImagePathfoto);
-            fileselectedImagePathakte=new File(selectedImagePathakte);
-            fileselectedImagePathkk=new File(selectedImagePathkk);
-            fileselectedImagePathsertifikat=new File(selectedImagePathsertifikat);
-            fileselectedImagePathraport=new File(selectedImagePathraport);
-            fileselectedImagePathkasehtan=new File(selectedImagePathkasehtan);
-            fileselectedImagePathgambar=new File(selectedImagePathgambar);
+            fileselectedImagePathfoto = new File(selectedImagePathfoto);
+            fileselectedImagePathakte = new File(selectedImagePathakte);
+            fileselectedImagePathkk = new File(selectedImagePathkk);
+            fileselectedImagePathsertifikat = new File(selectedImagePathsertifikat);
+            fileselectedImagePathraport = new File(selectedImagePathraport);
+            fileselectedImagePathkasehtan = new File(selectedImagePathkasehtan);
+            fileselectedImagePathgambar = new File(selectedImagePathgambar);
 
             namaayah = bundle.getString("namaayah");
             namaibu = bundle.getString("namaibu");
@@ -162,62 +162,79 @@ public class DataAsalSekolah extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
-                        switch (i){
+                        switch (i) {
                             case DialogInterface.BUTTON_POSITIVE:
 
-
-                                //siswa
-                                Log.d("ceksiswa", namaSiswa);
-                                Log.d("ceksiswa", jenisKelamin);
-                                Log.d("ceksiswa", tempatLahir);
-                                Log.d("ceksiswa", tanggalLahir);
-                                Log.d("ceksiswa", agama);
-                                Log.d("ceksiswa", alamatSiswa);
-                                Log.d("ceksiswa", tinggiBadan);
-                                Log.d("ceksiswa", beratBadan);
-
-                                Log.d("ceksiswa", nisn);
-                                Log.d("ceksiswa", noUjian);
-
-                                //fotoBerkas
-                                Log.d("cekberkas", selectedImagePathfoto);
-                                Log.d("cekberkas", selectedImagePathakte);
-                                Log.d("cekberkas", selectedImagePathkk);
-                                Log.d("cekberkas", selectedImagePathsertifikat);
-                                Log.d("cekberkas", selectedImagePathraport);
-                                Log.d("cekberkas", selectedImagePathkasehtan);
-                                Log.d("cekberkas", selectedImagePathgambar);
-
-                                //orangtua atau wali
-                                Log.d("cekorangtua", namaayah);
-                                Log.d("cekorangtua", namaibu);
-                                Log.d("cekorangtua", alamatorangtua);
-                                Log.d("cekorangtua", pekerjaanayah);
-                                Log.d("cekorangtua", pekerjaanibu);
-                                Log.d("cekorangtua", penghasilanayah);
-                                Log.d("cekorangtua", penghasilanibu);
-                                Log.d("cekorangtua", noayah);
-                                Log.d("cekorangtua", noibu);
-                                Log.d("cekorangtua", namawali);
-                                Log.d("cekorangtua", alamatwali);
-                                Log.d("cekorangtua", nowali);
-                                Log.d("cekorangtua", pekerjaanwali);
-
-                                //asalsekolah
-                                Log.d("ceksekolah", txtNamaSekolah.getText().toString());
-                                Log.d("ceksekolah", txtAlamatSekolah.getText().toString());
-                                Log.d("ceksekolah", txtNilaiSTTb.getText().toString());
-                                Log.d("ceksekolah", txtNoSTTb.getText().toString());
-                                Log.d("ceksekolah", txtTahunSTTb.getText().toString());
+                                if (txtNamaSekolah.length() == 0) {
+                                    txtNamaSekolah.requestFocus();
+                                    txtNamaSekolah.setError("FIELD CANNOT BE EMPTY");
+                                } else if (txtAlamatSekolah.length() == 0) {
+                                    txtAlamatSekolah.requestFocus();
+                                    txtAlamatSekolah.setError("FIELD CANNOT BE EMPTY");
+                                } else if (txtNilaiSTTb.length() == 0) {
+                                    txtNilaiSTTb.requestFocus();
+                                    txtNilaiSTTb.setError("FIELD CANNOT BE EMPTY");
+                                } else if (txtNoSTTb.length() == 0) {
+                                    txtNoSTTb.requestFocus();
+                                    txtNoSTTb.setError("FIELD CANNOT BE EMPTY");
+                                } else if (txtTahunSTTb.length() == 0) {
+                                    txtTahunSTTb.requestFocus();
+                                    txtTahunSTTb.setError("FIELD CANNOT BE EMPTY");
+                                } else {
 
 
-                                Log.d("ceksekolah",mInfoRPL.getString("username", ""));
-                                Log.d("ceksekolah",mInfoRPL.getString("jurusan", ""));
+                                    //siswa
+                                    Log.d("ceksiswa", namaSiswa);
+                                    Log.d("ceksiswa", jenisKelamin);
+                                    Log.d("ceksiswa", tempatLahir);
+                                    Log.d("ceksiswa", tanggalLahir);
+                                    Log.d("ceksiswa", agama);
+                                    Log.d("ceksiswa", alamatSiswa);
+                                    Log.d("ceksiswa", tinggiBadan);
+                                    Log.d("ceksiswa", beratBadan);
 
-                                senData();
+                                    Log.d("ceksiswa", nisn);
+                                    Log.d("ceksiswa", noUjian);
 
-                                finish();
+                                    //fotoBerkas
+                                    Log.d("cekberkas", selectedImagePathfoto);
+                                    Log.d("cekberkas", selectedImagePathakte);
+                                    Log.d("cekberkas", selectedImagePathkk);
+                                    Log.d("cekberkas", selectedImagePathsertifikat);
+                                    Log.d("cekberkas", selectedImagePathraport);
+                                    Log.d("cekberkas", selectedImagePathkasehtan);
+                                    Log.d("cekberkas", selectedImagePathgambar);
 
+                                    //orangtua atau wali
+                                    Log.d("cekorangtua", namaayah);
+                                    Log.d("cekorangtua", namaibu);
+                                    Log.d("cekorangtua", alamatorangtua);
+                                    Log.d("cekorangtua", pekerjaanayah);
+                                    Log.d("cekorangtua", pekerjaanibu);
+                                    Log.d("cekorangtua", penghasilanayah);
+                                    Log.d("cekorangtua", penghasilanibu);
+                                    Log.d("cekorangtua", noayah);
+                                    Log.d("cekorangtua", noibu);
+                                    Log.d("cekorangtua", namawali);
+                                    Log.d("cekorangtua", alamatwali);
+                                    Log.d("cekorangtua", nowali);
+                                    Log.d("cekorangtua", pekerjaanwali);
+
+                                    //asalsekolah
+                                    Log.d("ceksekolah", txtNamaSekolah.getText().toString());
+                                    Log.d("ceksekolah", txtAlamatSekolah.getText().toString());
+                                    Log.d("ceksekolah", txtNilaiSTTb.getText().toString());
+                                    Log.d("ceksekolah", txtNoSTTb.getText().toString());
+                                    Log.d("ceksekolah", txtTahunSTTb.getText().toString());
+
+
+                                    Log.d("ceksekolah", mInfoRPL.getString("username", ""));
+                                    Log.d("ceksekolah", mInfoRPL.getString("jurusan", ""));
+
+                                    senData();
+
+                                    finish();
+                                }
                                 break;
 
                             case DialogInterface.BUTTON_NEGATIVE:
@@ -226,48 +243,22 @@ public class DataAsalSekolah extends AppCompatActivity {
 
                                 break;
                         }
-                        if (txtNamaSekolah.length()==0)
-                        {
-                            txtNamaSekolah.requestFocus();
-                            txtNamaSekolah.setError("FIELD CANNOT BE EMPTY");
-                        }
 
-                        else if (txtAlamatSekolah.length()==0)
-                        {
-                            txtAlamatSekolah.requestFocus();
-                            txtAlamatSekolah.setError("FIELD CANNOT BE EMPTY");
-                        }
-
-                        else if (txtNilaiSTTb.length()==0)
-                        {
-                            txtNilaiSTTb.requestFocus();
-                            txtNilaiSTTb.setError("FIELD CANNOT BE EMPTY");
-                        }
-
-                        else if (txtNoSTTb.length()==0)
-                        {
-                            txtNoSTTb.requestFocus();
-                            txtNoSTTb.setError("FIELD CANNOT BE EMPTY");
-                        }
-
-                        else if (txtTahunSTTb.length()==0)
-                        {
-                            txtTahunSTTb.requestFocus();
-                            txtTahunSTTb.setError("FIELD CANNOT BE EMPTY");
-                        }
                     }
                 };
+
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
                 builder.setMessage("Apakah anda yakin ingin simpan data?").setPositiveButton("Ya", dialog)
                         .setNegativeButton("Tidak", dialog).show();
+
 
             }
         });
 
     }
 
-    private void senData(){
+    private void senData() {
 
         dialog.setMessage("Doing something, please wait.");
         dialog.show();
@@ -294,7 +285,6 @@ public class DataAsalSekolah extends AppCompatActivity {
 
                 .addMultipartParameter("username", mInfoRPL.getString("username", ""))
                 .addMultipartParameter("sw_jurusan", mInfoRPL.getString("jurusan", ""))
-
 
 
                 //Siswa

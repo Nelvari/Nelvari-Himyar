@@ -64,7 +64,7 @@ public class DataOrangTua extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
 
-        if (bundle != null){
+        if (bundle != null) {
 
             namaSiswa = bundle.getString("namasiswa");
             jenisKelamin = bundle.getString("jeniskelamin");
@@ -103,7 +103,7 @@ public class DataOrangTua extends AppCompatActivity {
         txtPekerjaanWali = findViewById(R.id.pekerjaanWali);
 
 
-        btnSimpanOrangTua=(Button)findViewById(R.id.btnSimpanOrangTua);
+        btnSimpanOrangTua = (Button) findViewById(R.id.btnSimpanOrangTua);
 
         btnSimpanOrangTua.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,114 +113,92 @@ public class DataOrangTua extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
-                        switch (i){
+                        switch (i) {
 
-                            case DialogInterface.BUTTON_POSITIVE :
+                            case DialogInterface.BUTTON_POSITIVE:
 
-                                //dialog
-                                Intent in =new Intent(getApplicationContext(),DataAsalSekolah.class);
-                                //put extra here
-                                in.putExtra("namaayah", txtNamaAyah.getText().toString());
-                                in.putExtra("namaibu", txtNamaIbu.getText().toString());
-                                in.putExtra("alamatorangtua", txtAlamatOrangTua.getText().toString());
-                                in.putExtra("pekerjaanayah", txtPekerjaanAyah.getText().toString());
-                                in.putExtra("pekerjaanibu", txtPekerjaanIbu.getText().toString());
-                                in.putExtra("penghasilanayah", txtPenghasilanAyah.getText().toString());
-                                in.putExtra("penghasilanibu", txtPenghasilanIbu.getText().toString());
-                                in.putExtra("noayah", txtnoAyah.getText().toString());
-                                in.putExtra("noibu", txtnoIbu.getText().toString());
-                                in.putExtra("namawali", txtNamaWali.getText().toString());
-                                in.putExtra("alamatwali", txtAlamatWali.getText().toString());
-                                in.putExtra("nowali", txtnoWali.getText().toString());
-                                in.putExtra("pekerjaanwali", txtPekerjaanWali.getText().toString());
+                                if (txtNamaAyah.length() == 0) {
+                                    txtNamaAyah.requestFocus();
+                                    txtNamaAyah.setError("FIELD CANNOT BE EMPTY");
+                                } else if (txtNamaIbu.length() == 0) {
+                                    txtNamaIbu.requestFocus();
+                                    txtNamaIbu.setError("FIELD CANNOT BE EMPTY");
+                                } else if (txtAlamatOrangTua.length() == 0) {
+                                    txtAlamatOrangTua.requestFocus();
+                                    txtAlamatOrangTua.setError("FIELD CANNOT BE EMPTY");
+                                } else if (txtPekerjaanAyah.length() == 0) {
+                                    txtPekerjaanAyah.requestFocus();
+                                    txtPekerjaanAyah.setError("FIELD CANNOT BE EMPTY");
+                                } else if (txtPekerjaanIbu.length() == 0) {
+                                    txtPekerjaanIbu.requestFocus();
+                                    txtPekerjaanIbu.setError("FIELD CANNOT BE EMPTY");
+                                } else if (txtPenghasilanAyah.length() == 0) {
+                                    txtPenghasilanAyah.requestFocus();
+                                    txtPenghasilanAyah.setError("FIELD CANNOT BE EMPTY");
+                                } else if (txtPenghasilanIbu.length() == 0) {
+                                    txtPenghasilanIbu.requestFocus();
+                                    txtPenghasilanIbu.setError("FIELD CANNOT BE EMPTY");
+                                } else if (txtnoAyah.length() == 0) {
+                                    txtnoAyah.requestFocus();
+                                    txtnoAyah.setError("FIELD CANNOT BE EMPTY");
+                                } else if (txtnoIbu.length() == 0) {
+                                    txtnoIbu.requestFocus();
+                                    txtnoIbu.setError("FIELD CANNOT BE EMPTY");
+                                } else {
 
-                                //siswa
-                                in.putExtra("namasiswa", namaSiswa);
-                                in.putExtra("jeniskelamin", jenisKelamin);
-                                in.putExtra("tempatlahir", tempatLahir);
-                                in.putExtra("tanggallahir", tanggalLahir);
-                                in.putExtra("agama", agama);
-                                in.putExtra("alamatsiswa", alamatSiswa);
-                                in.putExtra("tinggibadan", tinggiBadan);
-                                in.putExtra("beratbadan", beratBadan);
 
-                                in.putExtra("nisn", nisn);
-                                in.putExtra("noujian", noUjian);
+                                    //dialog
+                                    Intent in = new Intent(getApplicationContext(), DataAsalSekolah.class);
+                                    //put extra here
+                                    in.putExtra("namaayah", txtNamaAyah.getText().toString());
+                                    in.putExtra("namaibu", txtNamaIbu.getText().toString());
+                                    in.putExtra("alamatorangtua", txtAlamatOrangTua.getText().toString());
+                                    in.putExtra("pekerjaanayah", txtPekerjaanAyah.getText().toString());
+                                    in.putExtra("pekerjaanibu", txtPekerjaanIbu.getText().toString());
+                                    in.putExtra("penghasilanayah", txtPenghasilanAyah.getText().toString());
+                                    in.putExtra("penghasilanibu", txtPenghasilanIbu.getText().toString());
+                                    in.putExtra("noayah", txtnoAyah.getText().toString());
+                                    in.putExtra("noibu", txtnoIbu.getText().toString());
+                                    in.putExtra("namawali", txtNamaWali.getText().toString());
+                                    in.putExtra("alamatwali", txtAlamatWali.getText().toString());
+                                    in.putExtra("nowali", txtnoWali.getText().toString());
+                                    in.putExtra("pekerjaanwali", txtPekerjaanWali.getText().toString());
 
-                                in.putExtra("selectedImagePathfoto", selectedImagePathfoto);
-                                in.putExtra("selectedImagePathakte", selectedImagePathakte);
-                                in.putExtra("selectedImagePathkk", selectedImagePathkk);
-                                in.putExtra("selectedImagePathsertifikat", selectedImagePathsertifikat);
-                                in.putExtra("selectedImagePathraport", selectedImagePathraport);
-                                in.putExtra("selectedImagePathkasehtan", selectedImagePathkasehtan);
-                                in.putExtra("selectedImagePathgambar", selectedImagePathgambar);
+                                    //siswa
+                                    in.putExtra("namasiswa", namaSiswa);
+                                    in.putExtra("jeniskelamin", jenisKelamin);
+                                    in.putExtra("tempatlahir", tempatLahir);
+                                    in.putExtra("tanggallahir", tanggalLahir);
+                                    in.putExtra("agama", agama);
+                                    in.putExtra("alamatsiswa", alamatSiswa);
+                                    in.putExtra("tinggibadan", tinggiBadan);
+                                    in.putExtra("beratbadan", beratBadan);
 
-                                startActivity(in);
+                                    in.putExtra("nisn", nisn);
+                                    in.putExtra("noujian", noUjian);
 
-                                finish();
+                                    in.putExtra("selectedImagePathfoto", selectedImagePathfoto);
+                                    in.putExtra("selectedImagePathakte", selectedImagePathakte);
+                                    in.putExtra("selectedImagePathkk", selectedImagePathkk);
+                                    in.putExtra("selectedImagePathsertifikat", selectedImagePathsertifikat);
+                                    in.putExtra("selectedImagePathraport", selectedImagePathraport);
+                                    in.putExtra("selectedImagePathkasehtan", selectedImagePathkasehtan);
+                                    in.putExtra("selectedImagePathgambar", selectedImagePathgambar);
 
+                                    startActivity(in);
+
+                                    finish();
+                                }
                                 break;
 
-                            case DialogInterface.BUTTON_NEGATIVE :
+                            case DialogInterface.BUTTON_NEGATIVE:
 
                                 Toast.makeText(getApplicationContext(), "Data gagal di simpan", Toast.LENGTH_LONG).show();
 
                                 break;
 
                         }
-                        if (txtNamaAyah.length()==0)
-                        {
-                            txtNamaAyah.requestFocus();
-                            txtNamaAyah.setError("FIELD CANNOT BE EMPTY");
-                        }
 
-                        else if (txtNamaIbu.length()==0)
-                        {
-                            txtNamaIbu.requestFocus();
-                            txtNamaIbu.setError("FIELD CANNOT BE EMPTY");
-                        }
-
-                        else if (txtAlamatOrangTua.length()==0)
-                        {
-                            txtAlamatOrangTua.requestFocus();
-                            txtAlamatOrangTua.setError("FIELD CANNOT BE EMPTY");
-                        }
-
-                        else if (txtPekerjaanAyah.length()==0)
-                        {
-                            txtPekerjaanAyah.requestFocus();
-                            txtPekerjaanAyah.setError("FIELD CANNOT BE EMPTY");
-                        }
-
-                        else if (txtPekerjaanIbu.length()==0)
-                        {
-                            txtPekerjaanIbu.requestFocus();
-                            txtPekerjaanIbu.setError("FIELD CANNOT BE EMPTY");
-                        }
-
-                        else if (txtPenghasilanAyah.length()==0)
-                        {
-                            txtPenghasilanAyah.requestFocus();
-                            txtPenghasilanAyah.setError("FIELD CANNOT BE EMPTY");
-                        }
-
-                        else if (txtPenghasilanIbu.length()==0)
-                        {
-                            txtPenghasilanIbu.requestFocus();
-                            txtPenghasilanIbu.setError("FIELD CANNOT BE EMPTY");
-                        }
-
-                        else if (txtnoAyah.length()==0)
-                        {
-                            txtnoAyah.requestFocus();
-                            txtnoAyah.setError("FIELD CANNOT BE EMPTY");
-                        }
-
-                        else if (txtnoIbu.length()==0)
-                        {
-                            txtnoIbu.requestFocus();
-                            txtnoIbu.setError("FIELD CANNOT BE EMPTY");
-                        }
                     }
                 };
 
