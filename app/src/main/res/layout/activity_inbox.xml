@@ -5,35 +5,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Ui.InboxActivity">
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/Swiperefresh"
-        android:visibility="gone"
+    <androidx.appcompat.widget.Toolbar
+
+        android:theme="@style/ActionBarThemeOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/toolbarOrangTua">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvInbox"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/ListDATA"
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/playlistDataLV"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:divider="#faf8f8"
+            android:dividerHeight="2dp"
+            app:layout_constraintStart_toStartOf="parent" />
 
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
 
-        </androidx.recyclerview.widget.RecyclerView>
+            <!-- Adding 7 rows of placeholders -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+                <include
+                    layout="@layout/data_placeholder_layout"
+                    tools:ignore="ResourceCycle" />
+            </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/rlloading"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        </com.facebook.shimmer.ShimmerFrameLayout>
 
-        <ProgressBar
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></ProgressBar>
-    </RelativeLayout>
-
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
