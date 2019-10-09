@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.loginonlyonce.Model.ModelClass;
 import com.example.loginonlyonce.R;
+import com.example.loginonlyonce.Ui.InboxActivity;
 import com.example.loginonlyonce.Ui.MainActivity;
 import com.facebook.shimmer.ShimmerFrameLayout;
 
@@ -24,7 +25,7 @@ public class InboxAdapter extends RecyclerView.Adapter<InboxAdapter.InboxViewHol
     int SHIMMER_ITEM_NUMBER = 5;
 
 
-    public InboxAdapter(MainActivity mainActivity, ArrayList<ModelClass> dataList) {
+    public InboxAdapter(InboxActivity mainActivity, ArrayList<ModelClass> dataList) {
         this.dataList = dataList;
     }
 

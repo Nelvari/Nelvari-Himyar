@@ -69,10 +69,9 @@ public class DataSiswa extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-
         Bundle bundle = getIntent().getExtras();
 
-        if (bundle != null){
+        if (bundle != null) {
 
             selectedImagePathfoto = bundle.getString("selectedImagePathfoto");
             selectedImagePathakte = bundle.getString("selectedImagePathakte");
@@ -82,13 +81,13 @@ public class DataSiswa extends AppCompatActivity {
             selectedImagePathkasehtan = bundle.getString("selectedImagePathkasehtan");
             selectedImagePathgambar = bundle.getString("selectedImagePathgambar");
 
-            Log.d("databerkas", "onCreate: "+selectedImagePathfoto);
-            Log.d("databerkas", "onCreate: "+selectedImagePathakte);
-            Log.d("databerkas", "onCreate: "+selectedImagePathkk);
-            Log.d("databerkas", "onCreate: "+selectedImagePathsertifikat);
-            Log.d("databerkas", "onCreate: "+selectedImagePathraport);
-            Log.d("databerkas", "onCreate: "+selectedImagePathkasehtan);
-            Log.d("databerkas", "onCreate: "+selectedImagePathgambar);
+            Log.d("databerkas", "onCreate: " + selectedImagePathfoto);
+            Log.d("databerkas", "onCreate: " + selectedImagePathakte);
+            Log.d("databerkas", "onCreate: " + selectedImagePathkk);
+            Log.d("databerkas", "onCreate: " + selectedImagePathsertifikat);
+            Log.d("databerkas", "onCreate: " + selectedImagePathraport);
+            Log.d("databerkas", "onCreate: " + selectedImagePathkasehtan);
+            Log.d("databerkas", "onCreate: " + selectedImagePathgambar);
 
         }
 
@@ -154,16 +153,16 @@ public class DataSiswa extends AppCompatActivity {
                             case DialogInterface.BUTTON_POSITIVE:
 
                                 Intent in = new Intent(getApplicationContext(), DataOrangTua.class);
-                                in.putExtra("namasiswa", namaSiswa.getText().toString() );
-                                in.putExtra("jeniskelamin", jenisKelamin.getSelectedItem().toString() );
-                                in.putExtra("tempatlahir", tempat.getText().toString() );
-                                in.putExtra("tanggallahir", show.getText().toString() );
-                                in.putExtra("agama", agama.getSelectedItem().toString() );
-                                in.putExtra("alamatsiswa", alamatSiswa.getText().toString() );
-                                in.putExtra("tinggibadan", tinggi.getText().toString() );
-                                in.putExtra("beratbadan", berat.getText().toString() );
-                                in.putExtra("nisn", nisn.getText().toString() );
-                                in.putExtra("noujian", noUjian.getText().toString() );
+                                in.putExtra("namasiswa", namaSiswa.getText().toString());
+                                in.putExtra("jeniskelamin", jenisKelamin.getSelectedItem().toString());
+                                in.putExtra("tempatlahir", tempat.getText().toString());
+                                in.putExtra("tanggallahir", show.getText().toString());
+                                in.putExtra("agama", agama.getSelectedItem().toString());
+                                in.putExtra("alamatsiswa", alamatSiswa.getText().toString());
+                                in.putExtra("tinggibadan", tinggi.getText().toString());
+                                in.putExtra("beratbadan", berat.getText().toString());
+                                in.putExtra("nisn", nisn.getText().toString());
+                                in.putExtra("noujian", noUjian.getText().toString());
                                 //put extra here
 
                                 in.putExtra("selectedImagePathfoto", selectedImagePathfoto);
@@ -176,7 +175,7 @@ public class DataSiswa extends AppCompatActivity {
 
                                 startActivity(in);
 
-                               finish();
+                                finish();
 
                                 break;
 
@@ -190,37 +189,53 @@ public class DataSiswa extends AppCompatActivity {
                     }
                 };
 
-//                if(namaSiswa.length()==0)
-//
-//                {
-//                    namaSiswa.requestFocus();
-//                    namaSiswa.setError("FIELD CANNOT BE EMPTY");
-//                }
-//
-//                else if(!Name.matches("[a-zA-Z ]+"))
-//                {
-//                    NameEditText.requestFocus();
-//                    NameEditText.setError("ENTER ONLY ALPHABETICAL CHARACTER");
-//                }
-//
-//                else if(word.length()==0)
-//                {
-//                    wordEditText.requestFocus();
-//                    wordEditText.setError("FIELD CANNOT BE EMPTY");
-//                }
-//                else
-//                {
-//                    Toast.makeText(DataSiswa.this,"Validation Successful",Toast.LENGTH_LONG).show();
-//                }
-
-
-
-
                 AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
                 builder.setMessage("Apakah anda yakin ingin simpan data?").setPositiveButton("Ya", dialog)
                         .setNegativeButton("Tidak", dialog).show();
 
+                if (namaSiswa.length()==0)
+                {
+                    namaSiswa.requestFocus();
+                    namaSiswa.setError("FIELD CANNOT BE EMPTY");
+                }
+
+                else if (tempat.length()==0)
+                {
+                    tempat.requestFocus();
+                    tempat.setError("FIELD CANNOT BE EMPTY");
+                }
+
+                else if (noUjian.length()==0)
+                {
+                    noUjian.requestFocus();
+                    noUjian.setError("FIELD CANNOT BE EMPTY");
+                }
+
+                else if (nisn.length()==0)
+                {
+                    nisn.requestFocus();
+                    nisn.setError("FIELD CANNOT BE EMPTY");
+                }
+
+                else if (alamatSiswa.length()==0)
+                {
+                    alamatSiswa.requestFocus();
+                    alamatSiswa.setError("FIELD CANNOT BE EMPTY");
+                }
+
+                else if (tinggi.length()==0)
+                {
+                    tinggi.requestFocus();
+                    tinggi.setError("FIELD CANNOT BE EMPTY");
+                }
+
+                else if (berat.length()==0)
+                {
+                    berat.requestFocus();
+                    berat.setError("FIELD CANNOT BE EMPTY");
+                }
             }
+
         });
 
     }
