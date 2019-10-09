@@ -13,7 +13,8 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".Model.ControlData"/>
         <activity android:name=".Adapter_Berkas" />
-        <activity android:name=".Berkas" />
+        <activity android:name=".Berkas"
+            android:parentActivityName=".Ui.Mainmenu"/>
         <activity android:name=".Ui.CetakData" />
         <activity android:name=".Model.ControlHistory" />
         <activity android:name=".Model.ControlHome" />
