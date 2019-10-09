@@ -22,6 +22,7 @@ public class ModelClass {
     public void setTxtisi(String txtisi) {
         this.txtisi = txtisi;
     }
+
     public String getTxttype() {
         return txttype;
     }

@@ -185,7 +185,47 @@ public class DataSiswa extends AppCompatActivity {
 
                                 break;
                         }
+                        if (namaSiswa.length()==0)
+                        {
+                            namaSiswa.requestFocus();
+                            namaSiswa.setError("FIELD CANNOT BE EMPTY");
+                        }
 
+                        else if (tempat.length()==0)
+                        {
+                            tempat.requestFocus();
+                            tempat.setError("FIELD CANNOT BE EMPTY");
+                        }
+
+                        else if (noUjian.length()==0)
+                        {
+                            noUjian.requestFocus();
+                            noUjian.setError("FIELD CANNOT BE EMPTY");
+                        }
+
+                        else if (nisn.length()==0)
+                        {
+                            nisn.requestFocus();
+                            nisn.setError("FIELD CANNOT BE EMPTY");
+                        }
+
+                        else if (alamatSiswa.length()==0)
+                        {
+                            alamatSiswa.requestFocus();
+                            alamatSiswa.setError("FIELD CANNOT BE EMPTY");
+                        }
+
+                        else if (tinggi.length()==0)
+                        {
+                            tinggi.requestFocus();
+                            tinggi.setError("FIELD CANNOT BE EMPTY");
+                        }
+
+                        else if (berat.length()==0)
+                        {
+                            berat.requestFocus();
+                            berat.setError("FIELD CANNOT BE EMPTY");
+                        }
                     }
                 };
 
@@ -193,47 +233,7 @@ public class DataSiswa extends AppCompatActivity {
                 builder.setMessage("Apakah anda yakin ingin simpan data?").setPositiveButton("Ya", dialog)
                         .setNegativeButton("Tidak", dialog).show();
 
-                if (namaSiswa.length()==0)
-                {
-                    namaSiswa.requestFocus();
-                    namaSiswa.setError("FIELD CANNOT BE EMPTY");
-                }
 
-                else if (tempat.length()==0)
-                {
-                    tempat.requestFocus();
-                    tempat.setError("FIELD CANNOT BE EMPTY");
-                }
-
-                else if (noUjian.length()==0)
-                {
-                    noUjian.requestFocus();
-                    noUjian.setError("FIELD CANNOT BE EMPTY");
-                }
-
-                else if (nisn.length()==0)
-                {
-                    nisn.requestFocus();
-                    nisn.setError("FIELD CANNOT BE EMPTY");
-                }
-
-                else if (alamatSiswa.length()==0)
-                {
-                    alamatSiswa.requestFocus();
-                    alamatSiswa.setError("FIELD CANNOT BE EMPTY");
-                }
-
-                else if (tinggi.length()==0)
-                {
-                    tinggi.requestFocus();
-                    tinggi.setError("FIELD CANNOT BE EMPTY");
-                }
-
-                else if (berat.length()==0)
-                {
-                    berat.requestFocus();
-                    berat.setError("FIELD CANNOT BE EMPTY");
-                }
             }
 
         });

@@ -226,7 +226,35 @@ public class DataAsalSekolah extends AppCompatActivity {
 
                                 break;
                         }
+                        if (txtNamaSekolah.length()==0)
+                        {
+                            txtNamaSekolah.requestFocus();
+                            txtNamaSekolah.setError("FIELD CANNOT BE EMPTY");
+                        }
 
+                        else if (txtAlamatSekolah.length()==0)
+                        {
+                            txtAlamatSekolah.requestFocus();
+                            txtAlamatSekolah.setError("FIELD CANNOT BE EMPTY");
+                        }
+
+                        else if (txtNilaiSTTb.length()==0)
+                        {
+                            txtNilaiSTTb.requestFocus();
+                            txtNilaiSTTb.setError("FIELD CANNOT BE EMPTY");
+                        }
+
+                        else if (txtNoSTTb.length()==0)
+                        {
+                            txtNoSTTb.requestFocus();
+                            txtNoSTTb.setError("FIELD CANNOT BE EMPTY");
+                        }
+
+                        else if (txtTahunSTTb.length()==0)
+                        {
+                            txtTahunSTTb.requestFocus();
+                            txtTahunSTTb.setError("FIELD CANNOT BE EMPTY");
+                        }
                     }
                 };
 

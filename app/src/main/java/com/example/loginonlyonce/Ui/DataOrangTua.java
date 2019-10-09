@@ -168,7 +168,59 @@ public class DataOrangTua extends AppCompatActivity {
                                 break;
 
                         }
+                        if (txtNamaAyah.length()==0)
+                        {
+                            txtNamaAyah.requestFocus();
+                            txtNamaAyah.setError("FIELD CANNOT BE EMPTY");
+                        }
 
+                        else if (txtNamaIbu.length()==0)
+                        {
+                            txtNamaIbu.requestFocus();
+                            txtNamaIbu.setError("FIELD CANNOT BE EMPTY");
+                        }
+
+                        else if (txtAlamatOrangTua.length()==0)
+                        {
+                            txtAlamatOrangTua.requestFocus();
+                            txtAlamatOrangTua.setError("FIELD CANNOT BE EMPTY");
+                        }
+
+                        else if (txtPekerjaanAyah.length()==0)
+                        {
+                            txtPekerjaanAyah.requestFocus();
+                            txtPekerjaanAyah.setError("FIELD CANNOT BE EMPTY");
+                        }
+
+                        else if (txtPekerjaanIbu.length()==0)
+                        {
+                            txtPekerjaanIbu.requestFocus();
+                            txtPekerjaanIbu.setError("FIELD CANNOT BE EMPTY");
+                        }
+
+                        else if (txtPenghasilanAyah.length()==0)
+                        {
+                            txtPenghasilanAyah.requestFocus();
+                            txtPenghasilanAyah.setError("FIELD CANNOT BE EMPTY");
+                        }
+
+                        else if (txtPenghasilanIbu.length()==0)
+                        {
+                            txtPenghasilanIbu.requestFocus();
+                            txtPenghasilanIbu.setError("FIELD CANNOT BE EMPTY");
+                        }
+
+                        else if (txtnoAyah.length()==0)
+                        {
+                            txtnoAyah.requestFocus();
+                            txtnoAyah.setError("FIELD CANNOT BE EMPTY");
+                        }
+
+                        else if (txtnoIbu.length()==0)
+                        {
+                            txtnoIbu.requestFocus();
+                            txtnoIbu.setError("FIELD CANNOT BE EMPTY");
+                        }
                     }
                 };
 
