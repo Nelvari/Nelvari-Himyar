@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.loginonlyonce.Model.ModelClass;
 import com.example.loginonlyonce.R;
-
 import java.util.ArrayList;
 
 public class InboxAdapter extends RecyclerView.Adapter<InboxAdapter.InboxViewHolder> {
@@ -18,6 +17,7 @@ public class InboxAdapter extends RecyclerView.Adapter<InboxAdapter.InboxViewHol
     private ArrayList<ModelClass> dataList;
 
     public InboxAdapter(ArrayList<ModelClass> dataList) {
+      this.dataList = dataList;
       this.dataList = dataList;
     }
 
