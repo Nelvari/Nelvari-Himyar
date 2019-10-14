@@ -8,7 +8,6 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.example.loginonlyonce.Model.ControlClass;
 import com.example.loginonlyonce.R;
 
 public class DKV extends AppCompatActivity {
@@ -31,7 +30,7 @@ public class DKV extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(DKV.this, ControlClass.class);
+                Intent intent = new Intent(DKV.this, Berkasfile.class);
                 startActivity(intent);
                 finish();
 

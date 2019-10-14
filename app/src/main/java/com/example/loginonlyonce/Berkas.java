@@ -2,6 +2,7 @@ package com.example.loginonlyonce;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
@@ -21,6 +23,7 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
+import com.androidnetworking.interfaces.UploadProgressListener;
 import com.vansuita.pickimage.bean.PickResult;
 import com.vansuita.pickimage.bundle.PickSetup;
 import com.vansuita.pickimage.dialog.PickImageDialog;
@@ -44,6 +47,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
     private CardView raport;
     private CardView catksehtan;
     private CardView gambar;
+    private CardView struk;
     SharedPreferences mInfoBerkas;
     private LinearLayout lnberkas;
 
@@ -69,6 +73,14 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
     Button btnkugambar;
     Button btnkustruk;
 
+    Button btnPostFoto;
+    Button btnPostAkta;
+    Button btnPostKk;
+    Button btnPostSertifikat;
+    Button btnPostKesehatan;
+    Button btnPostGambar;
+    Button btnPostStruk;
+    Button btnPostRapot;
 
     private String selectedImagePathkupassfoto = "";
     private String selectedImagePathkuakta = "";
@@ -78,6 +90,15 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
     private String selectedImagePathkukesehatan = "";
     private String selectedImagePathkugambar = "";
     private String selectedImagePathkustruk = "";
+
+    File fileselectedImagePathfoto;
+    File fileselectedImagePathakte;
+    File fileselectedImagePathkk;
+    File fileselectedImagePathsertifikat;
+    File fileselectedImagePathraport;
+    File fileselectedImagePathkasehtan;
+    File fileselectedImagePathgambar;
+    File fileselectedImagePathstruck;
 
     String kupassfoto = "";
     String kuakta = "";
@@ -107,6 +128,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
         raport = (CardView) findViewById(R.id.cdraport);
         catksehtan = (CardView) findViewById(R.id.cdcatksehtan);
         gambar = (CardView) findViewById(R.id.cdgambar);
+        struk = findViewById(R.id.cdstruk);
         lnberkas = (LinearLayout) findViewById(R.id.lnberkas);
 
         ivkupassfoto = findViewById(R.id.ivkupassfoto);
@@ -118,6 +140,14 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
         ivkugambar = findViewById(R.id.ivkugambar);
         ivkustruk = findViewById(R.id.ivkustruk);
 
+        btnPostFoto = findViewById(R.id.btnPostFoto);
+        btnPostAkta = findViewById(R.id.btnPostAkta);
+        btnPostKk = findViewById(R.id.btnPostKk);
+        btnPostSertifikat = findViewById(R.id.btnPostSertifikat);
+        btnPostKesehatan = findViewById(R.id.btnPostKesehatan);
+        btnPostGambar = findViewById(R.id.btnPostGambar);
+        btnPostStruk = findViewById(R.id.btnPostStruk);
+        btnPostRapot = findViewById(R.id.btnPostRapot);
 
         btnkufoto = (Button) findViewById(R.id.btnkufoto);
         btnkuakta = (Button) findViewById(R.id.btnkuAkte);
@@ -295,6 +325,527 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                     }
                 });
 
+        btnPostFoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View view) {
+
+                progressBar.setMessage("Please wait");
+                progressBar.show();
+                AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
+                        .addMultipartParameter("id", "1")
+                        .addMultipartParameter("type", "FOTO_DIRI")
+                        .addMultipartFile("file", fileselectedImagePathfoto)
+                        .setPriority(Priority.HIGH)
+                        .build()
+                        .setUploadProgressListener(new UploadProgressListener() {
+                            @Override
+                            public void onProgress(long bytesUploaded, long totalBytes) {
+
+                            }
+                        })
+                        .getAsJSONObject(new JSONObjectRequestListener() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+
+                                if (progressBar.isShowing()) {
+                                    progressBar.dismiss();
+                                }
+
+                                Log.d("hasilResponsku", "onResponse: " + response.toString());
+                                if (selectedImagePathkupassfoto.equalsIgnoreCase("")){
+
+                                    Toast.makeText(getApplicationContext(), "Pilih File Gambar", Toast.LENGTH_LONG).show();
+
+                                }else {
+
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(Berkas.this);
+                                    builder.setMessage("Data berhasil terkirim!")
+                                            .setCancelable(false)
+                                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+
+                                                    foto.setVisibility(View.GONE);
+
+                                                }
+                                            });
+                                    AlertDialog alert = builder.create();
+                                    alert.show();
+
+                                }
+
+                            }
+
+                            @Override
+                            public void onError(ANError anError) {
+
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.toString());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorDetail());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorCode());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorBody());
+                                Log.d("hasilResponsku", "onResponseEror: " + fileselectedImagePathfoto);
+
+                            }
+                        });
+
+
+            }
+        });
+
+        btnPostAkta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                progressBar.setMessage("Please wait");
+                progressBar.show();
+                AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
+                        .addMultipartParameter("id", "1")
+                        .addMultipartParameter("type", "AKTE")
+                        .addMultipartFile("file", fileselectedImagePathakte)
+                        .setPriority(Priority.HIGH)
+                        .build()
+                        .setUploadProgressListener(new UploadProgressListener() {
+                            @Override
+                            public void onProgress(long bytesUploaded, long totalBytes) {
+
+                            }
+                        })
+                        .getAsJSONObject(new JSONObjectRequestListener() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+
+                                if (progressBar.isShowing()) {
+                                    progressBar.dismiss();
+                                }
+
+                                Log.d("hasilResponsku", "onResponse: " + response.toString());
+                                if (selectedImagePathkuakta.equalsIgnoreCase("")){
+
+                                    Toast.makeText(getApplicationContext(), "Pilih File Gambar", Toast.LENGTH_LONG).show();
+
+                                }else {
+
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(Berkas.this);
+                                    builder.setMessage("Data berhasil terkirim!")
+                                            .setCancelable(false)
+                                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+
+                                                    akte.setVisibility(View.GONE);
+
+                                                }
+                                            });
+                                    AlertDialog alert = builder.create();
+                                    alert.show();
+
+                                }
+
+                            }
+
+                            @Override
+                            public void onError(ANError anError) {
+
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.toString());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorDetail());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorCode());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorBody());
+                                Log.d("hasilResponsku", "onResponseEror: " + fileselectedImagePathfoto);
+
+                            }
+                        });
+
+            }
+        });
+
+        btnPostKk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                progressBar.setMessage("Please wait");
+                progressBar.show();
+                AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
+                        .addMultipartParameter("id", "1")
+                        .addMultipartParameter("type", "KK")
+                        .addMultipartFile("file", fileselectedImagePathkk)
+                        .setPriority(Priority.HIGH)
+                        .build()
+                        .setUploadProgressListener(new UploadProgressListener() {
+                            @Override
+                            public void onProgress(long bytesUploaded, long totalBytes) {
+
+                            }
+                        })
+                        .getAsJSONObject(new JSONObjectRequestListener() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+
+                                if (progressBar.isShowing()) {
+                                    progressBar.dismiss();
+                                }
+
+                                Log.d("hasilResponsku", "onResponse: " + response.toString());
+                                if (selectedImagePathkukk.equalsIgnoreCase("")){
+
+                                    Toast.makeText(getApplicationContext(), "Pilih File Gambar", Toast.LENGTH_LONG).show();
+
+                                }else {
+
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(Berkas.this);
+                                    builder.setMessage("Data berhasil terkirim!")
+                                            .setCancelable(false)
+                                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+
+                                                    kk.setVisibility(View.GONE);
+
+                                                }
+                                            });
+                                    AlertDialog alert = builder.create();
+                                    alert.show();
+
+                                }
+
+                            }
+
+                            @Override
+                            public void onError(ANError anError) {
+
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.toString());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorDetail());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorCode());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorBody());
+                                Log.d("hasilResponsku", "onResponseEror: " + fileselectedImagePathfoto);
+
+                            }
+                        });
+
+            }
+        });
+
+        btnPostSertifikat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                progressBar.setMessage("Please wait");
+                progressBar.show();
+                AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
+                        .addMultipartParameter("id", "1")
+                        .addMultipartParameter("type", "PRESTASI")
+                        .addMultipartFile("file", fileselectedImagePathsertifikat)
+                        .setPriority(Priority.HIGH)
+                        .build()
+                        .setUploadProgressListener(new UploadProgressListener() {
+                            @Override
+                            public void onProgress(long bytesUploaded, long totalBytes) {
+
+                            }
+                        })
+                        .getAsJSONObject(new JSONObjectRequestListener() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+
+                                if (progressBar.isShowing()) {
+                                    progressBar.dismiss();
+                                }
+
+                                Log.d("hasilResponsku", "onResponse: " + response.toString());
+                                if (selectedImagePathkusertifikat.equalsIgnoreCase("")){
+
+                                    Toast.makeText(getApplicationContext(), "Pilih File Gambar", Toast.LENGTH_LONG).show();
+
+                                }else {
+
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(Berkas.this);
+                                    builder.setMessage("Data berhasil terkirim!")
+                                            .setCancelable(false)
+                                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+
+                                                    sertifikat.setVisibility(View.GONE);
+
+                                                }
+                                            });
+                                    AlertDialog alert = builder.create();
+                                    alert.show();
+
+                                }
+
+                            }
+
+                            @Override
+                            public void onError(ANError anError) {
+
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.toString());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorDetail());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorCode());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorBody());
+                                Log.d("hasilResponsku", "onResponseEror: " + fileselectedImagePathfoto);
+
+                            }
+                        });
+
+            }
+        });
+
+        btnPostKesehatan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                progressBar.setMessage("Please wait");
+                progressBar.show();
+                AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
+                        .addMultipartParameter("id", "1")
+                        .addMultipartParameter("type", "CEK_KESEHATAN")
+                        .addMultipartFile("file", fileselectedImagePathkasehtan)
+                        .setPriority(Priority.HIGH)
+                        .build()
+                        .setUploadProgressListener(new UploadProgressListener() {
+                            @Override
+                            public void onProgress(long bytesUploaded, long totalBytes) {
+
+                            }
+                        })
+                        .getAsJSONObject(new JSONObjectRequestListener() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+
+                                if (progressBar.isShowing()) {
+                                    progressBar.dismiss();
+                                }
+
+                                Log.d("hasilResponsku", "onResponse: " + response.toString());
+                                if (selectedImagePathkukesehatan.equalsIgnoreCase("")){
+
+                                    Toast.makeText(getApplicationContext(), "Pilih File Gambar", Toast.LENGTH_LONG).show();
+
+                                }else {
+
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(Berkas.this);
+                                    builder.setMessage("Data berhasil terkirim!")
+                                            .setCancelable(false)
+                                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+
+                                                    catksehtan.setVisibility(View.GONE);
+
+                                                }
+                                            });
+                                    AlertDialog alert = builder.create();
+                                    alert.show();
+
+                                }
+
+                            }
+
+                            @Override
+                            public void onError(ANError anError) {
+
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.toString());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorDetail());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorCode());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorBody());
+                                Log.d("hasilResponsku", "onResponseEror: " + fileselectedImagePathfoto);
+
+                            }
+                        });
+
+            }
+        });
+
+        btnPostGambar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                progressBar.setMessage("Please wait");
+                progressBar.show();
+                AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
+                        .addMultipartParameter("id", "1")
+                        .addMultipartParameter("type", "GAMBAR_ANIMASI")
+                        .addMultipartFile("file", fileselectedImagePathgambar)
+                        .setPriority(Priority.HIGH)
+                        .build()
+                        .setUploadProgressListener(new UploadProgressListener() {
+                            @Override
+                            public void onProgress(long bytesUploaded, long totalBytes) {
+
+                            }
+                        })
+                        .getAsJSONObject(new JSONObjectRequestListener() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+
+                                if (progressBar.isShowing()) {
+                                    progressBar.dismiss();
+                                }
+
+                                Log.d("hasilResponsku", "onResponse: " + response.toString());
+                                if (selectedImagePathkugambar.equalsIgnoreCase("")){
+
+                                    Toast.makeText(getApplicationContext(), "Pilih File Gambar", Toast.LENGTH_LONG).show();
+
+                                }else {
+
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(Berkas.this);
+                                    builder.setMessage("Data berhasil terkirim!")
+                                            .setCancelable(false)
+                                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+
+                                                    gambar.setVisibility(View.GONE);
+
+                                                }
+                                            });
+                                    AlertDialog alert = builder.create();
+                                    alert.show();
+
+                                }
+
+                            }
+
+                            @Override
+                            public void onError(ANError anError) {
+
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.toString());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorDetail());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorCode());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorBody());
+                                Log.d("hasilResponsku", "onResponseEror: " + fileselectedImagePathfoto);
+
+                            }
+                        });
+
+            }
+        });
+
+        btnPostStruk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                progressBar.setMessage("Please wait");
+                progressBar.show();
+                AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
+                        .addMultipartParameter("id", "1")
+                        .addMultipartParameter("type", "BUKTI_PEMBAYARAN")
+                        .addMultipartFile("file", fileselectedImagePathstruck)
+                        .setPriority(Priority.HIGH)
+                        .build()
+                        .setUploadProgressListener(new UploadProgressListener() {
+                            @Override
+                            public void onProgress(long bytesUploaded, long totalBytes) {
+
+                            }
+                        })
+                        .getAsJSONObject(new JSONObjectRequestListener() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+
+                                if (progressBar.isShowing()) {
+                                    progressBar.dismiss();
+                                }
+
+                                Log.d("hasilResponsku", "onResponse: " + response.toString());
+                                if (selectedImagePathkustruk.equalsIgnoreCase("")){
+
+                                    Toast.makeText(getApplicationContext(), "Pilih File Gambar", Toast.LENGTH_LONG).show();
+
+                                }else {
+
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(Berkas.this);
+                                    builder.setMessage("Data berhasil terkirim!")
+                                            .setCancelable(false)
+                                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+
+                                                    struk.setVisibility(View.GONE);
+
+                                                }
+                                            });
+                                    AlertDialog alert = builder.create();
+                                    alert.show();
+
+                                }
+
+                            }
+
+                            @Override
+                            public void onError(ANError anError) {
+
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.toString());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorDetail());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorCode());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorBody());
+                                Log.d("hasilResponsku", "onResponseEror: " + fileselectedImagePathfoto);
+
+                            }
+                        });
+
+            }
+        });
+
+        btnPostRapot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                progressBar.setMessage("Please wait");
+                progressBar.show();
+                AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
+                        .addMultipartParameter("id", "1")
+                        .addMultipartParameter("type", "FOTO_DIRI")
+                        .addMultipartFile("file", fileselectedImagePathfoto)
+                        .setPriority(Priority.HIGH)
+                        .build()
+                        .setUploadProgressListener(new UploadProgressListener() {
+                            @Override
+                            public void onProgress(long bytesUploaded, long totalBytes) {
+
+                            }
+                        })
+                        .getAsJSONObject(new JSONObjectRequestListener() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+
+                                if (progressBar.isShowing()) {
+                                    progressBar.dismiss();
+                                }
+
+                                Log.d("hasilResponsku", "onResponse: " + response.toString());
+                                if (selectedImagePathkuraport.equalsIgnoreCase("")){
+
+                                    Toast.makeText(getApplicationContext(), "Pilih File Gambar", Toast.LENGTH_LONG).show();
+
+                                }else {
+
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(Berkas.this);
+                                    builder.setMessage("Data berhasil terkirim!")
+                                            .setCancelable(false)
+                                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+
+                                                    raport.setVisibility(View.GONE);
+
+                                                }
+                                            });
+                                    AlertDialog alert = builder.create();
+                                    alert.show();
+
+                                }
+
+                            }
+
+                            @Override
+                            public void onError(ANError anError) {
+
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.toString());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorDetail());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorCode());
+                                Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorBody());
+                                Log.d("hasilResponsku", "onResponseEror: " + fileselectedImagePathfoto);
+
+                            }
+                        });
+
+            }
+        });
+
     }
 
     @Override
@@ -311,6 +862,8 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                         .compressToFile(new File(r.getPath()));
 
                 selectedImagePathkupassfoto = fileku.getAbsolutePath().toString();
+                fileselectedImagePathfoto = new File(selectedImagePathkupassfoto.toString());
+                Log.d("file", "onCreate: " + fileselectedImagePathfoto);
                 Log.d("makananku", "onPickResult: " + selectedImagePathkupassfoto);
 
                 selectedImage = r.getBitmap();
@@ -333,6 +886,8 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                         .compressToFile(new File(r.getPath()));
 
                 selectedImagePathkuakta = fileku.getAbsolutePath().toString();
+                fileselectedImagePathakte = new File(selectedImagePathkuakta.toString());
+                Log.d("file", "onCreate: " + fileselectedImagePathakte);
                 Log.d("makananku", "onPickResult: " + selectedImagePathkuakta);
                 selectedImage = r.getBitmap();
                 ivkuakta.setImageBitmap(selectedImage);
@@ -354,6 +909,8 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                         .compressToFile(new File(r.getPath()));
 
                 selectedImagePathkukk = fileku.getAbsolutePath().toString();
+                fileselectedImagePathkk = new File(selectedImagePathkukk.toString());
+                Log.d("file", "onCreate: " + fileselectedImagePathkk);
                 Log.d("makananku", "onPickResult: " + selectedImagePathkukk);
 
                 selectedImage = r.getBitmap();
@@ -377,6 +934,8 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                         .compressToFile(new File(r.getPath()));
 
                 selectedImagePathkusertifikat = fileku.getAbsolutePath().toString();
+                fileselectedImagePathsertifikat = new File(selectedImagePathkusertifikat.toString());
+                Log.d("file", "onCreate: " + fileselectedImagePathsertifikat);
                 Log.d("makananku", "onPickResult: " + selectedImagePathkusertifikat);
 
                 selectedImage = r.getBitmap();
@@ -398,6 +957,8 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                         .compressToFile(new File(r.getPath()));
 
                 selectedImagePathkuraport = fileku.getAbsolutePath().toString();
+                fileselectedImagePathraport = new File(selectedImagePathkuraport.toString());
+                Log.d("file", "onCreate: " + fileselectedImagePathraport);
                 Log.d("makananku", "onPickResult: " + selectedImagePathkuraport);
 
                 selectedImage = r.getBitmap();
@@ -420,6 +981,8 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                         .compressToFile(new File(r.getPath()));
 
                 selectedImagePathkukesehatan = fileku.getAbsolutePath().toString();
+                fileselectedImagePathkasehtan = new File(selectedImagePathkukesehatan.toString());
+                Log.d("file", "onCreate: " + fileselectedImagePathkasehtan);
                 Log.d("makananku", "onPickResult: " + selectedImagePathkukesehatan);
 
                 selectedImage = r.getBitmap();
@@ -442,6 +1005,8 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                         .compressToFile(new File(r.getPath()));
 
                 selectedImagePathkugambar = fileku.getAbsolutePath().toString();
+                fileselectedImagePathgambar = new File(selectedImagePathkugambar.toString());
+                Log.d("file", "onCreate: " + fileselectedImagePathgambar);
                 Log.d("makananku", "onPickResult: " + selectedImagePathkugambar);
 
                 selectedImage = r.getBitmap();
@@ -464,6 +1029,8 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                         .compressToFile(new File(r.getPath()));
 
                 selectedImagePathkustruk = fileku.getAbsolutePath().toString();
+                fileselectedImagePathstruck = new File(selectedImagePathkustruk.toString());
+                Log.d("file", "onCreate: " + fileselectedImagePathstruck);
                 Log.d("makananku", "onPickResult: " + selectedImagePathkustruk);
 
                 selectedImage = r.getBitmap();

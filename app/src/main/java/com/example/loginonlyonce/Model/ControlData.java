@@ -14,7 +14,7 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
-import com.example.loginonlyonce.Ui.Berkasfile;
+import com.example.loginonlyonce.Ui.Home;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -36,7 +36,7 @@ public class ControlData extends AppCompatActivity {
         progressBar.setMessage("Please wait");
         progressBar.show();
 
-        AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/cek-daftar?id=" + mData.getInt("id", 0))
+        AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/cek-daftar?id=" + mData.getInt("userid", 0))
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()
@@ -50,7 +50,7 @@ public class ControlData extends AppCompatActivity {
 
                             if (status.equalsIgnoreCase("SUCCESS")){
 
-                                Intent intent = new Intent(ControlData.this, Berkasfile.class);
+                                Intent intent = new Intent(ControlData.this, Home.class);
                                 startActivity(intent);
 
                                 Toast.makeText(getApplicationContext(), "Tolong isi data", Toast.LENGTH_LONG).show();

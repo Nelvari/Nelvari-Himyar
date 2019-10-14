@@ -47,7 +47,7 @@ public class ControlHome extends AppCompatActivity {
 
                             String status = response.getString("STATUS");
 
-                            if (status.equalsIgnoreCase("SUCCES") && mHome.getString("username1", "") != ""){
+                            if (status.equalsIgnoreCase("SUCCES")){
 
                                 Intent intent = new Intent(ControlHome.this, Mainmenu.class);
                                 startActivity(intent);

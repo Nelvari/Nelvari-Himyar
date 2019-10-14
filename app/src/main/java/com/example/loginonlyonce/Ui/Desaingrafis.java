@@ -31,7 +31,7 @@ public class Desaingrafis extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(Desaingrafis.this, ControlClass.class);
+                Intent intent = new Intent(Desaingrafis.this, Berkasfile.class);
                 startActivity(intent);
                 finish();
 

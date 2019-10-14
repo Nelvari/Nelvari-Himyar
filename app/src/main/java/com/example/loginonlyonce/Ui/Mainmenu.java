@@ -11,7 +11,6 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
-import com.example.loginonlyonce.Adapter.InboxAdapter;
 import com.example.loginonlyonce.Berkas;
 import com.example.loginonlyonce.Model.ControlData;
 import com.example.loginonlyonce.Model.ControlHistory;

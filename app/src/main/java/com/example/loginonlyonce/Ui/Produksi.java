@@ -31,7 +31,7 @@ public class Produksi extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(Produksi.this, ControlClass.class);
+                Intent intent = new Intent(Produksi.this, Berkasfile.class);
                 startActivity(intent);
                 finish();
 

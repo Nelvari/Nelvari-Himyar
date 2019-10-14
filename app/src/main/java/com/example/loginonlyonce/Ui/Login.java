@@ -90,7 +90,7 @@ public class Login extends AppCompatActivity {
                     AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/login")
                             .addBodyParameter("username", txtusername.getText().toString())
                             .addBodyParameter("password", txtpassword.getText().toString())
-                            .addBodyParameter("role", "superadmin")
+                            .addBodyParameter("role", "user")
                             .setTag("test")
                             .setPriority(Priority.MEDIUM)
                             .build()
@@ -117,38 +117,9 @@ public class Login extends AppCompatActivity {
                                             editor.putString("data4", "");
                                             editor.apply();
 
-                                            AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/profile?id="+id)
-                                                    .setTag("test")
-                                                    .setPriority(Priority.LOW)
-                                                    .build().getAsJSONObject(new JSONObjectRequestListener() {
-                                                @Override
-                                                public void onResponse(JSONObject response) {
-                                                    try {
-                                                        String status = response.getString("STATUS");
-
-                                                        if (status.equalsIgnoreCase("SUCCES") && mLogin.getString("username1", "") != ""){
-
-                                                            Intent intent = new Intent(Login.this, Mainmenu.class);
-                                                            startActivity(intent);
-                                                            finish();
-
-                                                        }else {
-
-                                                            Intent intent = new Intent(Login.this, Home.class);
-                                                            startActivity(intent);
-                                                            finish();
-                                                        }
-
-                                                    } catch (JSONException e) {
-                                                        e.printStackTrace();
-                                                    }
-                                                }
-
-                                                @Override
-                                                public void onError(ANError anError) {
-
-                                                }
-                                            });
+                                            Intent intent = new Intent(Login.this, Mainmenu.class);
+                                            startActivity(intent);
+                                            finish();
 
 
                                         }

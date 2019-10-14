@@ -39,6 +39,7 @@ public class Home extends AppCompatActivity {
 
                 Intent hi = new Intent(Home.this, Produksi.class);
                 startActivity(hi);
+                finish();
 
             }
         });
@@ -53,6 +54,7 @@ public class Home extends AppCompatActivity {
 
                 Intent hi = new Intent(Home.this, Desaingrafis.class);
                 startActivity(hi);
+                finish();
 
             }
         });
@@ -67,6 +69,7 @@ public class Home extends AppCompatActivity {
 
                 Intent hi = new Intent(Home.this, Animasi.class);
                 startActivity(hi);
+                finish();
 
             }
         });
@@ -81,6 +84,7 @@ public class Home extends AppCompatActivity {
 
                 Intent hi = new Intent(Home.this, DKV.class);
                 startActivity(hi);
+                finish();
 
             }
         });
@@ -95,6 +99,7 @@ public class Home extends AppCompatActivity {
 
                 Intent hi = new Intent(Home.this, RPL.class);
                 startActivity(hi);
+                finish();
 
             }
         });

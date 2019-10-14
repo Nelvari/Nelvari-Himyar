@@ -115,7 +115,7 @@
             android:layout_gravity="center"
             android:layout_margin="20dp"
             android:background="@color/persiapan"
-            android:text="LOGIN SEKARANG"
+            android:text="Next"
             android:textColor="@color/putih"/>
 
     </LinearLayout>
