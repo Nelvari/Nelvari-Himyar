@@ -30,6 +30,7 @@
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
+                android:visibility="gone"
                 android:id="@+id/cdfoto"
                 android:layout_width="360dp"
                 android:layout_height="348dp"
@@ -115,6 +116,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:visibility="gone"
                 android:id="@+id/cdakte"
                 android:layout_width="360dp"
                 android:layout_height="348dp"
@@ -195,6 +197,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:visibility="gone"
                 android:id="@+id/cdkk"
                 android:layout_width="360dp"
                 android:layout_height="348dp"
@@ -277,6 +280,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:visibility="gone"
                 android:id="@+id/cdsertifikat"
                 android:layout_width="360dp"
                 android:layout_height="348dp"
@@ -357,6 +361,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:visibility="gone"
                 android:id="@+id/cdraport"
                 android:layout_width="360dp"
                 android:layout_height="348dp"
@@ -437,6 +442,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:visibility="gone"
                 android:id="@+id/cdcatksehtan"
                 android:layout_width="360dp"
                 android:layout_height="348dp"
@@ -517,6 +523,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:visibility="gone"
                 android:id="@+id/cdgambar"
                 android:layout_width="360dp"
                 android:layout_height="348dp"
@@ -598,6 +605,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:visibility="gone"
                 android:id="@+id/cdstruk"
                 android:layout_width="360dp"
                 android:layout_height="348dp"
