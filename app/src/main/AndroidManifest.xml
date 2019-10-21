@@ -11,65 +11,98 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Ui.KartuUjian"></activity>
-        <activity android:name=".Ui.KartuPeserta" />
-        <activity android:name=".Model.ControlData" />
+        <activity android:name=".Ui.KartuUjian"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".Ui.KartuPeserta"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".Model.ControlData"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Berkas"
-            android:parentActivityName=".Ui.Mainmenu" />
-        <activity android:name=".Ui.CetakData" />
-        <activity android:name=".Model.ControlHistory" />
-        <activity android:name=".Model.ControlHome" />
-        <activity android:name=".Ui.InboxActivity" />
-        <activity android:name=".Adapter.InboxAdapter" />
+            android:parentActivityName=".Ui.Mainmenu"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Ui.CetakData"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Model.ControlHistory"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Model.ControlHome"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Ui.InboxActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Adapter.InboxAdapter"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Ui.Berkasfile"
-            android:parentActivityName=".Ui.Mainmenu" />
-        <activity android:name=".adapter_history" />
-        <activity android:name=".Ui.History" />
-        <activity android:name=".InboxActivity" />
-        <activity android:name=".Model.InboxAdapter" />
-        <activity android:name=".inbox" />
+            android:parentActivityName=".Ui.Mainmenu"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".adapter_history"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Ui.History"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".InboxActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Model.InboxAdapter"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".inbox"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Ui.DKV"
-            android:parentActivityName=".Ui.Home" />
+            android:parentActivityName=".Ui.Home"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Ui.RPL"
-            android:parentActivityName=".Ui.Home" />
+            android:parentActivityName=".Ui.Home"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Ui.Produksi"
-            android:parentActivityName=".Ui.Home" />
-        <activity android:name=".Ui.Mainmenu" />
+            android:parentActivityName=".Ui.Home"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Ui.Mainmenu"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Ui.Desaingrafis"
-            android:parentActivityName=".Ui.Home" />
+            android:parentActivityName=".Ui.Home"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Ui.Animasi"
-            android:parentActivityName=".Ui.Home" />
-        <activity android:name=".Ui.Kartutes" />
-        <activity android:name=".Ui.Pembayaran" />
-        <activity android:name=".Ui.Registrasi" />
-        <activity android:name=".Intro" />
-        <activity android:name=".Ui.Home" />
-        <activity android:name=".Ui.Login" />
-        <activity android:name=".Model.ControlClass" />
+            android:parentActivityName=".Ui.Home"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Ui.Kartutes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Ui.Pembayaran"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Ui.Registrasi"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Intro"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Ui.Home"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Ui.Login"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Model.ControlClass"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Ui.DataAsalSekolah"
-            android:parentActivityName=".Ui.DataOrangTua" />
+            android:parentActivityName=".Ui.DataOrangTua"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Ui.DataOrangTua"
-            android:parentActivityName=".Ui.DataSiswa" />
+            android:parentActivityName=".Ui.DataSiswa"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Ui.DataSiswa"
-            android:parentActivityName=".Ui.Berkasfile" />
-        <activity android:name=".SplashScreen">
+            android:parentActivityName=".Ui.Berkasfile"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SplashScreen"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Ui.MainActivity" />
+        <activity android:name=".Ui.MainActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
