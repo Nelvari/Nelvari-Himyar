@@ -19,6 +19,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cvKartuPeserta"
         android:layout_width="335dp"
         android:layout_height="170dp"
         android:layout_gravity="center"
@@ -68,6 +69,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cvKartuUjian"
         android:layout_width="337dp"
         android:layout_height="170dp"
         android:layout_gravity="center"

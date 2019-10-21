@@ -229,7 +229,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
 
         progressBar.setMessage("Please wait");
         progressBar.show();
-        AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/berkas?id" + mInfoBerkas.getInt("userid", 0))
+        AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/berkas?id=" + mInfoBerkas.getInt("userid", 0))
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()
@@ -249,7 +249,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                 } else if (jsonObjectPayload.getString("lmp_raport").equalsIgnoreCase("N")) {
                                     raport.setVisibility(View.VISIBLE);
                                 } else if (jsonObjectPayload.getString("lmp_raport").equalsIgnoreCase("Y")) {
-                                    raport.setVisibility(View.INVISIBLE);
+                                    raport.setVisibility(View.GONE);
                                 }
 
                                 if (jsonObjectPayload.getString("lmp_akte").equalsIgnoreCase("-")) {
@@ -257,7 +257,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                 } else if (jsonObjectPayload.getString("lmp_akte").equalsIgnoreCase("N")) {
                                     akte.setVisibility(View.VISIBLE);
                                 } else if (jsonObjectPayload.getString("lmp_akte").equalsIgnoreCase("Y")) {
-                                    akte.setVisibility(View.INVISIBLE);
+                                    akte.setVisibility(View.GONE);
                                 }
 
                                 if (jsonObjectPayload.getString("lmp_kk").equalsIgnoreCase("-")) {
@@ -265,7 +265,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                 } else if (jsonObjectPayload.getString("lmp_kk").equalsIgnoreCase("N")) {
                                     kk.setVisibility(View.VISIBLE);
                                 } else if (jsonObjectPayload.getString("lmp_kk").equalsIgnoreCase("Y")) {
-                                    kk.setVisibility(View.INVISIBLE);
+                                    kk.setVisibility(View.GONE);
                                 }
 
                                 if (jsonObjectPayload.getString("lmp_foto").equalsIgnoreCase("-")) {
@@ -273,7 +273,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                 } else if (jsonObjectPayload.getString("lmp_foto").equalsIgnoreCase("N")) {
                                     foto.setVisibility(View.VISIBLE);
                                 } else if (jsonObjectPayload.getString("lmp_foto").equalsIgnoreCase("Y")) {
-                                    foto.setVisibility(View.INVISIBLE);
+                                    foto.setVisibility(View.GONE);
                                 }
 
                                 if (jsonObjectPayload.getString("lmp_kesehatan").equalsIgnoreCase("-")) {
@@ -281,7 +281,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                 } else if (jsonObjectPayload.getString("lmp_kesehatan").equalsIgnoreCase("N")) {
                                     catksehtan.setVisibility(View.VISIBLE);
                                 } else if (jsonObjectPayload.getString("lmp_kesehatan").equalsIgnoreCase("Y")) {
-                                    catksehtan.setVisibility(View.INVISIBLE);
+                                    catksehtan.setVisibility(View.GONE);
                                 }
 
                                 if (jsonObjectPayload.getString("lmp_prestasi").equalsIgnoreCase("-")) {
@@ -289,16 +289,30 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                 } else if (jsonObjectPayload.getString("lmp_prestasi").equalsIgnoreCase("N")) {
                                     sertifikat.setVisibility(View.VISIBLE);
                                 } else if (jsonObjectPayload.getString("lmp_prestasi").equalsIgnoreCase("Y")) {
-                                    sertifikat.setVisibility(View.INVISIBLE);
+                                    sertifikat.setVisibility(View.GONE);
                                 }
 
                                 if (jsonObjectPayload.getString("lmp_gambar_anm").equalsIgnoreCase("-")) {
                                     gambar.setVisibility(View.VISIBLE);
+                                    Log.d("view", "onResponse: -");
                                 } else if (jsonObjectPayload.getString("lmp_gambar_anm").equalsIgnoreCase("N")) {
                                     gambar.setVisibility(View.VISIBLE);
+                                    Log.d("view", "onResponse: N");
                                 } else if (jsonObjectPayload.getString("lmp_gambar_anm").equalsIgnoreCase("Y")) {
-                                    gambar.setVisibility(View.INVISIBLE);
+                                    gambar.setVisibility(View.GONE);
+                                    Log.d("view", "onResponse: Y");
                                 }
+
+                                if (jsonObjectPayload.getString("lmp_bukti_pembayaran").equalsIgnoreCase("-")) {
+                                    struk.setVisibility(View.VISIBLE);
+                                } else if (jsonObjectPayload.getString("lmp_bukti_pembayaran").equalsIgnoreCase("N")) {
+                                    struk.setVisibility(View.VISIBLE);
+                                } else if (jsonObjectPayload.getString("lmp_bukti_pembayaran").equalsIgnoreCase("Y")) {
+                                    struk.setVisibility(View.GONE);
+                                }
+
+                                Log.d("payload", "onResponse: " + jsonObjectPayload.getString("lmp_gambar_anm"));
+
                             }
 
                             Toast.makeText(getApplicationContext(), "Successs", Toast.LENGTH_LONG).show();

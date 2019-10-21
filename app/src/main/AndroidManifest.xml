@@ -11,17 +11,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Model.ControlData"/>
-        <activity android:name=".Adapter_Berkas" />
-        <activity android:name=".Berkas"
-            android:parentActivityName=".Ui.Mainmenu"/>
+        <activity android:name=".Ui.KartuUjian"></activity>
+        <activity android:name=".Ui.KartuPeserta" />
+        <activity android:name=".Model.ControlData" />
+        <activity
+            android:name=".Berkas"
+            android:parentActivityName=".Ui.Mainmenu" />
         <activity android:name=".Ui.CetakData" />
         <activity android:name=".Model.ControlHistory" />
         <activity android:name=".Model.ControlHome" />
         <activity android:name=".Ui.InboxActivity" />
         <activity android:name=".Adapter.InboxAdapter" />
-        <activity android:name=".Ui.Berkasfile"
-            android:parentActivityName=".Ui.Mainmenu"/>
+        <activity
+            android:name=".Ui.Berkasfile"
+            android:parentActivityName=".Ui.Mainmenu" />
         <activity android:name=".adapter_history" />
         <activity android:name=".Ui.History" />
         <activity android:name=".InboxActivity" />
