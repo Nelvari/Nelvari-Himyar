@@ -145,8 +145,6 @@ public class DataOrangTua extends AppCompatActivity {
                                     txtnoIbu.requestFocus();
                                     txtnoIbu.setError("FIELD CANNOT BE EMPTY");
                                 } else {
-
-
                                     //dialog
                                     Intent in = new Intent(getApplicationContext(), DataAsalSekolah.class);
                                     //put extra here

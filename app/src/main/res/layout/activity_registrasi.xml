@@ -12,42 +12,42 @@
         tools:context=".Daftar"
         android:orientation="vertical">
 
-
         <ImageView
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
             android:layout_gravity="center"
-            android:layout_marginTop="70dp"
-            android:background="@mipmap/logobaru" />
+            android:layout_marginTop="50dp"
+            android:background="@mipmap/logobaru"/>
 
         <EditText
             android:id="@+id/txtUsername"
-            android:layout_width="280dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
             android:hint="Nama Lengkap"/>
 
         <EditText
             android:id="@+id/notelp"
-            android:layout_width="280dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="7dp"
-            android:hint="Nomor Telepon Aktif"/>
+            android:layout_marginTop="10dp"
+            android:hint="Nomor Telepon Aktif"
+            android:inputType="number"/>
 
         <EditText
             android:id="@+id/Email"
-            android:layout_width="280dp"
-            android:layout_marginTop="7dp"
+            android:layout_width="350dp"
+            android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:hint="E-mail"/>
+            android:hint="E-mail / Username"/>
 
         <EditText
             android:id="@+id/txtPassword"
-            android:layout_width="280dp"
-            android:layout_marginTop="7dp"
+            android:layout_width="350dp"
+            android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:hint="Password"
@@ -55,8 +55,8 @@
 
         <EditText
             android:id="@+id/konfirmpass"
-            android:layout_width="280dp"
-            android:layout_marginTop="7dp"
+            android:layout_width="350dp"
+            android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:hint="Konfirmasi Password"
@@ -64,10 +64,10 @@
 
         <Button
             android:id="@+id/btnbuat"
-            android:layout_width="280dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="100dp"
             android:background="@color/colorPrimaryDark"
             android:text="Buat"
             android:layout_marginBottom="30dp"

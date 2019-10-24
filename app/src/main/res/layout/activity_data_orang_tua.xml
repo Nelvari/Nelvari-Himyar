@@ -175,7 +175,7 @@
                         android:id="@+id/penghasilanAyah"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="text"
+                        android:inputType="number"
                         android:textSize="15dp"
                         android:hint="Ayah"/>
 
@@ -184,7 +184,7 @@
                         android:id="@+id/penghasilanIbu"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="text"
+                        android:inputType="number"
                         android:textSize="15dp"
                         android:hint="ibu"/>
 
@@ -219,7 +219,7 @@
                         android:id="@+id/noAyah"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="text"
+                        android:inputType="number"
                         android:textSize="15dp"
                         android:hint="Ayah"/>
 
@@ -228,7 +228,7 @@
                         android:id="@+id/noIbu"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="text"
+                        android:inputType="number"
                         android:textSize="15dp"
                         android:hint="ibu"/>
 
@@ -292,7 +292,7 @@
                         android:id="@+id/pekerjaanWali"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="text"
+                        android:inputType="number"
                         android:textSize="15dp"
                         android:hint="Pekaerjaan Wali"/>
 

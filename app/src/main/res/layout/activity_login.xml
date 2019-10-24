@@ -30,7 +30,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="20dp"
-            android:hint="Email"
+            android:hint="Email / Username"
             android:textColorHint="#797979"
             app:backgroundTint="#797979"
             />
@@ -90,7 +90,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="7dp"
             android:gravity="center"
             android:layout_marginBottom="30dp"
             android:orientation="horizontal">
@@ -100,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:text="Belum punya akun ?"
                 android:textColor="@color/hitam"
-                android:textSize="14dp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tvdaftar"
@@ -109,7 +109,7 @@
                 android:layout_marginLeft="5dp"
                 android:text="Daftar"
                 android:textColor="@color/blue"
-                android:textSize="14dp"
+                android:textSize="16sp"
                 />
 
         </LinearLayout>
