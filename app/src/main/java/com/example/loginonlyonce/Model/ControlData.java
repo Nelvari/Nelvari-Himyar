@@ -35,7 +35,7 @@ public class ControlData extends AppCompatActivity {
 
         progressBar.setMessage("Please wait");
         progressBar.show();
-
+        Log.d("trialsaya", "onCreate: "+"http://api-ppdb.smkrus.com/api/v1/cek-daftar?id=" + mData.getInt("userid", 0));
         AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/cek-daftar?id=" + mData.getInt("userid", 0))
                 .setTag("test")
                 .setPriority(Priority.LOW)
@@ -43,22 +43,14 @@ public class ControlData extends AppCompatActivity {
                 .getAsJSONObject(new JSONObjectRequestListener() {
                     @Override
                     public void onResponse(JSONObject response) {
-
                         try {
-
                             String status = response.getString("STATUS");
-
                             if (status.equalsIgnoreCase("SUCCESS")){
-
                                 Intent intent = new Intent(ControlData.this, Home.class);
                                 startActivity(intent);
-
                                 Toast.makeText(getApplicationContext(), "Tolong isi data", Toast.LENGTH_LONG).show();
-
                             } else {
-
                                 Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
-
                             }
 
                             Log.d("tes", "onResponse: " + status);

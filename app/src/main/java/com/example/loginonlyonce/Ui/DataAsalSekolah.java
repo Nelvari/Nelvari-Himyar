@@ -231,9 +231,10 @@ public class DataAsalSekolah extends AppCompatActivity {
                                     Log.d("ceksekolah", mInfoRPL.getString("username", ""));
                                     Log.d("ceksekolah", mInfoRPL.getString("jurusan", ""));
 
+
                                     senData();
 
-                                    finish();
+
                                 }
                                 break;
 
@@ -328,13 +329,8 @@ public class DataAsalSekolah extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
 
                         if (dialog.isShowing()) {
-                            Log.d("hasilResponsku", "onResponse: " + response.toString());
                             dialog.dismiss();
-                            SharedPreferences.Editor editor = getSharedPreferences("login", MODE_PRIVATE).edit();
-                            editor.putString("username1", mInfoRPL.getString("username", ""));
-                            editor.putInt("id", 1);
-                            editor.commit();
-
+                            finish();
                         }
                     }
 

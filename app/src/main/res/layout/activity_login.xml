@@ -22,16 +22,6 @@
             android:layout_marginTop="50dp"
             android:background="@mipmap/logobaru"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="WELCOME PLEASE LOGIN"
-            android:textSize="17dp"
-            android:textColor="@color/hitam"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginTop="40dp"/>
-
 
         <EditText
             android:id="@+id/txtusername"

@@ -13,21 +13,21 @@ import com.example.loginonlyonce.R;
 
 public class Produksi extends AppCompatActivity {
 
-    Button btnLogin;
+    Button btnnext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_produksi);
 
-        btnLogin = findViewById(R.id.btnlogin);
+        btnnext = findViewById(R.id.btnnext);
         Toolbar toolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("PRODUKSI");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
+        btnnext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 

@@ -229,6 +229,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
 
         progressBar.setMessage("Please wait");
         progressBar.show();
+        progressBar.setCancelable(false);
         AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/berkas?id=" + mInfoBerkas.getInt("userid", 0))
                 .setTag("test")
                 .setPriority(Priority.LOW)
@@ -240,12 +241,13 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                             if (progressBar.isShowing()) {
                                 progressBar.dismiss();
                             }
+                            Log.d("makananenak", "onResponse: "+response.toString());
 
                             String status = response.getString("STATUS");
                             if (status.equalsIgnoreCase("SUCCESS")) {
                                 JSONObject jsonObjectPayload = response.getJSONObject("PAYLOAD");
                                 if (jsonObjectPayload.getString("lmp_raport").equalsIgnoreCase("-")) {
-                                    raport.setVisibility(View.VISIBLE);
+                                    raport.setVisibility(View.GONE);
                                 } else if (jsonObjectPayload.getString("lmp_raport").equalsIgnoreCase("N")) {
                                     raport.setVisibility(View.VISIBLE);
                                 } else if (jsonObjectPayload.getString("lmp_raport").equalsIgnoreCase("Y")) {
@@ -311,11 +313,23 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                     struk.setVisibility(View.GONE);
                                 }
 
-                                Log.d("payload", "onResponse: " + jsonObjectPayload.getString("lmp_gambar_anm"));
+                                Log.d("payload", "onResponseee: " + jsonObjectPayload);
 
                             }
 
-                            Toast.makeText(getApplicationContext(), "Successs", Toast.LENGTH_LONG).show();
+                            else if(status.equalsIgnoreCase("ERROR")){
+                                Toast.makeText(Berkas.this, "Anda belum mendaftar", Toast.LENGTH_SHORT).show();
+                                raport.setVisibility(View.GONE);
+                                akte.setVisibility(View.GONE);
+                                kk.setVisibility(View.GONE);
+                                foto.setVisibility(View.GONE);
+                                catksehtan.setVisibility(View.GONE);
+                                sertifikat.setVisibility(View.GONE);
+                                gambar.setVisibility(View.GONE);
+                                struk.setVisibility(View.GONE);
+                            }
+
+                            //Toast.makeText(getApplicationContext(), "Successs", Toast.LENGTH_LONG).show();
 
                             Log.d("tes", "onResponse: " + status);
 

@@ -20,19 +20,15 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
         mLogin = getSharedPreferences("login", Context.MODE_PRIVATE);
-
         prduksi = findViewById(R.id.produksi);
         persiapan = findViewById(R.id.persiapan);
         animasi = findViewById(R.id.animasi);
         rpl = findViewById(R.id.rpl);
         dkv = findViewById(R.id.dkv);
-
         prduksi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 SharedPreferences.Editor editor = mLogin.edit();
                 editor.putString("jurusan", "Produksi");
                 editor.apply();

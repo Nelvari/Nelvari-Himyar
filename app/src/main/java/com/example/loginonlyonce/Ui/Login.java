@@ -154,29 +154,21 @@ public class Login extends AppCompatActivity {
 
             }
         });
-
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-
         callbackManager = CallbackManager.Factory.create();
-
         loginButton = findViewById(R.id.login_button);
-
         loginButton.setReadPermissions(Arrays.asList(EMAIL));
-
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-
                 GraphRequest graphRequest = GraphRequest.newMeRequest(loginResult.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
                     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
                     @Override
                     public void onCompleted(JSONObject object, GraphResponse response) {
-
                         String userDetil = response.getRawResponse();
-
                         try {
                             JSONObject jsonObject = new JSONObject(userDetil);
                             fbId = jsonObject.getString("id");
@@ -246,10 +238,8 @@ public class Login extends AppCompatActivity {
     }
 
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
-
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
-
             String realName = account.getDisplayName();
             String email = account.getEmail();
             String fbId = account.getId();
@@ -260,9 +250,7 @@ public class Login extends AppCompatActivity {
                 avatar = "avatar";
             }
             Log.d("avatarku", "handleSignInResult: "+avatar);
-
             SharedPreferences mLogin = getSharedPreferences("login", Context.MODE_PRIVATE);
-
             SharedPreferences.Editor editor = mLogin.edit();
             editor.putInt("userid", getTaskId());
             editor.putString("username", realName);
@@ -270,11 +258,9 @@ public class Login extends AppCompatActivity {
             editor.putString("data3", fbId);
             editor.putString("data4", avatar);
             editor.apply();
-
             Intent intent = new Intent(Login.this, Mainmenu.class);
             startActivity(intent);
             finish();
-
         } catch (ApiException e) {
             e.printStackTrace();
         }

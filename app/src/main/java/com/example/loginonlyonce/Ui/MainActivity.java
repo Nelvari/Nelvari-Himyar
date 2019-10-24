@@ -92,8 +92,8 @@ public class MainActivity extends AppCompatActivity {
                 LoginManager.getInstance().logOut();
 
                 Intent intent = new Intent(MainActivity.this, SplashScreen.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
-                finish();
 
                 PrefManager prefManager = new PrefManager(getApplicationContext());
                 prefManager.setFirstTimeLaunch(true);
