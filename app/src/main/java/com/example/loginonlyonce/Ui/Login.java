@@ -1,5 +1,6 @@
 package com.example.loginonlyonce.Ui;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -209,19 +210,67 @@ public class Login extends AppCompatActivity {
                             Log.d("gambar", "oncompleted" + email);
                             Log.d("gambar", "oncompleted" + fbId);
 
-                            SharedPreferences mLogin = getSharedPreferences("login", Context.MODE_PRIVATE);
 
-                            SharedPreferences.Editor editor = mLogin.edit();
-                            editor.putInt("userid", getTaskId());
-                            editor.putString("username", realName);
-                            editor.putString("data2", email);
-                            editor.putString("data3", fbId);
-                            editor.putString("data4", avatar);
-                            editor.apply();
+                            AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/register")
+                                    .addBodyParameter("nama", email)
+                                    .addBodyParameter("username", realName)
+                                    .addBodyParameter("password", "facebook")
+                                    .addBodyParameter("no_hp", "-")
+                                    .addBodyParameter("role", "1")
+                                    .setTag("test")
+                                    .setPriority(Priority.MEDIUM)
+                                    .build()
+                                    .getAsJSONObject(new JSONObjectRequestListener() {
+                                        @Override
+                                        public void onResponse(JSONObject response) {
+                                            // do anything with response
+                                            try {
+                                                String status = response.getString("STATUS");
+                                                if (status.equalsIgnoreCase("SUCCESS")) {
 
-                            Intent intent = new Intent(Login.this, Mainmenu.class);
-                            startActivity(intent);
-                            finish();
+                                                    SharedPreferences.Editor editor = mLogin.edit();
+                                                    editor.putInt("userid", getTaskId());
+                                                    editor.putString("username", realName);
+                                                    editor.putString("data2", email);
+                                                    editor.putString("data3", fbId);
+                                                    editor.putString("data4", avatar);
+                                                    editor.apply();
+
+                                                    if (dialog.isShowing()) {
+                                                        dialog.dismiss();
+                                                    }
+
+                                                    Intent intent = new Intent(Login.this, Mainmenu.class);
+                                                    startActivity(intent);
+                                                    finish();
+                                                }else {
+                                                    if (dialog.isShowing()) {
+                                                        dialog.dismiss();
+                                                        Toast.makeText(Login.this, "Registrasi gagal, coba ulang lagi", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                }
+                                            } catch (JSONException e) {
+                                                if (dialog.isShowing()) {
+                                                    dialog.dismiss();
+                                                    Toast.makeText(Login.this, "Registrasi gagal, coba ulang lagi", Toast.LENGTH_SHORT).show();
+                                                }
+                                                e.printStackTrace();
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onError(ANError error) {
+                                            if (dialog.isShowing()) {
+                                                dialog.dismiss();
+                                                Toast.makeText(Login.this, "Registrasi gagal, coba ulang lagi", Toast.LENGTH_SHORT).show();
+                                            }
+                                            Log.d("gagal login", "onResponse: " + error.toString());
+                                            Log.d("gagal login", "onResponse: " + error.getErrorBody());
+                                            Log.d("gagal login", "onResponse: " + error.getErrorCode());
+                                            Log.d("gagal login", "onResponse: " + error.getErrorDetail());
+                                        }
+                                    });
+
 
                         } catch (JSONException ignored) {
                         }
@@ -268,24 +317,77 @@ public class Login extends AppCompatActivity {
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
-            String realName = account.getDisplayName();
-            String email = account.getEmail();
-            String fbId = account.getId();
-            String avatar;
+            final String realName = account.getDisplayName();
+            final String email = account.getEmail();
+            final String fbId = account.getId();
+            final String avatar;
             if (account.getPhotoUrl() != null) {
                 avatar = account.getPhotoUrl().toString();
             } else {
                 avatar = "avatar";
             }
             Log.d("avatarku", "handleSignInResult: "+avatar);
-            SharedPreferences mLogin = getSharedPreferences("login", Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = mLogin.edit();
-            editor.putInt("userid", getTaskId());
-            editor.putString("username", realName);
-            editor.putString("data2", email);
-            editor.putString("data3", fbId);
-            editor.putString("data4", avatar);
-            editor.apply();
+
+            AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/register")
+                    .addBodyParameter("nama", email)
+                    .addBodyParameter("username", realName)
+                    .addBodyParameter("password", "facebook")
+                    .addBodyParameter("no_hp", "-")
+                    .addBodyParameter("role", "1")
+                    .setTag("test")
+                    .setPriority(Priority.MEDIUM)
+                    .build()
+                    .getAsJSONObject(new JSONObjectRequestListener() {
+                        @Override
+                        public void onResponse(JSONObject response) {
+                            // do anything with response
+                            try {
+                                String status = response.getString("STATUS");
+                                if (status.equalsIgnoreCase("SUCCESS")) {
+
+                                    SharedPreferences.Editor editor = mLogin.edit();
+                                    editor.putInt("userid", getTaskId());
+                                    editor.putString("username", realName);
+                                    editor.putString("data2", email);
+                                    editor.putString("data3", fbId);
+                                    editor.putString("data4", avatar);
+                                    editor.apply();
+
+                                    if (dialog.isShowing()) {
+                                        dialog.dismiss();
+                                    }
+
+                                    Intent intent = new Intent(Login.this, Mainmenu.class);
+                                    startActivity(intent);
+                                    finish();
+                                }else {
+                                    if (dialog.isShowing()) {
+                                        dialog.dismiss();
+                                        Toast.makeText(Login.this, "Registrasi gagal, coba ulang lagi", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            } catch (JSONException e) {
+                                if (dialog.isShowing()) {
+                                    dialog.dismiss();
+                                    Toast.makeText(Login.this, "Registrasi gagal, coba ulang lagi", Toast.LENGTH_SHORT).show();
+                                }
+                                e.printStackTrace();
+                            }
+                        }
+
+                        @Override
+                        public void onError(ANError error) {
+                            if (dialog.isShowing()) {
+                                dialog.dismiss();
+                                Toast.makeText(Login.this, "Registrasi gagal, coba ulang lagi", Toast.LENGTH_SHORT).show();
+                            }
+                            Log.d("gagal login", "onResponse: " + error.toString());
+                            Log.d("gagal login", "onResponse: " + error.getErrorBody());
+                            Log.d("gagal login", "onResponse: " + error.getErrorCode());
+                            Log.d("gagal login", "onResponse: " + error.getErrorDetail());
+                        }
+                    });
+
             Intent intent = new Intent(Login.this, Mainmenu.class);
             startActivity(intent);
             finish();

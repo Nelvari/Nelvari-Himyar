@@ -111,6 +111,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
     String kugambar = "";
     String kustruk = "";
 
+    SharedPreferences GambarAnimasi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -160,6 +161,18 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
         btnkukesehatan = (Button) findViewById(R.id.btnkuksehatan);
         btnkugambar = (Button) findViewById(R.id.btnkugambar);
         btnkustruk = (Button) findViewById(R.id.btnkustruk);
+
+        GambarAnimasi = getSharedPreferences("login", MODE_PRIVATE);
+
+        if (GambarAnimasi.getString("jurusan", "") == "Animasi"){
+
+            gambar.setVisibility(View.VISIBLE);
+
+        }else {
+
+            gambar.setVisibility(View.GONE);
+
+        }
 
         btnkufoto.setOnClickListener(new View.OnClickListener() {
             @Override

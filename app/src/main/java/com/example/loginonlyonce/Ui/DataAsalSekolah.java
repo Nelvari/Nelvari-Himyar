@@ -104,6 +104,37 @@ public class DataAsalSekolah extends AppCompatActivity {
         getSupportActionBar().setTitle("Formulir Asal Sekolah");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                DialogInterface.OnClickListener dialog = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                        switch (i){
+
+                            case DialogInterface.BUTTON_POSITIVE :
+                                finish();
+                                break;
+
+                            case DialogInterface.BUTTON_NEGATIVE :
+                                Toast.makeText(DataAsalSekolah.this, "Gagal Kembali", Toast.LENGTH_SHORT).show();
+                                break;
+                        }
+
+                    }
+                };
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                builder.setMessage("Jika anda kembali anda akan mengulang kembali?").setPositiveButton("Ya", dialog)
+                        .setTitle("Konfirmasi exit")
+                        .setNegativeButton("Tidak", dialog).show();
+
+
+            }
+        });
+
         Bundle bundle = getIntent().getExtras();
 
         if (bundle != null) {

@@ -8,7 +8,6 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.example.loginonlyonce.Model.ControlClass;
 import com.example.loginonlyonce.R;
 
 public class Produksi extends AppCompatActivity {

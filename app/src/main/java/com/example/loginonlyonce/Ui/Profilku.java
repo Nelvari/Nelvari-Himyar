@@ -45,7 +45,6 @@ public class Profilku extends AppCompatActivity {
 
             nama.setText(mlogin.getString("username", "missing"));
             email.setText(mlogin.getString("data2", ""));
-            id.setText(mlogin.getString("data3", ""));
 
             Glide
                     .with(this)
