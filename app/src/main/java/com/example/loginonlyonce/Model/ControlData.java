@@ -15,6 +15,7 @@ import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.example.loginonlyonce.Ui.Home;
+import com.example.loginonlyonce.Ui.sdhdaftar;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -48,26 +49,22 @@ public class ControlData extends AppCompatActivity {
                             if (status.equalsIgnoreCase("SUCCESS")){
                                 Intent intent = new Intent(ControlData.this, Home.class);
                                 startActivity(intent);
-                                Toast.makeText(getApplicationContext(), "Tolong isi data", Toast.LENGTH_LONG).show();
+                                finish();
                             } else {
-                                Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
+                                //intent ke seperti cetak data
+                                Intent intent= new Intent(ControlData.this, sdhdaftar.class);
+                                startActivity(intent);
+                                finish();
                             }
-
                             Log.d("tes", "onResponse: " + status);
                             Log.d("tes", "onResponse: " + mData.getString("username1", ""));
-
                             if (progressBar.isShowing()){
                                 progressBar.dismiss();
                             }
-
-                            finish();
-
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-
                     }
-
                     @Override
                     public void onError(ANError anError) {
 

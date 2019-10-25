@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
-        android:layout_width="246dp"
+        android:id="@+id/txtinfo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Maaf,Kartu Peserta dan Kartu Ujian tidak dapat dilihat karena inputan belum terisi"
+        android:text="Maaf ,kartu tes dan kartu pendaftaran belum tersedia ,silahkan kembali ke main menu"
         android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="30sp"
         android:layout_gravity="center"
-        android:layout_marginTop="300dp"
         android:textSize="17sp"/>
 
-</LinearLayout>
+    <Button
+        android:id="@+id/btnkembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorPrimary"
+        android:text="kembali"
+        android:textColor="@color/putih"
+        app:layout_constraintTop_toBottomOf="@id/txtinfo"
+        app:layout_constraintStart_toStartOf="@id/txtinfo"
+        app:layout_constraintEnd_toEndOf="@id/txtinfo"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

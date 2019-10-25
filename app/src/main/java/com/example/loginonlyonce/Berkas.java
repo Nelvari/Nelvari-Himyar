@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -50,6 +51,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
     private CardView struk;
     SharedPreferences mInfoBerkas;
     private LinearLayout lnberkas;
+
 
     //
 
@@ -120,6 +122,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Berkas");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         foto = (CardView) findViewById(R.id.cdfoto);
         akte = (CardView) findViewById(R.id.cdakte);
@@ -318,6 +321,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                             }
 
                             else if(status.equalsIgnoreCase("ERROR")){
+
                                 Toast.makeText(Berkas.this, "Anda belum mendaftar", Toast.LENGTH_SHORT).show();
                                 raport.setVisibility(View.GONE);
                                 akte.setVisibility(View.GONE);
@@ -327,6 +331,19 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                 sertifikat.setVisibility(View.GONE);
                                 gambar.setVisibility(View.GONE);
                                 struk.setVisibility(View.GONE);
+                                AlertDialog.Builder builder = new AlertDialog.Builder(Berkas.this);
+                                builder.setMessage("Belum ada data yang harus upload ulang")
+                                        .setTitle("information")
+                                        .setCancelable(false)
+                                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+
+                                                finish();
+
+                                            }
+                                        });
+                                AlertDialog alert = builder.create();
+                                alert.show();
                             }
 
                             //Toast.makeText(getApplicationContext(), "Successs", Toast.LENGTH_LONG).show();

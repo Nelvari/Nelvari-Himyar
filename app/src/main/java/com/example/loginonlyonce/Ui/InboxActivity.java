@@ -6,10 +6,13 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -41,7 +44,10 @@ public class InboxActivity extends AppCompatActivity {
 
     CardView cvInbox;
 
-    TextView txttitle, txtisi,txttype;
+
+    TextView txttitle, txtisi,txttype,txtinfo;
+
+    Button btnkembali;
 
     View vInbox;
 
@@ -53,6 +59,20 @@ public class InboxActivity extends AppCompatActivity {
         txttype = findViewById(R.id.txttype);
         txttitle = findViewById(R.id.txttitle);
         txtisi = findViewById(R.id.txtisi);
+        txtinfo = findViewById(R.id.txtinfo);
+        btnkembali = findViewById(R.id.btnkembali);
+        btnkembali.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+        Toolbar toolbar = findViewById(R.id.toolbarInbox);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Inbox");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         datalist = new ArrayList<>();
 
@@ -103,6 +123,16 @@ public class InboxActivity extends AppCompatActivity {
                             recyclerView.setLayoutManager(layoutManager);
 
                             recyclerView.setAdapter(adapter);
+
+                            Log.d("pay1", "onResponse: " + response.getJSONArray("PAYLOAD"));
+
+                            if (response.getJSONArray("PAYLOAD").length() == 0){
+
+                                recyclerView.setVisibility(View.GONE);
+                                txtinfo.setVisibility(View.VISIBLE);
+                                btnkembali.setVisibility(View.VISIBLE);
+
+                            }
 
                         } catch (JSONException e) {
                             e.printStackTrace();
