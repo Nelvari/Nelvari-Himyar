@@ -200,24 +200,43 @@ public class Berkasfile extends AppCompatActivity implements IPickResult {
 
                             case DialogInterface.BUTTON_POSITIVE :
                                 Log.d("makanananim", "onClick: "+selectedImagePathgambar);
-                                if (selectedImagePathgambar.equalsIgnoreCase("")
-                                        || selectedImagePathgambar == ""
-                                        ||selectedImagePathgambar == null){
-                                    selectedImagePathgambar="/storage/emulated/0/Pictures/IMG20190817145323.jpg";
-                                    Log.d("makanananim", "onClick: "+selectedImagePathgambar);
+                                if (selectedImagePathfoto.equalsIgnoreCase("")
+                                        || selectedImagePathfoto == ""
+                                        ||selectedImagePathfoto == null){
+                                    Toast.makeText(Berkasfile.this, "foto kosong", Toast.LENGTH_SHORT).show();
+                                }else if (selectedImagePathakte.equalsIgnoreCase("")
+                                        || selectedImagePathakte == ""
+                                        ||selectedImagePathakte == null){
+                                    Toast.makeText(Berkasfile.this, "akte kosong", Toast.LENGTH_SHORT).show();
+                                }else if (selectedImagePathkasehtan.equalsIgnoreCase("")
+                                        || selectedImagePathkasehtan == ""
+                                        ||selectedImagePathkasehtan == null){
+                                    Toast.makeText(Berkasfile.this, "catatan kesehatan kosong", Toast.LENGTH_SHORT).show();
+                                }else if (selectedImagePathkk.equalsIgnoreCase("")
+                                        || selectedImagePathkk == ""
+                                        ||selectedImagePathkk == null){
+                                    Toast.makeText(Berkasfile.this, "kk kosong", Toast.LENGTH_SHORT).show();
+                                }else if (selectedImagePathraport.equalsIgnoreCase("")
+                                        || selectedImagePathraport == ""
+                                        ||selectedImagePathraport == null){
+                                    Toast.makeText(Berkasfile.this, "rapot kosong", Toast.LENGTH_SHORT).show();
+                                }else if (selectedImagePathsertifikat.equalsIgnoreCase("")
+                                        || selectedImagePathsertifikat == ""
+                                        ||selectedImagePathsertifikat == null){
+                                    Toast.makeText(Berkasfile.this, "sertifikat kosong", Toast.LENGTH_SHORT).show();
+                                }else {
+                                    Intent intent = new Intent(Berkasfile.this, DataSiswa.class);
+                                    intent.putExtra("selectedImagePathfoto", selectedImagePathfoto);
+                                    intent.putExtra("selectedImagePathakte", selectedImagePathakte);
+                                    intent.putExtra("selectedImagePathkk", selectedImagePathkk);
+                                    intent.putExtra("selectedImagePathsertifikat", selectedImagePathsertifikat);
+                                    intent.putExtra("selectedImagePathraport", selectedImagePathraport);
+                                    intent.putExtra("selectedImagePathkasehtan", selectedImagePathkasehtan);
+                                    intent.putExtra("selectedImagePathgambar", selectedImagePathgambar);
+                                    startActivity(intent);
+
+                                    finish();
                                 }
-                                Intent intent = new Intent(Berkasfile.this, DataSiswa.class);
-                                intent.putExtra("selectedImagePathfoto", selectedImagePathfoto);
-                                intent.putExtra("selectedImagePathakte", selectedImagePathakte);
-                                intent.putExtra("selectedImagePathkk", selectedImagePathkk);
-                                intent.putExtra("selectedImagePathsertifikat", selectedImagePathsertifikat);
-                                intent.putExtra("selectedImagePathraport", selectedImagePathraport);
-                                intent.putExtra("selectedImagePathkasehtan", selectedImagePathkasehtan);
-                                intent.putExtra("selectedImagePathgambar", selectedImagePathgambar);
-                                startActivity(intent);
-
-                                finish();
-
                                 break;
 
                             case  DialogInterface.BUTTON_NEGATIVE :
