@@ -293,6 +293,7 @@ public class DataAsalSekolah extends AppCompatActivity {
     private void senData() {
 
         dialog.setMessage("Doing something, please wait.");
+        dialog.setCancelable(false);
         dialog.show();
         AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/daftar")
                 //berkas, testing pakai text dulu
