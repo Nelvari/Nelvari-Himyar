@@ -37,8 +37,8 @@ public class ControlHistory extends AppCompatActivity {
 //        progressBar.setMessage("Please wait");
 //        progressBar.show();
 
-        startActivity(new Intent(getApplicationContext(),CetakData.class));
-        finish();
+//        startActivity(new Intent(getApplicationContext(),CetakData.class));
+//        finish();
 
     }
 }

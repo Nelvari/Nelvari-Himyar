@@ -48,7 +48,8 @@ public class Mainmenu extends AppCompatActivity {
         btnCetakData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Mainmenu.this, ControlHistory.class);
+                //Intent intent = new Intent(Mainmenu.this, ControlHistory.class);
+                Intent intent = new Intent(Mainmenu.this, History.class);
                 startActivity(intent);
             }
         });
