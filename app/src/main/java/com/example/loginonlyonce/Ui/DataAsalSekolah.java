@@ -157,7 +157,7 @@ public class DataAsalSekolah extends AppCompatActivity {
             selectedImagePathsertifikat = bundle.getString("selectedImagePathsertifikat");
             selectedImagePathraport = bundle.getString("selectedImagePathraport");
             selectedImagePathkasehtan = bundle.getString("selectedImagePathkasehtan");
-            selectedImagePathgambar = bundle.getString("selectedImagePathgambar","/storage/emulated/0/Pictures/IMG20190817145323.jpg");
+            selectedImagePathgambar = bundle.getString("selectedImagePathgambar");
 
             fileselectedImagePathfoto = new File(selectedImagePathfoto);
             fileselectedImagePathakte = new File(selectedImagePathakte);
