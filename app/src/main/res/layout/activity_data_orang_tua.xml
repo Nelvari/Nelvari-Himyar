@@ -282,7 +282,7 @@
                         android:id="@+id/noWali"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="text"
+                        android:inputType="number"
                         android:textSize="15dp"
                         android:hint="No HP aktif"/>
 
@@ -292,7 +292,7 @@
                         android:id="@+id/pekerjaanWali"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="number"
+                        android:inputType="text"
                         android:textSize="15dp"
                         android:hint="Pekaerjaan Wali"/>
 

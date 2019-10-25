@@ -1,5 +1,6 @@
 package com.example.loginonlyonce.Ui;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -59,6 +60,8 @@ public class Login extends AppCompatActivity {
 
     int id;
 
+    private ProgressDialog dialog;
+
     SharedPreferences mLogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +82,8 @@ public class Login extends AppCompatActivity {
             }
         });
 
+        dialog = new ProgressDialog(Login.this);
+
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,6 +92,10 @@ public class Login extends AppCompatActivity {
                     Toast.makeText(Login.this, "please fill my heart first to send a request :(", Toast.LENGTH_SHORT).show();
                 }
                 else {
+
+                    dialog.setMessage("Doing something, please wait.");
+                    dialog.show();
+
                     AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/login")
                             .addBodyParameter("username", txtusername.getText().toString())
                             .addBodyParameter("password", txtpassword.getText().toString())
@@ -117,6 +126,11 @@ public class Login extends AppCompatActivity {
                                             editor.putString("data4", "");
                                             editor.apply();
 
+                                            if (dialog.isShowing()) {
+                                                dialog.dismiss();
+                                                finish();
+                                            }
+
                                             Intent intent = new Intent(Login.this, Mainmenu.class);
                                             startActivity(intent);
                                             finish();
@@ -130,6 +144,14 @@ public class Login extends AppCompatActivity {
                                 }
                                 @Override
                                 public void onError(ANError error) {
+
+                                    if (dialog.isShowing()) {
+                                        dialog.dismiss();
+                                        finish();
+                                    }
+
+                                    Toast.makeText(getApplicationContext(), "Eror", Toast.LENGTH_SHORT).show();
+
                                     Log.d("gagal login", "onResponse: "+error.toString());
                                 }
                             });
