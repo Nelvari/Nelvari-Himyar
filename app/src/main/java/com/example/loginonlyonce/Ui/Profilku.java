@@ -24,7 +24,7 @@ public class Profilku extends AppCompatActivity {
     TextView email;
     TextView id;
     TextView nama;
-
+    SharedPreferences mlogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class Profilku extends AppCompatActivity {
         id = findViewById(R.id.id);
 
 
-        SharedPreferences mlogin = getSharedPreferences("login", Context.MODE_PRIVATE);
+        mlogin = getSharedPreferences("login", Context.MODE_PRIVATE);
 
         nama.setText(mlogin.getString("username", "missing"));
 
@@ -67,6 +67,10 @@ public class Profilku extends AppCompatActivity {
                 PrefManager prefManager = new PrefManager(getApplicationContext());
                 prefManager.setFirstTimeLaunch(true);
                 finish();
+
+                SharedPreferences.Editor editor = mlogin.edit();
+                editor.clear();
+                editor.commit();
 
             }
         });
