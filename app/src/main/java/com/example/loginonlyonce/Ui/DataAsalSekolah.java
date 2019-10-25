@@ -264,7 +264,14 @@ public class DataAsalSekolah extends AppCompatActivity {
                                     Log.d("ceksekolah", mInfoRPL.getString("jurusan", ""));
 
 
-                                    senData();
+                                    if (mInfoRPL.getString("jurusan", "")=="Animasi"){
+                                        System.out.println("masuk daftar anim");
+                                        senData();
+                                    }else{
+                                        System.out.println("masuk daftar selain anim");
+                                        senDataselainanimasi();
+                                    }
+
 
 
                                 }
@@ -301,6 +308,97 @@ public class DataAsalSekolah extends AppCompatActivity {
                 .addMultipartFile("lmp_foto", fileselectedImagePathfoto)
                 .addMultipartFile("lmp_akte", fileselectedImagePathakte)
                 .addMultipartFile("lmp_gambar_anm", fileselectedImagePathgambar)
+                .addMultipartFile("lmp_kesehatan", fileselectedImagePathkasehtan)
+                .addMultipartFile("lmp_raport", fileselectedImagePathraport)
+                .addMultipartFile("lmp_prestasi", fileselectedImagePathsertifikat)
+                .addMultipartFile("lmp_kk", fileselectedImagePathkk)
+
+
+                //berkas, kalau sudah siap pakai file, komen aja 7 dibawah ini, trus unkomen 7 diatas
+//                .addMultipartParameter("lmp_foto", selectedImagePathfoto)
+//                .addMultipartParameter("lmp_akte", content)
+//                .addMultipartParameter("lmp_gambar_anm", content)
+//                .addMultipartParameter("lmp_kesehatan", content)
+//                .addMultipartParameter("gantiparaminiyaNel", content)
+//                .addMultipartParameter("lmp_skhun", content)
+//                .addMultipartParameter("lmp_kk", content)
+
+
+                .addMultipartParameter("username", mInfoRPL.getString("username", ""))
+                .addMultipartParameter("sw_jurusan", mInfoRPL.getString("jurusan", ""))
+
+
+                //Siswa
+                .addMultipartParameter("sw_nama_lengkap", namaSiswa)
+                .addMultipartParameter("sw_nisn", nisn)
+                .addMultipartParameter("sw_ttl", tempatLahir + ", " + tanggalLahir)
+                .addMultipartParameter("sw_alamat", alamatSiswa)
+                .addMultipartParameter("sw_gender", jenisKelamin)
+                .addMultipartParameter("sw_agama", agama)
+                .addMultipartParameter("sw_berat_badan", beratBadan)
+                .addMultipartParameter("sw_tinggi_badan", tinggiBadan)
+                .addMultipartParameter("sw_no_ujian", noUjian)
+
+                //Orang Tua atau Wali
+                .addMultipartParameter("ayah_nama", namaayah)
+                .addMultipartParameter("ayah_pekerjaan", pekerjaanayah)
+                .addMultipartParameter("ayah_no_hp", noayah)
+                .addMultipartParameter("ibu_nama", namaibu)
+                .addMultipartParameter("ibu_pekerjaan", pekerjaanibu)
+                .addMultipartParameter("ibu_no_hp", noibu)
+                .addMultipartParameter("wali_nama", namawali)
+                .addMultipartParameter("wali_alamat", alamatwali)
+                .addMultipartParameter("wali_pekerjaan", pekerjaanwali)
+                .addMultipartParameter("wali_no_hp", nowali)
+
+                //Sekolah Asal
+                .addMultipartParameter("sw_sekolah_asal", txtNamaSekolah.getText().toString())
+                .addMultipartParameter("sw_sekolah_asal_alamat", txtAlamatSekolah.getText().toString())
+
+                .setPriority(Priority.HIGH)
+                .build()
+                .setUploadProgressListener(new UploadProgressListener() {
+                    @Override
+                    public void onProgress(long bytesUploaded, long totalBytes) {
+
+                    }
+                })
+
+                .getAsJSONObject(new JSONObjectRequestListener() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+
+                        if (dialog.isShowing()) {
+                            dialog.dismiss();
+                            finish();
+                        }
+                    }
+
+                    @Override
+                    public void onError(ANError anError) {
+                        if (dialog.isShowing()) {
+                            dialog.dismiss();
+                            Log.d("erorResponsku", "onError: " + anError.getErrorDetail());
+                            Log.d("erorResponsku", "onError: " + anError.getErrorBody());
+                            Log.d("erorResponsku", "onError: " + anError.getErrorCode());
+                        }
+
+                    }
+                });
+
+    }
+
+
+    private void senDataselainanimasi() {
+
+        dialog.setMessage("Doing something, please wait.");
+        dialog.setCancelable(false);
+        dialog.show();
+        AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/daftar")
+                //berkas, testing pakai text dulu
+                .addMultipartFile("lmp_foto", fileselectedImagePathfoto)
+                .addMultipartFile("lmp_akte", fileselectedImagePathakte)
+                //.addMultipartFile("lmp_gambar_anm", fileselectedImagePathgambar)
                 .addMultipartFile("lmp_kesehatan", fileselectedImagePathkasehtan)
                 .addMultipartFile("lmp_raport", fileselectedImagePathraport)
                 .addMultipartFile("lmp_prestasi", fileselectedImagePathsertifikat)
