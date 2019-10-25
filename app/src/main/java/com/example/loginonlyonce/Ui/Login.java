@@ -68,7 +68,7 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        mLogin = getSharedPreferences("login", Context.MODE_PRIVATE);
         txtusername = (EditText) findViewById(R.id.txtusername);
         txtpassword = (EditText) findViewById(R.id.txtpassword);
         Button btnlogin = (Button) findViewById(R.id.btnlogin);
@@ -88,7 +88,7 @@ public class Login extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mLogin = getSharedPreferences("login", Context.MODE_PRIVATE);
+
                 if (txtusername.getText().toString().isEmpty() || txtpassword.getText().toString().isEmpty()) {
                     Toast.makeText(Login.this, "Silahkan isi username dan password terlebih dahulu", Toast.LENGTH_SHORT).show();
                 }
@@ -210,6 +210,13 @@ public class Login extends AppCompatActivity {
                             Log.d("gambar", "oncompleted" + email);
                             Log.d("gambar", "oncompleted" + fbId);
 
+                            if (!dialog.isShowing()){
+                                dialog.show();
+                                dialog.setMessage("login process..");
+                                dialog.setTitle("info");
+                                dialog.setCancelable(false);
+
+                            }
 
                             AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/register")
                                     .addBodyParameter("nama", email)
@@ -223,26 +230,57 @@ public class Login extends AppCompatActivity {
                                     .getAsJSONObject(new JSONObjectRequestListener() {
                                         @Override
                                         public void onResponse(JSONObject response) {
+                                            Log.d("facebookdataku", "onResponse: " + response.toString());
                                             // do anything with response
                                             try {
                                                 String status = response.getString("STATUS");
                                                 if (status.equalsIgnoreCase("SUCCESS")) {
 
+                                                    JSONObject getdata=response.getJSONObject("PAYLOAD");
+
+                                                    //nohp=getdata.getString("u_no_hp");
+
+                                                    id = getdata.getInt("u_id");
+
                                                     SharedPreferences.Editor editor = mLogin.edit();
-                                                    editor.putInt("userid", getTaskId());
                                                     editor.putString("username", realName);
+                                                    editor.putString("nohp", "-");
+                                                    editor.putString("password", "facebook");
+                                                    editor.putInt("userid", id);
                                                     editor.putString("data2", email);
                                                     editor.putString("data3", fbId);
                                                     editor.putString("data4", avatar);
                                                     editor.apply();
 
-                                                    if (dialog.isShowing()) {
-                                                        dialog.dismiss();
-                                                    }
+
 
                                                     Intent intent = new Intent(Login.this, Mainmenu.class);
                                                     startActivity(intent);
                                                     finish();
+
+                                                    if (dialog.isShowing()) {
+                                                        dialog.dismiss();
+                                                    }
+
+                                                }else if (status.equalsIgnoreCase("ERROR")){
+
+                                                    if (response.getString("MESSAGE").equalsIgnoreCase("Username sudah terpakai!") ){
+                                                        JSONObject getdata=response.getJSONObject("PAYLOAD");
+                                                        id = getdata.getInt("u_id");
+                                                        SharedPreferences.Editor editor = mLogin.edit();
+                                                        editor.putString("username", realName);
+                                                        editor.putString("nohp", "-");
+                                                        editor.putString("password", "facebook");
+                                                        editor.putInt("userid", id);
+                                                        editor.putString("data2", email);
+                                                        editor.putString("data3", fbId);
+                                                        editor.putString("data4", avatar);
+                                                        editor.apply();
+                                                        Intent intent = new Intent(Login.this, Mainmenu.class);
+                                                        startActivity(intent);
+                                                        finish();
+                                                    }
+
                                                 }else {
                                                     if (dialog.isShowing()) {
                                                         dialog.dismiss();
@@ -271,8 +309,8 @@ public class Login extends AppCompatActivity {
                                         }
                                     });
 
-
                         } catch (JSONException ignored) {
+                            Log.d("facebookgagal1", "onCompleted: " + ignored.getMessage());
                         }
 
                     }
@@ -287,12 +325,12 @@ public class Login extends AppCompatActivity {
 
             @Override
             public void onCancel() {
-
+                Log.d("facebookgagal2", "onCompleted: " );
             }
 
             @Override
             public void onError(FacebookException error) {
-
+                Log.d("facebookgagal3", "onCompleted: " + error.getMessage());
             }
         });
 
@@ -321,6 +359,7 @@ public class Login extends AppCompatActivity {
             final String email = account.getEmail();
             final String fbId = account.getId();
             final String avatar;
+
             if (account.getPhotoUrl() != null) {
                 avatar = account.getPhotoUrl().toString();
             } else {
@@ -328,10 +367,20 @@ public class Login extends AppCompatActivity {
             }
             Log.d("avatarku", "handleSignInResult: "+avatar);
 
+            Log.d("datagooglesaya", "handleSignInResult: " + realName + "," + email + "," + fbId + "," + avatar);
+
+            //here
+            if (!dialog.isShowing()){
+                dialog.show();
+                dialog.setMessage("login process..");
+                dialog.setTitle("info");
+                dialog.setCancelable(false);
+
+            }
             AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/register")
                     .addBodyParameter("nama", email)
                     .addBodyParameter("username", realName)
-                    .addBodyParameter("password", "facebook")
+                    .addBodyParameter("password", "google")
                     .addBodyParameter("no_hp", "-")
                     .addBodyParameter("role", "1")
                     .setTag("test")
@@ -340,26 +389,57 @@ public class Login extends AppCompatActivity {
                     .getAsJSONObject(new JSONObjectRequestListener() {
                         @Override
                         public void onResponse(JSONObject response) {
+                            Log.d("googledataku", "onResponse: " + response.toString());
                             // do anything with response
                             try {
                                 String status = response.getString("STATUS");
                                 if (status.equalsIgnoreCase("SUCCESS")) {
 
+                                    JSONObject getdata=response.getJSONObject("PAYLOAD");
+
+                                    //nohp=getdata.getString("u_no_hp");
+
+                                    id = getdata.getInt("u_id");
+
                                     SharedPreferences.Editor editor = mLogin.edit();
-                                    editor.putInt("userid", getTaskId());
                                     editor.putString("username", realName);
+                                    editor.putString("nohp", "-");
+                                    editor.putString("password", "google");
+                                    editor.putInt("userid", id);
                                     editor.putString("data2", email);
                                     editor.putString("data3", fbId);
                                     editor.putString("data4", avatar);
                                     editor.apply();
 
-                                    if (dialog.isShowing()) {
-                                        dialog.dismiss();
-                                    }
+
 
                                     Intent intent = new Intent(Login.this, Mainmenu.class);
                                     startActivity(intent);
                                     finish();
+
+                                    if (dialog.isShowing()) {
+                                        dialog.dismiss();
+                                    }
+
+                                }else if (status.equalsIgnoreCase("ERROR")){
+
+                                    if (response.getString("MESSAGE").equalsIgnoreCase("Username sudah terpakai!") ){
+                                        JSONObject getdata=response.getJSONObject("PAYLOAD");
+                                        id = getdata.getInt("u_id");
+                                        SharedPreferences.Editor editor = mLogin.edit();
+                                        editor.putString("username", realName);
+                                        editor.putString("nohp", "-");
+                                        editor.putString("password", "google");
+                                        editor.putInt("userid", id);
+                                        editor.putString("data2", email);
+                                        editor.putString("data3", fbId);
+                                        editor.putString("data4", avatar);
+                                        editor.apply();
+                                        Intent intent = new Intent(Login.this, Mainmenu.class);
+                                        startActivity(intent);
+                                        finish();
+                                    }
+
                                 }else {
                                     if (dialog.isShowing()) {
                                         dialog.dismiss();
@@ -388,9 +468,6 @@ public class Login extends AppCompatActivity {
                         }
                     });
 
-            Intent intent = new Intent(Login.this, Mainmenu.class);
-            startActivity(intent);
-            finish();
         } catch (ApiException e) {
             e.printStackTrace();
         }
