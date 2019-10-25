@@ -12,12 +12,14 @@
         tools:context=".Daftar"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_gravity="center"
+        <TextView
+            android:textStyle="bold"
+            android:textSize="25sp"
             android:layout_marginTop="50dp"
-            android:background="@mipmap/logobaru"/>
+            android:layout_gravity="center"
+            android:text="Registrasi Akun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
         <EditText
             android:id="@+id/txtUsername"

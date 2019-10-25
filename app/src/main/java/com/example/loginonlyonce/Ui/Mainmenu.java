@@ -58,7 +58,7 @@ public class Mainmenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(Mainmenu.this, MainActivity.class);
+                Intent intent = new Intent(Mainmenu.this, Profilku.class);
                 startActivity(intent);
 
             }

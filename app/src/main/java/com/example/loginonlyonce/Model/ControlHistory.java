@@ -32,80 +32,13 @@ public class ControlHistory extends AppCompatActivity {
 
         mHistory = getSharedPreferences("login", Context.MODE_PRIVATE);
 
-        progressBar = new ProgressDialog(ControlHistory.this);
-
-        progressBar.setMessage("Please wait");
-        progressBar.show();
-
-        AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/cek-daftar?id=" + mHistory.getInt("userid", 0))
-                .setTag("test")
-                .setPriority(Priority.LOW)
-                .build()
-                .getAsJSONObject(new JSONObjectRequestListener() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-
-                        try {
-
-                            String status = response.getString("STATUS");
-
-                            if (status.equalsIgnoreCase("SUCCESS")){
-
-                                Intent intent = new Intent(ControlHistory.this, CetakData.class);
-                                startActivity(intent);
-
-                                Toast.makeText(getApplicationContext(), "Tolong isi data", Toast.LENGTH_LONG).show();
-
-                            } else {
-
-                                Intent intent = new Intent(ControlHistory.this, History.class);
-                                startActivity(intent);
-                                Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
-
-                            }
-
-                            Log.d("tes", "onResponse: " + status);
-                            Log.d("tes", "onResponse: " + mHistory.getString("username1", ""));
-
-                            if (progressBar.isShowing()){
-                                progressBar.dismiss();
-                            }
-
-                            finish();
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-
-                    }
-
-                    @Override
-                    public void onError(ANError anError) {
-
-                        if (progressBar.isShowing()){
-
-                            progressBar.dismiss();
-
-                        }
-
-                    }
-                });
-
-//        mHistory = getSharedPreferences("login", Context.MODE_PRIVATE);
-//        if (mHistory.getString("username1", "").equalsIgnoreCase("")
-//                || mHistory.getString("username1", "") == null
-//                || mHistory.getString("username1", "").isEmpty()){
-//            Intent intent = new Intent(ControlHistory.this, CetakData.class);
-//            startActivity(intent);
-//            finish();
+//        progressBar = new ProgressDialog(ControlHistory.this);
 //
-//        }else {
-//
-//            Intent intent = new Intent(ControlHistory.this, History.class);
-//            startActivity(intent);
-//            finish();
-//
-//        }
+//        progressBar.setMessage("Please wait");
+//        progressBar.show();
+
+        startActivity(new Intent(getApplicationContext(),CetakData.class));
+        finish();
 
     }
 }
