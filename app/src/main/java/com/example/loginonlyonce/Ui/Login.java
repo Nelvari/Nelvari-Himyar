@@ -89,12 +89,13 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
                 mLogin = getSharedPreferences("login", Context.MODE_PRIVATE);
                 if (txtusername.getText().toString().isEmpty() || txtpassword.getText().toString().isEmpty()) {
-                    Toast.makeText(Login.this, "please fill my heart first to send a request :(", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this, "Silahkan isi username dan password terlebih dahulu", Toast.LENGTH_SHORT).show();
                 }
                 else {
-
-                    dialog.setMessage("Doing something, please wait.");
+                    dialog.setTitle("Login process");
+                    dialog.setMessage("Please wait...");
                     dialog.show();
+                    dialog.setCancelable(false);
 
                     AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/login")
                             .addBodyParameter("username", txtusername.getText().toString())
@@ -128,7 +129,6 @@ public class Login extends AppCompatActivity {
 
                                             if (dialog.isShowing()) {
                                                 dialog.dismiss();
-                                                finish();
                                             }
 
                                             Intent intent = new Intent(Login.this, Mainmenu.class);
@@ -136,22 +136,28 @@ public class Login extends AppCompatActivity {
                                             finish();
 
 
+                                        }else{
+                                            if (dialog.isShowing()) {
+                                                dialog.dismiss();
+                                                Toast.makeText(Login.this, "Login gagal", Toast.LENGTH_SHORT).show();
+                                            }
                                         }
                                     } catch (JSONException e) {
+                                        if (dialog.isShowing()) {
+                                            dialog.dismiss();
+                                            Toast.makeText(Login.this, "Login gagal", Toast.LENGTH_SHORT).show();
+                                        }
                                         Log.d("errorku", "onResponse: "+e.toString());
                                         e.printStackTrace();
                                     }
                                 }
                                 @Override
                                 public void onError(ANError error) {
-
                                     if (dialog.isShowing()) {
                                         dialog.dismiss();
-                                        finish();
+                                        Toast.makeText(Login.this, "Login gagal", Toast.LENGTH_SHORT).show();
                                     }
-
                                     Toast.makeText(getApplicationContext(), "Eror", Toast.LENGTH_SHORT).show();
-
                                     Log.d("gagal login", "onResponse: "+error.toString());
                                 }
                             });

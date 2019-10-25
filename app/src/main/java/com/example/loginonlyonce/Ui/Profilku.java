@@ -17,7 +17,7 @@ import com.example.loginonlyonce.R;
 import com.example.loginonlyonce.SplashScreen;
 import com.facebook.login.LoginManager;
 
-public class MainActivity extends AppCompatActivity {
+public class Profilku extends AppCompatActivity {
 
     Button log;
     ImageView imageView;
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
                 LoginManager.getInstance().logOut();
 
-                Intent intent = new Intent(MainActivity.this, SplashScreen.class);
+                Intent intent = new Intent(Profilku.this, SplashScreen.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
 

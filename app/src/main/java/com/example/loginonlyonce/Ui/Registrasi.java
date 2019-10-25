@@ -1,5 +1,6 @@
 package com.example.loginonlyonce.Ui;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -32,7 +33,7 @@ public class Registrasi extends AppCompatActivity {
     EditText txtpassword;
     EditText konfirmpass;
     Button btnbuat;
-
+    private ProgressDialog dialog;
     int id;
     String username;
     String nohp;
@@ -42,6 +43,7 @@ public class Registrasi extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrasi);
+        dialog = new ProgressDialog(Registrasi.this);
         txtusername = findViewById(R.id.txtUsername);
         txtpassword = findViewById(R.id.txtPassword);
         txtnotelp = findViewById(R.id.notelp);
@@ -50,19 +52,17 @@ public class Registrasi extends AppCompatActivity {
         btnbuat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Log.d("tes", "onClick: ");
-
                 mLogin = getSharedPreferences("login", Context.MODE_PRIVATE);
                 if (txtusername.getText().toString().isEmpty() || txtpassword.getText().toString().isEmpty()) {
-                    Toast.makeText(Registrasi.this, "please fill my heart first to send a request :(", Toast.LENGTH_SHORT).show();
-
+                    Toast.makeText(Registrasi.this, "silahkan lengkapi data terlebih dahulu", Toast.LENGTH_SHORT).show();
                     Log.d("ten", "onClick: ");
-
                 } else {
-
                     Log.d("net", "onClick: ");
-
+                    dialog.setTitle("Registration process");
+                    dialog.setMessage("Please wait...");
+                    dialog.show();
+                    dialog.setCancelable(false);
                     AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/register")
                             .addBodyParameter("nama", txtusername.getText().toString())
                             .addBodyParameter("username", txtusername.getText().toString())
@@ -92,17 +92,35 @@ public class Registrasi extends AppCompatActivity {
                                             editor.putString("password", password);
                                             editor.putInt("userid", id);
                                             editor.apply();
+
+                                            if (dialog.isShowing()) {
+                                                dialog.dismiss();
+                                            }
+
                                             Intent intent = new Intent(Registrasi.this, Login.class);
                                             startActivity(intent);
                                             finish();
+                                        }else {
+                                            if (dialog.isShowing()) {
+                                                dialog.dismiss();
+                                                Toast.makeText(Registrasi.this, "Registrasi gagal, coba ulang lagi", Toast.LENGTH_SHORT).show();
+                                            }
                                         }
                                     } catch (JSONException e) {
+                                        if (dialog.isShowing()) {
+                                            dialog.dismiss();
+                                            Toast.makeText(Registrasi.this, "Registrasi gagal, coba ulang lagi", Toast.LENGTH_SHORT).show();
+                                        }
                                         e.printStackTrace();
                                     }
                                 }
 
                                 @Override
                                 public void onError(ANError error) {
+                                    if (dialog.isShowing()) {
+                                        dialog.dismiss();
+                                        Toast.makeText(Registrasi.this, "Registrasi gagal, coba ulang lagi", Toast.LENGTH_SHORT).show();
+                                    }
                                     Log.d("gagal login", "onResponse: " + error.toString());
                                     Log.d("gagal login", "onResponse: " + error.getErrorBody());
                                     Log.d("gagal login", "onResponse: " + error.getErrorCode());

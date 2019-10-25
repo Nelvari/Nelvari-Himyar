@@ -67,10 +67,6 @@
             android:name=".Ui.Animasi"
             android:parentActivityName=".Ui.Home"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Ui.Kartutes"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Ui.Pembayaran"
-            android:screenOrientation="portrait"/>
         <activity android:name=".Ui.Registrasi"
             android:screenOrientation="portrait"/>
         <activity android:name=".Intro"
@@ -101,7 +97,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Ui.MainActivity"
+        <activity android:name=".Ui.Profilku"
             android:screenOrientation="portrait"/>
         <activity
             android:name="com.facebook.FacebookActivity"
