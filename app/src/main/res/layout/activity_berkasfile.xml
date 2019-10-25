@@ -216,7 +216,7 @@
             android:background="@color/colorPrimaryDark"
             android:textColor="@color/putih"
             android:layout_marginLeft="25dp"
-            android:text="Srtfkt"/>
+            android:text="Sertifikat"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -294,7 +294,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:layout_marginLeft="25dp"
-            android:text="ksehtan"/>
+            android:text="catatan\nkesehatan"/>
 
         <LinearLayout
             android:layout_width="match_parent"
