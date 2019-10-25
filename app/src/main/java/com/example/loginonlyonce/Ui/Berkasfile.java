@@ -2,6 +2,7 @@ package com.example.loginonlyonce.Ui;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Environment;
@@ -9,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -60,6 +62,10 @@ public class Berkasfile extends AppCompatActivity implements IPickResult {
     String ksehtan="";
     String gambar="";
 
+    LinearLayout lineGambar;
+
+    SharedPreferences GambarAnimasi;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +76,37 @@ public class Berkasfile extends AppCompatActivity implements IPickResult {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Berkas File");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                DialogInterface.OnClickListener dialog = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                        switch (i){
+
+                            case DialogInterface.BUTTON_POSITIVE :
+                                finish();
+                                break;
+
+                            case DialogInterface.BUTTON_NEGATIVE :
+                                Toast.makeText(Berkasfile.this, "Gagal Kembali", Toast.LENGTH_SHORT).show();
+                                break;
+                        }
+
+                    }
+                };
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                builder.setMessage("Jika anda kembali anda akan mengulang kembali?").setPositiveButton("Ya", dialog)
+                        .setTitle("Konfirmasi exit")
+                        .setNegativeButton("Tidak", dialog).show();
+
+
+            }
+        });
 
         btnfotosisiwa = (Button) findViewById(R.id.btnfotosisiwa);
         btnakte = (Button) findViewById(R.id.btnakte);
@@ -86,6 +123,20 @@ public class Berkasfile extends AppCompatActivity implements IPickResult {
         ivksehtan= findViewById(R.id.ivksehtan);
         ivgambar= findViewById(R.id.ivgambar);
         btnSaf = findViewById(R.id.btnSaf);
+
+        lineGambar = findViewById(R.id.lineGambar);
+
+        GambarAnimasi = getSharedPreferences("login", MODE_PRIVATE);
+
+        if (GambarAnimasi.getString("jurusan", "") == "Animasi"){
+
+            lineGambar.setVisibility(View.VISIBLE);
+
+        }else {
+
+            lineGambar.setVisibility(View.GONE);
+
+        }
 
         btnfotosisiwa.setOnClickListener(new View.OnClickListener() {
             @Override

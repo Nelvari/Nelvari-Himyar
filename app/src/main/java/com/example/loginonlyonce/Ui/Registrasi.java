@@ -61,8 +61,6 @@ public class Registrasi extends AppCompatActivity {
 
                 } else {
 
-                    Log.d("net", "onClick: ");
-
                     AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/register")
                             .addBodyParameter("nama", txtusername.getText().toString())
                             .addBodyParameter("username", txtusername.getText().toString())
