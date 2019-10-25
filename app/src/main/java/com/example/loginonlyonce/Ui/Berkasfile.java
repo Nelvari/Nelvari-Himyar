@@ -199,7 +199,6 @@ public class Berkasfile extends AppCompatActivity implements IPickResult {
                         switch (i){
 
                             case DialogInterface.BUTTON_POSITIVE :
-
                                 Intent intent = new Intent(Berkasfile.this, DataSiswa.class);
                                 intent.putExtra("selectedImagePathfoto", selectedImagePathfoto);
                                 intent.putExtra("selectedImagePathakte", selectedImagePathakte);

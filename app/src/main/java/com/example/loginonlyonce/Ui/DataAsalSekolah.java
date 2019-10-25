@@ -157,7 +157,7 @@ public class DataAsalSekolah extends AppCompatActivity {
             selectedImagePathsertifikat = bundle.getString("selectedImagePathsertifikat");
             selectedImagePathraport = bundle.getString("selectedImagePathraport");
             selectedImagePathkasehtan = bundle.getString("selectedImagePathkasehtan");
-            selectedImagePathgambar = bundle.getString("selectedImagePathgambar");
+            selectedImagePathgambar = bundle.getString("selectedImagePathgambar","kosong");
 
             fileselectedImagePathfoto = new File(selectedImagePathfoto);
             fileselectedImagePathakte = new File(selectedImagePathakte);
@@ -166,6 +166,7 @@ public class DataAsalSekolah extends AppCompatActivity {
             fileselectedImagePathraport = new File(selectedImagePathraport);
             fileselectedImagePathkasehtan = new File(selectedImagePathkasehtan);
             fileselectedImagePathgambar = new File(selectedImagePathgambar);
+            Log.d("animpic", "onCreate: "+fileselectedImagePathgambar.getAbsolutePath().toString());
 
             namaayah = bundle.getString("namaayah");
             namaibu = bundle.getString("namaibu");
