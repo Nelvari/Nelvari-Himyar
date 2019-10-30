@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -246,7 +245,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
         progressBar.setMessage("Please wait");
         progressBar.show();
         progressBar.setCancelable(false);
-        AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/berkas?id=" + mInfoBerkas.getInt("userid", 0))
+        AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/cek-berkas?id=" + mInfoBerkas.getInt("userid", 0))
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()
