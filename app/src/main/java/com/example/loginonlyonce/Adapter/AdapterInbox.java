@@ -41,6 +41,7 @@ public class AdapterInbox extends RecyclerView.Adapter<AdapterInbox.InboxViewHol
         holder.txtisi.setText(dataList.get(position).getTxtisi());
         holder.txttitle.setText(dataList.get(position).getTxttitle());
         holder.txttype.setText(dataList.get(position).getTxttype());
+        holder.txtdate.setText(dataList.get(position).getTxtdate());
         if (dataList.get(position).getTxttype().equalsIgnoreCase("ERROR")){
             holder.vInbox.setBackgroundColor(Color.parseColor("#D41414"));
         }
@@ -68,7 +69,7 @@ public class AdapterInbox extends RecyclerView.Adapter<AdapterInbox.InboxViewHol
     }
 
     class InboxViewHolder extends RecyclerView.ViewHolder{
-        private TextView txttitle, txtisi, txttype;
+        private TextView txttitle, txtisi, txttype, txtdate;
         View vInbox;
         CardView cvInbox;
 
@@ -79,6 +80,7 @@ public class AdapterInbox extends RecyclerView.Adapter<AdapterInbox.InboxViewHol
             txttype = itemView.findViewById(R.id.txttype);
             vInbox = itemView.findViewById(R.id.vInbox);
             cvInbox = itemView.findViewById(R.id.cvInbox);
+            txtdate = itemView.findViewById(R.id.txtdate);
         }
     }
 

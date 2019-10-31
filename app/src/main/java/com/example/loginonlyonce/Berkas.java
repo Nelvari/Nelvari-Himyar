@@ -270,7 +270,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                 }
 
                                 if (jsonObjectPayload.getString("lmp_akte").equalsIgnoreCase("-")) {
-                                    akte.setVisibility(View.VISIBLE);
+                                    akte.setVisibility(View.GONE);
                                 } else if (jsonObjectPayload.getString("lmp_akte").equalsIgnoreCase("N")) {
                                     akte.setVisibility(View.VISIBLE);
                                 } else if (jsonObjectPayload.getString("lmp_akte").equalsIgnoreCase("Y")) {
@@ -278,7 +278,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                 }
 
                                 if (jsonObjectPayload.getString("lmp_kk").equalsIgnoreCase("-")) {
-                                    kk.setVisibility(View.VISIBLE);
+                                    kk.setVisibility(View.GONE);
                                 } else if (jsonObjectPayload.getString("lmp_kk").equalsIgnoreCase("N")) {
                                     kk.setVisibility(View.VISIBLE);
                                 } else if (jsonObjectPayload.getString("lmp_kk").equalsIgnoreCase("Y")) {
@@ -286,7 +286,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                 }
 
                                 if (jsonObjectPayload.getString("lmp_foto").equalsIgnoreCase("-")) {
-                                    foto.setVisibility(View.VISIBLE);
+                                    foto.setVisibility(View.GONE);
                                 } else if (jsonObjectPayload.getString("lmp_foto").equalsIgnoreCase("N")) {
                                     foto.setVisibility(View.VISIBLE);
                                 } else if (jsonObjectPayload.getString("lmp_foto").equalsIgnoreCase("Y")) {
@@ -294,7 +294,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                 }
 
                                 if (jsonObjectPayload.getString("lmp_kesehatan").equalsIgnoreCase("-")) {
-                                    catksehtan.setVisibility(View.VISIBLE);
+                                    catksehtan.setVisibility(View.GONE);
                                 } else if (jsonObjectPayload.getString("lmp_kesehatan").equalsIgnoreCase("N")) {
                                     catksehtan.setVisibility(View.VISIBLE);
                                 } else if (jsonObjectPayload.getString("lmp_kesehatan").equalsIgnoreCase("Y")) {
@@ -302,7 +302,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                 }
 
                                 if (jsonObjectPayload.getString("lmp_prestasi").equalsIgnoreCase("-")) {
-                                    sertifikat.setVisibility(View.VISIBLE);
+                                    sertifikat.setVisibility(View.GONE);
                                 } else if (jsonObjectPayload.getString("lmp_prestasi").equalsIgnoreCase("N")) {
                                     sertifikat.setVisibility(View.VISIBLE);
                                 } else if (jsonObjectPayload.getString("lmp_prestasi").equalsIgnoreCase("Y")) {
@@ -310,7 +310,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                 }
 
                                 if (jsonObjectPayload.getString("lmp_gambar_anm").equalsIgnoreCase("-")) {
-                                    gambar.setVisibility(View.VISIBLE);
+                                    gambar.setVisibility(View.GONE);
                                     Log.d("view", "onResponse: -");
                                 } else if (jsonObjectPayload.getString("lmp_gambar_anm").equalsIgnoreCase("N")) {
                                     gambar.setVisibility(View.VISIBLE);
@@ -321,7 +321,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                 }
 
                                 if (jsonObjectPayload.getString("lmp_bukti_pembayaran").equalsIgnoreCase("-")) {
-                                    struk.setVisibility(View.VISIBLE);
+                                    struk.setVisibility(View.GONE);
                                 } else if (jsonObjectPayload.getString("lmp_bukti_pembayaran").equalsIgnoreCase("N")) {
                                     struk.setVisibility(View.VISIBLE);
                                 } else if (jsonObjectPayload.getString("lmp_bukti_pembayaran").equalsIgnoreCase("Y")) {
@@ -334,7 +334,8 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
 
                             else if(status.equalsIgnoreCase("ERROR")){
 
-                                Toast.makeText(Berkas.this, "Anda belum mendaftar", Toast.LENGTH_SHORT).show();
+                                String MESSAGE = response.getString("MESSAGE");
+
                                 raport.setVisibility(View.GONE);
                                 akte.setVisibility(View.GONE);
                                 kk.setVisibility(View.GONE);
@@ -344,8 +345,8 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                 gambar.setVisibility(View.GONE);
                                 struk.setVisibility(View.GONE);
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Berkas.this);
-                                builder.setMessage("Belum ada data yang harus upload ulang")
-                                        .setTitle("information")
+                                builder.setMessage(MESSAGE)
+                                        .setTitle("Information")
                                         .setCancelable(false)
                                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                             public void onClick(DialogInterface dialog, int id) {
@@ -389,7 +390,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                 progressBar.setMessage("Please wait");
                 progressBar.show();
                 AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
-                        .addMultipartParameter("id", "1")
+                        .addMultipartParameter("id", String.valueOf(mInfoBerkas.getInt("userid", 0)))
                         .addMultipartParameter("type", "FOTO_DIRI")
                         .addMultipartFile("file", fileselectedImagePathfoto)
                         .setPriority(Priority.HIGH)
@@ -455,7 +456,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                 progressBar.setMessage("Please wait");
                 progressBar.show();
                 AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
-                        .addMultipartParameter("id", "1")
+                        .addMultipartParameter("id", String.valueOf(mInfoBerkas.getInt("userid", 0)))
                         .addMultipartParameter("type", "AKTE")
                         .addMultipartFile("file", fileselectedImagePathakte)
                         .setPriority(Priority.HIGH)
@@ -520,7 +521,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                 progressBar.setMessage("Please wait");
                 progressBar.show();
                 AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
-                        .addMultipartParameter("id", "1")
+                        .addMultipartParameter("id", String.valueOf(mInfoBerkas.getInt("userid", 0)))
                         .addMultipartParameter("type", "KK")
                         .addMultipartFile("file", fileselectedImagePathkk)
                         .setPriority(Priority.HIGH)
@@ -585,7 +586,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                 progressBar.setMessage("Please wait");
                 progressBar.show();
                 AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
-                        .addMultipartParameter("id", "1")
+                        .addMultipartParameter("id", String.valueOf(mInfoBerkas.getInt("userid", 0)))
                         .addMultipartParameter("type", "PRESTASI")
                         .addMultipartFile("file", fileselectedImagePathsertifikat)
                         .setPriority(Priority.HIGH)
@@ -650,7 +651,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                 progressBar.setMessage("Please wait");
                 progressBar.show();
                 AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
-                        .addMultipartParameter("id", "1")
+                        .addMultipartParameter("id", String.valueOf(mInfoBerkas.getInt("userid", 0)))
                         .addMultipartParameter("type", "CEK_KESEHATAN")
                         .addMultipartFile("file", fileselectedImagePathkasehtan)
                         .setPriority(Priority.HIGH)
@@ -715,7 +716,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                 progressBar.setMessage("Please wait");
                 progressBar.show();
                 AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
-                        .addMultipartParameter("id", "1")
+                        .addMultipartParameter("id", String.valueOf(mInfoBerkas.getInt("userid", 0)))
                         .addMultipartParameter("type", "GAMBAR_ANIMASI")
                         .addMultipartFile("file", fileselectedImagePathgambar)
                         .setPriority(Priority.HIGH)
@@ -780,7 +781,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                 progressBar.setMessage("Please wait");
                 progressBar.show();
                 AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
-                        .addMultipartParameter("id", "1")
+                        .addMultipartParameter("id", String.valueOf(mInfoBerkas.getInt("userid", 0)))
                         .addMultipartParameter("type", "BUKTI_PEMBAYARAN")
                         .addMultipartFile("file", fileselectedImagePathstruck)
                         .setPriority(Priority.HIGH)
@@ -845,9 +846,9 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                 progressBar.setMessage("Please wait");
                 progressBar.show();
                 AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
-                        .addMultipartParameter("id", "1")
-                        .addMultipartParameter("type", "FOTO_DIRI")
-                        .addMultipartFile("file", fileselectedImagePathfoto)
+                        .addMultipartParameter("id", String.valueOf(mInfoBerkas.getInt("userid", 0)))
+                        .addMultipartParameter("type", "RAPORT")
+                        .addMultipartFile("file", fileselectedImagePathraport)
                         .setPriority(Priority.HIGH)
                         .build()
                         .setUploadProgressListener(new UploadProgressListener() {
@@ -895,7 +896,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                 Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorDetail());
                                 Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorCode());
                                 Log.d("hasilResponsku", "onResponseEror: " + anError.getErrorBody());
-                                Log.d("hasilResponsku", "onResponseEror: " + fileselectedImagePathfoto);
+                                Log.d("hasilResponsku", "onResponseEror: " + fileselectedImagePathraport);
 
                             }
                         });

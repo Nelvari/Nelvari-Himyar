@@ -15,7 +15,6 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="15dp"
         app:cardElevation="3dp"
-        android:layout_marginTop="15dp"
         android:layout_gravity="center"
         app:cardUseCompatPadding="true">
 
@@ -43,7 +42,8 @@
                 android:id="@+id/txttitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/padding_10"/>
+                android:layout_marginLeft="@dimen/padding_10"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/txtisi"
@@ -57,7 +57,16 @@
                 android:layout_width="@dimen/placeholderImage"
                 android:layout_height="@dimen/activityPadding"
                 android:layout_marginTop="20dp"
+                android:layout_marginLeft="@dimen/padding_10"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/txtdate"
+                android:layout_width="@dimen/placeholderImage"
+                android:layout_height="@dimen/activityPadding"
+                android:layout_marginTop="20dp"
                 android:layout_marginLeft="@dimen/padding_10"/>
+
 
         </LinearLayout>
 

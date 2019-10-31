@@ -112,6 +112,7 @@ public class InboxActivity extends AppCompatActivity {
                                 model.setTxttitle(object.getString("inb_subjek"));
                                 model.setTxtisi(object.getString("inb_detail"));
                                 model.setTxttype(object.getString("inb_type"));
+                                model.setTxtdate(object.getString("inb_created_at"));
                                 datalist.add(model);
 
                             }
