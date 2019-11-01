@@ -1,6 +1,7 @@
 package com.example.loginonlyonce.Ui;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
@@ -58,19 +60,41 @@ public class Profilku extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                LoginManager.getInstance().logOut();
+                final DialogInterface.OnClickListener dialog =new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
 
-                Intent intent = new Intent(Profilku.this, SplashScreen.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
+                        switch (i){
+                            case DialogInterface.BUTTON_POSITIVE:
+                                LoginManager.getInstance().logOut();
 
-                PrefManager prefManager = new PrefManager(getApplicationContext());
-                prefManager.setFirstTimeLaunch(true);
-                finish();
+                                Intent intent = new Intent(Profilku.this, SplashScreen.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
 
-                SharedPreferences.Editor editor = mlogin.edit();
-                editor.clear();
-                editor.commit();
+                                PrefManager prefManager = new PrefManager(getApplicationContext());
+                                prefManager.setFirstTimeLaunch(true);
+                                finish();
+
+                                SharedPreferences.Editor editor = mlogin.edit();
+                                editor.clear();
+                                editor.commit();
+                                break;
+
+                            case DialogInterface.BUTTON_NEGATIVE:
+
+                                break;
+                        }
+
+                    }
+
+                };
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                builder.setMessage("Apakah anda yakin ingin logout?").setPositiveButton("Ya", dialog)
+                        .setTitle("Konfirmasi logout")
+                        .setNegativeButton("Tidak", dialog).show();
+
 
             }
         });

@@ -294,7 +294,7 @@
                         android:layout_height="wrap_content"
                         android:inputType="text"
                         android:textSize="15dp"
-                        android:hint="Pekaerjaan Wali"/>
+                        android:hint="Pekerjaan Wali"/>
 
                 </LinearLayout>
 
