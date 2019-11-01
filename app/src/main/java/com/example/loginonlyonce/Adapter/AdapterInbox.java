@@ -1,5 +1,6 @@
 package com.example.loginonlyonce.Adapter;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -20,6 +21,7 @@ import java.util.ArrayList;
 public class AdapterInbox extends RecyclerView.Adapter<AdapterInbox.InboxViewHolder> {
 
     private ArrayList<ModelClass> dataList;
+    View viewku;
 
     public AdapterInbox(ArrayList<ModelClass> dataList) {
         this.dataList = dataList;
@@ -30,8 +32,8 @@ public class AdapterInbox extends RecyclerView.Adapter<AdapterInbox.InboxViewHol
     public InboxViewHolder onCreateViewHolder(@NonNull ViewGroup ViewGroup, int viewType) {
 
         LayoutInflater layoutInflater = LayoutInflater.from(ViewGroup.getContext());
-        View view = layoutInflater.inflate(R.layout.itemview, ViewGroup, false);
-        return new InboxViewHolder(view);
+        viewku = layoutInflater.inflate(R.layout.itemview, ViewGroup, false);
+        return new InboxViewHolder(viewku);
 
     }
 
@@ -57,6 +59,7 @@ public class AdapterInbox extends RecyclerView.Adapter<AdapterInbox.InboxViewHol
                 if (dataList.get(position).getTxttype().equalsIgnoreCase("ERROR")){
                     Intent in = new Intent(holder.itemView.getContext(), Berkas.class);
                     holder.itemView.getContext().startActivity(in);
+                    ((Activity)viewku.getContext()).finish();
                 }
             }
         });
