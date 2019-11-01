@@ -300,6 +300,21 @@ public class DataAsalSekolah extends AppCompatActivity {
 
     private void senData() {
 
+        //orangtua atau wali
+        Log.d("cekorangtua1", namaayah);
+        Log.d("cekorangtua1", namaibu);
+        Log.d("cekorangtua1", alamatorangtua);
+        Log.d("cekorangtua1", pekerjaanayah);
+        Log.d("cekorangtua1", pekerjaanibu);
+        Log.d("cekorangtua1", penghasilanayah);
+        Log.d("cekorangtua1", penghasilanibu);
+        Log.d("cekorangtua1", noayah);
+        Log.d("cekorangtua1", noibu);
+        Log.d("cekorangtua1", namawali);
+        Log.d("cekorangtua1", alamatwali);
+        Log.d("cekorangtua1", nowali);
+        Log.d("cekorangtua1", pekerjaanwali);
+
         dialog.setMessage("Doing something, please wait.");
         dialog.setCancelable(false);
         dialog.show();
@@ -345,6 +360,8 @@ public class DataAsalSekolah extends AppCompatActivity {
                 .addMultipartParameter("ayah_no_hp", noayah)
                 .addMultipartParameter("ibu_nama", namaibu)
                 .addMultipartParameter("ibu_pekerjaan", pekerjaanibu)
+                .addMultipartParameter("ayah_alamat", alamatorangtua)
+                .addMultipartParameter("ibu_alamat", alamatorangtua)
                 .addMultipartParameter("ibu_no_hp", noibu)
                 .addMultipartParameter("wali_nama", namawali)
                 .addMultipartParameter("wali_alamat", alamatwali)
@@ -391,6 +408,21 @@ public class DataAsalSekolah extends AppCompatActivity {
 
     private void senDataselainanimasi() {
 
+        //orangtua atau wali
+        Log.d("cekorangtua2", namaayah);
+        Log.d("cekorangtua2", namaibu);
+        Log.d("cekorangtua2", alamatorangtua);
+        Log.d("cekorangtua2", pekerjaanayah);
+        Log.d("cekorangtua2", pekerjaanibu);
+        Log.d("cekorangtua2", penghasilanayah);
+        Log.d("cekorangtua2", penghasilanibu);
+        Log.d("cekorangtua2", noayah);
+        Log.d("cekorangtua2", noibu);
+        Log.d("cekorangtua2", namawali);
+        Log.d("cekorangtua2", alamatwali);
+        Log.d("cekorangtua2", nowali);
+        Log.d("cekorangtua2", pekerjaanwali);
+
         dialog.setMessage("Doing something, please wait.");
         dialog.setCancelable(false);
         dialog.show();
@@ -434,6 +466,8 @@ public class DataAsalSekolah extends AppCompatActivity {
                 .addMultipartParameter("ayah_nama", namaayah)
                 .addMultipartParameter("ayah_pekerjaan", pekerjaanayah)
                 .addMultipartParameter("ayah_no_hp", noayah)
+                .addMultipartParameter("ayah_alamat", alamatorangtua)
+                .addMultipartParameter("ibu_alamat", alamatorangtua)
                 .addMultipartParameter("ibu_nama", namaibu)
                 .addMultipartParameter("ibu_pekerjaan", pekerjaanibu)
                 .addMultipartParameter("ibu_no_hp", noibu)
