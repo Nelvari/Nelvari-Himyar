@@ -112,10 +112,13 @@ public class Registrasi extends AppCompatActivity {
                                                             Intent intent = new Intent(Registrasi.this, Login.class);
                                                             startActivity(intent);
                                                             finish();
+                                                            String MESSAGE=response.getString("MESSAGE");
+                                                            Toast.makeText(Registrasi.this, MESSAGE, Toast.LENGTH_SHORT).show();
                                                         }else {
                                                             if (progressDialog.isShowing()) {
                                                                 progressDialog.dismiss();
-                                                                Toast.makeText(Registrasi.this, "Registrasi gagal, coba ulang lagi", Toast.LENGTH_SHORT).show();
+                                                                String MESSAGE=response.getString("MESSAGE");
+                                                                Toast.makeText(Registrasi.this, MESSAGE, Toast.LENGTH_SHORT).show();
                                                             }
                                                         }
                                                     } catch (JSONException e) {

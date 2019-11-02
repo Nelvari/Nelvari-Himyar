@@ -1,6 +1,5 @@
 package com.example.loginonlyonce.Ui;
 
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -135,12 +134,14 @@ public class Login extends AppCompatActivity {
                                             Intent intent = new Intent(Login.this, Mainmenu.class);
                                             startActivity(intent);
                                             finish();
-
+                                            String MESSAGE=response.getString("MESSAGE");
+                                            Toast.makeText(Login.this, MESSAGE, Toast.LENGTH_SHORT).show();
 
                                         }else{
                                             if (dialog.isShowing()) {
                                                 dialog.dismiss();
-                                                Toast.makeText(Login.this, "Login gagal", Toast.LENGTH_SHORT).show();
+                                                String MESSAGE=response.getString("MESSAGE");
+                                                Toast.makeText(Login.this, MESSAGE, Toast.LENGTH_SHORT).show();
                                             }
                                         }
                                     } catch (JSONException e) {
@@ -156,7 +157,7 @@ public class Login extends AppCompatActivity {
                                 public void onError(ANError error) {
                                     if (dialog.isShowing()) {
                                         dialog.dismiss();
-                                        Toast.makeText(Login.this, "Login gagal", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(Login.this, "user tidak valid!", Toast.LENGTH_SHORT).show();
                                     }
                                     Toast.makeText(getApplicationContext(), "Eror", Toast.LENGTH_SHORT).show();
                                     Log.d("gagal login", "onResponse: "+error.toString());
