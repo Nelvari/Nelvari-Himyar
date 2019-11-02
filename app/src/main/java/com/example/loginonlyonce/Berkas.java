@@ -423,6 +423,17 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                                 public void onClick(DialogInterface dialog, int id) {
 
                                                     foto.setVisibility(View.GONE);
+                                                    if (akte.getVisibility() == View.GONE
+                                                            && foto.getVisibility() == View.GONE
+                                                            && raport.getVisibility() == View.GONE
+                                                            && kk.getVisibility() == View.GONE
+                                                            && catksehtan.getVisibility() == View.GONE
+                                                            && gambar.getVisibility() == View.GONE
+                                                            && struk.getVisibility() == View.GONE
+                                                            && sertifikat.getVisibility() == View.GONE){
+                                                        Log.d("sembunyi", "onClick: ");
+                                                        finish();
+                                                    }
 
                                                 }
                                             });
@@ -489,6 +500,17 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                                 public void onClick(DialogInterface dialog, int id) {
 
                                                     akte.setVisibility(View.GONE);
+                                                    if (akte.getVisibility() == View.GONE
+                                                            && foto.getVisibility() == View.GONE
+                                                            && raport.getVisibility() == View.GONE
+                                                            && kk.getVisibility() == View.GONE
+                                                            && catksehtan.getVisibility() == View.GONE
+                                                            && gambar.getVisibility() == View.GONE
+                                                            && struk.getVisibility() == View.GONE
+                                                            && sertifikat.getVisibility() == View.GONE){
+                                                        Log.d("sembunyi", "onClick: ");
+                                                        finish();
+                                                    }
 
                                                 }
                                             });
@@ -554,6 +576,17 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                                 public void onClick(DialogInterface dialog, int id) {
 
                                                     kk.setVisibility(View.GONE);
+                                                    if (akte.getVisibility() == View.GONE
+                                                            && foto.getVisibility() == View.GONE
+                                                            && raport.getVisibility() == View.GONE
+                                                            && kk.getVisibility() == View.GONE
+                                                            && catksehtan.getVisibility() == View.GONE
+                                                            && gambar.getVisibility() == View.GONE
+                                                            && struk.getVisibility() == View.GONE
+                                                            && sertifikat.getVisibility() == View.GONE){
+                                                        Log.d("sembunyi", "onClick: ");
+                                                        finish();
+                                                    }
 
                                                 }
                                             });
@@ -619,6 +652,17 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                                 public void onClick(DialogInterface dialog, int id) {
 
                                                     sertifikat.setVisibility(View.GONE);
+                                                    if (akte.getVisibility() == View.GONE
+                                                            && foto.getVisibility() == View.GONE
+                                                            && raport.getVisibility() == View.GONE
+                                                            && kk.getVisibility() == View.GONE
+                                                            && catksehtan.getVisibility() == View.GONE
+                                                            && gambar.getVisibility() == View.GONE
+                                                            && struk.getVisibility() == View.GONE
+                                                            && sertifikat.getVisibility() == View.GONE){
+                                                        Log.d("sembunyi", "onClick: ");
+                                                        finish();
+                                                    }
 
                                                 }
                                             });
@@ -684,6 +728,17 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                                 public void onClick(DialogInterface dialog, int id) {
 
                                                     catksehtan.setVisibility(View.GONE);
+                                                    if (akte.getVisibility() == View.GONE
+                                                            && foto.getVisibility() == View.GONE
+                                                            && raport.getVisibility() == View.GONE
+                                                            && kk.getVisibility() == View.GONE
+                                                            && catksehtan.getVisibility() == View.GONE
+                                                            && gambar.getVisibility() == View.GONE
+                                                            && struk.getVisibility() == View.GONE
+                                                            && sertifikat.getVisibility() == View.GONE){
+                                                        Log.d("sembunyi", "onClick: ");
+                                                        finish();
+                                                    }
 
                                                 }
                                             });
@@ -749,6 +804,17 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                                 public void onClick(DialogInterface dialog, int id) {
 
                                                     gambar.setVisibility(View.GONE);
+                                                    if (akte.getVisibility() == View.GONE
+                                                            && foto.getVisibility() == View.GONE
+                                                            && raport.getVisibility() == View.GONE
+                                                            && kk.getVisibility() == View.GONE
+                                                            && catksehtan.getVisibility() == View.GONE
+                                                            && gambar.getVisibility() == View.GONE
+                                                            && struk.getVisibility() == View.GONE
+                                                            && sertifikat.getVisibility() == View.GONE){
+                                                        Log.d("sembunyi", "onClick: ");
+                                                        finish();
+                                                    }
 
                                                 }
                                             });
@@ -814,6 +880,17 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                                 public void onClick(DialogInterface dialog, int id) {
 
                                                     struk.setVisibility(View.GONE);
+                                                    if (akte.getVisibility() == View.GONE
+                                                            && foto.getVisibility() == View.GONE
+                                                            && raport.getVisibility() == View.GONE
+                                                            && kk.getVisibility() == View.GONE
+                                                            && catksehtan.getVisibility() == View.GONE
+                                                            && gambar.getVisibility() == View.GONE
+                                                            && struk.getVisibility() == View.GONE
+                                                            && sertifikat.getVisibility() == View.GONE){
+                                                        Log.d("sembunyi", "onClick: ");
+                                                        finish();
+                                                    }
 
                                                 }
                                             });
@@ -879,6 +956,17 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                                                 public void onClick(DialogInterface dialog, int id) {
 
                                                     raport.setVisibility(View.GONE);
+                                                    if (akte.getVisibility() == View.GONE
+                                                            && foto.getVisibility() == View.GONE
+                                                            && raport.getVisibility() == View.GONE
+                                                            && kk.getVisibility() == View.GONE
+                                                            && catksehtan.getVisibility() == View.GONE
+                                                            && gambar.getVisibility() == View.GONE
+                                                            && struk.getVisibility() == View.GONE
+                                                            && sertifikat.getVisibility() == View.GONE){
+                                                        Log.d("sembunyi", "onClick: ");
+                                                        finish();
+                                                    }
 
                                                 }
                                             });
