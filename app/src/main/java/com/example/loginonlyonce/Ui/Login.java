@@ -201,10 +201,19 @@ public class Login extends AppCompatActivity {
                         String userDetil = response.getRawResponse();
                         try {
                             JSONObject jsonObject = new JSONObject(userDetil);
+                            Log.d("gambar", "onCompleted: " + jsonObject.toString());
                             fbId = jsonObject.getString("id");
                             realName = jsonObject.optString("name", "");
-                            email = jsonObject.optString("email", "");
+                            if (jsonObject.has("email")){
+                                email = jsonObject.optString("email", "");
+                            }else{
+                                Log.d("gambar", "onCompleted: masuk else");
+                                email = jsonObject.optString("name", "");
+                            }
+
                             avatar = "https://graph.facebook.com/" + fbId + "/picture?type=large";
+
+
 
                             Log.d("gambar", "onCompleted: "+avatar);
                             Log.d("gambar", "oncompleted" + realName);
