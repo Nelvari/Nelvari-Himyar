@@ -41,12 +41,10 @@ public class Profilku extends AppCompatActivity {
 
         mlogin = getSharedPreferences("login", Context.MODE_PRIVATE);
 
-        nama.setText(mlogin.getString("username", "missing"));
-
         if (getSharedPreferences("login", Context.MODE_PRIVATE) != null){
 
             nama.setText(mlogin.getString("username", "missing"));
-            email.setText(mlogin.getString("data2", ""));
+            email.setText(mlogin.getString("data2", "-"));
 
             Glide
                     .with(this)
