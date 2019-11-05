@@ -112,7 +112,7 @@ public class Login extends AppCompatActivity {
                                     try {
                                         Log.d("loginku ", "onResponse: "+response.toString());
                                         String status=response.getString("STATUS");
-                                        if(status.equalsIgnoreCase("SUCCES")){
+                                        if(status.equalsIgnoreCase("SUCCESS")){
                                             JSONObject getdata=response.getJSONObject("PAYLOAD");
                                             token=getdata.getString("login_token");
                                             nohp=getdata.getString("u_no_hp");
@@ -140,6 +140,7 @@ public class Login extends AppCompatActivity {
                                         }else{
                                             if (dialog.isShowing()) {
                                                 dialog.dismiss();
+                                                Log.d("loginku", "onResponse: masuk else");
                                                 String MESSAGE=response.getString("MESSAGE");
                                                 Toast.makeText(Login.this, MESSAGE, Toast.LENGTH_SHORT).show();
                                             }
