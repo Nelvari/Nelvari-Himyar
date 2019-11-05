@@ -48,7 +48,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".adapter_history"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Ui.Mainmenu"/>
         <activity
             android:name=".Ui.History"
             android:screenOrientation="portrait" />
