@@ -423,7 +423,7 @@ public class DataAsalSekolah extends AppCompatActivity {
         Log.d("cekorangtua2", nowali);
         Log.d("cekorangtua2", pekerjaanwali);
 
-        dialog.setMessage("Doing something, please wait.");
+        dialog.setMessage("Sedang mengirim data...");
         dialog.setCancelable(false);
         dialog.show();
         AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/daftar")
