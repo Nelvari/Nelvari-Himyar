@@ -46,7 +46,7 @@ public class Registrasi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrasi);
         progressDialog = new ProgressDialog(Registrasi.this);
-        txtusername = findViewById(R.id.txtUsername);
+        txtusername = findViewById(R.id.Email);
         txtpassword = findViewById(R.id.txtPassword);
         txtnotelp = findViewById(R.id.notelp);
         konfirmpass = findViewById(R.id.konfirmpass);
