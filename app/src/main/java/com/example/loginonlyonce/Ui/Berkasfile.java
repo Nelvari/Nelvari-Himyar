@@ -262,24 +262,24 @@ public class Berkasfile extends AppCompatActivity implements IPickResult {
     public void onPickResult(PickResult r) {
         if (r.getError() == null & foto.equalsIgnoreCase("true")) {
             //selectedImagePathfoto = r.getPath();
-            try {
-                File fileku = new Compressor(this)
-                        .setQuality(50)
-                        .setCompressFormat(Bitmap.CompressFormat.WEBP)
-                        .setDestinationDirectoryPath(Environment.getExternalStoragePublicDirectory(
-                                Environment.DIRECTORY_PICTURES).getAbsolutePath())
-                        .compressToFile(new File(r.getPath()));
+            //try {
+//                File fileku = new Compressor(this)
+//                        .setQuality(100)
+//                        .setCompressFormat(Bitmap.CompressFormat.WEBP)
+//                        .setDestinationDirectoryPath(Environment.getExternalStoragePublicDirectory(
+//                                Environment.DIRECTORY_PICTURES).getAbsolutePath())
+//                        .compressToFile(new File(r.getPath()));
 
-                selectedImagePathfoto=fileku.getAbsolutePath().toString();
+                selectedImagePathfoto=r.getPath().toString();
                 Log.d("makananku", "onPickResult: "+selectedImagePathfoto);
 
                 selectedImage = r.getBitmap();
                 ivfotodiri.setImageBitmap(selectedImage);
                 foto="";
 
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
 
 
 

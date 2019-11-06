@@ -1,214 +1,266 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     tools:context=".Ui.Mainmenu"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_width="match_parent">
 
-    <LinearLayout
-        android:id="@+id/line3"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="235dp"
-        android:background="@color/blu"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
-    </LinearLayout>
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/ivProfile"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@mipmap/usermainmenu"
-        android:layout_marginTop="75dp"
-        android:layout_marginRight="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/txtMainMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Main Menu"
-        android:textColor="@color/putih"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:layout_marginTop="75dp"
-        android:layout_marginLeft="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/txtItems"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="4 items"
-        android:textColor="@color/item"
-        android:textSize="18sp"
-        android:layout_marginLeft="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/txtMainMenu"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-
-    <LinearLayout
-        android:id="@+id/line1"
-        app:layout_constraintTop_toBottomOf="@+id/txtItems"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
         <LinearLayout
-            android:id="@+id/Inbox"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:layout_width="120dp"
-            android:layout_height="150dp"
-            android:layout_margin="30dp"
-            android:background="@drawable/pinggirrr"
-            android:gravity="center"
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="235dp"
+            android:background="@color/blu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="65dp"
-                android:layout_height="65dp"
-                android:layout_marginTop="7dp"
-                android:layout_marginBottom="10dp"
-                android:background="@mipmap/google1" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:background="@color/colorAccent" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="INBOX"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"
-                android:textSize="17sp"
-                android:gravity="center"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/berkasList"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:layout_width="120dp"
-            android:layout_height="150dp"
-            android:layout_marginRight="40dp"
-            android:background="@drawable/pinggirrr"
-            android:gravity="center"
-            android:orientation="vertical">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/usermainmenu"
+            android:layout_marginTop="75dp"
+            android:layout_marginRight="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-            <ImageView
-                android:layout_width="69dp"
-                android:layout_height="69dp"
-                android:layout_marginTop="7dp"
-                android:layout_marginBottom="10dp"
-                android:background="@mipmap/gg1" />
+        <TextView
+            android:id="@+id/txtMainMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Main Menu"
+            android:textColor="@color/putih"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginTop="75dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:background="@color/colorAccent" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="BERKAS"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"
-                android:textSize="17sp"
-                android:gravity="center"/>
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        app:layout_constraintTop_toBottomOf="@+id/line1"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <LinearLayout
-            android:id="@+id/btnCetakData"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:layout_width="120dp"
-            android:layout_height="150dp"
-            android:layout_margin="30dp"
-            android:background="@drawable/pinggirrr"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="68dp"
-                android:layout_height="68dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="10dp"
-                android:background="@mipmap/cetak" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:background="@color/colorAccent" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CETAK DATA"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"
-                android:textSize="15sp"
-                android:gravity="center"/>
-        </LinearLayout>
+        <TextView
+            android:id="@+id/txtItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4 items"
+            android:textColor="@color/item"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtMainMenu"
+            app:layout_constraintStart_toStartOf="parent"/>
 
 
         <LinearLayout
-            android:id="@+id/btnDaftar"
-            android:layout_marginRight="40dp"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:layout_width="120dp"
-            android:layout_height="150dp"
-            android:background="@drawable/pinggirrr"
+            android:id="@+id/line1"
+            app:layout_constraintTop_toBottomOf="@+id/line3"
+            app:layout_constraintBottom_toBottomOf="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="67dp"
-                android:layout_height="67dp"
-                android:layout_marginTop="9dp"
-                android:layout_marginBottom="10dp"
-                android:background="@mipmap/daftarr" />
+            <LinearLayout
+                android:id="@+id/Inbox"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:layout_margin="30dp"
+                android:background="@drawable/pinggirrr"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="15dp"
-                android:background="@color/colorAccent" />
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@mipmap/google1" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="DAFTAR"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"
-                android:textSize="17sp"
-                android:gravity="center"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/colorAccent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INBOX"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/berkasList"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/pinggirrr"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="69dp"
+                    android:layout_height="69dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@mipmap/gg1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/colorAccent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BERKAS"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
         </LinearLayout>
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/line2"
+            app:layout_constraintTop_toBottomOf="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:orientation="horizontal"
+            android:gravity="center">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:id="@+id/btnCetakData"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:layout_margin="30dp"
+                android:background="@drawable/pinggirrr"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@mipmap/cetak" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/colorAccent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CETAK DATA"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/btnDaftar"
+                android:layout_marginRight="30dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:background="@drawable/pinggirrr"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="67dp"
+                    android:layout_height="67dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@mipmap/daftarr" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/colorAccent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DAFTAR"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="175dp">
+
+            <LinearLayout
+                android:id="@+id/btnInfo"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="50dp"
+                android:background="@drawable/pinggirrr"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="67dp"
+                    android:layout_height="67dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@mipmap/daftarr" />
+
+                <View
+                    android:layout_width="85dp"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/colorAccent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DAFTAR"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

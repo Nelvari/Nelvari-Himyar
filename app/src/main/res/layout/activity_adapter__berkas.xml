@@ -636,19 +636,14 @@
                             android:text="Struck Pembayaran"
                             android:textColor="@color/hitam" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="15dp"
-                            android:text="Berkas Struck Pembayaran anda di tolak oleh admin karena lampiran tersebut kurang memenuhi syarat."
-                            android:textColor="@color/hitam"
-                            android:textSize="13sp" />
 
                         <TextView
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="30dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="15dp"
-                            android:text="Silahkan kirim ulang kembali."
+                            android:text="Silahkan kirim bukti struck pembayaran anda."
                             android:textColor="@color/hitam"
                             android:textSize="13dp" />
 
@@ -685,7 +680,7 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="15dp"
                             android:background="@color/colorPrimaryDark"
-                            android:text="Kirim Ulang"
+                            android:text="Kirim"
                             android:textColor="@color/putih"
                             android:textSize="13dp" />
                     </LinearLayout>
