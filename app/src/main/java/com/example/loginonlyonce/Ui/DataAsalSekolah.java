@@ -461,6 +461,7 @@ public class DataAsalSekolah extends AppCompatActivity {
                 .addMultipartParameter("sw_berat_badan", beratBadan)
                 .addMultipartParameter("sw_tinggi_badan", tinggiBadan)
                 .addMultipartParameter("sw_no_ujian", noUjian)
+                .addMultipartParameter("sw_jurusan", mInfoRPL.getString("jurusan", ""))
 
                 //Orang Tua atau Wali
                 .addMultipartParameter("ayah_nama", namaayah)

@@ -30,7 +30,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 SharedPreferences.Editor editor = mLogin.edit();
-                editor.putString("jurusan", "Produksi");
+                editor.putString("jurusan", "Produksi Grafika");
                 editor.apply();
 
                 Intent hi = new Intent(Home.this, Produksi.class);
@@ -45,7 +45,7 @@ public class Home extends AppCompatActivity {
             public void onClick(View view) {
 
                 SharedPreferences.Editor editor = mLogin.edit();
-                editor.putString("jurusan", "Persiapan");
+                editor.putString("jurusan", "Persiapan Grafika");
                 editor.apply();
 
                 Intent hi = new Intent(Home.this, Desaingrafis.class);
@@ -75,7 +75,7 @@ public class Home extends AppCompatActivity {
             public void onClick(View view) {
 
                 SharedPreferences.Editor editor = mLogin.edit();
-                editor.putString("jurusan", "DKV");
+                editor.putString("jurusan", "Desain Komunikasi Visual");
                 editor.apply();
 
                 Intent hi = new Intent(Home.this, DKV.class);
@@ -90,7 +90,7 @@ public class Home extends AppCompatActivity {
             public void onClick(View view) {
 
                 SharedPreferences.Editor editor = mLogin.edit();
-                editor.putString("jurusan", "RPL");
+                editor.putString("jurusan", "Rekayasa Perangkat Lunak");
                 editor.apply();
 
                 Intent hi = new Intent(Home.this, RPL.class);
