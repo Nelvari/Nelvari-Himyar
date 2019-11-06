@@ -24,7 +24,6 @@ public class Profilku extends AppCompatActivity {
     Button log;
     ImageView imageView;
     TextView email;
-    TextView id;
     TextView nama;
     SharedPreferences mlogin;
 
@@ -36,7 +35,6 @@ public class Profilku extends AppCompatActivity {
         imageView = findViewById(R.id.icon);
         nama = findViewById(R.id.nama);
         email = findViewById(R.id.email);
-        id = findViewById(R.id.id);
 
 
         mlogin = getSharedPreferences("login", Context.MODE_PRIVATE);
