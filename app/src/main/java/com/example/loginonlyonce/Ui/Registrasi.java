@@ -3,10 +3,8 @@ package com.example.loginonlyonce.Ui;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -108,9 +106,9 @@ public class Registrasi extends AppCompatActivity {
                                                             if (progressDialog.isShowing()) {
                                                                 progressDialog.dismiss();
                                                             }
-
-                                                            Intent intent = new Intent(Registrasi.this, Login.class);
-                                                            startActivity(intent);
+//
+//                                                            Intent intent = new Intent(Registrasi.this, Login.class);
+//                                                            startActivity(intent);
                                                             finish();
                                                             String MESSAGE=response.getString("MESSAGE");
                                                             Toast.makeText(Registrasi.this, MESSAGE, Toast.LENGTH_SHORT).show();
