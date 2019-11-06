@@ -98,12 +98,12 @@ public class Registrasi extends AppCompatActivity {
                                                             username=getdata.getString("u_username");
                                                             id = getdata.getInt("u_id");
 
-                                                            SharedPreferences.Editor editor = mLogin.edit();
-                                                            editor.putString("username", username);
-                                                            editor.putString("nohp", nohp);
-                                                            editor.putString("password", password);
-                                                            editor.putInt("userid", id);
-                                                            editor.apply();
+//                                                            SharedPreferences.Editor editor = mLogin.edit();
+//                                                            editor.putString("username", username);
+//                                                            editor.putString("nohp", nohp);
+//                                                            editor.putString("password", password);
+//                                                            editor.putInt("userid", id);
+//                                                            editor.apply();
 
                                                             if (progressDialog.isShowing()) {
                                                                 progressDialog.dismiss();
