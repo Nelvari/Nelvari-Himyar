@@ -17,7 +17,7 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/icon"
-            android:layout_width="match_parent"
+            android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
@@ -54,7 +54,7 @@
             android:layout_marginHorizontal="20dp"
             android:id="@+id/email"
             android:layout_height="wrap_content"
-            android:textSize="20dp"/>
+            android:textSize="17dp"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -65,11 +65,10 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/btn_profil"
         android:text="log out"
         app:layout_constraintTop_toBottomOf="@+id/linear"
         android:layout_marginTop="40dp"
         android:id="@+id/logOut"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

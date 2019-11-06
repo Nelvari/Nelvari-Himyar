@@ -52,7 +52,8 @@
             android:parentActivityName=".Ui.Mainmenu"/>
         <activity
             android:name=".Ui.History"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Ui.Mainmenu"/>
         <activity
             android:name=".InboxActivity"
             android:screenOrientation="portrait" />
