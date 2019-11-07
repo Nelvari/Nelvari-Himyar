@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ui.DetailInfoInbox"
+    android:orientation="vertical"
+    android:layout_margin="15dp"
+    android:background="@drawable/pinggirrr">
+
+    <TextView
+        android:id="@+id/tvjudulinbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="INBOX :"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvisiinbox"
+        app:layout_constraintTop_toBottomOf="@+id/tvjudulinbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Pada bagian main menu,inbox digunakan untuk melihat notifikasi informasi dari android sendiri
+	atau dari Admin PPDB."/>
+    <TextView
+        android:id="@+id/tvcontohinbox"
+        app:layout_constraintTop_toBottomOf="@+id/tvisiinbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Berikut adalah contoh notifikasi yang terdapat pada Inbox :"/>
+
+    <ImageView
+        android:id="@+id/ivcontoh1inbox"
+        android:layout_width="150dp"
+        android:layout_height="280dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/inbox1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvcontohinbox" />
+
+    <ImageView
+        android:id="@+id/ivcontoh2inbox"
+        android:layout_width="150dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:src="@mipmap/inbox2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvcontohinbox" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,7 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Model.ControlLogin"></activity>
+        <activity android:name=".Ui.DeatailInfoInbox"></activity>
+        <activity android:name=".Ui.DetailInfoBerkas" />
+        <activity android:name=".Model.ControlLogin" />
         <activity android:name=".Ui.sdhdaftar" />
         <activity
             android:name=".Ui.KartuUjian"
@@ -48,12 +50,12 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".adapter_history"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".Ui.Mainmenu"/>
+            android:parentActivityName=".Ui.Mainmenu"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Ui.History"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".Ui.Mainmenu"/>
+            android:parentActivityName=".Ui.Mainmenu"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".InboxActivity"
             android:screenOrientation="portrait" />
@@ -154,12 +156,12 @@
                 android:resource="@xml/picker_provider_paths" />
         </provider>
     </application>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 </manifest>

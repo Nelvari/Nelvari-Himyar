@@ -23,6 +23,7 @@ public class Mainmenu extends AppCompatActivity {
     ImageView ivProfile;
     LinearLayout berkasList;
     LinearLayout Inbox;
+    LinearLayout btnInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,7 @@ public class Mainmenu extends AppCompatActivity {
         btnDaftar = findViewById(R.id.btnDaftar);
         berkasList = findViewById(R.id.berkasList);
         Inbox = findViewById(R.id.Inbox);
+        btnInfo = findViewById(R.id.btnInfo);
 
         btnDaftar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +81,14 @@ public class Mainmenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Mainmenu.this, InboxActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Mainmenu.this, DetailInfoBerkas.class);
                 startActivity(intent);
             }
         });
