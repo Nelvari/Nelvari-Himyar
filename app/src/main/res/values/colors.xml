@@ -26,6 +26,7 @@
     <color name="background">#dddddd</color>
     <color name="background2">#8ADDDDDD</color>
     <color name="color_white_semitransparent">#99FFFFFF</color>
+    <color name="line">#c9c7c7</color>
 
     <!-- dots inactive colors -->
     <color name="dot_dark_screen1">#FFFFF0</color>

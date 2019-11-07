@@ -6,11 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.loginonlyonce.R;
 
-public class DeatailInfoInbox extends AppCompatActivity {
+public class DetailInfoDaftar extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_deatail_info_inbox);
+        setContentView(R.layout.activity_detail_info_daftar);
     }
 }

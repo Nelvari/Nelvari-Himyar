@@ -88,7 +88,7 @@ public class Mainmenu extends AppCompatActivity {
         btnInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Mainmenu.this, DetailInfoBerkas.class);
+                Intent intent = new Intent(Mainmenu.this, Help.class);
                 startActivity(intent);
             }
         });

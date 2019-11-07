@@ -71,4 +71,14 @@
         android:layout_marginTop="40dp"
         android:id="@+id/logOut"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Copyright ©2019 RPL SMK RUS Android Team"
+        android:layout_marginBottom="20dp"
+        android:textColor="#5467b1"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

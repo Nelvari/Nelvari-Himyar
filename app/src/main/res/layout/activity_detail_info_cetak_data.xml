@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ui.DetailInfoCetakData"
+    android:layout_margin="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/pinggirrr">
+
+            <TextView
+                android:id="@+id/tvjudulinbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:text="Cetak Data :"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/tvisiinbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="17sp"
+                android:text="Pada bagian main menu,Cek data digunakan untuk mengecek Kartu peserta dan Kartu Ujian.Bagian Kartu Peserta sendiri terdapat DATA DATA yang telah di daftarkan ke aplikasi PPDB RUS.Bagian Kartu Ujian adalah kartu tes yang dapat dibawa saat tes seleksi di SMK RUS.Bagian ini didapat setelah melakukan pembayaran ke Admin PPDB."/>
+            <TextView
+                android:id="@+id/tvcontohinbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="17sp"
+                android:text="Berikut adalah contoh menu yang terdapat pada Cetak Data :"/>
+
+            <ImageView
+                android:id="@+id/ivcontoh1inbox"
+                android:layout_width="150dp"
+                android:layout_height="280dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:src="@mipmap/detailinfocetak"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

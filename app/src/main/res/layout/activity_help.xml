@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/toolbarhelp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/ActionBarThemeOverlay.1">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/putih"
+            tools:context=".Ui.Help">
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/line"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/constrain1" />
+
+
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/line"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/constrain2" />
+
+            <LinearLayout
+                android:id="@+id/linear3"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/line"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/constrain3" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrain1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/btninbox"
+                    android:layout_width="170dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="45dp"
+                    android:background="@drawable/button"
+                    android:text="info selengkapnya"
+                    android:textColor="@color/putih"
+                    app:layout_constraintLeft_toRightOf="@+id/inbox"
+                    app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+                <ImageView
+                    android:id="@+id/line1"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:src="@mipmap/line"
+                    app:layout_constraintLeft_toRightOf="@+id/inbox"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/inbox"
+                    android:layout_width="120dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="220dp"
+                    android:src="@mipmap/inbox"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="55dp"
+                    android:src="@mipmap/line"
+                    android:text="INBOX"
+                    android:textSize="20dp"
+                    app:layout_constraintLeft_toRightOf="@+id/line1"
+                    app:layout_constraintTop_toBottomOf="@+id/line"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="UnknownId" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrain3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/linear2">
+
+                <Button
+                    android:id="@+id/btncetak"
+                    android:layout_width="170dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/button"
+                    android:text="info selengkapnya"
+                    android:textColor="@color/putih"
+                    app:layout_constraintLeft_toRightOf="@+id/cetakdata"
+                    app:layout_constraintTop_toBottomOf="@+id/line3" />
+
+                <ImageView
+                    android:id="@+id/line3"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:src="@mipmap/line"
+                    app:layout_constraintLeft_toRightOf="@+id/cetakdata"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/cetakdata"
+                    android:layout_width="140dp"
+                    android:layout_height="170dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="220dp"
+                    android:src="@mipmap/cetakdata"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:src="@mipmap/line"
+                    android:text="CETAK"
+                    android:textSize="20dp"
+                    app:layout_constraintLeft_toRightOf="@+id/line3"
+                    app:layout_constraintTop_toBottomOf="@+id/cetakdata"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="UnknownId" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrain2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/linear1">
+
+
+                <Button
+                    android:id="@+id/btnberkas"
+                    android:layout_width="170dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="45dp"
+                    android:background="@drawable/button"
+                    android:text="info selengkapnya"
+                    android:textColor="@color/putih"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/berkas"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line2" />
+
+                <ImageView
+                    android:id="@+id/line2"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="55dp"
+                    android:src="@mipmap/line2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/berkas"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/berkas"
+                    android:layout_width="120dp"
+                    android:layout_height="170dp"
+                    android:layout_marginLeft="220dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@mipmap/berkas"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="55dp"
+                    android:src="@mipmap/line"
+                    android:text="BERKAS"
+                    android:textSize="20dp"
+                    app:layout_constraintRight_toLeftOf="@+id/line2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrain4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/linear3">
+
+
+                <Button
+                    android:id="@+id/btndaftar"
+                    android:layout_width="170dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="45dp"
+                    android:background="@drawable/button"
+                    android:text="info selengkapnya"
+                    android:textColor="@color/putih"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/daftar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line4"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/line4"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="55dp"
+                    android:src="@mipmap/line2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/daftar"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/daftar"
+                    android:layout_width="140dp"
+                    android:layout_height="190dp"
+                    android:layout_marginLeft="220dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@mipmap/daftar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="58dp"
+                    android:src="@mipmap/line"
+                    android:text="DAFTAR"
+                    android:textSize="20dp"
+                    app:layout_constraintRight_toLeftOf="@+id/line4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>
