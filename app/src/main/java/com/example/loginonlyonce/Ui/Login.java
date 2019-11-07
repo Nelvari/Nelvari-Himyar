@@ -2,6 +2,7 @@ package com.example.loginonlyonce.Ui;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.androidnetworking.AndroidNetworking;
@@ -131,18 +133,38 @@ public class Login extends AppCompatActivity {
                                                 dialog.dismiss();
                                             }
 
-                                            Intent intent = new Intent(Login.this, Mainmenu.class);
-                                            startActivity(intent);
-                                            finish();
                                             String MESSAGE=response.getString("MESSAGE");
-                                            Toast.makeText(Login.this, MESSAGE, Toast.LENGTH_SHORT).show();
+                                            AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
+                                            builder.setMessage(MESSAGE)
+                                                    .setTitle("Information")
+                                                    .setCancelable(false)
+                                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                        public void onClick(DialogInterface dialog, int id) {
 
+                                                            Intent intent = new Intent(Login.this, Mainmenu.class);
+                                                            startActivity(intent);
+                                                            finish();
+
+                                                        }
+                                                    });
+                                            AlertDialog alert = builder.create();
+                                            alert.show();
                                         }else{
                                             if (dialog.isShowing()) {
                                                 dialog.dismiss();
                                                 Log.d("loginku", "onResponse: masuk else");
                                                 String MESSAGE=response.getString("MESSAGE");
-                                                Toast.makeText(Login.this, MESSAGE, Toast.LENGTH_SHORT).show();
+                                                AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
+                                                builder.setMessage(MESSAGE)
+                                                        .setTitle("Information")
+                                                        .setCancelable(false)
+                                                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                            public void onClick(DialogInterface dialog, int id) {
+
+                                                            }
+                                                        });
+                                                AlertDialog alert = builder.create();
+                                                alert.show();
                                             }
                                         }
                                     } catch (JSONException e) {

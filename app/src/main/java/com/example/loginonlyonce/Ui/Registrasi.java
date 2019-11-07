@@ -109,14 +109,39 @@ public class Registrasi extends AppCompatActivity {
 //
 //                                                            Intent intent = new Intent(Registrasi.this, Login.class);
 //                                                            startActivity(intent);
-                                                            finish();
                                                             String MESSAGE=response.getString("MESSAGE");
                                                             Toast.makeText(Registrasi.this, MESSAGE, Toast.LENGTH_SHORT).show();
+
+                                                            AlertDialog.Builder builder = new AlertDialog.Builder(Registrasi.this);
+                                                            builder.setMessage("Sukses login, kemudian silahkan login.")
+                                                                    .setTitle("Information")
+                                                                    .setCancelable(false)
+                                                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                                        public void onClick(DialogInterface dialog, int id) {
+
+                                                                            finish();
+
+                                                                        }
+                                                                    });
+                                                            AlertDialog alert = builder.create();
+                                                            alert.show();
+
                                                         }else {
                                                             if (progressDialog.isShowing()) {
                                                                 progressDialog.dismiss();
                                                                 String MESSAGE=response.getString("MESSAGE");
-                                                                Toast.makeText(Registrasi.this, MESSAGE, Toast.LENGTH_SHORT).show();
+
+                                                                AlertDialog.Builder builder = new AlertDialog.Builder(Registrasi.this);
+                                                                builder.setMessage(MESSAGE)
+                                                                        .setTitle("Information")
+                                                                        .setCancelable(false)
+                                                                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                                            public void onClick(DialogInterface dialog, int id) {
+
+                                                                            }
+                                                                        });
+                                                                AlertDialog alert = builder.create();
+                                                                alert.show();
                                                             }
                                                         }
                                                     } catch (JSONException e) {
