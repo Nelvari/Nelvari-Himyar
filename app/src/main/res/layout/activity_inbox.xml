@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,13 +12,11 @@
         android:theme="@style/ActionBarThemeOverlay.1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
         android:background="@color/colorPrimaryDark"
         android:id="@+id/toolbarInbox"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbarInbox"
         android:layout_height="wrap_content"
         android:id="@+id/listInbox"/>
 
@@ -28,9 +26,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Belum ada data,silahkan kembali ke main menu dan cek inbox"
-        android:textAlignment="center"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginHorizontal="30sp"
         android:layout_gravity="center"
         android:textSize="17sp"/>
@@ -43,9 +38,6 @@
         android:layout_marginTop="15dp"
         android:background="@color/colorPrimary"
         android:text="kembali"
-        android:textColor="@color/putih"
-        app:layout_constraintTop_toBottomOf="@id/txtinfo"
-        app:layout_constraintStart_toStartOf="@id/txtinfo"
-        app:layout_constraintEnd_toEndOf="@id/txtinfo"/>
+        android:textColor="@color/putih"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
