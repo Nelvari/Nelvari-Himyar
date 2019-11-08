@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -13,18 +14,25 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.androidnetworking.AndroidNetworking;
+import com.androidnetworking.common.Priority;
+import com.androidnetworking.error.ANError;
+import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.bumptech.glide.Glide;
 import com.example.loginonlyonce.Model.PrefManager;
 import com.example.loginonlyonce.R;
 import com.example.loginonlyonce.SplashScreen;
 import com.facebook.login.LoginManager;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class Profilku extends AppCompatActivity {
 
     Button log;
     ImageView imageView;
     TextView email;
-    TextView nama;
+    TextView nama, txtStatus;
     SharedPreferences mlogin;
 
     @Override
@@ -35,6 +43,7 @@ public class Profilku extends AppCompatActivity {
         imageView = findViewById(R.id.icon);
         nama = findViewById(R.id.nama);
         email = findViewById(R.id.email);
+        txtStatus = findViewById(R.id.txtStatus);
 
 
         mlogin = getSharedPreferences("login", Context.MODE_PRIVATE);
@@ -42,7 +51,12 @@ public class Profilku extends AppCompatActivity {
         if (getSharedPreferences("login", Context.MODE_PRIVATE) != null){
 
             nama.setText(mlogin.getString("username", "missing"));
-            email.setText(mlogin.getString("data2", "-"));
+            if (mlogin.getString("data2", "-").equalsIgnoreCase("-")){
+
+                email.setText(mlogin.getString("email", "-"));
+            }else {
+                email.setText(mlogin.getString("data2", "-"));
+            }
 
             Glide
                     .with(this)
@@ -51,6 +65,35 @@ public class Profilku extends AppCompatActivity {
                     .into(imageView);
 
         }
+
+        AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/cek-daftar?id=" + mlogin.getInt("userid", 0))
+                .setTag("test")
+                .setPriority(Priority.LOW)
+                .build()
+                .getAsJSONObject(new JSONObjectRequestListener() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            String status = response.getString("STATUS");
+                            if (status.equalsIgnoreCase("SUCCESS")){
+                                txtStatus.setText("Anda belum mendafatar untuk menjadi peserta didik baru");
+                            } else if (status.equalsIgnoreCase("ERROR")){
+                                JSONObject jsonObject = response.getJSONObject("PAYLOAD");
+
+                                txtStatus.setText("Anda sudah mendaftar di jurusan : \n" + jsonObject.getString("sw_jurusan"));
+                                Log.d("status", "onResponse: " + jsonObject.getString("sw_jurusan") + mlogin.getInt("userid", 0));
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    @Override
+                    public void onError(ANError anError) {
+
+                    }
+                });
 
         log.setOnClickListener(new View.OnClickListener() {
             @Override

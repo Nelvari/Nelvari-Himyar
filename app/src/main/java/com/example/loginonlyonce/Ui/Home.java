@@ -45,7 +45,7 @@ public class Home extends AppCompatActivity {
             public void onClick(View view) {
 
                 SharedPreferences.Editor editor = mLogin.edit();
-                editor.putString("jurusan", "Persiapan Grafika");
+                editor.putString("jurusan", "Desain Grafika");
                 editor.apply();
 
                 Intent hi = new Intent(Home.this, Desaingrafis.class);
