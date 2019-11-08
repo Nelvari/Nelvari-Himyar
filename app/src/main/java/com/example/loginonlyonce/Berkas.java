@@ -999,15 +999,16 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
         if (r.getError() == null & kupassfoto.equalsIgnoreCase("true")) {
             //selectedImagePathkupassfoto = r.getPath();
 
-            try {
-                File fileku = new Compressor(this)
-                        .setQuality(50)
-                        .setCompressFormat(Bitmap.CompressFormat.WEBP)
-                        .setDestinationDirectoryPath(Environment.getExternalStoragePublicDirectory(
-                                Environment.DIRECTORY_PICTURES).getAbsolutePath())
-                        .compressToFile(new File(r.getPath()));
+            //try {
+//                File fileku = new Compressor(this)
+//                        .setQuality(50)
+//                        .setCompressFormat(Bitmap.CompressFormat.WEBP)
+//                        .setDestinationDirectoryPath(Environment.getExternalStoragePublicDirectory(
+//                                Environment.DIRECTORY_PICTURES).getAbsolutePath())
+//                        .compressToFile(new File(r.getPath()));
 
-                selectedImagePathkupassfoto = fileku.getAbsolutePath().toString();
+                //selectedImagePathkupassfoto = fileku.getAbsolutePath().toString();
+                selectedImagePathkupassfoto = r.getPath().toString();
                 fileselectedImagePathfoto = new File(selectedImagePathkupassfoto.toString());
                 Log.d("file", "onCreate: " + fileselectedImagePathfoto);
                 Log.d("makananku", "onPickResult: " + selectedImagePathkupassfoto);
@@ -1016,9 +1017,9 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
                 ivkupassfoto.setImageBitmap(selectedImage);
                 kupassfoto = "";
 
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
 
         } else if (r.getError() == null & kuakta.equalsIgnoreCase("true")) {
             //selectedImagePathkuakte = r.getPath();
