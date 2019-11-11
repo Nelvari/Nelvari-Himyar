@@ -19,6 +19,7 @@ import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.bumptech.glide.Glide;
+import com.example.loginonlyonce.Model.ControlData;
 import com.example.loginonlyonce.Model.PrefManager;
 import com.example.loginonlyonce.R;
 import com.example.loginonlyonce.SplashScreen;
@@ -34,6 +35,7 @@ public class Profilku extends AppCompatActivity {
     TextView email;
     TextView nama, txtStatus;
     SharedPreferences mlogin;
+    Boolean isdaftar=true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,9 +80,11 @@ public class Profilku extends AppCompatActivity {
                             String status = response.getString("STATUS");
                             if (status.equalsIgnoreCase("SUCCESS")){
                                 txtStatus.setText("Anda belum mendafatar untuk menjadi peserta didik baru");
+                                isdaftar=false;
+                                btnInbok.setText("Daftar sekarang");
                             } else if (status.equalsIgnoreCase("ERROR")){
                                 JSONObject jsonObject = response.getJSONObject("PAYLOAD");
-
+                                btnInbok.setText("Cek di sini");
                                 txtStatus.setText("Anda sudah mendaftar di jurusan : \n" + jsonObject.getString("sw_jurusan"));
                                 Log.d("status", "onResponse: " + jsonObject.getString("sw_jurusan") + mlogin.getInt("userid", 0));
                             }
@@ -142,9 +146,18 @@ public class Profilku extends AppCompatActivity {
         btnInbok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (btnInbok.getText().equals("Daftar sekarang")){
 
-                Intent intent = new Intent(Profilku.this, InboxActivity.class);
-                startActivity(intent);
+                    Intent intent = new Intent(Profilku.this, ControlData.class);
+                    startActivity(intent);
+
+                }else {
+
+                    Intent intent = new Intent(Profilku.this, InboxActivity.class);
+                    startActivity(intent);
+
+                }
+
 
             }
         });
