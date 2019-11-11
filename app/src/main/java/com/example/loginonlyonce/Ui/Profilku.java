@@ -29,7 +29,7 @@ import org.json.JSONObject;
 
 public class Profilku extends AppCompatActivity {
 
-    Button log;
+    Button log, btnInbok;
     ImageView imageView;
     TextView email;
     TextView nama, txtStatus;
@@ -44,6 +44,7 @@ public class Profilku extends AppCompatActivity {
         nama = findViewById(R.id.nama);
         email = findViewById(R.id.email);
         txtStatus = findViewById(R.id.txtStatus);
+        btnInbok = findViewById(R.id.btnInbok);
 
 
         mlogin = getSharedPreferences("login", Context.MODE_PRIVATE);
@@ -134,6 +135,17 @@ public class Profilku extends AppCompatActivity {
                         .setTitle("Konfirmasi logout")
                         .setNegativeButton("Tidak", dialog).show();
 
+
+            }
+        });
+
+        btnInbok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(Profilku.this, InboxActivity.class);
+                startActivity(intent);
+                finish();
 
             }
         });
