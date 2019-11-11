@@ -47,6 +47,7 @@ public class Profilku extends AppCompatActivity {
         email = findViewById(R.id.email);
         txtStatus = findViewById(R.id.txtStatus);
         btnInbok = findViewById(R.id.btnInbok);
+        btnInbok.setEnabled(false);
 
 
         mlogin = getSharedPreferences("login", Context.MODE_PRIVATE);
@@ -82,8 +83,10 @@ public class Profilku extends AppCompatActivity {
                                 txtStatus.setText("Anda belum mendafatar untuk menjadi peserta didik baru");
                                 isdaftar=false;
                                 btnInbok.setText("Daftar sekarang");
+                                btnInbok.setEnabled(true);
                             } else if (status.equalsIgnoreCase("ERROR")){
                                 JSONObject jsonObject = response.getJSONObject("PAYLOAD");
+                                btnInbok.setEnabled(true);
                                 btnInbok.setText("Cek di sini");
                                 txtStatus.setText("Anda sudah mendaftar di jurusan : \n" + jsonObject.getString("sw_jurusan"));
                                 Log.d("status", "onResponse: " + jsonObject.getString("sw_jurusan") + mlogin.getInt("userid", 0));
