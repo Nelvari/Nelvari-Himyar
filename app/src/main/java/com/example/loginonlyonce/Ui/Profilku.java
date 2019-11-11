@@ -145,7 +145,6 @@ public class Profilku extends AppCompatActivity {
 
                 Intent intent = new Intent(Profilku.this, InboxActivity.class);
                 startActivity(intent);
-                finish();
 
             }
         });
