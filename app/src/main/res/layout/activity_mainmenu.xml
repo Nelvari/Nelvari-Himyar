@@ -68,6 +68,41 @@
             android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/btnDaftar"
+                android:layout_marginLeft="20dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:background="@drawable/pinggirrr"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="67dp"
+                    android:layout_height="67dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@mipmap/daftarr" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/colorAccent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DAFTAR"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/Inbox"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:layout_width="120dp"
@@ -101,12 +136,24 @@
                     android:gravity="center"/>
             </LinearLayout>
 
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line2"
+            app:layout_constraintTop_toBottomOf="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
             <LinearLayout
                 android:id="@+id/berkasList"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:layout_width="120dp"
                 android:layout_height="150dp"
-                android:layout_marginRight="30dp"
+                android:layout_marginLeft="20dp"
                 android:background="@drawable/pinggirrr"
                 android:gravity="center"
                 android:orientation="vertical">
@@ -134,16 +181,6 @@
                     android:textSize="17sp"
                     android:gravity="center"/>
             </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/line2"
-            app:layout_constraintTop_toBottomOf="@+id/line1"
-            android:layout_width="match_parent"
-            android:layout_height="175dp"
-            android:orientation="horizontal"
-            android:gravity="center">
 
             <LinearLayout
                 android:id="@+id/btnCetakData"
@@ -180,40 +217,7 @@
             </LinearLayout>
 
 
-            <LinearLayout
-                android:id="@+id/btnDaftar"
-                android:layout_marginRight="30dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:layout_width="120dp"
-                android:layout_height="150dp"
-                android:background="@drawable/pinggirrr"
-                android:gravity="center"
-                android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="67dp"
-                    android:layout_height="67dp"
-                    android:layout_marginTop="9dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@mipmap/daftarr" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="15dp"
-                    android:background="@color/colorAccent" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="DAFTAR"
-                    android:layout_marginTop="10dp"
-                    android:textStyle="bold"
-                    android:textSize="17sp"
-                    android:gravity="center"/>
-            </LinearLayout>
 
         </LinearLayout>
 

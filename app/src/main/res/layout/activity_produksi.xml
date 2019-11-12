@@ -17,7 +17,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/produksi"
+            android:background="#14D41A"
             android:theme="@style/ActionBarThemeOverlay.1">
 
         </androidx.appcompat.widget.Toolbar>
@@ -145,7 +145,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_margin="20dp"
-            android:background="@color/produksi"
+            android:background="#14D41A"
             android:text="Next"
             android:textColor="@color/putih"/>
 
