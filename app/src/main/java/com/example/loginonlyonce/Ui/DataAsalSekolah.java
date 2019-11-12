@@ -149,7 +149,7 @@ public class DataAsalSekolah extends AppCompatActivity {
             beratBadan = bundle.getString("beratbadan");
 
             nisn = bundle.getString("nisn");
-            noUjian = bundle.getString("noujian");
+            noUjian = bundle.getString("noujian","");
 
             selectedImagePathfoto = bundle.getString("selectedImagePathfoto");
             selectedImagePathakte = bundle.getString("selectedImagePathakte");
@@ -203,15 +203,15 @@ public class DataAsalSekolah extends AppCompatActivity {
                                 } else if (txtAlamatSekolah.length() == 0) {
                                     txtAlamatSekolah.requestFocus();
                                     txtAlamatSekolah.setError("FIELD CANNOT BE EMPTY");
-                                } else if (txtNilaiSTTb.length() == 0) {
-                                    txtNilaiSTTb.requestFocus();
-                                    txtNilaiSTTb.setError("FIELD CANNOT BE EMPTY");
-                                } else if (txtNoSTTb.length() == 0) {
-                                    txtNoSTTb.requestFocus();
-                                    txtNoSTTb.setError("FIELD CANNOT BE EMPTY");
-                                } else if (txtTahunSTTb.length() == 0) {
-                                    txtTahunSTTb.requestFocus();
-                                    txtTahunSTTb.setError("FIELD CANNOT BE EMPTY");
+//                                } else if (txtNilaiSTTb.length() == 0) {
+//                                    txtNilaiSTTb.requestFocus();
+//                                    txtNilaiSTTb.setError("FIELD CANNOT BE EMPTY");
+//                                } else if (txtNoSTTb.length() == 0) {
+//                                    txtNoSTTb.requestFocus();
+//                                    txtNoSTTb.setError("FIELD CANNOT BE EMPTY");
+//                                } else if (txtTahunSTTb.length() == 0) {
+//                                    txtTahunSTTb.requestFocus();
+//                                    txtTahunSTTb.setError("FIELD CANNOT BE EMPTY");
                                 } else {
 
 

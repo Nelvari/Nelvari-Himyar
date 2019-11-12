@@ -194,11 +194,6 @@ public class DataSiswa extends AppCompatActivity {
                                     tempat.setError("FIELD CANNOT BE EMPTY");
                                 }
 
-                                else if (noUjian.length()==0)
-                                {
-                                    noUjian.requestFocus();
-                                    noUjian.setError("FIELD CANNOT BE EMPTY");
-                                }
 
                                 else if (nisn.length()==0)
                                 {
