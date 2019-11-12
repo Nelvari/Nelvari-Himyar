@@ -8,7 +8,7 @@ android:shape="rectangle">
 </solid>
 
 <stroke
-    android:width="3dp" android:color="#14D41A">
+    android:width="3dp" android:color="@color/produksi">
 
 </stroke>
 <corners android:radius="20sp" />
