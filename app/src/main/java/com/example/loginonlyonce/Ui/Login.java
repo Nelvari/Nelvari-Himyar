@@ -99,7 +99,7 @@ public class Login extends AppCompatActivity {
                     dialog.show();
                     dialog.setCancelable(false);
 
-                    AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/login")
+                    AndroidNetworking.post(BaseURL.url+"/login")
                             .addBodyParameter("username", txtusername.getText().toString())
                             .addBodyParameter("password", txtpassword.getText().toString())
                             .addBodyParameter("role", "user")
@@ -251,7 +251,7 @@ public class Login extends AppCompatActivity {
 
                             }
 
-                            AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/register")
+                            AndroidNetworking.post(BaseURL.url+"/register")
                                     .addBodyParameter("nama", email)
                                     .addBodyParameter("username", realName)
                                     .addBodyParameter("password", "facebook")
@@ -410,7 +410,7 @@ public class Login extends AppCompatActivity {
                 dialog.setCancelable(false);
 
             }
-            AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/register")
+            AndroidNetworking.post(BaseURL.url+"/register")
                     .addBodyParameter("nama", email)
                     .addBodyParameter("username", realName)
                     .addBodyParameter("password", "google")

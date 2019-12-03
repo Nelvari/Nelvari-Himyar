@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,6 +13,7 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
+import com.example.loginonlyonce.Ui.BaseURL;
 import com.example.loginonlyonce.Ui.Home;
 import com.example.loginonlyonce.Ui.sdhdaftar;
 
@@ -36,8 +36,8 @@ public class ControlData extends AppCompatActivity {
 
         progressBar.setMessage("Please wait");
         progressBar.show();
-        Log.d("trialsaya", "onCreate: "+"http://api-ppdb.smkrus.com/api/v1/cek-daftar?id=" + mData.getInt("userid", 0));
-        AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/cek-daftar?id=" + mData.getInt("userid", 0))
+        Log.d("trialsaya", "onCreate: "+ BaseURL.url+"/cek-daftar?id=" + mData.getInt("userid", 0));
+        AndroidNetworking.get(BaseURL.url+"/cek-daftar?id=" + mData.getInt("userid", 0))
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()

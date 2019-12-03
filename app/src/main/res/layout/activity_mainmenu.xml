@@ -50,7 +50,7 @@
             android:id="@+id/txtItems"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4 items"
+            android:text="5 items"
             android:textColor="@color/item"
             android:textSize="18sp"
             android:layout_marginLeft="20dp"

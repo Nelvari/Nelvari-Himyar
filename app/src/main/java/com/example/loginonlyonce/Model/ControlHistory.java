@@ -6,8 +6,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,8 +14,7 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
-import com.example.loginonlyonce.Berkas;
-import com.example.loginonlyonce.Ui.CetakData;
+import com.example.loginonlyonce.Ui.BaseURL;
 import com.example.loginonlyonce.Ui.History;
 
 import org.json.JSONException;
@@ -39,8 +36,8 @@ public class ControlHistory extends AppCompatActivity {
         progressBar.setMessage("loading");
         progressBar.show();
         progressBar.setCancelable(false);
-        System.out.println("makan"+"http://api-ppdb.smkrus.com/api/v1/cek-kartu?id="+mHistory.getInt("userid",0));
-        AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/cek-kartu?id="+mHistory.getInt("userid",0))
+        System.out.println("makan"+ BaseURL.url+"/cek-kartu?id="+mHistory.getInt("userid",0));
+        AndroidNetworking.get(BaseURL.url+"/cek-kartu?id="+mHistory.getInt("userid",0))
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()

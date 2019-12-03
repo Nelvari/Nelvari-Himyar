@@ -89,7 +89,7 @@ public class InboxActivity extends AppCompatActivity {
         progressBar.setMessage("Please wait");
         progressBar.show();
 
-        AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/inbox?id=" + preferences.getInt("userid", 0) )
+        AndroidNetworking.get(BaseURL.url+"/inbox?id=" + preferences.getInt("userid", 0) )
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()

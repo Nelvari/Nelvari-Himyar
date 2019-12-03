@@ -13,6 +13,7 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
+import com.example.loginonlyonce.Ui.BaseURL;
 import com.example.loginonlyonce.Ui.Home;
 import com.example.loginonlyonce.Ui.Mainmenu;
 
@@ -35,7 +36,7 @@ public class ControlHome extends AppCompatActivity {
 
         mHome = getSharedPreferences("login", Context.MODE_PRIVATE);
 
-        AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/profile?id=" + mHome.getInt("userid", 0))
+        AndroidNetworking.get(BaseURL.url+"/profile?id=" + mHome.getInt("userid", 0))
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()

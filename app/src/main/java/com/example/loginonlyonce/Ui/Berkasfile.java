@@ -1,5 +1,6 @@
 package com.example.loginonlyonce.Ui;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -126,7 +127,9 @@ public class Berkasfile extends AppCompatActivity implements IPickResult {
 
         lineGambar = findViewById(R.id.lineGambar);
 
-        GambarAnimasi = getSharedPreferences("login", MODE_PRIVATE);
+        GambarAnimasi = getSharedPreferences("login", Context.MODE_PRIVATE);
+
+        Log.d("anim", "onCreate: " + GambarAnimasi.getString("jurusan", ""));
 
         if (GambarAnimasi.getString("jurusan", "") == "Animasi"){
 
@@ -208,22 +211,14 @@ public class Berkasfile extends AppCompatActivity implements IPickResult {
                                         || selectedImagePathakte == ""
                                         ||selectedImagePathakte == null){
                                     Toast.makeText(Berkasfile.this, "akte kosong", Toast.LENGTH_SHORT).show();
-                                }else if (selectedImagePathkasehtan.equalsIgnoreCase("")
-                                        || selectedImagePathkasehtan == ""
-                                        ||selectedImagePathkasehtan == null){
-                                    Toast.makeText(Berkasfile.this, "catatan kesehatan kosong", Toast.LENGTH_SHORT).show();
                                 }else if (selectedImagePathkk.equalsIgnoreCase("")
                                         || selectedImagePathkk == ""
                                         ||selectedImagePathkk == null){
                                     Toast.makeText(Berkasfile.this, "kk kosong", Toast.LENGTH_SHORT).show();
-                                }else if (selectedImagePathraport.equalsIgnoreCase("")
-                                        || selectedImagePathraport == ""
-                                        ||selectedImagePathraport == null){
-                                    Toast.makeText(Berkasfile.this, "rapot kosong", Toast.LENGTH_SHORT).show();
-                                }else if (selectedImagePathsertifikat.equalsIgnoreCase("")
-                                        || selectedImagePathsertifikat == ""
-                                        ||selectedImagePathsertifikat == null){
-                                    Toast.makeText(Berkasfile.this, "sertifikat kosong", Toast.LENGTH_SHORT).show();
+                                }else if (selectedImagePathkasehtan.equalsIgnoreCase("")
+                                        || selectedImagePathkasehtan == ""
+                                        ||selectedImagePathkasehtan == null){
+                                    Toast.makeText(Berkasfile.this, "catatan kesehatan kosong", Toast.LENGTH_SHORT).show();
                                 }else {
                                     Intent intent = new Intent(Berkasfile.this, DataSiswa.class);
                                     intent.putExtra("selectedImagePathfoto", selectedImagePathfoto);

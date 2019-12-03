@@ -130,7 +130,7 @@
            android:layout_marginTop="75dp"
            android:layout_marginBottom="20sp"
            android:background="@drawable/button"
-           android:text="NEXT"
+           android:text="KIRIM"
            android:textStyle="bold"
            android:textColor="@android:color/white"/>
 

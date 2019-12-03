@@ -36,10 +36,12 @@ public class DataOrangTua extends AppCompatActivity {
     String tempatLahir;
     String tanggalLahir;
     String agama;
-    String alamatSiswa;
+    String alamatsiswadesa;
+    String alamatsiswaprovinsi;
+    String alamatsiswakota;
+    String alamatsiswakecamatan;
     String tinggiBadan;
     String beratBadan;
-    String prestasi;
     String nisn;
     String noUjian;
 
@@ -102,7 +104,10 @@ public class DataOrangTua extends AppCompatActivity {
             tempatLahir = bundle.getString("tempatlahir");
             tanggalLahir = bundle.getString("tanggallahir");
             agama = bundle.getString("agama");
-            alamatSiswa = bundle.getString("alamatsiswa");
+            alamatsiswaprovinsi = bundle.getString("alamatsiswaprovinsi");
+            alamatsiswakota = bundle.getString("alamatsiswakota");
+            alamatsiswakecamatan = bundle.getString("alamatsiswakecamatan");
+            alamatsiswadesa = bundle.getString("alamatsiswadesa");
             tinggiBadan = bundle.getString("tinggibadan");
             beratBadan = bundle.getString("beratbadan");
 
@@ -199,7 +204,10 @@ public class DataOrangTua extends AppCompatActivity {
                                     in.putExtra("tempatlahir", tempatLahir);
                                     in.putExtra("tanggallahir", tanggalLahir);
                                     in.putExtra("agama", agama);
-                                    in.putExtra("alamatsiswa", alamatSiswa);
+                                    in.putExtra("alamatsiswaprovinsi", alamatsiswaprovinsi);
+                                    in.putExtra("alamatsiswakota", alamatsiswakota);
+                                    in.putExtra("alamatsiswakecamatan", alamatsiswakecamatan);
+                                    in.putExtra("alamatsiswadesa", alamatsiswadesa);
                                     in.putExtra("tinggibadan", tinggiBadan);
                                     in.putExtra("beratbadan", beratBadan);
 

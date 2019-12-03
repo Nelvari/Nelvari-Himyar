@@ -70,7 +70,7 @@ public class Profilku extends AppCompatActivity {
 
         }
 
-        AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/cek-daftar?id=" + mlogin.getInt("userid", 0))
+        AndroidNetworking.get(BaseURL.url+"/cek-daftar?id=" + mlogin.getInt("userid", 0))
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()

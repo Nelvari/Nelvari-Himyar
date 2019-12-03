@@ -165,19 +165,65 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginHorizontal="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:gravity="center"
             android:layout_marginTop="10dp">
 
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alamat Siswa(Lengkap) *"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
             <EditText
-                android:id="@+id/editxtalamatSiswa"
+                android:id="@+id/editxtalamatSiswaProvinsi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:hint="Alamat Siswa (Lengkap) *"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:hint="Provinsi"
+                android:textSize="15dp"/>
+
+
+            <EditText
+                android:id="@+id/editxtalamatSiswaKota"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_marginTop="10dp"
+                android:hint="Kabupaten / Kota"
+                android:textSize="15dp"/>
+
+
+            <EditText
+                android:id="@+id/editxtalamatSiswaKecamatan"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_marginTop="@dimen/padding_10"
+                android:hint="Kecamatan"
+                android:textSize="15dp"/>
+
+            <EditText
+                android:id="@+id/editxtalamatSiswaDesa"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_marginTop="@dimen/padding_10"
+                android:hint="Desa RT/RW"
                 android:textSize="15dp"/>
 
         </LinearLayout>
@@ -188,7 +234,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="20dp">
 
             <EditText
                 android:id="@+id/editxttinggi"

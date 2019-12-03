@@ -34,7 +34,10 @@ public class DataSiswa extends AppCompatActivity {
     Spinner jenisKelamin;
     EditText tempat;
     Spinner agama;
-    EditText alamatSiswa;
+    EditText editxtalamatSiswaProvinsi;
+    EditText editxtalamatSiswaKota;
+    EditText editxtalamatSiswaKecamatan;
+    EditText editxtalamatSiswaDesa;
     EditText tinggi;
     EditText berat;
 
@@ -60,7 +63,10 @@ public class DataSiswa extends AppCompatActivity {
         tempat = findViewById(R.id.editxttempatlahir);
         agama = findViewById(R.id.spinnerAgama);
         tinggi = findViewById(R.id.editxttinggi);
-        alamatSiswa = findViewById(R.id.editxtalamatSiswa);
+        editxtalamatSiswaProvinsi = findViewById(R.id.editxtalamatSiswaProvinsi);
+        editxtalamatSiswaKota = findViewById(R.id.editxtalamatSiswaKota);
+        editxtalamatSiswaKecamatan = findViewById(R.id.editxtalamatSiswaKecamatan);
+        editxtalamatSiswaDesa = findViewById(R.id.editxtalamatSiswaDesa);
         berat = findViewById(R.id.editxtberat);
 
 
@@ -182,29 +188,45 @@ public class DataSiswa extends AppCompatActivity {
                         switch (i) {
                             case DialogInterface.BUTTON_POSITIVE:
 
-                                if (namaSiswa.length()==0)
+                                if (nisn.length()==0)
+                                {
+                                    nisn.requestFocus();
+                                    nisn.setError("FIELD CANNOT BE EMPTY");
+                                }
+
+                                else if (namaSiswa.length()==0)
                                 {
                                     namaSiswa.requestFocus();
                                     namaSiswa.setError("FIELD CANNOT BE EMPTY");
                                 }
-
                                 else if (tempat.length()==0)
                                 {
                                     tempat.requestFocus();
                                     tempat.setError("FIELD CANNOT BE EMPTY");
                                 }
 
-
-                                else if (nisn.length()==0)
+                                else if (editxtalamatSiswaProvinsi.length()==0)
                                 {
-                                    nisn.requestFocus();
-                                    nisn.setError("FIELD CANNOT BE EMPTY");
+                                    editxtalamatSiswaProvinsi.requestFocus();
+                                    editxtalamatSiswaProvinsi.setError("FIELD CANNOT BE EMPTY");
                                 }
 
-                                else if (alamatSiswa.length()==0)
+                                else if (editxtalamatSiswaKota.length()==0)
                                 {
-                                    alamatSiswa.requestFocus();
-                                    alamatSiswa.setError("FIELD CANNOT BE EMPTY");
+                                    editxtalamatSiswaKota.requestFocus();
+                                    editxtalamatSiswaKota.setError("FIELD CANNOT BE EMPTY");
+                                }
+
+                                else if (editxtalamatSiswaKecamatan.length()==0)
+                                {
+                                    editxtalamatSiswaKecamatan.requestFocus();
+                                    editxtalamatSiswaKecamatan.setError("FIELD CANNOT BE EMPTY");
+                                }
+
+                                else if (editxtalamatSiswaDesa.length()==0)
+                                {
+                                    editxtalamatSiswaDesa.requestFocus();
+                                    editxtalamatSiswaDesa.setError("FIELD CANNOT BE EMPTY");
                                 }
 
                                 else if (tinggi.length()==0)
@@ -225,7 +247,10 @@ public class DataSiswa extends AppCompatActivity {
                                     in.putExtra("tempatlahir", tempat.getText().toString());
                                     in.putExtra("tanggallahir", show.getText().toString());
                                     in.putExtra("agama", agama.getSelectedItem().toString());
-                                    in.putExtra("alamatsiswa", alamatSiswa.getText().toString());
+                                    in.putExtra("alamatsiswaprovinsi", editxtalamatSiswaProvinsi.getText().toString());
+                                    in.putExtra("alamatsiswakota", editxtalamatSiswaKota.getText().toString());
+                                    in.putExtra("alamatsiswakecamatan", editxtalamatSiswaKecamatan.getText().toString());
+                                    in.putExtra("alamatsiswadesa", editxtalamatSiswaDesa.getText().toString());
                                     in.putExtra("tinggibadan", tinggi.getText().toString());
                                     in.putExtra("beratbadan", berat.getText().toString());
                                     in.putExtra("nisn", nisn.getText().toString());

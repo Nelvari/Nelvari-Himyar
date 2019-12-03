@@ -24,6 +24,7 @@ import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.androidnetworking.interfaces.UploadProgressListener;
+import com.example.loginonlyonce.Ui.BaseURL;
 import com.vansuita.pickimage.bean.PickResult;
 import com.vansuita.pickimage.bundle.PickSetup;
 import com.vansuita.pickimage.dialog.PickImageDialog;
@@ -245,7 +246,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
         progressBar.setMessage("Please wait");
         progressBar.show();
         progressBar.setCancelable(false);
-        AndroidNetworking.get("http://api-ppdb.smkrus.com/api/v1/cek-berkas?id=" + mInfoBerkas.getInt("userid", 0))
+        AndroidNetworking.get(BaseURL.url+"/cek-berkas?id=" + mInfoBerkas.getInt("userid", 0))
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()
@@ -389,7 +390,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
 
                 progressBar.setMessage("Please wait");
                 progressBar.show();
-                AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
+                AndroidNetworking.upload(BaseURL.url+"/berkas")
                         .addMultipartParameter("id", String.valueOf(mInfoBerkas.getInt("userid", 0)))
                         .addMultipartParameter("type", "FOTO_DIRI")
                         .addMultipartFile("file", fileselectedImagePathfoto)
@@ -466,7 +467,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
 
                 progressBar.setMessage("Please wait");
                 progressBar.show();
-                AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
+                AndroidNetworking.upload(BaseURL.url+"/berkas")
                         .addMultipartParameter("id", String.valueOf(mInfoBerkas.getInt("userid", 0)))
                         .addMultipartParameter("type", "AKTE")
                         .addMultipartFile("file", fileselectedImagePathakte)
@@ -542,7 +543,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
 
                 progressBar.setMessage("Please wait");
                 progressBar.show();
-                AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
+                AndroidNetworking.upload(BaseURL.url+"/berkas")
                         .addMultipartParameter("id", String.valueOf(mInfoBerkas.getInt("userid", 0)))
                         .addMultipartParameter("type", "KK")
                         .addMultipartFile("file", fileselectedImagePathkk)
@@ -618,7 +619,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
 
                 progressBar.setMessage("Please wait");
                 progressBar.show();
-                AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
+                AndroidNetworking.upload(BaseURL.url+"/berkas")
                         .addMultipartParameter("id", String.valueOf(mInfoBerkas.getInt("userid", 0)))
                         .addMultipartParameter("type", "PRESTASI")
                         .addMultipartFile("file", fileselectedImagePathsertifikat)
@@ -694,7 +695,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
 
                 progressBar.setMessage("Please wait");
                 progressBar.show();
-                AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
+                AndroidNetworking.upload(BaseURL.url+"/berkas")
                         .addMultipartParameter("id", String.valueOf(mInfoBerkas.getInt("userid", 0)))
                         .addMultipartParameter("type", "CEK_KESEHATAN")
                         .addMultipartFile("file", fileselectedImagePathkasehtan)
@@ -770,7 +771,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
 
                 progressBar.setMessage("Please wait");
                 progressBar.show();
-                AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
+                AndroidNetworking.upload(BaseURL.url+"/berkas")
                         .addMultipartParameter("id", String.valueOf(mInfoBerkas.getInt("userid", 0)))
                         .addMultipartParameter("type", "GAMBAR_ANIMASI")
                         .addMultipartFile("file", fileselectedImagePathgambar)
@@ -846,7 +847,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
 
                 progressBar.setMessage("Please wait");
                 progressBar.show();
-                AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
+                AndroidNetworking.upload(BaseURL.url+"/berkas")
                         .addMultipartParameter("id", String.valueOf(mInfoBerkas.getInt("userid", 0)))
                         .addMultipartParameter("type", "BUKTI_PEMBAYARAN")
                         .addMultipartFile("file", fileselectedImagePathstruck)
@@ -922,7 +923,7 @@ public class Berkas extends AppCompatActivity implements IPickResult  {
 
                 progressBar.setMessage("Please wait");
                 progressBar.show();
-                AndroidNetworking.upload("http://api-ppdb.smkrus.com/api/v1/berkas")
+                AndroidNetworking.upload(BaseURL.url+"/berkas")
                         .addMultipartParameter("id", String.valueOf(mInfoBerkas.getInt("userid", 0)))
                         .addMultipartParameter("type", "RAPORT")
                         .addMultipartFile("file", fileselectedImagePathraport)

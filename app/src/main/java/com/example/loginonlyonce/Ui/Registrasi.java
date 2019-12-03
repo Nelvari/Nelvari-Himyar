@@ -73,7 +73,7 @@ public class Registrasi extends AppCompatActivity {
                             switch (i) {
                                 case DialogInterface.BUTTON_POSITIVE:
 
-                                    AndroidNetworking.post("http://api-ppdb.smkrus.com/api/v1/register")
+                                    AndroidNetworking.post(BaseURL.url+"/register")
                                             .addBodyParameter("nama", txtusername.getText().toString())
                                             .addBodyParameter("username", txtusername.getText().toString())
                                             .addBodyParameter("password", txtpassword.getText().toString())
