@@ -272,20 +272,16 @@ public class DataAsalSekolah extends AppCompatActivity {
                                                 || selectedImagePathsertifikat.equalsIgnoreCase("")
                                                 || selectedImagePathsertifikat == "")){
                                             senDataNoRaportDanPrestasi();
-                                            Toast.makeText(DataAsalSekolah.this, "If animasi masuk tidak ada rapot dan sertifikat", Toast.LENGTH_SHORT).show();
                                         }else if (selectedImagePathraport == null
                                                 || selectedImagePathraport.equalsIgnoreCase("")
                                                 || selectedImagePathraport == ""){
                                             senDataNoRaport();
-                                            Toast.makeText(DataAsalSekolah.this, "If animasi masuk tidak ada rapot", Toast.LENGTH_SHORT).show();
                                         }else if (selectedImagePathsertifikat == null
                                                 || selectedImagePathsertifikat.equalsIgnoreCase("")
                                                 || selectedImagePathsertifikat == ""){
                                             senDataNoPrestasi();
-                                            Toast.makeText(DataAsalSekolah.this, "If animasi masuk tidak ada sertifikat", Toast.LENGTH_SHORT).show();
                                         }else {
                                             senData();
-                                            Toast.makeText(DataAsalSekolah.this, "If animasi masuk ada rapot dan sertifikat", Toast.LENGTH_SHORT).show();
                                         }
                                     }else{
                                         System.out.println("masuk daftar selain anim");
@@ -297,20 +293,16 @@ public class DataAsalSekolah extends AppCompatActivity {
                                                 || selectedImagePathsertifikat.equalsIgnoreCase("")
                                                 || selectedImagePathsertifikat == "")){
                                             senDataselainanimasiNoRaportDanPrestasi();
-                                            Toast.makeText(DataAsalSekolah.this, "If selain animasi masuk tidak ada rapot dan sertifikat", Toast.LENGTH_SHORT).show();
                                         }else if (selectedImagePathraport == null
                                                 || selectedImagePathraport.equalsIgnoreCase("")
                                                 || selectedImagePathraport == ""){
                                             senDataselainanimasiNoRaport();
-                                            Toast.makeText(DataAsalSekolah.this, "If selain animasi masuk tidak ada rapot", Toast.LENGTH_SHORT).show();
                                         }else if (selectedImagePathsertifikat == null
                                                 || selectedImagePathsertifikat.equalsIgnoreCase("")
                                                 || selectedImagePathsertifikat == ""){
                                             senDataselainanimasiNoPrestasi();
-                                            Toast.makeText(DataAsalSekolah.this, "If selain animasi masuk tidak ada sertifikat", Toast.LENGTH_SHORT).show();
                                         }else {
                                             senDataselainanimasi();
-                                            Toast.makeText(DataAsalSekolah.this, "yyyyy", Toast.LENGTH_SHORT).show();
                                         }
                                     }
 
